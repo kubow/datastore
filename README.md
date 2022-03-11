@@ -33,3 +33,14 @@
 - Maintain
 
 
+### engines overview database description (sqlite3) ###
+
+view "engine_overview" with columns for
+- engine name
+- developer
+- free version available
+- sourcing model (open-source?)
+- engine category
+- supported operating systems (server / client)
+- security rating
+- deployment model
