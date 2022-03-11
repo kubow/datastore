@@ -1,0 +1,1858 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <title>Oracle Recovery Procedure</title>
+</head>
+
+<center><font face="TIMES"><font size=+4>Recovering Oracle</font></font></center>
+
+<p><font face="TIMES"><font size=-1>Since an Oracle database consists of
+several interrelated parts, recovering such a database is done through
+a process of elimination. Identify which pieces work, then recover the
+pieces that don't work. The following recovery guidefollows that logic
+and works regardless of the chosen backup method. It consists of a flowchart
+and a procedure whose numbered steps correspond to the elements in the
+flowchart.</font></font>
+<p><map NAME="flowchrt">
+<area HREF="#Step12" SHAPE="RECT" COORDS="561,517,689,592">
+<area HREF="#Step14" SHAPE="RECT" COORDS="565,605,689,656">
+<area HREF="#Step18" SHAPE="POLY" COORDS="612,970,614,969,689,928,761,973,688,1014,612,970">
+<area HREF="#Step19" SHAPE="POLY" COORDS="563,874,564,874,640,833,720,879,640,921,563,874">
+<area HREF="#Step21" SHAPE="RECT" COORDS="644,740,755,813">
+<area HREF="#Step20" SHAPE="RECT" COORDS="495,699,632,776">
+<area HREF="#Step17" SHAPE="POLY" COORDS="407,844,408,844,483,804,558,847,484,889,407,844">
+<area HREF="#Step22" SHAPE="POLY" COORDS="427,935,371,971,426,1002,485,969,427,935">
+<area HREF="#Step23" SHAPE="RECT" COORDS="224,942,355,1002">
+<area HREF="#Step25" SHAPE="POLY" COORDS="313,871,314,871,377,906,432,868,374,841,313,871">
+<area HREF="#Step26" SHAPE="RECT" COORDS="170,847,289,894">
+<area HREF="#Step24" SHAPE="RECT" COORDS="89,916,200,958">
+<area HREF="#Step28" SHAPE="RECT" COORDS="177,776,289,831">
+<area HREF="#Step10" SHAPE="RECT" COORDS="34,779,147,804">
+<area HREF="#Step31" SHAPE="RECT" COORDS="57,727,193,769">
+<area HREF="#Step27" SHAPE="POLY" COORDS="301,732,377,691,450,737,377,778,301,732">
+<area HREF="#Step13" SHAPE="POLY" COORDS="389,660,466,618,540,662,465,705,389,660">
+<area HREF="#Step29" SHAPE="POLY" COORDS="28,653,106,609,182,655,106,695,28,653">
+<area HREF="#Step30" SHAPE="RECT" COORDS="198,590,365,647">
+<area HREF="#Step11" SHAPE="POLY" COORDS="391,550,392,550,467,507,542,553,466,594,391,550">
+<area HREF="#Step16" SHAPE="RECT" COORDS="210,518,365,575">
+<area HREF="#Step15" SHAPE="POLY" COORDS="29,522,106,478,180,523,105,567,29,522">
+<area HREF="#Step10" SHAPE="POLY" COORDS="129,450,130,450,207,409,279,455,204,496,129,450">
+<area HREF="#Step8" SHAPE="RECT" COORDS="117,311,338,365">
+<area HREF="#Step9" SHAPE="RECT" COORDS="358,308,633,368">
+<area HREF="#Step31" SHAPE="RECT" COORDS="607,257,671,303">
+<area HREF="#Step1" SHAPE="RECT" COORDS="662,152,773,178">
+<area HREF="#Step4" SHAPE="POLY" COORDS="652,99,654,99,728,57,801,102,724,144,652,99">
+<area HREF="#Step7" SHAPE="RECT" COORDS="545,163,656,208">
+<area HREF="#Step6" SHAPE="POLY" COORDS="345,224,423,184,494,228,420,271,345,224">
+<area HREF="#Step3" SHAPE="RECT" COORDS="367,54,502,152">
+<area HREF="#Step4" SHAPE="POLY" COORDS="206,225,271,262,332,226,268,193,206,225">
+<area HREF="#Step5" SHAPE="RECT" COORDS="141,140,245,197">
+<area HREF="#Step2" SHAPE="POLY" COORDS="198,100,199,100,274,57,349,102,272,146,198,100">
+<area HREF="#Step1" SHAPE="POLY" COORDS="27,100,107,55,175,102,103,143,27,100">
+</map>
+<img SRC="oracle.gif" NAME="flowchrt" USEMAP="#flowchrt" height=1061 width=827>
+
+
+<p><a NAME="Step1"></a><b><font face="TIMES"><font size=+1>Step 1: Try
+Startup Mount</font></font></b>
+<p><font face="TIMES"><font size=-1>The first step in verifying the condition
+of an Oracle database is to attempt to mount it. This works because mounting
+a database (without opening it) reads the control files but does not open
+the data files. If the control files are mirrored, Oracle attempts to open
+each of the control files that are listed in the <i>initORACLE_SID.ora</i>
+file. If any of them is damaged, the mount fails.</font></font>
+<p><font face="TIMES"><font size=-1>To mount a database, simply run <i>svrmgrl</i>,
+connect to the database, and enter <i>startup mount</i>.</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<p><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>startup mount;</b></font></font>
+<p><font face="Courier"><font size=-2>Statement processed.</font></font></dir>
+<font face="TIMES"><font size=-1>If it succeeds, the output looks something
+like this:</font></font>
+<dir><font face="Courier"><font size=-2>SVRMGR > <b>startup mount;</b></font></font>
+<p><font face="Courier"><font size=-2>ORACLE instance started.</font></font>
+<p><font face="Courier"><font size=-2>Total System Global Area 5130648
+bytes</font></font>
+<p><font face="Courier"><font size=-2>Fixed Size 44924 bytes</font></font>
+<p><font face="Courier"><font size=-2>Variable Size 4151836 bytes</font></font>
+<p><font face="Courier"><font size=-2>Database Buffers 409600 bytes</font></font>
+<p><font face="Courier"><font size=-2>Redo Buffers 524288 bytes</font></font>
+<p><font face="Courier"><font size=-2>Database mounted.</font></font>
+<dir><font face="TIMES"><font size=-1>If the attempt to mount the database
+succeeds, proceed to Step 10.</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>If the attempt to mount the database fails,
+the output looks something like this:</font></font>
+<dir><font face="Courier"><font size=-2>SVRMGR > <b>startup mount;</b></font></font>
+<p><font face="Courier"><font size=-2>Total System Global Area 5130648
+bytes</font></font>
+<p><font face="Courier"><font size=-2>Fixed Size 44924 bytes</font></font>
+<p><font face="Courier"><font size=-2>Variable Size 4151836 bytes</font></font>
+<p><font face="Courier"><font size=-2>Database Buffer to s 409600 bytes</font></font>
+<p><font face="Courier"><font size=-2>Redo Buffers 524288 bytes</font></font>
+<p><font face="Courier"><font size=-2>ORACLE instance started.</font></font>
+<p><font face="Courier"><font size=-2>ORA-00205: error in identifying controlfile,
+check alert log for more info</font></font>
+<dir><font face="TIMES"><font size=-1>If the attempt to mount the database
+fails, proceed to Step 2.</font></font></dir>
+</dir>
+<a NAME="Step2"></a><b><font face="TIMES"><font size=+1>Step 2: Are All
+Control Files Missing?</font></font></b>
+<p><font face="TIMES"><font size=-1>Don't panic if the attempt to mount
+the database fails. Control files are easily restored if they were mirrored,
+and can even be rebuilt from scratch if necessary. The first important
+piece of information is that one or more control files are missing.</font></font>
+<p><font face="TIMES"><font size=-1>Unfortunately, since Oracle aborts
+the mount at the first failure it encounters, it could be missing one,
+two, or all of the control files, but so far you know only about the first
+missing file. So, before embarking on a course of action, determine the
+severity of the problem. In order to do that, do a little research.</font></font>
+<p><font size=-1><font face="TIMES">First, determine the names of all of
+the control files. Do that by looking at the <i>configORACLE_SID.ora </i>file
+next to the word </font><font face="Courier">control files</font><font face="TIMES">.
+It looks something like this:</font></font>
+<dir><font face="Courier"><font size=-2>control_files = (/db/Oracle/a/oradata/crash/control01.ctl,</font></font>
+<p><font face="Courier"><font size=-2>/db/Oracle/b/oradata/crash/control02.ctl,</font></font>
+<p><font face="Courier"><font size=-2>/db/Oracle/c/oradata/crash/control03.ctl)</font></font></dir>
+<font size=-1><font face="TIMES">It's also important to get the name of
+the control file that Oracle is complaining about. Find this by looking
+for the phrase </font><font face="Courier">control file:</font><font face="TIMES">
+in the alert log. (The alert log can be found in the location specified
+by the </font><font face="Courier">background_dump_dest</font><font face="TIMES">
+value in the <i>configinstance.ora</i> file. (Typically, it is in the <i>ORACLE_BASE/ORACLE_SID/admin/bdump</i>
+directory.) In that directory, there should be a file called <i>alert_ORACLE_SID.log</i>.
+In that file, there should be an error that looks something like this:</font></font>
+<dir><font face="Courier"><font size=-2>Sat Feb 21 13:46:19 1998</font></font>
+<p><font face="Courier"><font size=-2>alter database mount exclusive</font></font>
+<p><font face="Courier"><font size=-2>Sat Feb 21 13:46:20 1998</font></font>
+<p><font face="Courier"><font size=-2>ORA-00202: controlfile: '/db/a/oradata/crash/control01.ctl'</font></font>
+<p><font face="Courier"><font size=-2>ORA-27037: unable to obtain file
+status</font></font>
+<p><font face="Courier"><font size=-2>SVR4 Error: 2: No such file or directory</font></font>
+<dir><font face="TIMES"><font size=-1>Warning! Some of the following procedures
+may say to override a potentially corrupted control file. Since one never
+knows which file may be needed, always make backup copies of all of the
+control files before doing any of this. That offers an "undo" option that
+isn't possible otherwise. (Also make copies of the online redo logs as
+well.)</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>With the names of all of the control files
+and the name of the damaged file, it's easy to determine the severity of
+the problem. Do this by listing each of the control files and comparing
+their size and modification time. (Remember the game "Which one of these
+is not like the other," on Sesame Street?) The following scenarios assume
+that the control files were mirrored to three locations, which is a very
+common practice. The possible scenarios are:</font></font>
+<p><font face="TIMES"><font size=-1>The damaged file is missing, and at
+least one other file is present</font></font>
+<dir><font face="TIMES"><font size=-1>If the file that Oracle is complaining
+about is just missing, that's an easy thing to fix.</font></font>
+<dir><font face="TIMES"><font size=-1>If this is the case, proceed to Step
+3.</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>The damaged file is not missing. It is
+corrupted</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>This is probably the most confusing
+one, since it's hard to tell if a file is corrupted. What to do in this
+situation is a personal choice. Before going any farther, make backup copies
+of all control files. Once you do that, try a "shell game" with the different
+control files. The shell game consists of taking one of the three control
+files and copying it to the other two files' locations. Then attempt to
+mount the database again. The "shell game" is covered in Step 3.</font></font></dir>
+<font face="TIMES"><font size=-1>However, if all the online redo logs are
+present, it's probably easier at this point to just run the "create controlfile"
+script discussed in Steps 6 and 7. This rebuilds the control file to all
+locations automatically. (Before that, though, follow Steps 4 and 5 to
+verify if all the data files and log files are present.)</font></font>
+<dir><font face="TIMES"><font size=-1>To rebuild the control file using
+the "create controlfile" script, proceed to Steps 4 through 7.</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>All of the control files are missing,
+or they are all different sizes and/or times.</font></font>
+<dir><font face="TIMES"><font size=-1>If all of the control files are corrupt
+or missing, they must be rebuilt or the entire database must be restored.
+Hopefully your backup system has been running the <i>backup control file
+to trace</i> command on a regular basis. (The output of this command is
+a SQL script that will rebuild the control files automatically.)</font></font>
+<dir><font face="TIMES"><font size=-1>If the <i>backup control file to
+trace</i> command has been running, proceed to Steps 4 through 7. If not,
+then proceed to Step 8.</font></font></dir>
+</dir>
+<a NAME="Step3"></a><b><font face="TIMES"><font size=+1>Step 3: Replace
+Missing Control File</font></font></b>
+<p><font face="TIMES"><font size=-1>If the file that Oracle is complaining
+about is either missing or appears to have a different date and time than
+the other control files, this will be easy. Simply copy another one of
+the mirrored copies of the control file to the damaged control file's name
+and location. (The details of this procedure are below.) Once this is done,
+just attempt to mount the database again.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>Warning! Make sure to make backup
+copies of all of the control files before overwriting them!</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>The first thing to do is to get the name
+of the damaged control file. Again, this is relatively easy. Look in the
+alert log for a section like the one below:</font></font>
+<dir><font face="Courier"><font size=-2>Sat Feb 21 13:46:19 1998</font></font>
+<p><font face="Courier"><font size=-2>alter database mount exclusive</font></font>
+<p><font face="Courier"><font size=-2>Sat Feb 21 13:46:20 1998</font></font>
+<p><font face="Courier"><font size=-2>ORA-00202: controlfile: '/db/a/oradata/crash/control01.ctl'</font></font>
+<p><font face="Courier"><font size=-2>ORA-27037: unable to obtain file
+status</font></font>
+<p><font face="Courier"><font size=-2>SVR4 Error: 2: No such file or directory</font></font></dir>
+<font face="TIMES"><font size=-1>Always make backups of all the control
+files before copying any of them on top of each other. The next step would
+be to copy a known good control file to the damaged control file's location.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>Once that is done, return to Step
+1 and try the startup mount again.</font></font></dir>
+</dir>
+<b><font face="TIMES"><font size=-1>"But I don't have a good control file!"</font></font></b>
+<p><font face="TIMES"><font size=-1>It's possible that there may be no
+known good control file, which is what would happen if the remaining control
+files have different dates and/or sizes. If this is the case, it's probably
+best to use the "create controlfile" script.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>To use the create controlfile script,
+proceed to Steps 4 through 7.</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>If that's not possible or probable, try
+the following procedure. First, make backups of all of the control files.
+Then, one at a time, try copying every version of each control file to
+all the other locations -- excluding the one that Oracle has already complained
+about, since it's obviously damaged.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>Each time a new control file is copied
+to multiple locations, return to Step 1.</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>For example, assume there are three control
+files: <i>/a/control1.ctl</i>, <i>/b/control2.ctl</i>, and <i>/c/control3.ctl</i>.
+The alert log says that the <i>/c/control3.ctl</i> is damaged, and since
+<i>/a/control1.ctl</i>
+and <i>/b/control2.ctl</i> have different modification times, there's no
+way to know which one is good. Try the following steps:</font></font>
+<p><font face="TIMES"><font size=-1>First, make backup copies of all the
+files:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>cp /a/control1.ctl /a/control1.ctl.sav</b></font></font>
+<p><font face="Courier"><font size=-2>$ <b>cp /b/control2.ctl /b/control2.ctl.sav</b></font></font>
+<p><font face="Courier"><font size=-2>$ <b>cp /c/control3.ctl /c/control3.ctl.sav</b></font></font></dir>
+<font face="TIMES"><font size=-1>Second, try copying one file to all locations.
+Skip control3.ctl, since it's obviously damaged. Try starting with control1.ctl:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>cp /a/control1.ctl /b/control2.ctl</b></font></font>
+<p><font face="Courier"><font size=-2>$ <b>cp /a/control1.ctl /c/control3.ctl</b></font></font></dir>
+<font face="TIMES"><font size=-1>Now attempt a startup mount:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>startup mount</b></font></font>
+<p><font face="Courier"><font size=-2>Sat Feb 21 15:43:21 1998</font></font>
+<p><font face="Courier"><font size=-2>alter database mount exclusive</font></font>
+<p><font face="Courier"><font size=-2>Sat Feb 21 15:43:22 1998</font></font>
+<p><font face="Courier"><font size=-2>ORA-00202: controlfile: '/a/control3.ctl'</font></font>
+<p><font face="Courier"><font size=-2>ORA-27037: unable to obtain file
+status</font></font></dir>
+<font face="TIMES"><font size=-1>This error says that the file that was
+copied to all locations is also damaged. Now try the second file, control2.ctl:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>cp /b/control2.ctl /a/control1.ctl</b></font></font>
+<p><font face="Courier"><font size=-2>$ <b>cp /b/control2.ctl /a/control3.ctl</b></font></font></dir>
+<font face="TIMES"><font size=-1>Now attempt to do a startup mount:</font></font>
+<dir><font face="Courier"><font size=-2>SVRMGR > <b>startup mount;</b></font></font>
+<p><font face="Courier"><font size=-2>ORACLE instance started.</font></font>
+<p><font face="Courier"><font size=-2>Total System Global Area 5130648
+bytes</font></font>
+<p><font face="Courier"><font size=-2>Fixed Size 44924 bytes</font></font>
+<p><font face="Courier"><font size=-2>Variable Size 4151836 bytes</font></font>
+<p><font face="Courier"><font size=-2>Database Buffers 409600 bytes</font></font>
+<p><font face="Courier"><font size=-2>Redo Buffers 524288 bytes</font></font>
+<p><font face="Courier"><font size=-2>Database mounted.</font></font></dir>
+<font face="TIMES"><font size=-1>It appears that control2.ctl was a good
+copy of the control file.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>Once the attempt to mount the database
+is successful, proceed to Step 10.</font></font></dir>
+</dir>
+<a NAME="Step4"></a><b><font face="TIMES"><font size=+1>Step 4: Are All
+Data Files and Redo Logs OK?</font></font></b>
+<dir>
+<dir><font face="TIMES"><font size=-1>Steps 4 and 5 are required only prior
+to performing Step 6.</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>The "create controlfile" script described
+in Step 7 works only if all the data files and online redo logs are in
+place. The data files can be older versions that were restored from backup,
+since they will be rolled forward by the media recovery. However, the online
+redo logs must be current and intact for the "create controlfile" script
+to work.</font></font>
+<p><font face="TIMES"><font size=-1>The reason that this is the case is
+that the rebuild process looks at each data file as it is rebuilding the
+control file. Each data file contains a System Change Number (SCN) that
+corresponds to a certain online redo log. If a data file shows that it
+has an SCN that is more recent than the online redo logs that are available,
+the control file rebuild process will abort.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>If it's likely that one or more of
+the data files or online redo logs is damaged, go to Step 5. If it's more
+likely that they are all intact, go to Step 6.</font></font></dir>
+</dir>
+<a NAME="Step5"></a><b><font face="TIMES"><font size=+1>Step 5: Recover
+Damaged Data Files or Redo Logs</font></font></b>
+<p><font face="TIMES"><font size=-1>If one or more of the data files or
+online redo logs are definitely damaged, follow all the instructions below
+to see if there are any other damaged files. (A little extra effort now
+will save a lot of frustration later.) If it's possible that all the data
+files and online redo logs are okay, another option would be to skip this
+step and try to recreate the control file now. (An unsuccessful attempt
+at this will not cause any harm.) If it fails, return to this step. If
+there is plenty of time, go ahead and perform this step first.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>To try and recreate the control files
+now, proceed to Step 6.</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>The first thing to find out is where all
+of the data files and redo logs are. To determine this, run the following
+command on the mounted, closed database:</font></font>
+<dir><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>select name from v$datafile;</b></font></font>
+<p><i><font face="Courier"><font size=-2>(Example output below)</font></font></i>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>select group#, member
+from v$logfile;</b></font></font>
+<p><i><font face="Courier"><font size=-2>(Example output below)</font></font></i></dir>
+<font face="TIMES"><font size=-1>Figure B contains sample output from these
+commands:</font></font>
+<dir><font face="Courier"><font size=-2>SVRMGR > <b>select name from v$datafile;</b></font></font>
+<p><font face="Courier"><font size=-2>NAME</font></font>
+<p><font face="Courier"><font size=-2>--------------------------------------------------------------------------------</font></font>
+<p><font face="Courier"><font size=-2>/db/Oracle/a/oradata/crash/system01.dbf</font></font>
+<p><font face="Courier"><font size=-2>/db/Oracle/a/oradata/crash/rbs01.dbf</font></font>
+<p><font face="Courier"><font size=-2>/db/Oracle/a/oradata/crash/temp01.dbf</font></font>
+<p><font face="Courier"><font size=-2>/db/Oracle/a/oradata/crash/tools01.dbf</font></font>
+<p><font face="Courier"><font size=-2>/db/Oracle/a/oradata/crash/users01.dbf</font></font>
+<p><font face="Courier"><font size=-2>/db/Oracle/a/oradata/crash/test01.dbf</font></font>
+<p><font face="Courier"><font size=-2>6 rows selected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>select group#, member
+from v$logfile;</b></font></font>
+<p><font face="Courier"><font size=-2>MEMBER</font></font>
+<p><font face="Courier"><font size=-2>--------------------------------------------------------------------------------</font></font>
+<p><font face="Courier"><font size=-2>1 /db/Oracle/a/oradata/crash/redocrash01.log</font></font>
+<p><font face="Courier"><font size=-2>3 /db/Oracle/c/oradata/crash/redocrash03.log</font></font>
+<p><font face="Courier"><font size=-2>2 /db/Oracle/b/oradata/crash/redocrash02.log</font></font>
+<p><font face="Courier"><font size=-2>1 /db/Oracle/b/oradata/crash/redocrash01.log</font></font>
+<p><font face="Courier"><font size=-2>2 /db/Oracle/a/oradata/crash/redocrash03.log</font></font>
+<p><font face="Courier"><font size=-2>3 /db/Oracle/c/oradata/crash/redocrash02.log</font></font>
+<p><font face="Courier"><font size=-2>6 rows selected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR ></font></font>
+<dir>
+<center><i><font face="TIMES"><font size=-1>Figure B: Sample v$datafile
+and v$logfile output</font></font></i></center>
+</dir>
+</dir>
+<i>Look at each of the files shown by the above command. First, look at
+the data files. Each of the data files probably has the same modification
+time, or there might be a group of them with one modification time and
+another group with a different modification time. The main thing to look
+for is a missing file or a zero length file. Something else to look for
+is one or more files that have a modification time that is newer than the
+newest online redo log file. If a data file meets any one of these conditions,
+it must be restored from backup.</i>
+<p><i>Redo log files, however, are a little different. Each redo log file
+within a log group should have the same modification time. For example,
+the output of the example command above shows that /db/Oracle/a/oradata/crash/redocrash01.log
+and /db/Oracle/a/oradata/crash/redocrash01.log are in log group one. They
+should have the same modification time and size. The same should be true
+for groups two and three. There are a couple of possible scenarios:</i>
+<p><i>One or more log groups has at least one good and one damaged log</i>
+<dir><i>This is why redo logs are mirrored! Copy the good redo log to the
+damaged redo log's location. For example, if /db/Oracle/a/oradata/crash/redocrash01.log
+was missing, but /db/Oracle/a/oradata/crash/redocrash01.log was intact,
+issue the following command:</i>
+<p><font face="Courier"><font size=-2>$ <b>cp /db/Oracle/a/oradata/crash/redocrash01.log
+\</b></font></font>
+<p><b><font face="Courier"><font size=-2>/db/Oracle/a/oradata/crash/redocrash01.log</font></font></b></dir>
+<font face="TIMES"><font size=-1>All redo logs in at least one log group
+are damaged</font></font>
+<dir><font face="TIMES"><font size=-1>This is a bad place to be. The "create
+controlfile" script in Step 6 requires that all online redo logs be present.
+If even one log group is completely damaged, it will not be able to rebuild
+the control file. This means that the only option available now is to proceed
+to Steps 23 and 24 -- a complete recovery of the entire database followed
+by an <i>alter database open resetlogs</i>.</font></font>
+<dir><font face="TIMES"><font size=-1>Warning! This is a drastic step!
+Make sure that <i>all </i>members of at least one log group are missing.
+(In the example above, if both <i>/db/Oracle/a/oradata/crash/redocrash01.log</i>
+and <i>/db/Oracle/a/oradata/crash/redocrash01.log</i> were damaged, this
+database would require a complete recovery.)</font></font>
+<p><font face="TIMES"><font size=-1>If all the redo logs in at least one
+group are damaged, and all the control files are damaged, proceed to Steps
+23 and 24.</font></font>
+<p><font face="TIMES"><font size=-1>If the redo logs are all right, but
+all the control files are missing, proceed to Step 6.</font></font>
+<p><font face="TIMES"><font size=-1>If the database will not open for some
+other reason, proceed to Step 10.</font></font></dir>
+</dir>
+<a NAME="Step6"></a><b><font face="TIMES"><font size=+1>Step 6: Is There
+a "create controlfile" Script?</font></font></b>
+<dir>
+<dir><font face="TIMES"><font size=-1>Steps 4 and 5must be taken prior
+to this Step.</font></font></dir>
+</dir>
+<font size=-1><font face="TIMES">The <i>svrmgrl l </i>command <i>alter
+database backup control file to trace</i> creates a trace file that contains
+a "create controlfile" script. This command should be run from cron on
+a regular basis. To find out if there is such a script available, follow
+the instructions below. The first thing to find out is the destination
+of the trace files. This is specified by the </font><font face="Courier">user_dump_dest</font><font face="TIMES">
+value in the <i>configinstance.ora</i> file, usually located in <i>$ORACLE_HOME/dbs</i>.
+(Typically, it is <i>$ORACLE_BASE/$ORACLE_SID/admin/udump</i>.) First <i>cd</i>
+to that directory, then <i>grep </i>for the phrase </font><font face="Courier">CREATE
+CONTROLFILE</font><font face="TIMES">. For example:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>cd $ORACLE_HOME/dbs; grep
+user_dump_dest configcrash.ora</b></font></font>
+<p><font face="Courier"><font size=-2>user_dump_dest = /db/Oracle/admin/crash/udump</font></font>
+<p><font face="Courier"><font size=-2>$ <b>cd /db/Oracle/admin/crash/udump
+; grep 'CREATE CONTROLFILE' * \</b></font></font>
+<p><b><font face="Courier"><font size=-2>|awk -F: '{print $1}'|xargs ls
+-ltr</font></font></b>
+<p><font face="Courier"><font size=-2>-rw-r----- 1 Oracle dba 3399 Oct
+26 11:25 crash_ora_617.trc</font></font>
+<p><font face="Courier"><font size=-2>-rw-r----- 1 Oracle dba 3399 Oct
+26 11:25 crash_ora_617.trc</font></font>
+<p><font face="Courier"><font size=-2>-rw-r----- 1 Oracle dba 1179 Oct
+26 11:29 crash_ora_661.trc</font></font>
+<dir>
+<center><i><font face="TIMES"><font size=-1>Figure C: Locating the most
+recent create controlfile script</font></font></i></center>
+</dir>
+</dir>
+<i>In the example in Figure C, crash_ora_661.trc is the most recent file
+to contain the "create controlfile" script.</i>
+<dir>
+<dir><i>If there is a create controlfile script, proceed to Step 7. If
+there is not a create controlfile script, and all the control files are
+missing, proceed to Step 8.</i></dir>
+</dir>
+<a NAME="Step7"></a><b><font face="TIMES"><font size=+1>Step 7: Run the
+'create controlfile' Script</font></font></b>
+<p><font size=-1><font face="TIMES">First, find the trace file that contains
+the script. The instructions on how to do that are in Step 6. Once you
+find it, copy it to another filename, such as rebuild.sql. Edit the file,
+deleting everything above the phrase </font><font face="Courier"># The
+following commands will create,</font><font face="TIMES"> and anything
+after the last SQL command. The file should then look something like the
+one in Figure D:</font></font>
+<dir><font face="Courier"><font size=-2># The following commands will create
+a new controlfile and use it</font></font>
+<p><font face="Courier"><font size=-2># to open the database.</font></font>
+<p><font face="Courier"><font size=-2># Data used by the recovery manager
+will be lost. Additional logs may</font></font>
+<p><font face="Courier"><font size=-2># be required for media recovery
+of offline data files. Use this</font></font>
+<p><font face="Courier"><font size=-2># only if the current version of
+all online logs are available.</font></font>
+<p><font face="Courier"><font size=-2>STARTUP NOMOUNT</font></font>
+<p><font face="Courier"><font size=-2>CREATE CONTROLFILE REUSE DATABASE
+"CRASH" NORESETLOGS ARCHIVELOG</font></font>
+<p><font face="Courier"><font size=-2>MAXLOGFILES 32</font></font>
+<p><font face="Courier"><font size=-2>MAXLOGMEMBERS 2</font></font>
+<p><font face="Courier"><font size=-2>MAXDATAFILES 30</font></font>
+<p><font face="Courier"><font size=-2>MAXINSTANCES 8</font></font>
+<p><font face="Courier"><font size=-2>MAXLOGHISTORY 843</font></font>
+<p><font face="Courier"><font size=-2>LOGFILE</font></font>
+<p><font face="Courier"><font size=-2>GROUP 1 '/db/a/oradata/crash/redocrash01.log'
+SIZE 500K,</font></font>
+<p><font face="Courier"><font size=-2>GROUP 2 '/db/b/oradata/crash/redocrash02.log'
+SIZE 500K,</font></font>
+<p><font face="Courier"><font size=-2>GROUP 3 '/db/c/oradata/crash/redocrash03.log'
+SIZE 500K</font></font>
+<p><font face="Courier"><font size=-2>DATAFILE</font></font>
+<p><font face="Courier"><font size=-2>'/db/a/oradata/crash/system01.dbf',</font></font>
+<p><font face="Courier"><font size=-2>'/db/a/oradata/crash/rbs01.dbf',</font></font>
+<p><font face="Courier"><font size=-2>'/db/a/oradata/crash/temp01.dbf',</font></font>
+<p><font face="Courier"><font size=-2>'/db/a/oradata/crash/tools01.dbf',</font></font>
+<p><font face="Courier"><font size=-2>'/db/a/oradata/crash/users01.dbf'</font></font>
+<p><font face="Courier"><font size=-2>;</font></font>
+<p><font face="Courier"><font size=-2># Recovery is required if any of
+the data files are restored backups,</font></font>
+<p><font face="Courier"><font size=-2># or if the last shutdown was not
+normal or immediate.</font></font>
+<p><font face="Courier"><font size=-2>RECOVER DATABASE</font></font>
+<p><font face="Courier"><font size=-2># All logs need archiving and a log
+switch is needed.</font></font>
+<p><font face="Courier"><font size=-2>ALTER SYSTEM ARCHIVE LOG ALL;</font></font>
+<p><font face="Courier"><font size=-2># Database can now be opened normally.</font></font>
+<p><font face="Courier"><font size=-2>ALTER DATABASE OPEN;</font></font>
+<p><font face="Courier"><font size=-2># Files in read only tablespaces
+are now named.</font></font>
+<p><font face="Courier"><font size=-2>ALTER DATABASE RENAME FILE 'MISSING00006'</font></font>
+<p><font face="Courier"><font size=-2>TO '/db/a/oradata/crash/test01.dbf';</font></font>
+<p><font face="Courier"><font size=-2># Online the files in read only tablespaces.</font></font>
+<p><font face="Courier"><font size=-2>ALTER TABLESPACE "TEST" ONLINE;</font></font>
+<dir>
+<center><i><font face="TIMES"><font size=-1>Figure D: Example create controlfile
+script</font></font></i></center>
+</dir>
+</dir>
+<i>Once the file looks like the above example, add the following line just
+above the "STARTUP NOMOUNT" line:</i>
+<dir><font face="Courier"><font size=-2>connect internal;</font></font></dir>
+<font face="TIMES"><font size=-1>After you add this line, run the following
+command on the mounted, closed database, substituting <i>rebuild.sql</i>
+with the appropriate name:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl &lt; rebuild.sql</b></font></font></dir>
+<font face="TIMES"><font size=-1>If all of the data files and online redo
+log files are in place, this will work without intervention and completely
+rebuild the control files.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>If any of this instance's data files
+are missing, return to Step 4. However, if any of this instance's online
+redo logs are damaged or missing, <i>this option will not work</i>. Proceed
+to Step 8.</font></font></dir>
+</dir>
+<a NAME="Step8"></a><b><font face="TIMES"><font size=+1>Step 8: Restore
+Control Files and Prepare the Database for Recovery</font></font></b>
+<dir>
+<dir><font face="TIMES"><font size=-1>This Step is required only if Steps
+2 through 7 have failed.</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>If the precautions mentioned elsewhere
+in this chapter were followed, there is really only one scenario that would
+result in this position -- loss of the entire system due to a cataclysmic
+event. Loss of a disk drive (or even multiple disk drives) is easily handled
+if the control files are mirrored. Even if all control files are lost,
+they can be rebuilt using the trace file created by running the <i>backup
+control file to trace</i> command. The only barrier to using that script
+is if all members of an online log group are missing. The only time that
+you could lose all mirrored control files and all members of a mirrored
+log group would be a complete system failure, such as a fire or other natural
+disaster. And if that is the case, then a complete database recovery would
+be more appropriate.</font></font>
+<p><b><font face="TIMES"><font size=-1>But I didn't mirror my control files
+or my online redo logs</font></font></b>
+<p><font face="TIMES"><font size=-1>Follow the steps below, starting with
+restoring the control files from backup. Chances are that the database
+files will need to be restored as well. This is because one cannot use
+a control file that is older than the most recent database file. (Oracle
+will complain and abort if this happens.) To find out if the control file
+is newer than the data files, try the following steps without overwriting
+the database files and see what happens.</font></font>
+<p><font face="TIMES"><font size=-1>Restore control files from backup</font></font>
+<dir><font size=-1><font face="TIMES">The very first step in this process
+is to find and restore the most recent backup of the control file. This
+would be the results of a <i>backup control file to filename</i> command.
+This is the only supported method of backing up the control file. Some
+people (<i>oraback.sh</i> included) also copy the control file manually.
+If there is a manual copy of the control file that is more recent than
+an "official" copy, try to use it first. However, if it doesn't work, use
+a backup copy created by the <i>backup control file to filename</i> command.
+Whatever backup control file is used, copy it to all of the locations and
+filenames listed in the <i>configORACLE_SID.ora </i>file after the phrase
+</font><font face="Courier">control_files</font><font face="TIMES">:</font></font>
+<p><font face="Courier"><font size=-2>control_files = (/db/Oracle/a/oradata/crash/control01.ctl,</font></font>
+<p><font face="Courier"><font size=-2>/db/Oracle/b/oradata/crash/control02.ctl,</font></font>
+<p><font face="Courier"><font size=-2>/db/Oracle/c/oradata/crash/control03.ctl)</font></font>
+<p><font face="TIMES"><font size=-1>Again, this backup control file must
+be more recent than the most recent database file in the instance. If this
+isn't the case, Oracle will complain.</font></font></dir>
+<font face="TIMES"><font size=-1>Startup mount</font></font>
+<dir><font face="TIMES"><font size=-1>To find out if the control file is
+valid and has been copied to all of the correct locations, attempt to start
+up the database with the <i>mount</i> option. (This is the same command
+from Step 1.) To do this, run the following command on the mounted, closed
+database:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>startup mount;</b></font></font>
+<br><font face="Courier"><font size=-2>Statement processed.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>quit</b></font></font>
+<br>&nbsp;
+<br>&nbsp;</dir>
+</dir>
+<font face="TIMES"><font size=-1>Take read-only tablespaces offline</font></font>
+<dir><font face="TIMES"><font size=-1>Oracle does not allow read-only data
+files to be online during a <i>recover database using backup control file</i>
+action. Therefore, if there are any read-only data files, take them offline.
+To find out if there are any read-only data files, issue the following
+command on the mounted, closed database:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>select enabled, name
+from v$data file;</b></font></font>
+<br><font face="Courier"><font size=-2>Statement processed.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>quit</b></font></font></dir>
+<font face="TIMES"><font size=-1>For each read-only data file, issue the
+following command on a mounted, closed database:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>alter database data file
+'filename' offline;</b></font></font>
+<br><font face="Courier"><font size=-2>Statement processed.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>quit</b></font></font></dir>
+</dir>
+<a NAME="Step9"></a><font face="TIMES"><font size=+1>Step 9: Recover the
+Database</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>This step is required only if Steps
+2 through 7 have failed.</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>Once the control file is restored with
+a backup copy, attempt to recover the database using the backup control
+file.</font></font>
+<p><b><font face="TIMES"><font size=-1>Attempt to recover database normally</font></font></b>
+<p><font face="TIMES"><font size=-1>Since recovering the database with
+a backup control file requires the <i>alter database open resetlogs</i>
+option, it never hurts to try recovering the database normally first:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>recover database;</b></font></font></dir>
+<font face="TIMES"><font size=-1>If the backup control file option is required,
+Oracle will complain:</font></font>
+<dir><font face="Courier"><font size=-2>SVRMGR > <b>recover database</b></font></font>
+<p><font face="Courier"><font size=-2>ORA-00283: Recover session cancelled
+due to errors</font></font>
+<p><font face="Courier"><font size=-2>...</font></font>
+<p><font face="Courier"><font size=-2>ORA-01207: file is more recent than
+controlfile - old controlfile</font></font>
+<dir><font face="TIMES"><font size=-1>If the recover database command works,
+then proceed to Step 10. If it doesn’t, proceed to the next heading, "Attempt
+to recover database using backup control file."</font></font></dir>
+</dir>
+<b><font face="TIMES"><font size=-1>Attempt to recover database using backup
+control file</font></font></b>
+<p><font face="TIMES"><font size=-1>Attempt to recover the database using
+the following command on the mounted, closed database:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>recover database using
+backup controlfile</b></font></font></dir>
+<font face="TIMES"><font size=-1>If it works, the output looks will something
+Figure E:</font></font>
+<dir><font face="Courier"><font size=-2>ORA-00279: change 38666 generated
+at 03/14/98 21:19:05 needed for thread 1</font></font>
+<p><font face="Courier"><font size=-2>ORA-00289: suggestion : /db/Oracle/admin/crash/arch/arch.log1_494.dbf</font></font>
+<p><font face="Courier"><font size=-2>ORA-00280: change 38666 for thread
+1 is in sequence #494</font></font>
+<dir>
+<center><i><font face="TIMES"><font size=-1>Figure D: Sample output of
+</font></font>recover
+database command</i></center>
+
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<p><i>If Oracle complains, there are probably some missing or corrupted
+data files. If so, return to Steps 4 and 5. Once any missing or corrupted
+data files are restored, return to this step and attempt to recover the
+database again.</i>
+<p><i>Sometimes one can get in a catch-22 when recovering databases, where
+Oracle is complaining about data files being newer than the control file.
+The only way to get around this is to use a backup version of the data
+files that is older than the backup version of the control file. Media
+recovery will roll forward any changes that this older file is missing.</i></dir>
+</dir>
+<b><i>Apply all archived redo logs</i></b>
+<p><i>Oracle will request all archived redo logs since the time of the
+oldest restored data file. For example, if the backup that was used to
+restore the data files was from three days ago, Oracle will need all archived
+redo logs created since then. Also, the first log file that it asks for
+is the oldest log file that it wants.</i>
+<p><i>The most efficient way to roll through the archived redo logs is
+to have all of them sitting uncompressed in the directory that it suggests
+as the location of the first file. If this is the case, simply enter auto
+at the prompt. Otherwise, specify alternate locations or hit enter as it
+asks for each one, giving time to compress or remove the files that it
+no longer needs.</i>
+<p><b><i>Apply online redo logs if they are available</i></b>
+<p><i>If it is able to do so, Oracle will automatically roll through all
+the archived redo logs and the online redo log. Then it says, "</i><font size=-1><font face="Courier">Media
+recovery complete</font><font face="Courier New">.</font><font face="TIMES">"</font></font>
+<p><font face="TIMES"><font size=-1>However, once Oracle rolls through
+all the archived redo logs, it may prompt for the online redo log. It does
+this by prompting for an archived redo log with a number that is higher
+than the most recent archived redo log available. This means that it is
+looking for the online redo log. Try answering its prompt with the names
+of the online redo log files that you have. Unfortunately, as soon as you
+give it a name it doesn't like, it will make you start the <i>recover database
+using backup controlfile</i> command again.</font></font>
+<p><font face="TIMES"><font size=-1>For example, suppose that you have
+the following three online redo logs:</font></font>
+<dir><font face="Courier"><font size=-2>/oracle/data/redolog01.dbf</font></font>
+<p><font face="Courier"><font size=-2>/oracle/data/redolog02.dbf</font></font>
+<p><font face="Courier"><font size=-2>/oracle/data/redolog03.dbf</font></font></dir>
+<font face="TIMES"><font size=-1>When you are prompting for an archived
+redo log that has a higher number than the highest numbered archived redo
+log that you have, answer the prompt with one of these files (e.g., <i>/oracle/data/redolog01.dbf</i>).
+If the file that you give it does not contain the recovery thread it is
+looking for, you will see a message like the following:</font></font>
+<dir><font face="Courier"><font size=-2>ORA-00310: archived log contains
+sequence 2; sequence 3 required</font></font>
+<p><font face="Courier"><font size=-2>ORA-00334: archive log: '/oracle/data/redolog01.dbf'</font></font></dir>
+<font face="TIMES"><font size=-1>Oracle will cancel the recovery database,
+requiring you to start it over. Once you get to the same prompt again,
+respond with a different filename, such as /oracle/data/redolog02.dbf.
+If it contains the recovery thread it is looking for, it will respond with
+a message like the following:</font></font>
+<dir><font face="Courier"><font size=-2>Log applied.</font></font>
+<p><font face="Courier"><font size=-2>Media recovery complete.</font></font></dir>
+<font face="TIMES"><font size=-1>If after trying all the online redo logs
+it is still asking for a log that you do not have, simply enter <i>cancel</i>.</font></font>
+<p><b><font face="TIMES"><font size=-1>Alter database open resetlogs</font></font></b>
+<p><font face="TIMES"><font size=-1>Once the media recovery is complete,
+the next step is to open the database. As mentioned earlier, when recovering
+the database using a backup control file, it must be opened with the <i>resetlogs</i>
+option. Do this by entering:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR ><b> connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>alter database open resetlogs;</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>quit</b></font></font></dir>
+<font face="TIMES"><font size=-1>Take a backup immediately after recovering
+the database with the resetlogs option! It is best if it is a cold backup
+after shutting down the database. Perform a hot backup if absolutely necessary,
+but realize that there is a risk that:</font></font>
+<ul>
+<li>
+<font face="TIMES"><font size=-1>The entire recovery might need to be performed
+again</font></font></li>
+
+<li>
+<font face="TIMES"><font size=-1>All changes made after using the <i>resetlogs</i>
+option will be lost</font></font></li>
+</ul>
+
+<dir>
+<dir><font face="TIMES"><font size=-1>If the database did not open successfully,
+return to Step 1 and start over.</font></font>
+<p><font face="TIMES"><font size=-1>If the database did open successfully,
+perform a backup of the entire database immediately -- preferably a cold
+one. Congratulations! You're done!</font></font></dir>
+</dir>
+<a NAME="Step10"></a><b><font face="TIMES"><font size=+1>Step 10: Does
+"alter database open" work?</font></font></b>
+<p><font face="TIMES"><font size=-1>If the <i>startup mount</i> worked,
+this is actually only the second step that you will perform. Mounting the
+database only checks the presence and consistency of the control files.
+If that works, opening the database is the next step. Doing so will check
+the presence and consistency of all data files, online redo log files,
+and any rollback segments. To open the database, run the following command
+on the mounted, closed database:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>alter database open;</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>quit</b></font></font></dir>
+<font size=-1><font face="TIMES">If the attempt to open the database worked,
+Oracle will simply say, "</font><font face="Courier">Statement processed.</font><font face="TIMES">"
+If this is the first attempt to open the database, and no data files or
+rollback segments were taken offline, You're done!</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>If directed to this step by Steps
+26 or 28 (damaged log groups), and the attempt at opening the database
+failed, return to Step 23 to recover the entire database.</font></font>
+<p><font face="TIMES"><font size=-1>If the database did open, proceed to
+Step 15.</font></font>
+<br>&nbsp;
+<br>&nbsp;</dir>
+</dir>
+<font face="TIMES"><font size=-1>If the attempt to open the database did
+<i>not</i>
+work, the output will vary depending on the condition. Here is a listing
+of what those conditions may be, accompanied by what the error might look
+like when that condition occurs.</font></font>
+<p><font face="TIMES"><font size=-1>Missing data file</font></font>
+<dir>
+<dir><font face="Courier"><font size=-2>ORA-01157: cannot identify data
+file 1 - file not found</font></font>
+<p><font face="Courier"><font size=-2>ORA-01110: data file 1: '/db/Oracle/a/oradata/crash/system01.dbf'</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>Corrupted data file</font></font>
+<dir><font face="TIMES"><font size=-1>A corrupted data file can generate
+a number of different errors. For instance, it may mimic a missing data
+file:</font></font>
+<dir><font face="Courier"><font size=-2>ORA-01157: cannot identify data
+file 1 - file not found</font></font>
+<p><font face="Courier"><font size=-2>ORA-01110: data file 1: '/db/Oracle/a/oradata/crash/system01.dbf'</font></font></dir>
+<font face="TIMES"><font size=-1>It may also completely confuse Oracle:</font></font>
+<dir><font face="Courier"><font size=-2>ORA-00600: internal error code,
+arguments: [kfhcfh1_01], [0], [], [], [], [], [], []</font></font></dir>
+<font face="TIMES"><font size=-1>A corrupted data file may also cause a
+"failed verification check" error:</font></font>
+<dir><font face="Courier"><font size=-2>ORA-01122: database file 1 failed
+verification check</font></font>
+<p><font face="Courier"><font size=-2>ORA-01110: data file 1: '/db/Oracle/a/oradata/crash/system01.dbf'</font></font>
+<p><font face="Courier"><font size=-2>ORA-01200: actual file size of 1279
+is smaller than correct size of 40960 blocks</font></font></dir>
+<font face="TIMES"><font size=-1>These are just a few examples of the types
+of errors that Oracle may give if a data file is corrupted.</font></font></dir>
+<font face="TIMES"><font size=-1>Missing member of any online log group</font></font>
+<dir><font face="TIMES"><font size=-1>If the redo logs are mirrored, one
+or more of the mirrored copies are lost, but at least one good copy of
+each online redo log remains, Oracle will open the database without any
+errors displayed to the terminal. The only error will be a message like
+the following one in the alert log:</font></font>
+<dir><font face="Courier"><font size=-2>Errors in file /db/Oracle/admin/crash/bdump/crash_lgwr_10302.trc:</font></font>
+<p><font face="Courier"><font size=-2>ORA-00313: open failed for members
+of log group 2 of thread 1</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>All members of any online log group are
+corrupted</font></font>
+<dir><font face="TIMES"><font size=-1>However, if all members of any online
+log group are corrupted, Oracle <i>will </i>complain and the database will
+not open. The error might look something like this:</font></font>
+<dir><font face="Courier"><font size=-2>ORA-00327: log 2 of thread 1, physical
+size less than needed</font></font>
+<p><font face="Courier"><font size=-2>ORA-00312: online log 2 thread 1:
+'/db/Oracle/b/oradata/crash/redocrash02.log'</font></font>
+<p><font face="Courier"><font size=-2>ORA-00312: online log 2 thread 1:
+'/db/Oracle/a/oradata/crash/redocrash03.log'</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>Missing all members of any online log
+group</font></font>
+<dir><font face="TIMES"><font size=-1>A similar problem is if all members
+of an online log group are missing. Oracle will complain and the database
+will not open. The error looks something like this:</font></font>
+<dir><font face="Courier"><font size=-2>ORA-00313: open failed for members
+of log group 2 of thread 1</font></font>
+<p><font face="Courier"><font size=-2>ORA-00312: online log 2 thread 1:
+'/db/Oracle/b/oradata/crash/redocrash02.log'</font></font>
+<p><font face="Courier"><font size=-2>ORA-00312: online log 2 thread 1:
+'/db/Oracle/a/oradata/crash/redocrash03.log'</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>Damaged rollback segment</font></font>
+<dir><font face="TIMES"><font size=-1>If a rollback segment is damaged,
+the error will be like the following one:</font></font>
+<dir><font face="Courier"><font size=-2>ORA-01545: rollback segment 'USERS_RS'
+specified not available</font></font>
+<p><font face="Courier"><font size=-2>Cannot open database if all rollback
+segments are not available.</font></font></dir>
+</dir>
+<b><font face="TIMES"><font size=-1>Damaged datafile</font></font></b>
+<p><b>A damaged data file is actually very easy to recover from. This is
+a good thing, because this will occur more often than any other problem.
+Remember that there is only one copy of each data file, unlike online redo
+logs and control files that can be mirrored. So, statistically speaking,
+it's easier to lose one data file than to lose all mirrored copies of a
+log group or all mirrored copies of the control file.</b>
+<p><b>Oracle also has the ability to recover parts of the database while
+other parts of the database are brought online. Unfortunately, this helps
+only if a partially functioning database is of any use to the users in
+your environment. Therefore, a database that is completely worthless unless
+all tables are available will not benefit from the partial online restore
+feature. However, if the users can use one part of the database while the
+damaged files are being recovered, this feature may help to save face by
+allowing at least partial functionality during an outage.</b>
+<p><b>There are three types of data files as far as recovery is concerned:</b>
+<ul>
+<li>
+<b>The first is a data file that is not a part of the </b><font size=-1><font face="Courier">SYSTEM</font><font face="TIMES">
+tablespace and does not contain any rollback segments. Recovering this
+file (with the database online or offline) is very easy.</font></font></li>
+
+<li>
+<font face="TIMES"><font size=-1>The second type of data file is also a
+non-system data file, but one that happens to contain a rollback segment.
+Since rollback segments are needed to open the database, recovering such
+a file with the database online is difficult.</font></font></li>
+
+<li>
+<font size=-1><font face="TIMES">The final type of data file is a file
+contained within the </font><font face="Courier">SYSTEM</font><font face="TIMES">
+tablespace. This data file cannot be recovered with the database online,
+because the database cannot be brought online without it.</font></font></li>
+</ul>
+<b><font face="TIMES"><font size=-1>Damaged log group</font></font></b>
+<p><font face="TIMES"><font size=-1>If all members of a log group are damaged,
+there is a great potential for data loss. The entire database may have
+to be restored, depending on the status of the log group that was damaged,
+and the results of some attempts at fixing it. This may seem like a broken
+record, but this is why mirroring the log groups is so important.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>If the error refers to a damaged
+log group, one option is to proceed directly to Step 17. However, to verify
+that nothing else is wrong, read the following notes and proceed to the
+next step.</font></font></dir>
+</dir>
+<b><font face="TIMES"><font size=-1>Damaged rollback segment</font></font></b>
+<p><font face="TIMES"><font size=-1>Since Oracle has to open the data files
+that contain this rollback segment before it can verify that the rollback
+segment is available, this error will not occur unless a data file has
+been taken offline. If Oracle encounters a damaged data file (whether or
+not it contains a rollback segment), it will complain about that data file
+and abort the attempt to open the database.</font></font>
+<p><font face="TIMES"><font size=-1>Remember that a <i>rollback segment
+</i>is
+a special part of a tablespace that stores <i>rollback </i>information.
+Rollback information is needed in order to undo (or rollback) an uncommitted
+transaction. Since a crashed database will almost always contain uncommitted
+transactions, recovering a database with a damaged rollback segment is
+a little tricky. As previously mentioned, a damaged data file may be taken
+offline, but Oracle will not open the database without the rollback segment.</font></font>
+<p><font face="TIMES"><font size=-1>The strategy for dealing with this
+is to make Oracle believe that the rollback segment doesn't exist. That
+will allow the database to be brought online. However, there will be transactions
+that need to be rolled back that require this rollback segment. Since Oracle
+believes this rollback segment is no longer available, these rollbacks
+cannot occur. This means that the database may be online, but portions
+of it will not be available.</font></font>
+<p><font size=-1><font face="TIMES">For example, suppose that we created
+a table called </font><font face="Courier">data1</font><font face="TIMES">
+inside tablespace </font><font face="Courier">USERS</font><font face="TIMES">.
+Tablespace </font><font face="Courier">USERS</font><font face="TIMES">
+contains the data file <i>/db/oracle/a/oradata/crash/users01.dbf</i>. Unfortunately,
+the database crashed before this transaction was committed, and the data
+file that contains the rollback segment for this transaction was destroyed.
+In the process of recovering this database, we took that data file offline,
+convinced Oracle that the rollback segment it contained was not needed,
+and opened the database. If we run the command <i>select * from data1</i>,
+we will receive the error shown in Figure F:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>select * from data1;</b></font></font>
+<p><font face="Courier"><font size=-2>C1</font></font>
+<p><font face="Courier"><font size=-2>------------</font></font>
+<p><font face="Courier"><font size=-2>ORA-00376: file 7 cannot be read
+at this time</font></font>
+<p><font face="Courier"><font size=-2>ORA-01110: datafile 7: '/db/oracle/a/oradata/crash/users01.dbf'</font></font>
+<dir>
+<center><i><font face="TIMES"><font size=-1>Figure F: Sample data file
+error</font></font></i></center>
+</dir>
+</dir>
+<i>This is because Oracle does not know if the uncommitted transactions
+in /db/oracle/a/oradata/crash/users01.dbf have been rolled back or not.
+In order to make this database fully functional, the damaged data file
+must be recovered and the rollback segment brought online.</i>
+<p><i>Be aware, therefore, that if you bring a database online without
+all of its rollback segments, the database may be online -- but it probably
+will not be fully functional.</i>
+<dir>
+<dir><i>If the error indicates that there is a damaged rollback segment,
+proceed to Step 18.</i></dir>
+</dir>
+<b><i>Before going any farther…</i></b>
+<p><i>Remember that Oracle will stop attempting to open the database as
+soon as it encounters an error with one file. This means, of course, that
+there could be other files that are damaged. If there is at least one damaged
+data file, now is a good time to check and see if there are other files
+that are damaged.</i>
+<dir>
+<dir><i>Detailed instructions on how to do that are provided in Step 5.</i></dir>
+</dir>
+<i>Once you know the names of all the damaged files, proceed to the next
+section.</i>
+<p><b><i>How media recovery works</i></b>
+<p><i>If any data files are restored from backup, the svrmgr recover command
+will be needed. This command uses the archived and online redo logs to
+"redo" any transactions that have occurred since the time that the backup
+of a data file was taken. You can recover a complete database, a tablespace,
+or a data file by issuing the commands recover database, recover tablespace
+tablespace_name and recover data file data file_name, respectively. These
+commands are issued inside a svrmgr shell. For example:</i>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>startup mount</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>recover datafile '/db/Oracle/a/oradata/crash/datafile01.dbf'</b></font></font></dir>
+<font face="TIMES"><font size=-1>These commands allow the restore of an
+older version of a data file, and use redo to roll it forward to the point
+of failure. For example, if we took a backup of a data file on Wednesday
+night, and that data file was damaged on Thursday evening, we would restore
+that data file from Wednesday night's backup. Of course many transactions
+would have occurred since Wednesday night, making changes to the data files
+that we restored. Running the command <i>recover </i>[<i>database</i>|<i>tablespace</i>|<i>data
+file</i>]<i> </i>would reapply those transactions to the restored data
+file, rolling them forward to Thursday evening.</font></font>
+<p><font face="TIMES"><font size=-1>This recovery can work in a number
+of ways. After receiving the <i>recover</i> command, Oracle prompts for
+the name and location of the first archived redo log that it needs. If
+that log, and all logs that have been made sinse that log, are online,
+uncompressed, and in their original location, enter the word <i>AUTO</i>.
+This tells Oracle to assume that all files that it needs are online. It
+can therefore automatically roll through each log that it needs.</font></font>
+<p><font face="TIMES"><font size=-1>In order to do this, all files that
+Oracle will need must be online. First, get the name of the oldest file,
+since that it is the first file it will need. That file name is displayed
+immediately after issuing the <i>recover </i>command:</font></font>
+<dir><font face="Courier"><font size=-2>ORA-00279: change 18499 generated
+at 02/21/98 11:49:56 needed for thread 1</font></font>
+<p><font face="Courier"><font size=-2>ORA-00289: suggestion : /db/Oracle/admin/crash/arch/arch.log1_481.dbf</font></font>
+<p><font face="Courier"><font size=-2>ORA-00280: change 18499 for thread
+1 is in sequence #481</font></font>
+<p><font face="Courier"><font size=-2>Specify log: {&lt;RET>=suggested
+| filename | AUTO | CANCEL}</font></font></dir>
+<font size=-1><font face="TIMES">In the example above, the first file that
+Oracle needs is <i>/db/Oracle/admin/crash/arch/arch.log1_481.dbf</i>. Make
+sure that this file is online and not compressed or deleted. If it is deleted,
+restore it from backup. If it is compressed, uncompress it and any archived
+redo log files in that directory that are newer than it. That is because
+Oracle may need all of them to complete the media recovery. It might be
+necessary to delete some of the older archived redo logs to make enough
+room for the files that need to be uncompressed. Once all archived redo
+logs that are newer than the one requested by Oracle have been restored
+and uncompressed, enter <i>AUTO</i> at the "</font><font face="Courier">Specify
+log</font><font face="TIMES">" prompt.</font></font>
+<p><font face="TIMES"><font size=-1>If there isn't enough space for all
+of the archived redo logs to be uncompressed, a little creativity may be
+required. Uncompress as many as possible, and then hit enter each time
+it suggests the next file. (Hitting enter tells Oracle that the file that
+it is suggesting is available. If it finds that it is <i>not</i> available,
+it prompts for the same file again.) Once it has finished with one archive
+log, compress that log, and uncompress a newer log, since it will be needed
+it shortly. (Obviously, a second window is required, and a third window
+wouldn't hurt!)</font></font>
+<p><font size=-1><font face="TIMES">At some point, it may ask for an archived
+redo log that is not available. This could mean some of the archived redo
+logs or online redo logs are damaged. If the file cannot be located or
+restored, enter </font><font face="Courier">CANCEL</font><font face="TIMES">.</font></font>
+<p><font face="TIMES"><font size=-1>More detail on media recovery is available
+in Oracle's documentation.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>If the database did not open, proceed
+to Step 11 after reading the preceding notes. If it did open, proceed to
+Step 15.</font></font></dir>
+</dir>
+<a NAME="Step11"></a><b><font face="TIMES"><font size=+1>Step 11: Damaged
+System File?</font></font></b>
+<p><font size=-1><font face="TIMES">If the damaged file is part of the
+</font><font face="Courier">SYSTEM</font><font face="TIMES">
+tablespace, an offline recovery is required. All other missing data files
+can be recovered with the database online. Unfortunately, Oracle only complains
+that the data file is missing -- without saying what <i>kind </i>of data
+file it is. Fortunately, even if Oracle is down, there is an easy way to
+determine which files belong to the </font><font face="Courier">SYSTEM
+</font><font face="TIMES">tablespace.
+(Finding out if the data file contains a rollback segment is a little more
+difficult, but it is still possible.) To find out which data files are
+in the </font><font face="Courier">SYSTEM</font><font face="TIMES"> tablespace,
+run the following command on the mounted, closed database:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > select name from v$datafile
+where status = 'SYSTEM' ;</font></font>
+<p><font face="Courier"><font size=-2>NAME</font></font>
+<p><font face="Courier"><font size=-2>--------------------------------------------------------------------------------</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/system01.dbf</font></font>
+<p><font face="Courier"><font size=-2>1 row selected.</font></font></dir>
+<font size=-1><font face="TIMES">This example report shows that the only
+file that is a member of the </font><font face="Courier">SYSTEM</font><font face="TIMES">
+tablespace is <i>/db/Oracle/a/oradata/crash/system01.dbf</i>. In your configuration,
+however, there may be multiple data files in the </font><font face="Courier">SYSTEM
+</font><font face="TIMES">tablespace.</font></font>
+<dir>
+<dir><font size=-1><font face="TIMES">If any of the damaged data files
+is a member of the </font><font face="Courier">SYSTEM </font><font face="TIMES">tablespace,
+proceed to Step 12. If none of them is a member of the </font><font face="Courier">SYSTEM
+</font><font face="TIMES">tablespace,
+then proceed to Step 13.</font></font></dir>
+</dir>
+<a NAME="Step12"></a><b><font face="TIMES"><font size=+1>Step 12: Restore
+All Data Files in the SYSTEM Tablespace</font></font></b>
+<p><font face="TIMES"><font size=-1>Unlike other tablespaces, the SYSTEM
+tablespace must be available in order to open the database. Therefore,
+if any members of the system tablespace are damaged, they must be restored
+now. Before doing this, make sure that the database is not open. (It is
+okay if it is mounted.) To make sure, run the following command on the
+mounted, closed database:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>select status from v$instance;</b></font></font>
+<p><font face="Courier"><font size=-2>STATUS</font></font>
+<p><font face="Courier"><font size=-2>-------</font></font>
+<p><font face="Courier"><font size=-2>MOUNTED</font></font>
+<p><font face="Courier"><font size=-2>1 row selected.</font></font></dir>
+<font face="TIMES"><font size=-1>(The example above shows that this instance
+is mounted, not open.)</font></font>
+<p><font face="TIMES"><font size=-1>If the database is not open, restore
+the damaged files from the most recent backup available. Once all damaged
+files in the system tablespace are restored, run the following command
+on the mounted, closed database:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<p><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>recover tablespace system;</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > media recovery complete</font></font></dir>
+<font face="TIMES"><font size=-1>Once this command has completed, the system
+tablespace will be recovered to the time of failure.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>If it does complete successfully,
+and no other data files are damaged, return to Step 10. For more information
+about the <i>recover tablespace</i> command, read the earlier section "How
+Media Recovery works" at the end of Step 10. If there are other data files
+to recover, proceed to Step 13.</font></font></dir>
+</dir>
+<a NAME="Step13"></a><b><font face="TIMES"><font size=+1>Step 13: Damaged
+Non-System Data File?</font></font></b>
+<p><font size=-1><font face="TIMES">So far, we have mounted the database,
+which proves that the control files are okay. It may have taken some effort
+if one or more of the control files were damaged, but it succeeded. We
+have also verified that the </font><font face="Courier">SYSTEM</font><font face="TIMES">
+tablespace is intact, even if it required a restore and recovery. Most
+of the rest of this procedure concentrates on disabling damaged parts of
+the database so that it may be brought online as soon as possible. The
+process of elimination will identify all damaged data files once the database
+is opened successfully. They can then be easily restored.</font></font>
+<dir>
+<dir><font size=-1><font face="TIMES">If there are damaged data files that
+are not part of the </font><font face="Courier">SYSTEM </font><font face="TIMES">tablespace,
+proceed to Step 14. If there are no more damaged data files, then proceed
+to Step 17.</font></font></dir>
+</dir>
+<a NAME="Step14"></a><b><font face="TIMES"><font size=+1>Step 14: Take
+Damaged Data File Offline</font></font></b>
+<p><font face="TIMES"><font size=-1>To open a database with a damaged,
+non-system data file, take the data file offline. (If the file that is
+taken offline is part of a tablespace that contains rollback segments,
+there will be one other step, but we'll cross that bridge when we come
+to it.)</font></font>
+<p><font size=-1><font face="TIMES">If this instance is operating in </font><font face="Courier">ARCHIVELOG</font><font face="TIMES">
+mode, just take the data file offline. It can later be restored and recovered
+after the instance has been brought online. The command to do this is:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>alter database datafile
+'filename' offline;</b></font></font></dir>
+<font size=-1><font face="TIMES">If the instance is operating in </font><font face="Courier">NOARCHIVELOG</font><font face="TIMES">
+mode, that's a different problem. Oracle does not allow the data file to
+be taken offline, because it knows it can't be brought back online without
+media recovery. Without </font><font face="Courier">ARCHIVELOG</font><font face="TIMES">
+mode, there is no media recovery. The only thing Oracle does allow is to
+drop the data file entirely. This means, of course, that the tablespace
+that contains this file will have to be rebuilt from scratch. This is but
+one of the many reasons why a production instance should not be operating
+in no archive log mode. The command to do this is:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>alter database datafile
+'filename' offline drop;</b></font></font>
+<dir><font face="TIMES"><font size=-1>Once any damaged files are taken
+offline, return to Step 10 and attempt to open the database again.</font></font></dir>
+</dir>
+<a NAME="Step15"></a><b><font face="TIMES"><font size=+1>Step 15: Were
+Any Data Files Taken Offline?</font></font></b>
+<br>&nbsp;
+<br>&nbsp;
+<dir>
+<dir><font face="TIMES"><font size=-1>Perform this step only if the database
+has been opened.</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>This step is really a very simple question!</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>If the database was opened without
+taking any data files offline, proceed to Step 29. If some data files were
+taken offline to open the database, proceed to Step 16. If unsure, proceed
+to Step 16.</font></font></dir>
+</dir>
+<a NAME="Step16"></a><b><font face="TIMES"><font size=+1>Step 16: Bring
+Data File(s) Back Online</font></font></b>
+<p><font face="TIMES"><font size=-1>First find out which data files were
+taken offline. To do this, run the following command:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>select name from v$datafile
+where status = 'OFFLINE' ;</b></font></font>
+<p><font face="Courier"><font size=-2>NAME</font></font>
+<p><font face="Courier"><font size=-2>------------------</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/temp01.dbf</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/tools01.dbf</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/users01.dbf</font></font></dir>
+<b><font face="TIMES"><font size=-1>Restore the damaged datafiles</font></font></b>
+<p><b>Once the names of the data files that need to be restored are determined,
+restore them from the latest available backup. Once they are restored,
+recovery within Oracle can be accomplished in three different ways. These
+ways vary greatly in complexity and flexibility. Examine the following
+three media recovery methods and choose whichever one is best for you.</b>
+<p><b>Datafile recovery</b>
+<p><b>If there is a small number of data files to recover, this may be
+the easiest option. As each file is restored, issue the <i>recover data
+file </i>command against it and then bring it online:</b>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>recover datafile '<i>datafile_name'</i>
+;</b></font></font>
+<p><font face="Courier"><font size=-2>Statement processed.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>alter database datafile
+'<i>datafile_name</i>' online ;</b></font></font>
+<br><font face="Courier"><font size=-2>Statement processed.</font></font></dir>
+<font face="TIMES"><font size=-1>The downside to this method is that media
+recovery may take a while for each data file. If recovering multiple data
+files within a single tablespace, this is probably wasting time.</font></font>
+<p><b><font face="TIMES"><font size=-1>Tablespace recovery</font></font></b>
+<p><font face="TIMES"><font size=-1>This method is the hardest of all methods,
+but it may work faster than the previous method if there are several damaged
+data files within a tablespace. If forced to leave the partially functional
+database open while recovering the damaged data files, and there are several
+of them to recover, this is probably the best option.</font></font>
+<p><font face="TIMES"><font size=-1>First find out the names of all data
+files, and the tablespace to which they belong. Since the database is now
+open, this can be done in one step, demonstrated in Figure G:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>select file_name, tablespace_name
+from dba_data_files;</b></font></font>
+<br><font face="Courier"><font size=-2>Statement processed.</font></font>
+<p><font face="Courier"><font size=-2>FILE_NAME</font></font>
+<p><font face="Courier"><font size=-2>TABLESPACE_NAME</font></font>
+<p><font face="Courier"><font size=-2>--------------------------------------------------------------------------------</font></font>
+<p><font face="Courier"><font size=-2>------------------------------</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/users01.dbf</font></font>
+<p><font face="Courier"><font size=-2>USERS</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/tools01.dbf</font></font>
+<p><font face="Courier"><font size=-2>TOOLS</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/temp01.dbf</font></font>
+<p><font face="Courier"><font size=-2>TEMP</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/rbs01.dbf</font></font>
+<p><font face="Courier"><font size=-2>RBS</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/system01.dbf</font></font>
+<p><font face="Courier"><font size=-2>SYSTEM</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/test01.dbf</font></font>
+<p><font face="Courier"><font size=-2>TEST</font></font>
+<dir>
+<center><i><font face="TIMES"><font size=-1>Figure G: Listing of dba_data_files</font></font></i></center>
+</dir>
+</dir>
+<i>The only problem with this output is that it's not very easy to read,
+and could be impossible to read if there are hundreds of data files. One
+way to make it easier to read is to modify the command, as shown in Figure
+H:</i>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl &lt;&lt;EOF |sed 's/
+*/ /' |sort >/tmp/files.txt</b></font></font>
+<p><b><font face="Courier"><font size=-2>connect internal;</font></font></b>
+<p><b><font face="Courier"><font size=-2>select file_name, tablespace_name
+from dba_data_files;</font></font></b>
+<p><b><font face="Courier"><font size=-2>quit;</font></font></b>
+<p><b><font face="Courier"><font size=-2>EOF</font></font></b>
+<p><font face="Courier"><font size=-2>$ <b>grep '^/' /tmp/files.txt</b></font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/rbs01.dbf
+RBS</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/system01.dbf
+SYSTEM</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/temp01.dbf
+TEMP</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/test01.dbf
+TEST</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/tools01.dbf
+TOOLS</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/users01.dbf
+USERS</font></font>
+<dir>
+<center><i><font face="TIMES"><font size=-1>Figure H: Readable listing
+of data files</font></font></i></center>
+</dir>
+</dir>
+<i>This way, the files are sorted in alphanumeric order, making it easy
+to find the necessary file(s).</i>
+<p><i>Once all of the data files are restored, and the names of all the
+tablespaces that contain these data files have been determined, issue the
+recover tablespace command against each of those tablespaces. Before doing
+so, however, each of those tablespaces must be taken offline, as shown
+in Figure I.</i>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>alter tablespace <i>tablespace_name1
+</i>offline;</b></font></font>
+<p><font face="Courier"><font size=-2>Statement processed.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>recover tablespace <i>tablespace_name1
+</i>;</b></font></font>
+<p><font face="Courier"><font size=-2>ORA-00279: change 18499 generated
+at 02/21/98 11:49:56 needed for thread 1</font></font>
+<p><font face="Courier"><font size=-2>ORA-00289: suggestion : /db/Oracle/admin/crash/arch/arch.log1_481.dbf</font></font>
+<p><font face="Courier"><font size=-2>ORA-00280: change 18499 for thread
+1 is in sequence #481</font></font>
+<p><font face="Courier"><font size=-2>Specify log: {&lt;RET>=suggested
+| filename | AUTO | CANCEL}</font></font>
+<p><font face="Courier"><font size=-2>Auto</font></font>
+<p><font face="Courier"><font size=-2>Log applied</font></font>
+<p><font face="Courier"><font size=-2>Media Recovery Complete</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>alter tablespace <i>tablespace_name1
+</i>online;</b></font></font>
+<p><font face="Courier"><font size=-2>Statement processed.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>alter tablespace <i>tablespace_name2
+</i>offline;</b></font></font>
+<p><font face="Courier"><font size=-2>Statement processed.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>recover tablespace <i>tablespace_name2
+</i>;</b></font></font>
+<p><font face="Courier"><font size=-2>ORA-00279: change 18499 generated
+at 02/21/98 11:49:56 needed for thread 1</font></font>
+<p><font face="Courier"><font size=-2>ORA-00289: suggestion : /db/Oracle/admin/crash/arch/arch.log1_481.dbf</font></font>
+<p><font face="Courier"><font size=-2>ORA-00280: change 18499 for thread
+1 is in sequence #481</font></font>
+<p><font face="Courier"><font size=-2>Specify log: {&lt;RET>=suggested
+| filename | AUTO | CANCEL}</font></font>
+<p><font face="Courier"><font size=-2>Auto</font></font>
+<p><font face="Courier"><font size=-2>Log applied</font></font>
+<p><font face="Courier"><font size=-2>Media Recovery Complete</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>alter tablespace <i>tablespace_name2
+</i>online;</b></font></font>
+<p><font face="Courier"><font size=-2>Statement processed.</font></font>
+<dir>
+<center><i><font face="TIMES"><font size=-1>Figure I: Tablespace-based
+recovery</font></font></i></center>
+</dir>
+</dir>
+<i>It's obvious that this method is quite involved! It's not pretty, it's
+not easy, but it allows recovery of multiple tablespaces while the instance
+continues to operate. If a partially functioning database is of any value
+to the users, this method may be their best friend.</i>
+<p><b><i>Database recovery</i></b>
+<p><i>This method is actually the easiest method, but it requires that
+the database be shut down to perform it. After restoring all the database
+files that were taken offline, close the database and issue the recover
+database command.</i>
+<p><i>Once all the database files are restored, issued commands shown in
+Figure J.</i>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>alter database close
+;</b></font></font>
+<p><font face="Courier"><font size=-2>Statement processed.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>recover database ;</b></font></font>
+<p><font face="Courier"><font size=-2>ORA-00279: change 18499 generated
+at 02/21/98 11:49:56 needed for thread 1</font></font>
+<p><font face="Courier"><font size=-2>ORA-00289: suggestion : /db/Oracle/admin/crash/arch/arch.log1_481.dbf</font></font>
+<p><font face="Courier"><font size=-2>ORA-00280: change 18499 for thread
+1 is in sequence #481</font></font>
+<p><font face="Courier"><font size=-2>Specify log: {&lt;RET>=suggested
+| filename | AUTO | CANCEL}</font></font>
+<p><b><font face="Courier"><font size=-2>Auto</font></font></b>
+<p><font face="Courier"><font size=-2>Log applied</font></font>
+<p><font face="Courier"><font size=-2>Media Recovery Complete</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>alter database open</b></font></font>
+<p><font face="Courier"><font size=-2>Statement processed.</font></font>
+<dir>
+<center><i><font face="TIMES"><font size=-1>Figure J: Normal database recovery</font></font></i></center>
+</dir>
+</dir>
+<i>To make sure that all tablespaces and data files have been returned
+to their proper status, run the commands shown in Figure K.</i>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>select name, status from
+v$datafile</b></font></font>
+<p><font face="Courier"><font size=-2>NAME</font></font>
+<p><font face="Courier"><font size=-2>STATUS</font></font>
+<p><font face="Courier"><font size=-2>--------------------------------------------------------------------------------</font></font>
+<p><font face="Courier"><font size=-2>-------</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/system01.dbf</font></font>
+<p><font face="Courier"><font size=-2>SYSTEM</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/rbs01.dbf</font></font>
+<p><font face="Courier"><font size=-2>ONLINE</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/temp01.dbf</font></font>
+<p><font face="Courier"><font size=-2>ONLINE</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/tools01.dbf</font></font>
+<p><font face="Courier"><font size=-2>ONLINE</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/users01.dbf</font></font>
+<p><font face="Courier"><font size=-2>ONLINE</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/test01.dbf</font></font>
+<p><font face="Courier"><font size=-2>ONLINE</font></font>
+<p><font face="Courier"><font size=-2>6 rows selected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>select member, status
+from v$logfile</b></font></font>
+<p><font face="Courier"><font size=-2>NAME</font></font>
+<p><font face="Courier"><font size=-2>STATUS</font></font>
+<p><font face="Courier"><font size=-2>--------------------------------------------------------------------------------</font></font>
+<p><font face="Courier"><font size=-2>-------</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/system01.dbf</font></font>
+<p><font face="Courier"><font size=-2>SYSTEM</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/rbs01.dbf</font></font>
+<p><font face="Courier"><font size=-2>ONLINE</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/temp01.dbf</font></font>
+<p><font face="Courier"><font size=-2>ONLINE</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/tools01.dbf</font></font>
+<p><font face="Courier"><font size=-2>ONLINE</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/users01.dbf</font></font>
+<p><font face="Courier"><font size=-2>ONLINE</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/test01.dbf</font></font>
+<p><font face="Courier"><font size=-2>ONLINE</font></font>
+<p><font face="Courier"><font size=-2>6 rows selected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR> select * from v$controlfile;</font></font>
+<p><font face="Courier"><font size=-2>STATUS NAME</font></font>
+<p><font face="Courier"><font size=-2>------- ------------------------------------------------------------------------</font></font>
+<p><font face="Courier"><font size=-2>--------</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/a/oradata/crash/control01.ctl</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/b/oradata/crash/control02.ctl</font></font>
+<p><font face="Courier"><font size=-2>/db/oracle/c/oradata/crash/control03.ctl</font></font>
+<p><font face="Courier"><font size=-2>3 rows selected.</font></font>
+<dir>
+<center><i><font face="TIMES"><font size=-1>Figure K: Obtaining the names
+of all data files, control files, and log files</font></font></i></center>
+</dir>
+</dir>
+<i>The example above shows that all data files, control files, and log
+files are in good condition. (In the case of the log files and control
+files, no status is good status.)</i>
+<dir>
+<dir><i>Once any data files that were taken offline have been restored
+and recovered, proceed to Step 29.</i></dir>
+</dir>
+<a NAME="Step17"></a><b><font face="TIMES"><font size=+2>Step 17: Is There
+a Damaged Log Group?</font></font></b>
+<p><font face="TIMES"><font size=-1>When we refer to a damaged log group,
+we mean that all members of a log group are damaged. If at least one member
+of a mirrored log group is intact, Oracle opens the database and simply
+put an error message in the alert log. However, if all members of a log
+group are damaged, the database will not open, and the error will look
+something like this:</font></font>
+<dir><font face="Courier"><font size=-2>ORA-00313: open failed for members
+of log group 2 of thread 1</font></font>
+<p><font face="Courier"><font size=-2>ORA-00312: online log 2 thread 1:
+'/db/Oracle/b/oradata/crash/redocrash02.log'</font></font>
+<p><font face="Courier"><font size=-2>ORA-00312: online log 2 thread 1:
+'/db/Oracle/a/oradata/crash/redocrash03.log'</font></font>
+<dir><font face="TIMES"><font size=-1>If there is no error like this, there
+is no damaged log group. Proceed to Step 18.</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>The first thing that must be determined
+is the status of the damaged log group. The three possibilities are current,
+active, and inactive. To determine the status of the damaged log group,
+run the following command on the mounted, closed database:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>select group#, status
+from v$log;</b></font></font></dir>
+<font face="TIMES"><font size=-1>The output looks something like this:</font></font>
+<dir><font face="Courier"><font size=-2>GROUP# STATUS</font></font>
+<p><font face="Courier"><font size=-2>---------- ----------------</font></font>
+<p><font face="Courier"><font size=-2>1 INACTIVE</font></font>
+<p><font face="Courier"><font size=-2>2 CURRENT</font></font>
+<p><font face="Courier"><font size=-2>3 ACTIVE</font></font>
+<p><font face="Courier"><font size=-2>3 rows selected.</font></font></dir>
+<font face="TIMES"><font size=-1>The example above shows that log group
+1 is inactive, group 2 is current, and group 3 is active. What follows
+is an explanation of the different statuses, and how they affect the recovery.</font></font>
+<p><font face="TIMES"><font size=-1>Current</font></font>
+<dir><font face="TIMES"><font size=-1>The current log group is the one
+to which Oracle was writing when the failure occurred. It will still be
+listed as active until the server is brought online and a log switch occurs.</font></font></dir>
+<font face="TIMES"><font size=-1>Active</font></font>
+<dir><font face="TIMES"><font size=-1>An active log group is usually the
+log group that Oracle just finished writing to. However, until a checkpoint
+occurs, this group is still needed for media recovery. Since a log switch
+always forces in checkpoint, a status of active is actually very rare.
+In fact, the only way to see this (before the system crashed) is to run
+the above command while a checkpoint is in progress. (In a properly tuned
+database, this is a very short period of time.)</font></font></dir>
+<font face="TIMES"><font size=-1>Inactive</font></font>
+<dir><font face="TIMES"><font size=-1>An inactive log group is one that
+is not being used by Oracle in any way.</font></font></dir>
+<font size=-1><font face="TIMES">To determine what action to take next,
+first gave the number of the log group whose log files are damaged. In
+the example error above, it reads </font><font face="Courier">open failed
+for members of log group </font><font face="TIMES">2</font><font face="Courier">.</font><font face="TIMES">
+Reference this number against the log groups listed by the <i>select *
+from v$log</i> command. In the example above, log group 2 was current at
+the time the database crashed.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>If the damaged log group was current,
+proceed to Step 22. If it was active, proceed to Step 25. If it was inactive,
+proceed to Step 27.</font></font></dir>
+</dir>
+<a NAME="Step18"></a><b><font face="TIMES"><font size=+1>Step 18: Are Any
+Rollback Segments Unavailable?</font></font></b>
+<p><font face="TIMES"><font size=-1>If a rollback segment is damaged, Oracle
+will complain when attempting to open the database. The error looks like
+the following:</font></font>
+<dir><font face="Courier"><font size=-2>ORA-01545: rollback segment 'USERS_RS'
+specified not available</font></font>
+<p><font face="Courier"><font size=-2>Cannot open database if all rollback
+segments are not available.</font></font>
+<dir><font face="TIMES"><font size=-1>If you haven't already read the note
+about damaged rollback segments in Step 10, do so now.</font></font>
+<p><font face="TIMES"><font size=-1>If the preceding error is displayed
+when attempting to open the database, proceed to Step 19. If not, return
+to Step 10.</font></font></dir>
+</dir>
+<a NAME="Step19"></a><b><font face="TIMES"><font size=+1>Step 19: Does
+the Database Need to be at Least Partially Up ASAP?</font></font></b>
+<p><font face="TIMES"><font size=-1>Because of the unique nature of damaged
+rollback segments, there are two choices for recovery. The first is to
+get the database open sooner, but that may leave it only partially functional
+for a longer period of time. The second choice takes a little longer to
+open the database, but once it is open it will not have data files that
+are needed for this rollback segment. Which is more important: getting
+even a partially functional database open as soon as possible, or not opening
+the database until all rollback segments are available? The latter is more
+prudent, but the former may be more appropriate to the environment.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>If the database needs to be partially
+open ASAP, proceed to Step 21. If it's more important to make sure all
+rollback segments are available prior to opening the database, proceed
+to Step 20.</font></font></dir>
+</dir>
+<a NAME="Step20"></a><b><font face="TIMES"><font size=+1>Step 20: Recover
+Tablespace Containing Unavailable Rollback Segment</font></font></b>
+<dir>
+<dir><font face="TIMES"><font size=-1>Perform this step only if directed
+to do so by Step 19.</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>The first thing that must be determined
+is which tablespace the damaged rollback segment is in. Unfortunately,
+there is no fixed view that contains this information. That means that
+it will have to be discovered through common sense and deduction. First,
+remember that this error is not displayed unless a data file has been taken
+offline. To get a complete list of files that were taken offline, run the
+following command on a mounted, closed database:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>select TS#, name from
+v$datafile where status = 'OFFLINE' ;</b></font></font>
+<p><font face="Courier"><font size=-2>NAME</font></font>
+<p><font face="Courier"><font size=-2>--------------------------------------------------------------------------------</font></font>
+<p><font face="Courier"><font size=-2>5 /db/oracle/a/oradata/crash/test01.dbf</font></font>
+<p><font face="Courier"><font size=-2>1 row selected.</font></font></dir>
+<font face="TIMES"><font size=-1>Then find out the name of the tablespace
+that contains this data file:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>select name from v$tablespace
+where TS# = '5' ;</b></font></font>
+<p><font face="Courier"><font size=-2>NAME</font></font>
+<p><font face="Courier"><font size=-2>--------------------------------------------------------------------------------</font></font>
+<p><font face="Courier"><font size=-2>TEST</font></font>
+<p><font face="Courier"><font size=-2>1 row selected.</font></font></dir>
+<b><font face="TIMES"><font size=-1>That was too easy!</font></font></b>
+<p><b>Admittedly, the previous example was easy. There was only one data
+file that was offline, which made finding its tablespace pretty easy. What
+if there were multiple data files that were contained within multiple tablespaces?
+How do we know which one contains the rollback segment? Unfortunately,
+there is no way to be sure while the database is closed. That is why it
+is very helpful to put the rollback segments in dedicated tablespaces that
+have names that easily identify them as such. It's even more helpful if
+the data files are named something helpful as well. For example, create
+a separate tablespace called </b><font size=-1><font face="Courier">ROLLBACK_DATA</font><font face="TIMES">,
+and call its data files <i>rollback01.dbf</i>, <i>rollback02.dbf</i>, etc.
+That way, anyone that finds himself in this scenario will know exactly
+which data files contain rollback data.</font></font>
+<p><font face="TIMES"><font size=-1>The rest of this step is simple. Restore
+any files that were taken offline, and use either the <i>recover data file</i>
+or <i>recover tablespace</i> commands to roll them forward in time. If
+there are only one or two damaged data files, it's probably quicker to
+use the <i>recover data file</i> command. If there are several damaged
+data files, especially if they are all in one tablespace, the <i>recover
+tablespace</i> command is probably easiest. Either way will work.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>Once any data files that contain
+rollback segments have been restored and recovered, return to Step 10 and
+attempt to open the database again.</font></font></dir>
+</dir>
+<a NAME="Step21"></a><b><font face="TIMES"><font size=+1>Step 21: Comment
+Out Rollback Segment Line(s) in the init.ora File</font></font></b>
+<dir>
+<dir><font face="TIMES"><font size=-1>Perform this step only if directed
+to do so by Step 19.</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>There is a quicker way to open the database
+with damaged rollback segments. In order for Oracle to know what rollback
+segments to look for, the following line is inserted into the <i>initORACLE_SID.ora</i>
+file:</font></font>
+<dir><font face="Courier"><font size=-2>rollback_segments = (r01,r02,r03,r04,users_rs)</font></font></dir>
+<font size=-1><font face="TIMES">(The <i>initORACLE_SID.ora</i> file is
+usually found in <i>$ORACLE_HOME/dbs</i>.) Since the example error above
+says that it is the </font><font face="Courier">USERS_RS</font><font face="TIMES">
+rollback segment that is unavailable, simply delete that part of the line.
+It is wise, of course, to comment out and copy the original line. First,
+shut down Oracle completely (this includes un-mounting it as well). Then
+copy and comment the rollback segment line in the <i>initORACLE_SID.ora</i>
+file:</font></font>
+<dir><font face="Courier"><font size=-2>#rollback_segments = (r01,r02,r03,r04,users_rs)</font></font>
+<p><font face="Courier"><font size=-2>rollback_segments = (r01,r02,r03,r04)</font></font>
+<dir><font face="TIMES"><font size=-1>Once this change has been made in
+the <i>initORACLE_SID.ora</i> file, return to Step 1 to mount the database.</font></font></dir>
+</dir>
+<a NAME="Step22"></a><b><font face="TIMES"><font size=+1>Step 22: Is the
+Current Online Log Damaged?</font></font></b>
+<dir>
+<dir><font face="TIMES"><font size=-1>Performing this step only if instructed
+to do so by Step 17. If not, return to Step 17 now.</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>If the current online log group is damaged,
+there would be a message like the following when attempting to open the
+database:</font></font>
+<dir><font face="Courier"><font size=-2>ORA-00313: open failed for members
+of log group 2 of thread 1</font></font>
+<p><font face="Courier"><font size=-2>ORA-00312: online log 2 thread 1:
+'/db/Oracle/b/oradata/crash/redocrash02.log'</font></font>
+<p><font face="Courier"><font size=-2>ORA-00312: online log 2 thread 1:
+'/db/Oracle/a/oradata/crash/redocrash03.log'</font></font></dir>
+<font size=-1><font face="TIMES">In the example above, a <i>select group#,
+status from v$log</i> command would have also showed that log group 2 was
+</font><font face="Courier">CURRENT</font><font face="TIMES">
+at the time of failure.</font></font>
+<p><font face="TIMES"><font size=-1>This is the worst kind of failure to
+have because there will definitely be data loss. That is because the current
+online log is required to restart even a fully functioning database. The
+current control file knows about the current online log and will attempt
+to use it. The only way around that is to restore an older version of the
+control file. Unfortunately, you can't restore only the control file because
+the data files would then be more recent than the control file. The only
+remaining option is to restore the entire database.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>For the procedure to restore the
+entire database, proceed to Step 23.</font></font></dir>
+</dir>
+<a NAME="Step23"></a><b><font face="TIMES"><font size=+1>Step 23: Recover
+All Database Files from Backup</font></font></b>
+<dir>
+<dir><font face="TIMES"><font size=-1>Warning! There are only two reasons
+to perform this step. The first is if instructed to do so by Step 22. The
+other is if there was an unsuccessfull attempt to open the database after
+performing either Steps 26 or 28. This step is the most drastic method
+of recovery, and should not be performed unless absolutely necessary.</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>Perform this step only after verifying
+(or rebuilding or restoring) the control files, and verifying that all
+members of the current online log group are damaged. This step is relatively
+easy. Simply determine the names and locations of all of the data files
+and restore them from their latest backup.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>Warning! Restore only the data files,
+not the control files. Do not restore or overwrite the control files unless
+instructed to do so by Step 9!</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>To determine the names of all the data
+files, run the following command on the mounted, closed database:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>select name from v$datafile
+;</b></font></font>
+<dir><font face="TIMES"><font size=-1>Once all data files are restored,
+proceed to Step 24.</font></font></dir>
+</dir>
+<a NAME="Step24"></a><b><font face="TIMES"><font size=+1>Step 24: Alter
+Database Open reset logs</font></font></b>
+<dir>
+<dir><font face="TIMES"><font size=-1>Warning! Perform this step only if
+instructed to do so by Step 23. This is another drastic step that should
+only be performed if necessary!</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>This command causes Oracle to open the
+database after clearing all contents of the online redo log files. Since
+there is no way to undo this step, it is a good idea to make copies of
+the online redo log files now. To find out all their names, run the following
+command on a mounted, closed database:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>select member from v$logfile
+;</b></font></font></dir>
+<font face="TIMES"><font size=-1>To create an "undo" option, copy each
+of these files to <i>filename.bak</i>.</font></font>
+<p><font face="TIMES"><font size=-1>After making a backup of the online
+redo log files, run the following command on a mounted, closed database:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>alter database open resetlogs
+;</b></font></font>
+<br><font face="Courier"><font size=-2>Statement processed.</font></font></dir>
+<font face="TIMES"><font size=-1>If the database opens, congratulations!</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>Make a backup of this database <i>immediately</i>,
+preferably with the database shut down. That is because Oracle cannot roll
+through this point in time using the redo logs. Oracle <i>must</i> have
+a full backup taken after using the <i>open resetlogs</i> command in order
+to restore this database using any logs that are made after the <i>open
+resetlogs</i> was performed.</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>Once that backup is completed, you're
+done!</font></font>
+<p><a NAME="Step25"></a><b><font face="TIMES"><font size=+1>Step 25: Is
+an Active Online Redo Log Damaged?</font></font></b>
+<dir>
+<dir><font face="TIMES"><font size=-1>Perform this step only if instructed
+to do so by Step 17. If not, return to Step 17 now.</font></font></dir>
+</dir>
+<font size=-1><font face="TIMES">If an </font><font face="Courier">ACTIVE</font><font face="TIMES">
+online log group is damaged, there will be a message like the following
+when attempting to open the database:</font></font>
+<dir><font face="Courier"><font size=-2>ORA-00313: open failed for members
+of log group 2 of thread 1</font></font>
+<p><font face="Courier"><font size=-2>ORA-00312: online log 2 thread 1:
+'/db/Oracle/b/oradata/crash/redocrash02.log'</font></font>
+<p><font face="Courier"><font size=-2>ORA-00312: online log 2 thread 1:
+'/db/Oracle/a/oradata/crash/redocrash03.log'</font></font></dir>
+<font size=-1><font face="TIMES">In the example above, a <i>select group#,
+status from v$log</i> command would have also shown that log group 2 was
+</font><font face="Courier">ACTIVE</font><font face="TIMES">
+at the time of failure.</font></font>
+<p><font size=-1><font face="TIMES">Remember that an </font><font face="Courier">ACTIVE</font><font face="TIMES">
+log is one that is still needed for recovery. The reason that it is still
+needed is because a checkpoint has not flushed all changes from shared
+memory to disk. Once that happens, this log will no longer be needed.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>To perform a checkpoint, proceed
+to Step 26.</font></font></dir>
+</dir>
+<a NAME="Step26"></a><b><font face="TIMES"><font size=+1>Step 26: Perform
+a Checkpoint</font></font></b>
+<p><font face="TIMES"><font size=-1>The way to attempt to recover from
+the scenario in Step 25 is to perform a checkpoint. If it is successful,
+the database should open successfully. To perform a checkpoint, issue the
+following command on the mounted, closed database:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>alter system checkpoint
+local ;</b></font></font>
+<br><font face="Courier"><font size=-2>Statement processed.</font></font></dir>
+<font size=-1><font face="TIMES">Be patient. The reason that there is an
+</font><font face="Courier">ACTIVE</font><font face="TIMES">
+log group is that the checkpoint took a long time in the first place. Wait
+for Oracle to say that the checkpoint succeeded or failed. If it succeeded,
+Oracle will simply say, "</font><font face="Courier">Statement processed.</font><font face="TIMES">"
+If it fails, there could be any number of Oracle errors.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>After issuing the checkpoint, even
+if it was unsuccessful, return to Step 10 and attempt to open the database.
+If this attempt fails, return to Step 23 and recover the entire database.</font></font></dir>
+</dir>
+<a NAME="Step27"></a><b><font face="TIMES"><font size=+1>Step 27: Is an
+Inactive Online Redo Log Damaged?</font></font></b>
+<dir>
+<dir><font face="TIMES"><font size=-1>Perform this step only if instructed
+to do so by Step 17. If not, return to Step 17 now.</font></font></dir>
+</dir>
+<font size=-1><font face="TIMES">If an </font><font face="Courier">INACTIVE</font><font face="TIMES">
+online log group is damaged, there would be a message like the following
+when attempting to open the database:</font></font>
+<dir><font face="Courier"><font size=-2>ORA-00313: open failed for members
+of log group 2 of thread 1</font></font>
+<p><font face="Courier"><font size=-2>ORA-00312: online log 2 thread 1:
+'/db/Oracle/b/oradata/crash/redocrash02.log'</font></font>
+<p><font face="Courier"><font size=-2>ORA-00312: online log 2 thread 1:
+'/db/Oracle/a/oradata/crash/redocrash03.log'</font></font></dir>
+<font size=-1><font face="TIMES">In the example above, a <i>select group#,
+status from v$log</i> command would have also shown that log group 2 was
+</font><font face="Courier">INACTIVE</font><font face="TIMES">
+at the time of failure.</font></font>
+<p><font size=-1><font face="TIMES">In comparison, this one should be a
+breeze. An </font><font face="Courier">INACTIVE</font><font face="TIMES">
+log is not needed by Oracle. If it is not needed, simply drop it and add
+another in its place.</font></font>
+<dir>
+<dir><font size=-1><font face="TIMES">To drop and add an </font><font face="Courier">INACTIVE</font><font face="TIMES">
+log group, proceed to Step 28.</font></font></dir>
+</dir>
+<a NAME="Step28"></a><b><font face="TIMES"><font size=+1>Step 28: Drop/Add
+a Damaged, INACTIVE Log Group</font></font></b>
+<dir>
+<dir><font face="TIMES"><font size=-1>Perform this step only if instructed
+to do so by Step 27.</font></font></dir>
+</dir>
+<font face="TIMES"><font size=-1>In all the above examples, the damaged
+log group was group 2. Before we drop that group, we should make sure that
+we can add it back easily. Ensure that all the original redo log locations
+are still valid. To do this, get the names of all of the members of that
+log group:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > select member from v$logfile
+where GROUP# = '2 ;</font></font></dir>
+<font face="TIMES"><font size=-1>For this example, Oracle returned the
+values:</font></font>
+<dir><font face="Courier"><font size=-2>/logs1redolog01.dbf</font></font>
+<p><font face="Courier"><font size=-2>/logs2redolog01.dbf</font></font>
+<p><font face="Courier"><font size=-2>/logs3redolog01.dbf</font></font></dir>
+<font face="TIMES"><font size=-1>Verify that all these files' locations
+are still valid. For this example, assume <i>/logs3 </i>is completely destroyed,
+and we are relocating all its contents to <i>/logs4</i>. Therefore, the
+future members of log group 2 will be <i>/logs1redolog01.dbf</i>, <i>/logs2redolog01.db</i>,
+and <i>/logs4redolog01.dbf</i>.</font></font>
+<p><font face="TIMES"><font size=-1>To drop log group 2, issue the following
+command on a mounted, closed database:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > alter database drop logfile
+group 2<b> ;</b></font></font>
+<br><font face="Courier"><font size=-2>Statement processed.</font></font></dir>
+<font face="TIMES"><font size=-1>Once that command completes successfully,
+add the log group back to the database. To do this, issue the following
+command (Remember that we have replaced <i>/logs3redolog01.dbf </i>with
+<i>/logs4redolog01.dbf</i>.):</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<br><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > alter database add logfile
+group 2 ('<b><i>/logs1redolog01.dbf'</i>, '<i>/logs2redolog01.dbf</i>',
+'<i>/logs4redolog01.dbf'</i>) size 500K ;</b></font></font>
+<br><font face="Courier"><font size=-2>Statement processed.</font></font>
+<dir><font face="TIMES"><font size=-1>Once this command completes successfully,
+return to Step 10 and attempt to open the database.</font></font></dir>
+</dir>
+<a NAME="Step29"></a><b><font face="TIMES"><font size=+1>Step 29: Were
+Any Rollback Segment Lines Changed in init.ora?</font></font></b>
+<p><font face="TIMES"><font size=-1>There was an option in Step 19 to comment
+out rollback segments from the <i>initORACLE_SID.ora</i> file. If that
+option was taken, there should be a line in that file that looks like the
+following:</font></font>
+<dir><font face="Courier"><font size=-2>#rollback_segments = (r01,r02,r03,r04,users_rs)</font></font>
+<p><font face="Courier"><font size=-2>rollback_segments = (r01,r02,r03,r04)</font></font>
+<dir><font face="TIMES"><font size=-1>If any rollback segments were taken
+offline, proceed to Step 30. If there were not, back up the database now.
+You're done!</font></font></dir>
+</dir>
+<a NAME="Step30"></a><b><font face="TIMES"><font size=+1>Step 30: Return
+Offline Rollback Segments to Normal Condition.</font></font></b>
+<br>&nbsp;
+<br>&nbsp;
+<p><font face="TIMES"><font size=-1>To check which rollback segments are
+offline, run the following command:</font></font>
+<dir><font face="Courier"><font size=-2>SVRMGR> <b>select segment_name
+from dba_rollback_segs where status = 'OFFLINE' ;</b></font></font>
+<p><font face="Courier"><font size=-2>SEGMENT_NAME</font></font>
+<p><font face="Courier"><font size=-2>------------------------------</font></font>
+<p><font face="Courier"><font size=-2>USERS_RS</font></font>
+<p><font face="Courier"><font size=-2>1 rows selected.</font></font></dir>
+<font face="TIMES"><font size=-1>Since all data files and redo log files
+should be recovered by now, just return the offline rollback segments to
+an online status:</font></font>
+<dir><font face="Courier"><font size=-2>$ <b>svrmgrl</b></font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>connect internal;</b></font></font>
+<p><font face="Courier"><font size=-2>Connected.</font></font>
+<p><font face="Courier"><font size=-2>SVRMGR > <b>alter rollback segment
+<i>users_rs
+</i>online
+;</b></font></font>
+<p><font face="Courier"><font size=-2>Statement processed.</font></font>
+<br>&nbsp;
+<br>&nbsp;</dir>
+<font face="TIMES"><font size=-1>Once this has been completed, make sure
+that any commented lines in the <i>initORACLE_SID.ora</i> file are put
+back to their original condition. The example in Step 29 used the suggested
+method of commenting out the original line, and changing a copy of it.
+Return the line in <i>initORACLE_SID.ora</i> to its original condition:</font></font>
+<dir><font face="Courier"><font size=-2>rollback_segments = (r01,r02,r03,r04,users_rs)</font></font></dir>
+<font size=-1><font face="TIMES">This step ensures that the next time this
+database is opened, the </font><font face="Courier">USERS_RS</font><font face="TIMES">
+rollback segment will be used.</font></font>
+<p><a NAME="Step31"></a><b><font face="TIMES"><font size=+1>You're done!</font></font></b>
+<dir><font face="TIMES"><font size=-1>If you've made it this far, you're
+done! All data files, control files, and log files should be online. Take
+a backup of the entire database immediately, preferably a cold one with
+the database down. If that can't be done, then perform a hot backup.</font></font></dir>
+
+</body>
+</html>
