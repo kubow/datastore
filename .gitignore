@@ -127,3 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Ignore custom settings and cherrytree backups
+*.ctb~*
+/.obsidian/*
+/.vscode/*
