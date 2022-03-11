@@ -1,0 +1,68 @@
+
+Safe Harbour release
+SP/PL
+
+- Compiled Procs
+- Latchfree B-tree
+- Lockless Buffer Manager
+- Transactional Memory
+- Non-Volatile Cache Management (SSD)
+
+2x-5x
+1,000,000 tranactions per minute 80 cores
+Replication to HANA - proxy tables - pushdown 3x-99x - fuunctional compensation - hana udf
+Hana Cloud Platform
+SAP ASE 15.7/16 SP02
+HCP allocates storage/memory/cpu
+- monitoring/alerting
+- load balancingscaling
+- backup/reovery
+- configuration
+- jdbc
+
+Amazon ASE as RDS
+UZ Leuven - Memscale
+superdome 384 cores 117,000 SD users 16 sockets,24 cores
+
+Future 
+OLTP Performance - MVCC
+Operations - HADR Cross database transactions, data masking, data lineage, full text auditing
+Virt/Cloud - DBAAS HANA Cloud/AWS BYOL/Docker support
+ASE/HANA - Reporting apps on HANA with no codes changes
+
+SP03 2017
+In-memory rowstore
+MVCC/Data Row Caching 
+- table then per part
+- hash based indexes
+- encrypt/ha/rep
+- Monitoring - Advisory Wizards
+- MVCC Snapshoting Read Commited/Serializable
+
+SP03
+- in-memory row cache
+- hash-based index
+- compression code path improvements
+
+Workload Analyser
+- Clock Reset
+
+PL05 December HADR+External Replication Support
+
+Evaluation Editions ASE/SRS, no Developer Edition
+- 1 year validity
+
+15.7 support until 2020
+16.x support until 2025
+
+safe harbour release
+inovation release
+
+idea place for requirements
+
+HANA Vora
+- in memory computation
+
+syb_blocking_pool
+- DNS/CIS
+- seperate compute from storage

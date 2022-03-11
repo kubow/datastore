@@ -1,0 +1,206 @@
+﻿<Flowchart mc:Ignorable="sap sap2010 sads" DisplayName="kontrolaICO" sap2010:WorkflowViewState.IdRef="Flowchart_1" StartNode="{x:Reference __ReferenceID4}"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:c="clr-namespace:CxFrameworkWPF;assembly=CxFrameworkWPF"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_2">
+    <c:SnippetActivity ActivityType="SnippetActivity" CtxtId="130e55f5-b2ba-4bcf-94bd-1c0c2d3a1e1d" DisplayName="Start 'hledatZR'" sap2010:WorkflowViewState.IdRef="SnippetActivity_1">
+      <c:SnippetActivity.CustomData>
+        <x:String x:Key="SnippetId">page_start</x:String>
+        <x:String x:Key="Description">Starts a page of an application.</x:String>
+        <x:String x:Key="PageId">7e32ba35-5f89-4e54-a342-3b57f0b89f53</x:String>
+      </c:SnippetActivity.CustomData>
+    </c:SnippetActivity>
+    <FlowStep.Next>
+      <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_4">
+        <c:PageActivity ActivityType="PageActivity" CtxtId="39c1f9d7-f728-4afc-b6ce-d326e3e16328" DisplayName="hledatZR management" sap2010:WorkflowViewState.IdRef="PageActivity_2">
+          <c:PageActivity.CustomData>
+            <x:String x:Key="PageId">7e32ba35-5f89-4e54-a342-3b57f0b89f53</x:String>
+          </c:PageActivity.CustomData>
+          <Sequence>
+            <c:SnippetActivity ActivityType="wait" CtxtId="6886d7a4-7548-4e14-9f57-4474190fb3b0" DisplayName="Wait until 'oIco (1)' exists">
+              <c:SnippetActivity.CustomData>
+                <x:String x:Key="SnippetId">item_wait_exist</x:String>
+                <x:String x:Key="ItemId">bdcfc2a1-9e32-4962-849c-e8ba6f341ade</x:String>
+                <x:String x:Key="timeout">10000</x:String>
+              </c:SnippetActivity.CustomData>
+            </c:SnippetActivity>
+            <c:SnippetActivity ActivityType="SnippetActivity" CtxtId="8b0579d4-e220-49a5-817d-392af1641632" DisplayName="Click on 'oIco (1)'">
+              <c:SnippetActivity.CustomData>
+                <x:String x:Key="SnippetId">item_click</x:String>
+                <x:String x:Key="ItemId">bdcfc2a1-9e32-4962-849c-e8ba6f341ade</x:String>
+              </c:SnippetActivity.CustomData>
+            </c:SnippetActivity>
+            <c:SnippetActivity ActivityType="SnippetActivity" CtxtId="f5479e5b-dcdd-4b44-b958-5aef8cddea8b" DisplayName="Set kontrolaZRData.hledatZRData.oIco in 'oIco (1)'">
+              <c:SnippetActivity.CustomData>
+                <x:String x:Key="SnippetId">item_set_2</x:String>
+                <x:String x:Key="ItemId">bdcfc2a1-9e32-4962-849c-e8ba6f341ade</x:String>
+                <x:String x:Key="expression">&lt;EXP&gt;&lt;![CDATA[$data$]]&gt;&lt;/EXP&gt;&lt;data&gt;bdcfc2a1-9e32-4962-849c-e8ba6f341ade&lt;/data&gt;</x:String>
+                <x:String x:Key="ifExist">false</x:String>
+              </c:SnippetActivity.CustomData>
+            </c:SnippetActivity>
+            <c:SnippetActivity ActivityType="wait_end" CtxtId="af5d2568-1cdb-41ba-a1f2-800f7d214f52" DisplayName="Wait (end)">
+              <c:SnippetActivity.CustomData>
+                <x:String x:Key="SnippetId">wait_end</x:String>
+              </c:SnippetActivity.CustomData>
+            </c:SnippetActivity>
+            <c:SnippetActivity ActivityType="SnippetActivity" CtxtId="6098cf77-5405-4eb4-bc60-54c84ccff391" DisplayName="Click on 'oHledat (2)'">
+              <c:SnippetActivity.CustomData>
+                <x:String x:Key="SnippetId">item_click</x:String>
+                <x:String x:Key="ItemId">b43ad6f3-60aa-469f-923c-4d6a7cd7f1e4</x:String>
+              </c:SnippetActivity.CustomData>
+            </c:SnippetActivity>
+          </Sequence>
+        </c:PageActivity>
+        <FlowStep.Next>
+          <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_5">
+            <c:PageActivity ActivityType="PageActivity" CtxtId="71b03a47-ac0b-4a43-b1ba-c6ee816f0694" DisplayName="nalezenoFormular management" sap2010:WorkflowViewState.IdRef="PageActivity_3">
+              <c:PageActivity.CustomData>
+                <x:String x:Key="PageId">b5c322ea-3004-4ba1-968d-86100e71589b</x:String>
+              </c:PageActivity.CustomData>
+              <Sequence>
+                <c:SnippetActivity ActivityType="SnippetActivity" CtxtId="10cde00a-0a07-4bc6-8914-5c4b873183a0" DisplayName="Write log">
+                  <c:SnippetActivity.CustomData>
+                    <x:String x:Key="SnippetId">log_2</x:String>
+                    <x:String x:Key="Description">Add a message to the log file and in the debug window along with a severity level.</x:String>
+                    <x:String x:Key="level">Info</x:String>
+                    <x:String x:Key="DisplayName">Write log</x:String>
+                    <x:String x:Key="message">&lt;EXP&gt;&lt;![CDATA['loguje to?:']]&gt;&lt;/EXP&gt;</x:String>
+                  </c:SnippetActivity.CustomData>
+                </c:SnippetActivity>
+              </Sequence>
+            </c:PageActivity>
+            <FlowStep.Next>
+              <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_6">
+                <c:SnippetActivity ActivityType="SnippetActivity" CtxtId="09993b46-18b4-4947-b453-f6a4263cdcde" DisplayName="Write log" sap2010:WorkflowViewState.IdRef="SnippetActivity_3">
+                  <c:SnippetActivity.CustomData>
+                    <x:String x:Key="SnippetId">log_2</x:String>
+                    <x:String x:Key="Description">Add a message to the log file and in the debug window along with a severity level.</x:String>
+                    <x:String x:Key="level">Info</x:String>
+                    <x:String x:Key="message">&lt;EXP&gt;&lt;![CDATA['co se tu deje?:' + rootData.kontrolaZR.nalezenoFormular.oAggInfo]]&gt;&lt;/EXP&gt;</x:String>
+                  </c:SnippetActivity.CustomData>
+                </c:SnippetActivity>
+              </FlowStep>
+            </FlowStep.Next>
+          </FlowStep>
+        </FlowStep.Next>
+      </FlowStep>
+    </FlowStep.Next>
+  </FlowStep>
+  <x:Reference>__ReferenceID0</x:Reference>
+  <x:Reference>__ReferenceID1</x:Reference>
+  <x:Reference>__ReferenceID2</x:Reference>
+  <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_7">
+    <c:SnippetActivity ActivityType="SnippetActivity" CtxtId="43419acf-9de5-49ec-a1fb-5ce9de2f12f8" DisplayName="Write log" sap2010:WorkflowViewState.IdRef="SnippetActivity_4">
+      <c:SnippetActivity.CustomData>
+        <x:String x:Key="SnippetId">log_2</x:String>
+        <x:String x:Key="Description">Add a message to the log file and in the debug window along with a severity level.</x:String>
+        <x:String x:Key="level">Info</x:String>
+        <x:String x:Key="message">&lt;EXP&gt;&lt;![CDATA[rootData.kontrolaZRData.hledatZRData.oIco]]&gt;&lt;/EXP&gt;</x:String>
+      </c:SnippetActivity.CustomData>
+    </c:SnippetActivity>
+    <FlowStep.Next>
+      <x:Reference>__ReferenceID3</x:Reference>
+    </FlowStep.Next>
+  </FlowStep>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="SnippetActivity_1" sap:VirtualizedContainerService.HintSize="154,26.6666666666667">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="PageActivity_2" sap:VirtualizedContainerService.HintSize="150,200.666666666667">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="PageActivity_3" sap:VirtualizedContainerService.HintSize="150,200.666666666667">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="SnippetActivity_3" sap:VirtualizedContainerService.HintSize="154,26.6666666666667">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_6">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">405,356.666666666667</av:Point>
+            <av:Size x:Key="ShapeSize">154,26.6666666666667</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_5">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">205,269.666666666667</av:Point>
+            <av:Size x:Key="ShapeSize">150,200.666666666667</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">355,370 405,370</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_4">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">5,269.666666666667</av:Point>
+            <av:Size x:Key="ShapeSize">150,200.666666666667</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">155,370 205,370</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">223,203.833333333333</av:Point>
+            <av:Size x:Key="ShapeSize">154,26.6666666666667</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,230.5 300,260.5 80,260.5 80,269.666666666667</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="SnippetActivity_4" sap:VirtualizedContainerService.HintSize="154,26.6666666666667">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_7">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">223,117</av:Point>
+            <av:Size x:Key="ShapeSize">154,26.6666666666667</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,143.666666666667 300,203.833333333333</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Flowchart_1" sap:VirtualizedContainerService.HintSize="614,654">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+            <av:Size x:Key="ShapeSize">60,74.6666666666667</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.1666666666667 300,117</av:PointCollection>
+            <x:Double x:Key="Height">617.76666666666665</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+  <sads:DebugSymbol.Symbol>d2hDOlxVc2Vyc1xqLnZhamRhXERvY3VtZW50c1xTQVBcSW50ZWxsaWdlbnQgUlBBXERlc2t0b3AgU3R1ZGlvXEN6ZWNoIFVzYWdlXHdvcmtmbG93c1xrb250cm9sYWljb3Rlc3QueGFtbAYBAc4BDQEBYwVqGQEGDAUSGQEFFQk7GgEEPg1NHgEDUBFXJQEC</sads:DebugSymbol.Symbol>
+</Flowchart>

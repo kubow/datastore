@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ConteXtorStudio Version="Desktop Studio 1.0.5.57" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="XsdStudio.xsd">
+	<Properties>
+		<Property Name="validity" />
+		<Property Name="cyphering">0</Property>
+		<Property Name="compression">1</Property>
+	</Properties>
+	<UpdatePackages />
+	<Evolutions>
+		<Evolution Version="1.0" Date="8/25/2020"><![CDATA[Project creation]]></Evolution>
+		<Evolution Version="..." Date="..."><![CDATA[...]]></Evolution>
+	</Evolutions>
+	<PROCESSUS>
+		<PROCESS Name="GLOBAL" Key="NoKey" Comment="Global Processus" CtxtId="d264cb4b-0c74-4647-8064-4fdb029bb732">
+			<_DECLAREVAR>
+				<STRUCTUREDON Name="GLOBAL">
+					<OBJDON Name="PrjVersion">1.0</OBJDON>
+					<OBJDON Name="PrjClient"><![CDATA[SCZ-J-VAJDA1]]></OBJDON>
+					<OBJDON Name="PrjName">Czech Usage</OBJDON>
+					<OBJDON Name="PrjDate">25/08/2020</OBJDON>
+					<OBJDON Name="PrjLabel"><![CDATA[Use cases for Czech companies]]></OBJDON>
+					<OBJDON Name="PrjComment"><![CDATA[Ares check
+Exekuceinfo
+]]></OBJDON>
+					<OBJDON Name="LicenceURL" />
+					<STRUCTUREDON Name="Xc_MessBoxHtml">
+						<OBJDON Name="Style">style="font-size:12pt;font-family:'Arial'"</OBJDON>
+						<OBJDON Name="ErrColor">white</OBJDON>
+						<OBJDON Name="InfoColor">white</OBJDON>
+						<OBJDON Name="ChoiceColor">white</OBJDON>
+						<OBJDON Name="WarningColor">white</OBJDON>
+						<OBJDON Name="ErrIcon">Critical.gif</OBJDON>
+						<OBJDON Name="InfoIcon">Info.gif</OBJDON>
+						<OBJDON Name="ChoiceIcon">Pencil.gif</OBJDON>
+						<OBJDON Name="WarningIcon">Warning.gif</OBJDON>
+						<OBJDON Name="StyleButton">style="font-size:12px;font-family:'Arial';width:80px"</OBJDON>
+						<OBJDON Name="StyleText">style="font-size=11pt;font-family='Arial'"</OBJDON>
+						<OBJDON Name="IconSize">32</OBJDON>
+					</STRUCTUREDON>
+				</STRUCTUREDON>
+			</_DECLAREVAR>
+			<SCRIPTS>
+				<!-- framework files -->
+				<SCRIPT Name="Constants" Src="%sdk%\lib\common\ctx.enum.js" Folder="Framework" />
+				<SCRIPT Name="Ctx Core" Src="%sdk%\lib\ctx\ctx.core.js" Folder="Framework" />
+				<SCRIPT Name="Ctx XML" Src="%sdk%\lib\ctx\ctx.xml.js" Folder="Framework" />
+				<SCRIPT Name="Ctx Scenario" Src="%sdk%\lib\ctx\ctx.scenario.js" Folder="Framework" />
+				<SCRIPT Name="Ctx Request" Src="%sdk%\lib\ctx\ctx.request.js" Folder="Framework" />
+				<SCRIPT Name="Ctx Language" Src="%sdk%\lib\ctx\ctx.language.js" Folder="Framework" />
+				<SCRIPT Name="Ctx Item" Src="%sdk%\lib\ctx\ctx.item.js" Folder="Framework" />
+				<SCRIPT Name="Ctx Page" Src="%sdk%\lib\ctx\ctx.page.js" Folder="Framework" />
+				<SCRIPT Name="Ctx Application" Src="%sdk%\lib\ctx\ctx.application.js" Folder="Framework" />
+				<SCRIPT Name="Ctx Systray" Src="%sdk%\lib\ctx\ctx.systray.js" Folder="Framework" />
+				<SCRIPT Name="Ctx Popup" Src="%sdk%\lib\ctx\ctx.popup.js" Folder="Framework" />
+				<SCRIPT Name="Ctx Popup Bootstrap" Src="%sdk%\lib\ctx\ctx.popup.bootbox.js" Folder="Framework" />
+				<!-- framework extensions -->
+				<SCRIPT Name="FSO library" Src="%sdk%\lib\utils\fso.js" Folder="Framework" />
+				<SCRIPT Name="String" Comment="String Utilities" Folder="Framework" Src="%sdk%\lib\utils\string.js" />
+				<SCRIPT Name="WMI library" Src="%sdk%\lib\utils\wmi.js" Folder="Framework" />
+				<SCRIPT Name="WScript library" Src="%sdk%\lib\utils\wscript.js" Folder="Framework" />
+				<SCRIPT Name="Ctx Diagnostic" Src="%sdk%\lib\ctx\ctx.diagnostic.js" Folder="Framework" />
+				<SCRIPT Name="Ctx Galaxy" Src="%sdk%\lib\galaxy\galaxy.m2m.js" Folder="Framework" />
+				<SCRIPT Name="Excel" Comment="Excel Integration" Folder="Framework" Src="%sdk%\lib\office\excel.js" />
+				<SCRIPT Name="Outlook" Comment="Outlook Integration" Folder="Framework" Src="%sdk%\lib\office\outlook.js" />
+				<SCRIPT Name="SAP UI5" Src="%sdk%\lib\sapui5\sapui5.js" Folder="Framework" />
+				<SCRIPT Name="Entities" Src="entities.js" IsWorkflowGenerated="Y" />
+				<!-- generated definition file -->
+				<SCRIPT Name="Declarations" Src="Czech Usage.resources.js" ReadOnly="Y" />
+				<!-- project files -->
+				<SCRIPT Name="Labels" Src="labels.js" />
+				<SCRIPT Name="Global" Src="global.js" />
+				<SCRIPT Name="mesicniUzaverka" Src="mesicniuzaverka.js" IsWorkflowGenerated="Y" />
+				<SCRIPT Name="kontrolaicotest" Src="kontrolaicotest.js" IsWorkflowGenerated="Y" />
+				<SCRIPT Name="objednavkaZbozi" Src="objednavkazbozi.js" IsWorkflowGenerated="Y" />
+				<SCRIPT Name="hledatProdukt" Src="hledatProdukt\settings.js" Perspective="UiDesigner" />
+			</SCRIPTS>
+			<RESOURCES>
+				<!-- html resources -->
+				<RESOURCE Name="popup" Src="%sdk%\templates\resources\popup\" Dest="popup" />
+				<!-- bitmaps -->
+				<RESOURCE Name="agent16px" Src="%sdk%\templates\resources\bmp\agent.png" Dest="bmp" />
+				<RESOURCE Name="accept16px" Src="%sdk%\templates\resources\bmp\accept.png" Dest="bmp" />
+				<RESOURCE Name="cancel16px" Src="%sdk%\templates\resources\bmp\cancel.png" Dest="bmp" />
+				<RESOURCE Name="help16px" Src="%sdk%\templates\resources\bmp\help.png" Dest="bmp" />
+				<RESOURCE Name="information16px" Src="%sdk%\templates\resources\bmp\information.png" Dest="bmp" />
+				<RESOURCE Name="repeat16px" Src="%sdk%\templates\resources\bmp\repeat.png" Dest="bmp" />
+				<RESOURCE Name="stop16px" Src="%sdk%\templates\resources\bmp\stop.png" Dest="bmp" />
+				<RESOURCE Name="warning16px" Src="%sdk%\templates\resources\bmp\warning.png" Dest="bmp" />
+				<RESOURCE Name="record16px" Src="%sdk%\templates\resources\bmp\record.png" Dest="bmp" />
+				<RESOURCE Name="agent32px" Src="%sdk%\templates\resources\bmp32\agent.png" Dest="bmp32" />
+				<RESOURCE Name="accept32px" Src="%sdk%\templates\resources\bmp32\accept.png" Dest="bmp32" />
+				<RESOURCE Name="cancel32px" Src="%sdk%\templates\resources\bmp32\cancel.png" Dest="bmp32" />
+				<RESOURCE Name="help32px" Src="%sdk%\templates\resources\bmp32\help.png" Dest="bmp32" />
+				<RESOURCE Name="information32px" Src="%sdk%\templates\resources\bmp32\information.png" Dest="bmp32" />
+				<RESOURCE Name="user32px" Src="%sdk%\templates\resources\bmp32\user.png" Dest="bmp32" />
+				<RESOURCE Name="warning32px" Src="%sdk%\templates\resources\bmp32\warning.png" Dest="bmp32" />
+				<RESOURCE Name="agent64px" Src="%sdk%\templates\resources\bmp64\agent.png" Dest="bmp64" />
+				<RESOURCE Name="hello64px" Src="%sdk%\templates\resources\bmp64\hello.png" Dest="bmp64" />
+				<RESOURCE Name="hello128px" Src="%sdk%\templates\resources\bmp64\hello128.png" Dest="bmp64" />
+				<RESOURCE Name="gif" Src="%sdk%\templates\resources\gif\" Dest="gif" />
+			</RESOURCES>
+			<_ECRANS />
+			<WORKFLOWS>
+				<WORKFLOW Name="mesicniUzaverka" Src="%workflows%\mesicniuzaverka.xaml" CtxtId="549d0abd-bc54-4411-927c-412ee7b1f175" DisplayName="mesicniUzaverka" StepTimeout="30" ScenarioTimeout="600" GeneratedScenarioName="mesicniUzaverka" />
+				<WORKFLOW Name="kontrolaICOtest" Src="%workflows%\kontrolaicotest.xaml" CtxtId="a5929c38-fd2a-45c3-8bed-5beaddc42ed6" DisplayName="kontrolaICO" StepTimeout="30" ScenarioTimeout="600" GeneratedScenarioName="kontrolaICO" />
+				<WORKFLOW Name="objednavkaZbozi" Src="%workflows%\objednavkaZbozi.xaml" CtxtId="7b01a9e1-6092-4e1b-8e99-e6a717166762" DisplayName="objednavkaZbozi" StepTimeout="30" ScenarioTimeout="600" GeneratedScenarioName="objednavkaZbozi" />
+			</WORKFLOWS>
+			<ACTIONS />
+			<EVENTS />
+			<SCENARII>
+				<Steps />
+			</SCENARII>
+		</PROCESS>
+		<PROCESS Name="POPUPS" CtxtId="0ce1de06-0d50-4d24-806a-eaaf5e2c0be7" Nature="POPUP">
+			<_DECLAREVAR>
+				<STRUCTUREDON Name="POPUPS" />
+			</_DECLAREVAR>
+			<_ECRANS>
+				<PAGE Name="hledatProdukt" CtxtId="62b84799-893f-4863-94a2-6bce32447117" Template="popup.pscm" Type="POPUP" Comment="file://C:\Users\j.vajda\Documents\SAP\Intelligent RPA\Desktop Studio\Czech Usage\bin\hledatProdukt\popup.html?DesignMode=true TestMode=true">
+					<OBJETS>
+						<OBJET Name="text1" CtxtId="3dc94565-7423-41d3-a9a7-d14fedd17bfd" SpecIndex="1" ImagePath="fa/terminal.png" OrderBy="1">
+							<CRITERE>
+								<TAG Name="INPUT" Scope="All">
+									<ATT Name="id">
+										<VALUE Scan="Full"><![CDATA[text1]]></VALUE>
+									</ATT>
+								</TAG>
+							</CRITERE>
+						</OBJET>
+						<OBJET Name="button1" CtxtId="9e43a9dc-4b10-4f3b-981f-7cd0ea430dc0" ImagePath="fa/hand-o-up.png" OrderBy="2" SpecIndex="3">
+							<CRITERE>
+								<TAG Name="BUTTON" Scope="All">
+									<ATT Name="id">
+										<VALUE Scan="Full"><![CDATA[button1]]></VALUE>
+									</ATT>
+								</TAG>
+							</CRITERE>
+							<TRACK_EVENTS>
+								<TRACK_EVENT Name="CLICK" />
+							</TRACK_EVENTS>
+						</OBJET>
+					</OBJETS>
+					<CAPTURE Name="PAGE_FileCUsersJVaj_1901358_1" Comment="file://C:\Users\j.vajda\Documents\SAP\Intelligent RPA\Desktop Studio\Czech Usage\bin\hledatProdukt\popup.html?DesignMode=true TestMode=true" CtxtId="22" Techno="WEB" Timestamp="01/09/2020 19:01:36" />
+				</PAGE>
+			</_ECRANS>
+			<SCRIPTS />
+			<ACTIONS />
+			<EVENTS />
+			<SCENARII>
+				<Steps />
+			</SCENARII>
+		</PROCESS>
+	</PROCESSUS>
+	<APPLICATIONS>
+		<include href="app/MicrosoftEdge.pscp" xpointer="xpointer(//APPLI)" />
+		<include href="app/ARESEkonomickesub.pscp" xpointer="xpointer(//APPLI)" />
+		<include href="app/IExplorer.pscp" xpointer="xpointer(//APPLI)" />
+		<include href="app/ZpravaOutlook.pscp" xpointer="xpointer(//APPLI)" />
+		<include href="app/kontrolaRejstrik.pscp" xpointer="xpointer(//APPLI)" />
+		<include href="app/kontrolaZivnostenskyR.pscp" xpointer="xpointer(//APPLI)" />
+		<include href="app/CZC.pscp" xpointer="xpointer(//APPLI)" />
+		<include href="app/AlzaCz.pscp" xpointer="xpointer(//APPLI)" />
+		<include href="app/NahlenDoKN.pscp" xpointer="xpointer(//APPLI)" />
+		<include href="app/KurzyMnKurzovnLs.pscp" xpointer="xpointer(//APPLI)" />
+		<include href="app/KurzyMnKurzovnLs1.pscp" xpointer="xpointer(//APPLI)" />
+		<include href="app/Settings.pscp" xpointer="xpointer(//APPLI)" />
+		<include href="app/CaptureApplication.pscp" xpointer="xpointer(//APPLI)" />
+	</APPLICATIONS>
+	<CONTEXT Id="6ded0ab9-31db-4342-a200-5eb70b88d432" />
+</ConteXtorStudio>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<agent-plugin id="com.sybase.ase" version="16.0.0" name="ASE Agent Plugin" class="com.sybase.ua.plugins.ase.ASEAgentPlugin" provider-name="SAP AG or an SAP affiliate company" register-on-startup="true" mbean-type="Model MBean" mbean-descriptor="mbean-descriptor.xml" instance="1">
+  <dependencies />
+  <properties>
+    <set-property property="ase.heartbeat.timer" value="60" />
+    <set-property property="ase.heartbeat.update.time" value="2018-07-10 13:16:44 +0000" />
+    <set-property property="ase.home" value="/opt/sap_ase/ASE-16_0" />
+    <set-property property="ase.interfaces.pathspec" value="/opt/sap_ase/interfaces" />
+    <set-property property="ase.login.timeout" value="30" />
+    <set-property property="ase.maintain.connection" value="true" />
+    <set-property property="ase.password" value="1-AAAAEgQQwIThB4XCLO11T7mybCdhAgCiX03OGG89M7AuXuIiR0doo0ow6UqTL23ICzfv/txGU4puBsZ0xguSvte0wLi3zg==" />
+    <set-property property="ase.port" value="2025" />
+    <set-property property="ase.query.timeout" value="60" />
+    <set-property property="ase.server.log" value="/opt/sap_ase/ASE-16_0/install/SAPUBT_DS.log" />
+    <set-property property="ase.server.name" value="SAPUBT_DS" />
+    <set-property property="ase.start.command" value="/opt/sap_ase/ASE-16_0/install/RUN_SAPUBT_DS" />
+    <set-property property="ase.user" value="sa" />
+    <set-property property="com.sybase.home" value="/opt/sap_ase" />
+    <set-property property="rma.home" value="" />
+    <set-property property="rma.log.dir" value="" />
+    <set-property property="rma.password" value="" />
+    <set-property property="rma.port" value="" />
+    <set-property property="rma.start.command" value="" />
+    <set-property property="rma.user" value="DR_admin" />
+    <set-property property="rs.home" value="" />
+    <set-property property="rs.interfaces.pathspec" value="" />
+    <set-property property="rs.password" value="" />
+    <set-property property="rs.port" value="" />
+    <set-property property="rs.server.log" value="" />
+    <set-property property="rs.server.name" value="" />
+    <set-property property="rs.start.command" value="" />
+    <set-property property="rs.sybase.home" value="" />
+    <set-property property="rs.user" value="sa" />
+  </properties>
+</agent-plugin>

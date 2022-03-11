@@ -1,0 +1,59 @@
+﻿{"ts":"09:43:25.55","ctx":"Action","action":"ctx.log","params":["No excel found, create a new one",0],"verb":"LOGMESS","parentId":110}
+{"ts":"09:43:27.373","ctx":"Action","action":"ctx.log","params":["nalezeno celkem 19 zaznamu",0],"verb":"LOGMESS","parentId":112}
+{"ts":"09:43:27.436","ctx":"Action","action":"ctx.log","params":[0,0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:28.547","ctx":"Action","action":"ctx.log","params":[1,0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:28.553","ctx":"Action","action":"ctx.log","params":["zaznam cislo 1",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:28.564","ctx":"Action","action":"ctx.log","params":["zaznam obsahuje tyto hodnoty: 6,2,FO,Zakaznik XXX,,5000",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:28.692","ctx":"Action","action":"ctx.log","params":[2,0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:28.698","ctx":"Action","action":"ctx.log","params":["zaznam cislo 2",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:28.707","ctx":"Action","action":"ctx.log","params":["zaznam obsahuje tyto hodnoty: 6,1,FO,Zakaznik XXX,,10000",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:28.793","ctx":"Action","action":"ctx.log","params":[3,0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:28.799","ctx":"Action","action":"ctx.log","params":["zaznam cislo 3",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:28.808","ctx":"Action","action":"ctx.log","params":["zaznam obsahuje tyto hodnoty: 6,3,FO,Zakaznik XXX,,1000",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:28.954","ctx":"Action","action":"ctx.log","params":[4,0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:28.960","ctx":"Action","action":"ctx.log","params":["zaznam cislo 4",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:28.969","ctx":"Action","action":"ctx.log","params":["zaznam obsahuje tyto hodnoty: 10,5,PO,,25974947,5000",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:28.981","ctx":"Action","action":"ctx.log","params":["spoustim kontrolu subjektu cislo 25974947",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.91","ctx":"Action","action":"ctx.log","params":[5,0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.95","ctx":"Action","action":"ctx.log","params":["zaznam cislo 5",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.105","ctx":"Action","action":"ctx.log","params":["zaznam obsahuje tyto hodnoty: 2,1,FO,Zakaznik XXX,,10000",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.222","ctx":"Action","action":"ctx.log","params":[6,0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.227","ctx":"Action","action":"ctx.log","params":["zaznam cislo 6",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.239","ctx":"Action","action":"ctx.log","params":["zaznam obsahuje tyto hodnoty: 1,4,FO,Zakaznik XXX,,1000",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.329","ctx":"Action","action":"ctx.log","params":[7,0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.333","ctx":"Action","action":"ctx.log","params":["zaznam cislo 7",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.342","ctx":"Action","action":"ctx.log","params":["zaznam obsahuje tyto hodnoty: 3,3,FO,Zakaznik XXX,,5000",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.481","ctx":"Action","action":"ctx.log","params":[8,0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.485","ctx":"Action","action":"ctx.log","params":["zaznam cislo 8",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.494","ctx":"Action","action":"ctx.log","params":["zaznam obsahuje tyto hodnoty: 3,1,PO,,7354371,10000",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.507","ctx":"Action","action":"ctx.log","params":["spoustim kontrolu subjektu cislo 7354371",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.612","ctx":"Action","action":"ctx.log","params":[9,0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.617","ctx":"Action","action":"ctx.log","params":["zaznam cislo 9",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.626","ctx":"Action","action":"ctx.log","params":["zaznam obsahuje tyto hodnoty: 1,1,FO,Zakaznik XXX,,1000",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.730","ctx":"Action","action":"ctx.log","params":[10,0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.736","ctx":"Action","action":"ctx.log","params":["zaznam cislo 10",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.748","ctx":"Action","action":"ctx.log","params":["zaznam obsahuje tyto hodnoty: 7,2,FO,Zakaznik XXX,,5000",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.837","ctx":"Action","action":"ctx.log","params":[11,0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.842","ctx":"Action","action":"ctx.log","params":["zaznam cislo 11",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.855","ctx":"Action","action":"ctx.log","params":["zaznam obsahuje tyto hodnoty: 9,5,FO,Zakaznik XXX,,10000",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.973","ctx":"Action","action":"ctx.log","params":[12,0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.978","ctx":"Action","action":"ctx.log","params":["zaznam cislo 12",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:29.989","ctx":"Action","action":"ctx.log","params":["zaznam obsahuje tyto hodnoty: 7,3,FO,Zakaznik XXX,,1000",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:30.107","ctx":"Action","action":"ctx.log","params":[13,0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:30.119","ctx":"Action","action":"ctx.log","params":["zaznam cislo 13",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:30.128","ctx":"Action","action":"ctx.log","params":["zaznam obsahuje tyto hodnoty: 8,3,FO,Zakaznik XXX,,5000",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:30.220","ctx":"Action","action":"ctx.log","params":[14,0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:30.225","ctx":"Action","action":"ctx.log","params":["zaznam cislo 14",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:30.239","ctx":"Action","action":"ctx.log","params":["zaznam obsahuje tyto hodnoty: 2,2,PO,,28633598,10000",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:30.250","ctx":"Action","action":"ctx.log","params":["spoustim kontrolu subjektu cislo 28633598",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:30.354","ctx":"Action","action":"ctx.log","params":[15,0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:30.359","ctx":"Action","action":"ctx.log","params":["zaznam cislo 15",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:30.376","ctx":"Action","action":"ctx.log","params":["zaznam obsahuje tyto hodnoty: 4,4,FO,Zakaznik XXX,,1000",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:30.512","ctx":"Action","action":"ctx.log","params":[16,0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:30.516","ctx":"Action","action":"ctx.log","params":["zaznam cislo 16",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:30.526","ctx":"Action","action":"ctx.log","params":["zaznam obsahuje tyto hodnoty: 4,4,PO,,22735895,5000",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:30.538","ctx":"Action","action":"ctx.log","params":["spoustim kontrolu subjektu cislo 22735895",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:30.640","ctx":"Action","action":"ctx.log","params":[17,0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:30.645","ctx":"Action","action":"ctx.log","params":["zaznam cislo 17",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:30.656","ctx":"Action","action":"ctx.log","params":["zaznam obsahuje tyto hodnoty: 6,5,FO,Zakaznik XXX,,10000",0],"verb":"LOGMESS","parentId":120}
+{"ts":"09:43:30.773","ctx":"Action","action":"ctx.log","params":["Email body isDobr\u00fd den @@@@,\r\n\r\nzas\u00edl\u00e1me V\u00e1m seznam zprocesovan\u00fdch n\u00e1kup\u016f v p\u0159\u00edloze tohoto mailu.\r\n\r\n\r\nTato zpr\u00e1va je d\u016fv\u011brn\u00e1.",0],"verb":"LOGMESS","parentId":122}

@@ -1,0 +1,783 @@
+<PAGE Techno='WEB' Name='' ParentTree='' ProcessName='IEXPLORE.EXE' RatioX='150' RatioY='150' BoundingRect='1|1|1349|886'><PROPERTIES><TITLE><![CDATA[Veřejný rejstřík a Sbírka listin - Ministerstvo spravedlnosti České republiky]]></TITLE><DOMAIN>or.justice.cz</DOMAIN><URL><![CDATA[https://or.justice.cz/ias/ui/rejstrik-$firma]]></URL><NAME><![CDATA[aresXMLDet]]></NAME><CX>1349</CX><CY>886</CY><MAINFRAME>true</MAINFRAME></PROPERTIES><CHILDREN><ITEM><PROPERTIES><TAG>HTML</TAG><range>0</range><Text><![CDATA[ Veřejný rejstřík a Sbírka listin - Ministerstvo spravedlnosti České republiky                        /*<![CDATA[*/ var APP = { _ready : [], _load : [], run : function(fn,onload){var q=APP[onload?'_load':'_ready'];if(fn){if(q&&typeof q.push==='function'){q.push(fn);}else{fn();}}} }; /**/  /*<![CDATA[*/ APP.Strings = { invalidAjaxResponse : 'CHYBA - při zpracování požadavku došlo k interní chybě.' }; /**/        /*<![CDATA[*/ /* CSS pre nove vypisy */ div.vr-hlavicka{font-weight:bold;} .vr-child .vr-child div.vr-child {margin-left: 5mm} .vr-child .vr-child div.vr-hlavicka {margin-left: 5mm} .underline span {border-bottom: 1px solid black;} .underline .nounderline {border-bottom-style: none} .preformatted { white-space: pre-wrap; } .iq_alert { padding: 20px; background-color: #f44336; color: white; text-align: center; } /**/         
+
+
+
+
+ 
+
+
+
+
+
+Veřejný rejstřík podle subjektů 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Název subjektu: *
+ 
+
+Identifikační číslo: *
+ 
+
+Obec:
+ 
+
+Ulice:
+ 
+
+Právní forma:
+ Akciová společnost Česká tisková kancelář Československé státní dráhy-státní organizace Církve a náboženské společnosti Dobrovolný svazek obcí Družstvo Evidované církevní právnické osoby Evropská družstevní společnost Evropská společnost Evropské hospodářské zájmové sdružení Evropské seskupení pro územní spolupráci Fyzická osoba - podnikatel Garanční fond obchodníků s cennými papíry Honební společenstvo Komanditní společnost Komoditní burza Komora (hospodářská, agrární) Kraj Městská část hlavního města Prahy Mezinárodní nevládní organizace Mezinárodní odborová organizace Mezinárodní organizace zaměstnavatelů Nadace Nadační fond Národní podnik Občanské sdružení Obec Obecně prospěšná společnost Odborová organizace Odborová organizace a organizace zaměstnavatelů Odštěpný závod Odštěpný závod zahraniční fyzické osoby Odštěpný závod zahraniční právnické osoby Organizace zaměstnavatelů Organizační jednotka mezinárodní nevládní organizace Organizační jednotka občanského sdružení Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích Organizační složka zahraničního nadačního fondu Organizační složka zahraniční nadace Ostatní Pobočná mezinárodní odborová organizace Pobočná mezinárodní organizace zaměstnavatelů Pobočná odborová organizace a organizace zaměstnavatelů Pobočný spolek Podnikající fyzická osoba tuzemská Podnik nebo hospodářské zařízení politické strany Podnik nebo hospodářské zařízení sdružení Podnik se zahraniční majetkovou účastí Podnik zahraničního obchodu Politická strana, politické hnutí Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku Příspěvková organizace Rada pro veřejný dohled nad auditem Regionální rada regionu soudržnosti Samosprávná stavovská organizace (profesní komora)  Samostatná drobná provozovna (obecního úřadu) Sdružení mezinárodního obchodu Školská právnická osoba Společenství vlastníků jednotek Společnost s ručením omezeným Společný podnik Spolek Státní banka československá Státní fond ze zákona Státní fond ze zákona nezapisující se do obchodního rejstříku Státní organizace Správa železnic Státní podnik Státní příspěvková organizace Svazy církví a náboženských společností Účelová zahraničně obchodní organizace Ústav Veřejná obchodní společnost Veřejná výzkumná instituce  Veřejné neziskové ústavní zdravotnické zařízení  Veřejnoprávní instituce Všeobecná zdravotní pojišťovna Vysoká škola (veřejná, státní) Zahraniční fyzická osoba  Zahraniční osoba Zahraniční pobočný spolek Zahraniční spolek Zájmové sdružení Zájmové sdružení právnických osob Zájmové sdružení právnických osob zapsané v OR Zdravotní pojišťovna (mimo VZP) Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích  
+
+Spisová zn.: *
+  
+vedená u:  Městský soud v Praze Krajský soud v Českých Budějovicích Krajský soud v Plzni Krajský soud v Ústí nad Labem Krajský soud v Hradci Králové Krajský soud v Brně Krajský soud v Ostravě  
+
+* Vyplňte alespoň jedno z polí: Název subjektu, Identifikační číslo, Spisová zn.. 
+
+
+
+Max. počet zobrazených položek:
+
+50 200 500  
+
+Typ hledání v názvu:
+
+Dle začátku slov Od začátku  
+
+Vyhledávat údaje:
+
+Jen platné Platné i neplatné  
+
+
+
+Vyhledat  — Nápověda Vyčistit formulář  
+
+
+Jak na to?
+Podmínky provozu
+Rejstříkové soudy
+Evidence úpadců
+Insolvenční rejstřík
+Veřejný rejstřík podle subjektů
+Veřejný rejstřík podle právnických osob v angažmá
+Veřejný rejstřík podle fyzických osob v angažmá
+Automatické aktualizace ze základních registrů
+Podání do veřejného rejstříku
+Co s elektronickým výpisem
+Portál pro podnikatele: BusinessInfo.cz
+Průvodce: Jak založit firmu / společnost
+Informační místa pro podnikatele
+Technická podpora
+
+
+© 2012-2015 Ministerstvo spravedlnosti České republiky
+ Verze aplikace: 9.18.1 ]]></Text><class><![CDATA[ie ie11 js flexbox no-flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg no-smil svgclippaths]]></class><lang><![CDATA[cs]]></lang></PROPERTIES><CTX_PROPS><CONTROLTYPE>HTML</CONTROLTYPE><SOURCE_INDEX>1</SOURCE_INDEX><BOUNDINGRECT>0|0|1348|886</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>HEAD</TAG><range>0</range><Text><![CDATA[ Veřejný rejstřík a Sbírka listin - Ministerstvo spravedlnosti České republiky                        /*<![CDATA[*/ var APP = { _ready : [], _load : [], run : function(fn,onload){var q=APP[onload?'_load':'_ready'];if(fn){if(q&&typeof q.push==='function'){q.push(fn);}else{fn();}}} }; /**/  /*<![CDATA[*/ APP.Strings = { invalidAjaxResponse : 'CHYBA - při zpracování požadavku došlo k interní chybě.' }; /**/        /*<![CDATA[*/ /* CSS pre nove vypisy */ div.vr-hlavicka{font-weight:bold;} .vr-child .vr-child div.vr-child {margin-left: 5mm} .vr-child .vr-child div.vr-hlavicka {margin-left: 5mm} .underline span {border-bottom: 1px solid black;} .underline .nounderline {border-bottom-style: none} .preformatted { white-space: pre-wrap; } .iq_alert { padding: 20px; background-color: #f44336; color: white; text-align: center; } /**/        ]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>HEAD</CONTROLTYPE><SOURCE_INDEX>2</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TITLE</TAG><range>0</range><Text><![CDATA[Veřejný rejstřík a Sbírka listin - Ministerstvo spravedlnosti České republiky]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>TITLE</CONTROLTYPE><SOURCE_INDEX>5</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>0</range><href><![CDATA[./resource/images/favicon.ico]]></href><rel><![CDATA[shortcut icon]]></rel><type><![CDATA[image/x-icon]]></type></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>6</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>1</range><href><![CDATA[./resource/css/reset.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>8</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>2</range><href><![CDATA[./resource/css/base.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>9</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>3</range><href><![CDATA[./resource/css/layout.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>10</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>4</range><href><![CDATA[./resource/css/drop-down-menu.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>11</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>5</range><href><![CDATA[./resource/css/columns.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>12</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>6</range><href><![CDATA[./resource/css/tables.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>13</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>7</range><href><![CDATA[./resource/css/forms.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>14</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>8</range><href><![CDATA[./resource/css/buttons.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>15</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>9</range><href><![CDATA[./resource/css/messages.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>16</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>10</range><href><![CDATA[./resource/css/icons.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>17</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>11</range><href><![CDATA[./resource/css/typo.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>18</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>12</range><href><![CDATA[./resource/css/search.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>19</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>13</range><href><![CDATA[./resource/css/vypis.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>20</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>14</range><href><![CDATA[./resource/css/tooltip.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>21</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>15</range><href><![CDATA[./resource/css/ias.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>22</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>16</range><href><![CDATA[./resource/css/ajax.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>23</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>17</range><href><![CDATA[./resource/css/intform.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>24</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>18</range><href><![CDATA[./resource/css/dynamic.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>25</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>19</range><href><![CDATA[./resource/css/jquery-ui-1.8.17.custom.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[screen]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>26</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>20</range><href><![CDATA[./resource/css/print.css]]></href><rel><![CDATA[stylesheet]]></rel><media><![CDATA[print]]></media></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>27</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>STYLE</TAG><range>0</range><Text><![CDATA[ /*<![CDATA[*/ /* CSS pre nove vypisy */ div.vr-hlavicka{font-weight:bold;} .vr-child .vr-child div.vr-child {margin-left: 5mm} .vr-child .vr-child div.vr-hlavicka {margin-left: 5mm} .underline span {border-bottom: 1px solid black;} .underline .nounderline {border-bottom-style: none} .preformatted { white-space: pre-wrap; } .iq_alert { padding: 20px; background-color: #f44336; color: white; text-align: center; } /**/ ]]></Text><type><![CDATA[text/css]]></type></PROPERTIES><CTX_PROPS><CONTROLTYPE>STYLE</CONTROLTYPE><SOURCE_INDEX>38</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>META</TAG><range>0</range><http-equiv><![CDATA[X-UA-Compatible]]></http-equiv><content><![CDATA[IE=EmulateIE9]]></content></PROPERTIES><CTX_PROPS><CONTROLTYPE>META</CONTROLTYPE><SOURCE_INDEX>42</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>META</TAG><range>1</range><http-equiv><![CDATA[Content-Type]]></http-equiv><content><![CDATA[text/html; charset=UTF-8]]></content></PROPERTIES><CTX_PROPS><CONTROLTYPE>META</CONTROLTYPE><SOURCE_INDEX>43</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>LINK</TAG><range>21</range><href><![CDATA[./wicket/resource/cz.corpus.isror.ui.internet.InternetBasePage/basepage-ver-F0FB650D42CA79C149B4023B5F69BE5C.css]]></href><rel><![CDATA[stylesheet]]></rel><type><![CDATA[text/css]]></type></PROPERTIES><CTX_PROPS><CONTROLTYPE>LINK</CONTROLTYPE><SOURCE_INDEX>44</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>BODY</TAG><range>0</range><Text><![CDATA[
+
+
+
+ 
+
+
+
+
+
+Veřejný rejstřík podle subjektů 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Název subjektu: *
+ 
+
+Identifikační číslo: *
+ 
+
+Obec:
+ 
+
+Ulice:
+ 
+
+Právní forma:
+ Akciová společnost Česká tisková kancelář Československé státní dráhy-státní organizace Církve a náboženské společnosti Dobrovolný svazek obcí Družstvo Evidované církevní právnické osoby Evropská družstevní společnost Evropská společnost Evropské hospodářské zájmové sdružení Evropské seskupení pro územní spolupráci Fyzická osoba - podnikatel Garanční fond obchodníků s cennými papíry Honební společenstvo Komanditní společnost Komoditní burza Komora (hospodářská, agrární) Kraj Městská část hlavního města Prahy Mezinárodní nevládní organizace Mezinárodní odborová organizace Mezinárodní organizace zaměstnavatelů Nadace Nadační fond Národní podnik Občanské sdružení Obec Obecně prospěšná společnost Odborová organizace Odborová organizace a organizace zaměstnavatelů Odštěpný závod Odštěpný závod zahraniční fyzické osoby Odštěpný závod zahraniční právnické osoby Organizace zaměstnavatelů Organizační jednotka mezinárodní nevládní organizace Organizační jednotka občanského sdružení Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích Organizační složka zahraničního nadačního fondu Organizační složka zahraniční nadace Ostatní Pobočná mezinárodní odborová organizace Pobočná mezinárodní organizace zaměstnavatelů Pobočná odborová organizace a organizace zaměstnavatelů Pobočný spolek Podnikající fyzická osoba tuzemská Podnik nebo hospodářské zařízení politické strany Podnik nebo hospodářské zařízení sdružení Podnik se zahraniční majetkovou účastí Podnik zahraničního obchodu Politická strana, politické hnutí Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku Příspěvková organizace Rada pro veřejný dohled nad auditem Regionální rada regionu soudržnosti Samosprávná stavovská organizace (profesní komora)  Samostatná drobná provozovna (obecního úřadu) Sdružení mezinárodního obchodu Školská právnická osoba Společenství vlastníků jednotek Společnost s ručením omezeným Společný podnik Spolek Státní banka československá Státní fond ze zákona Státní fond ze zákona nezapisující se do obchodního rejstříku Státní organizace Správa železnic Státní podnik Státní příspěvková organizace Svazy církví a náboženských společností Účelová zahraničně obchodní organizace Ústav Veřejná obchodní společnost Veřejná výzkumná instituce  Veřejné neziskové ústavní zdravotnické zařízení  Veřejnoprávní instituce Všeobecná zdravotní pojišťovna Vysoká škola (veřejná, státní) Zahraniční fyzická osoba  Zahraniční osoba Zahraniční pobočný spolek Zahraniční spolek Zájmové sdružení Zájmové sdružení právnických osob Zájmové sdružení právnických osob zapsané v OR Zdravotní pojišťovna (mimo VZP) Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích  
+
+Spisová zn.: *
+  
+vedená u:  Městský soud v Praze Krajský soud v Českých Budějovicích Krajský soud v Plzni Krajský soud v Ústí nad Labem Krajský soud v Hradci Králové Krajský soud v Brně Krajský soud v Ostravě  
+
+* Vyplňte alespoň jedno z polí: Název subjektu, Identifikační číslo, Spisová zn.. 
+
+
+
+Max. počet zobrazených položek:
+
+50 200 500  
+
+Typ hledání v názvu:
+
+Dle začátku slov Od začátku  
+
+Vyhledávat údaje:
+
+Jen platné Platné i neplatné  
+
+
+
+Vyhledat  — Nápověda Vyčistit formulář  
+
+
+Jak na to?
+Podmínky provozu
+Rejstříkové soudy
+Evidence úpadců
+Insolvenční rejstřík
+Veřejný rejstřík podle subjektů
+Veřejný rejstřík podle právnických osob v angažmá
+Veřejný rejstřík podle fyzických osob v angažmá
+Automatické aktualizace ze základních registrů
+Podání do veřejného rejstříku
+Co s elektronickým výpisem
+Portál pro podnikatele: BusinessInfo.cz
+Průvodce: Jak založit firmu / společnost
+Informační místa pro podnikatele
+Technická podpora
+
+
+© 2012-2015 Ministerstvo spravedlnosti České republiky
+ Verze aplikace: 9.18.1 ]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>BODY</CONTROLTYPE><SOURCE_INDEX>47</SOURCE_INDEX><BOUNDINGRECT>0|0|1348|886</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>DIV</TAG><range>0</range><Text><![CDATA[
+
+
+ 
+
+
+
+
+
+Veřejný rejstřík podle subjektů 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Název subjektu: *
+ 
+
+Identifikační číslo: *
+ 
+
+Obec:
+ 
+
+Ulice:
+ 
+
+Právní forma:
+ Akciová společnost Česká tisková kancelář Československé státní dráhy-státní organizace Církve a náboženské společnosti Dobrovolný svazek obcí Družstvo Evidované církevní právnické osoby Evropská družstevní společnost Evropská společnost Evropské hospodářské zájmové sdružení Evropské seskupení pro územní spolupráci Fyzická osoba - podnikatel Garanční fond obchodníků s cennými papíry Honební společenstvo Komanditní společnost Komoditní burza Komora (hospodářská, agrární) Kraj Městská část hlavního města Prahy Mezinárodní nevládní organizace Mezinárodní odborová organizace Mezinárodní organizace zaměstnavatelů Nadace Nadační fond Národní podnik Občanské sdružení Obec Obecně prospěšná společnost Odborová organizace Odborová organizace a organizace zaměstnavatelů Odštěpný závod Odštěpný závod zahraniční fyzické osoby Odštěpný závod zahraniční právnické osoby Organizace zaměstnavatelů Organizační jednotka mezinárodní nevládní organizace Organizační jednotka občanského sdružení Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích Organizační složka zahraničního nadačního fondu Organizační složka zahraniční nadace Ostatní Pobočná mezinárodní odborová organizace Pobočná mezinárodní organizace zaměstnavatelů Pobočná odborová organizace a organizace zaměstnavatelů Pobočný spolek Podnikající fyzická osoba tuzemská Podnik nebo hospodářské zařízení politické strany Podnik nebo hospodářské zařízení sdružení Podnik se zahraniční majetkovou účastí Podnik zahraničního obchodu Politická strana, politické hnutí Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku Příspěvková organizace Rada pro veřejný dohled nad auditem Regionální rada regionu soudržnosti Samosprávná stavovská organizace (profesní komora)  Samostatná drobná provozovna (obecního úřadu) Sdružení mezinárodního obchodu Školská právnická osoba Společenství vlastníků jednotek Společnost s ručením omezeným Společný podnik Spolek Státní banka československá Státní fond ze zákona Státní fond ze zákona nezapisující se do obchodního rejstříku Státní organizace Správa železnic Státní podnik Státní příspěvková organizace Svazy církví a náboženských společností Účelová zahraničně obchodní organizace Ústav Veřejná obchodní společnost Veřejná výzkumná instituce  Veřejné neziskové ústavní zdravotnické zařízení  Veřejnoprávní instituce Všeobecná zdravotní pojišťovna Vysoká škola (veřejná, státní) Zahraniční fyzická osoba  Zahraniční osoba Zahraniční pobočný spolek Zahraniční spolek Zájmové sdružení Zájmové sdružení právnických osob Zájmové sdružení právnických osob zapsané v OR Zdravotní pojišťovna (mimo VZP) Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích  
+
+Spisová zn.: *
+  
+vedená u:  Městský soud v Praze Krajský soud v Českých Budějovicích Krajský soud v Plzni Krajský soud v Ústí nad Labem Krajský soud v Hradci Králové Krajský soud v Brně Krajský soud v Ostravě  
+
+* Vyplňte alespoň jedno z polí: Název subjektu, Identifikační číslo, Spisová zn.. 
+
+
+
+Max. počet zobrazených položek:
+
+50 200 500  
+
+Typ hledání v názvu:
+
+Dle začátku slov Od začátku  
+
+Vyhledávat údaje:
+
+Jen platné Platné i neplatné  
+
+
+
+Vyhledat  — Nápověda Vyčistit formulář  
+
+
+Jak na to?
+Podmínky provozu
+Rejstříkové soudy
+Evidence úpadců
+Insolvenční rejstřík
+Veřejný rejstřík podle subjektů
+Veřejný rejstřík podle právnických osob v angažmá
+Veřejný rejstřík podle fyzických osob v angažmá
+Automatické aktualizace ze základních registrů
+Podání do veřejného rejstříku
+Co s elektronickým výpisem
+Portál pro podnikatele: BusinessInfo.cz
+Průvodce: Jak založit firmu / společnost
+Informační místa pro podnikatele
+Technická podpora
+
+
+© 2012-2015 Ministerstvo spravedlnosti České republiky
+ Verze aplikace: 9.18.1 ]]></Text><id><![CDATA[page]]></id></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>48</SOURCE_INDEX><BOUNDINGRECT>0|0|1348|851</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>DIV</TAG><range>0</range><Text><![CDATA[
+
+
+ ]]></Text><class><![CDATA[noprint]]></class><id><![CDATA[page-h]]></id></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>49</SOURCE_INDEX><BOUNDINGRECT>0|0|1348|139</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>A</TAG><range>0</range><id><![CDATA[logo]]></id><href><![CDATA[https://or.justice.cz/ias/ui/rejstrik-$firma?-1.ILinkListener-htmlContainer-logo]]></href><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>50</SOURCE_INDEX><BOUNDINGRECT>332|35|685|59</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>HR</TAG><range>0</range><class><![CDATA[hidden]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>HR</CONTROLTYPE><SOURCE_INDEX>51</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>DIV</TAG><range>1</range><Text><![CDATA[
+
+
+
+Veřejný rejstřík podle subjektů 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Název subjektu: *
+ 
+
+Identifikační číslo: *
+ 
+
+Obec:
+ 
+
+Ulice:
+ 
+
+Právní forma:
+ Akciová společnost Česká tisková kancelář Československé státní dráhy-státní organizace Církve a náboženské společnosti Dobrovolný svazek obcí Družstvo Evidované církevní právnické osoby Evropská družstevní společnost Evropská společnost Evropské hospodářské zájmové sdružení Evropské seskupení pro územní spolupráci Fyzická osoba - podnikatel Garanční fond obchodníků s cennými papíry Honební společenstvo Komanditní společnost Komoditní burza Komora (hospodářská, agrární) Kraj Městská část hlavního města Prahy Mezinárodní nevládní organizace Mezinárodní odborová organizace Mezinárodní organizace zaměstnavatelů Nadace Nadační fond Národní podnik Občanské sdružení Obec Obecně prospěšná společnost Odborová organizace Odborová organizace a organizace zaměstnavatelů Odštěpný závod Odštěpný závod zahraniční fyzické osoby Odštěpný závod zahraniční právnické osoby Organizace zaměstnavatelů Organizační jednotka mezinárodní nevládní organizace Organizační jednotka občanského sdružení Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích Organizační složka zahraničního nadačního fondu Organizační složka zahraniční nadace Ostatní Pobočná mezinárodní odborová organizace Pobočná mezinárodní organizace zaměstnavatelů Pobočná odborová organizace a organizace zaměstnavatelů Pobočný spolek Podnikající fyzická osoba tuzemská Podnik nebo hospodářské zařízení politické strany Podnik nebo hospodářské zařízení sdružení Podnik se zahraniční majetkovou účastí Podnik zahraničního obchodu Politická strana, politické hnutí Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku Příspěvková organizace Rada pro veřejný dohled nad auditem Regionální rada regionu soudržnosti Samosprávná stavovská organizace (profesní komora)  Samostatná drobná provozovna (obecního úřadu) Sdružení mezinárodního obchodu Školská právnická osoba Společenství vlastníků jednotek Společnost s ručením omezeným Společný podnik Spolek Státní banka československá Státní fond ze zákona Státní fond ze zákona nezapisující se do obchodního rejstříku Státní organizace Správa železnic Státní podnik Státní příspěvková organizace Svazy církví a náboženských společností Účelová zahraničně obchodní organizace Ústav Veřejná obchodní společnost Veřejná výzkumná instituce  Veřejné neziskové ústavní zdravotnické zařízení  Veřejnoprávní instituce Všeobecná zdravotní pojišťovna Vysoká škola (veřejná, státní) Zahraniční fyzická osoba  Zahraniční osoba Zahraniční pobočný spolek Zahraniční spolek Zájmové sdružení Zájmové sdružení právnických osob Zájmové sdružení právnických osob zapsané v OR Zdravotní pojišťovna (mimo VZP) Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích  
+
+Spisová zn.: *
+  
+vedená u:  Městský soud v Praze Krajský soud v Českých Budějovicích Krajský soud v Plzni Krajský soud v Ústí nad Labem Krajský soud v Hradci Králové Krajský soud v Brně Krajský soud v Ostravě  
+
+* Vyplňte alespoň jedno z polí: Název subjektu, Identifikační číslo, Spisová zn.. 
+
+
+
+Max. počet zobrazených položek:
+
+50 200 500  
+
+Typ hledání v názvu:
+
+Dle začátku slov Od začátku  
+
+Vyhledávat údaje:
+
+Jen platné Platné i neplatné  
+
+
+
+Vyhledat  — Nápověda Vyčistit formulář  ]]></Text><id><![CDATA[page-c]]></id></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>52</SOURCE_INDEX><BOUNDINGRECT>0|139|1348|379</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>DIV</TAG><range>0</range><Text><![CDATA[
+
+
+Veřejný rejstřík podle subjektů 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Název subjektu: *
+ 
+
+Identifikační číslo: *
+ 
+
+Obec:
+ 
+
+Ulice:
+ 
+
+Právní forma:
+ Akciová společnost Česká tisková kancelář Československé státní dráhy-státní organizace Církve a náboženské společnosti Dobrovolný svazek obcí Družstvo Evidované církevní právnické osoby Evropská družstevní společnost Evropská společnost Evropské hospodářské zájmové sdružení Evropské seskupení pro územní spolupráci Fyzická osoba - podnikatel Garanční fond obchodníků s cennými papíry Honební společenstvo Komanditní společnost Komoditní burza Komora (hospodářská, agrární) Kraj Městská část hlavního města Prahy Mezinárodní nevládní organizace Mezinárodní odborová organizace Mezinárodní organizace zaměstnavatelů Nadace Nadační fond Národní podnik Občanské sdružení Obec Obecně prospěšná společnost Odborová organizace Odborová organizace a organizace zaměstnavatelů Odštěpný závod Odštěpný závod zahraniční fyzické osoby Odštěpný závod zahraniční právnické osoby Organizace zaměstnavatelů Organizační jednotka mezinárodní nevládní organizace Organizační jednotka občanského sdružení Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích Organizační složka zahraničního nadačního fondu Organizační složka zahraniční nadace Ostatní Pobočná mezinárodní odborová organizace Pobočná mezinárodní organizace zaměstnavatelů Pobočná odborová organizace a organizace zaměstnavatelů Pobočný spolek Podnikající fyzická osoba tuzemská Podnik nebo hospodářské zařízení politické strany Podnik nebo hospodářské zařízení sdružení Podnik se zahraniční majetkovou účastí Podnik zahraničního obchodu Politická strana, politické hnutí Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku Příspěvková organizace Rada pro veřejný dohled nad auditem Regionální rada regionu soudržnosti Samosprávná stavovská organizace (profesní komora)  Samostatná drobná provozovna (obecního úřadu) Sdružení mezinárodního obchodu Školská právnická osoba Společenství vlastníků jednotek Společnost s ručením omezeným Společný podnik Spolek Státní banka československá Státní fond ze zákona Státní fond ze zákona nezapisující se do obchodního rejstříku Státní organizace Správa železnic Státní podnik Státní příspěvková organizace Svazy církví a náboženských společností Účelová zahraničně obchodní organizace Ústav Veřejná obchodní společnost Veřejná výzkumná instituce  Veřejné neziskové ústavní zdravotnické zařízení  Veřejnoprávní instituce Všeobecná zdravotní pojišťovna Vysoká škola (veřejná, státní) Zahraniční fyzická osoba  Zahraniční osoba Zahraniční pobočný spolek Zahraniční spolek Zájmové sdružení Zájmové sdružení právnických osob Zájmové sdružení právnických osob zapsané v OR Zdravotní pojišťovna (mimo VZP) Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích  
+
+Spisová zn.: *
+  
+vedená u:  Městský soud v Praze Krajský soud v Českých Budějovicích Krajský soud v Plzni Krajský soud v Ústí nad Labem Krajský soud v Hradci Králové Krajský soud v Brně Krajský soud v Ostravě  
+
+* Vyplňte alespoň jedno z polí: Název subjektu, Identifikační číslo, Spisová zn.. 
+
+
+
+Max. počet zobrazených položek:
+
+50 200 500  
+
+Typ hledání v názvu:
+
+Dle začátku slov Od začátku  
+
+Vyhledávat údaje:
+
+Jen platné Platné i neplatné  
+
+
+
+Vyhledat  — Nápověda Vyčistit formulář  ]]></Text><id><![CDATA[frag-rejstrik-switchComp-wholebead]]></id></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>53</SOURCE_INDEX><BOUNDINGRECT>0|139|1348|379</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>DIV</TAG><range>0</range><Text><![CDATA[
+
+Veřejný rejstřík podle subjektů 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Název subjektu: *
+ 
+
+Identifikační číslo: *
+ 
+
+Obec:
+ 
+
+Ulice:
+ 
+
+Právní forma:
+ Akciová společnost Česká tisková kancelář Československé státní dráhy-státní organizace Církve a náboženské společnosti Dobrovolný svazek obcí Družstvo Evidované církevní právnické osoby Evropská družstevní společnost Evropská společnost Evropské hospodářské zájmové sdružení Evropské seskupení pro územní spolupráci Fyzická osoba - podnikatel Garanční fond obchodníků s cennými papíry Honební společenstvo Komanditní společnost Komoditní burza Komora (hospodářská, agrární) Kraj Městská část hlavního města Prahy Mezinárodní nevládní organizace Mezinárodní odborová organizace Mezinárodní organizace zaměstnavatelů Nadace Nadační fond Národní podnik Občanské sdružení Obec Obecně prospěšná společnost Odborová organizace Odborová organizace a organizace zaměstnavatelů Odštěpný závod Odštěpný závod zahraniční fyzické osoby Odštěpný závod zahraniční právnické osoby Organizace zaměstnavatelů Organizační jednotka mezinárodní nevládní organizace Organizační jednotka občanského sdružení Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích Organizační složka zahraničního nadačního fondu Organizační složka zahraniční nadace Ostatní Pobočná mezinárodní odborová organizace Pobočná mezinárodní organizace zaměstnavatelů Pobočná odborová organizace a organizace zaměstnavatelů Pobočný spolek Podnikající fyzická osoba tuzemská Podnik nebo hospodářské zařízení politické strany Podnik nebo hospodářské zařízení sdružení Podnik se zahraniční majetkovou účastí Podnik zahraničního obchodu Politická strana, politické hnutí Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku Příspěvková organizace Rada pro veřejný dohled nad auditem Regionální rada regionu soudržnosti Samosprávná stavovská organizace (profesní komora)  Samostatná drobná provozovna (obecního úřadu) Sdružení mezinárodního obchodu Školská právnická osoba Společenství vlastníků jednotek Společnost s ručením omezeným Společný podnik Spolek Státní banka československá Státní fond ze zákona Státní fond ze zákona nezapisující se do obchodního rejstříku Státní organizace Správa železnic Státní podnik Státní příspěvková organizace Svazy církví a náboženských společností Účelová zahraničně obchodní organizace Ústav Veřejná obchodní společnost Veřejná výzkumná instituce  Veřejné neziskové ústavní zdravotnické zařízení  Veřejnoprávní instituce Všeobecná zdravotní pojišťovna Vysoká škola (veřejná, státní) Zahraniční fyzická osoba  Zahraniční osoba Zahraniční pobočný spolek Zahraniční spolek Zájmové sdružení Zájmové sdružení právnických osob Zájmové sdružení právnických osob zapsané v OR Zdravotní pojišťovna (mimo VZP) Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích  
+
+Spisová zn.: *
+  
+vedená u:  Městský soud v Praze Krajský soud v Českých Budějovicích Krajský soud v Plzni Krajský soud v Ústí nad Labem Krajský soud v Hradci Králové Krajský soud v Brně Krajský soud v Ostravě  
+
+* Vyplňte alespoň jedno z polí: Název subjektu, Identifikační číslo, Spisová zn.. 
+
+
+
+Max. počet zobrazených položek:
+
+50 200 500  
+
+Typ hledání v názvu:
+
+Dle začátku slov Od začátku  
+
+Vyhledávat údaje:
+
+Jen platné Platné i neplatné  
+
+
+
+Vyhledat  — Nápověda Vyčistit formulář  ]]></Text><class><![CDATA[section]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>54</SOURCE_INDEX><BOUNDINGRECT>0|139|1348|379</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>DIV</TAG><range>0</range><Text><![CDATA[
+Veřejný rejstřík podle subjektů ]]></Text><class><![CDATA[section-h]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>55</SOURCE_INDEX><BOUNDINGRECT>0|139|1348|41</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>DIV</TAG><range>0</range><Text><![CDATA[Veřejný rejstřík podle subjektů ]]></Text><class><![CDATA[inner]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>56</SOURCE_INDEX><BOUNDINGRECT>194|139|960|38</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>H1</TAG><range>0</range><Text><![CDATA[Veřejný rejstřík podle subjektů ]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>H1</CONTROLTYPE><SOURCE_INDEX>57</SOURCE_INDEX><BOUNDINGRECT>218|140|912|36</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SPAN</TAG><range>0</range><Text><![CDATA[Veřejný rejstřík podle subjektů]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>58</SOURCE_INDEX><BOUNDINGRECT>218|149|252|18</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>SPAN</TAG><range>1</range><class><![CDATA[nobold]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>59</SOURCE_INDEX><BOUNDINGRECT>470|149|0|18</BOUNDINGRECT></CTX_PROPS></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>DIV</TAG><range>1</range><Text><![CDATA[
+
+
+
+
+
+
+
+
+
+
+Název subjektu: *
+ 
+
+Identifikační číslo: *
+ 
+
+Obec:
+ 
+
+Ulice:
+ 
+
+Právní forma:
+ Akciová společnost Česká tisková kancelář Československé státní dráhy-státní organizace Církve a náboženské společnosti Dobrovolný svazek obcí Družstvo Evidované církevní právnické osoby Evropská družstevní společnost Evropská společnost Evropské hospodářské zájmové sdružení Evropské seskupení pro územní spolupráci Fyzická osoba - podnikatel Garanční fond obchodníků s cennými papíry Honební společenstvo Komanditní společnost Komoditní burza Komora (hospodářská, agrární) Kraj Městská část hlavního města Prahy Mezinárodní nevládní organizace Mezinárodní odborová organizace Mezinárodní organizace zaměstnavatelů Nadace Nadační fond Národní podnik Občanské sdružení Obec Obecně prospěšná společnost Odborová organizace Odborová organizace a organizace zaměstnavatelů Odštěpný závod Odštěpný závod zahraniční fyzické osoby Odštěpný závod zahraniční právnické osoby Organizace zaměstnavatelů Organizační jednotka mezinárodní nevládní organizace Organizační jednotka občanského sdružení Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích Organizační složka zahraničního nadačního fondu Organizační složka zahraniční nadace Ostatní Pobočná mezinárodní odborová organizace Pobočná mezinárodní organizace zaměstnavatelů Pobočná odborová organizace a organizace zaměstnavatelů Pobočný spolek Podnikající fyzická osoba tuzemská Podnik nebo hospodářské zařízení politické strany Podnik nebo hospodářské zařízení sdružení Podnik se zahraniční majetkovou účastí Podnik zahraničního obchodu Politická strana, politické hnutí Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku Příspěvková organizace Rada pro veřejný dohled nad auditem Regionální rada regionu soudržnosti Samosprávná stavovská organizace (profesní komora)  Samostatná drobná provozovna (obecního úřadu) Sdružení mezinárodního obchodu Školská právnická osoba Společenství vlastníků jednotek Společnost s ručením omezeným Společný podnik Spolek Státní banka československá Státní fond ze zákona Státní fond ze zákona nezapisující se do obchodního rejstříku Státní organizace Správa železnic Státní podnik Státní příspěvková organizace Svazy církví a náboženských společností Účelová zahraničně obchodní organizace Ústav Veřejná obchodní společnost Veřejná výzkumná instituce  Veřejné neziskové ústavní zdravotnické zařízení  Veřejnoprávní instituce Všeobecná zdravotní pojišťovna Vysoká škola (veřejná, státní) Zahraniční fyzická osoba  Zahraniční osoba Zahraniční pobočný spolek Zahraniční spolek Zájmové sdružení Zájmové sdružení právnických osob Zájmové sdružení právnických osob zapsané v OR Zdravotní pojišťovna (mimo VZP) Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích  
+
+Spisová zn.: *
+  
+vedená u:  Městský soud v Praze Krajský soud v Českých Budějovicích Krajský soud v Plzni Krajský soud v Ústí nad Labem Krajský soud v Hradci Králové Krajský soud v Brně Krajský soud v Ostravě  
+
+* Vyplňte alespoň jedno z polí: Název subjektu, Identifikační číslo, Spisová zn.. 
+
+
+
+Max. počet zobrazených položek:
+
+50 200 500  
+
+Typ hledání v názvu:
+
+Dle začátku slov Od začátku  
+
+Vyhledávat údaje:
+
+Jen platné Platné i neplatné  
+
+
+
+Vyhledat  — Nápověda Vyčistit formulář  ]]></Text><class><![CDATA[section-c]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>60</SOURCE_INDEX><BOUNDINGRECT>0|180|1348|338</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>DIV</TAG><range>0</range><Text><![CDATA[
+
+
+
+
+
+
+
+
+
+Název subjektu: *
+ 
+
+Identifikační číslo: *
+ 
+
+Obec:
+ 
+
+Ulice:
+ 
+
+Právní forma:
+ Akciová společnost Česká tisková kancelář Československé státní dráhy-státní organizace Církve a náboženské společnosti Dobrovolný svazek obcí Družstvo Evidované církevní právnické osoby Evropská družstevní společnost Evropská společnost Evropské hospodářské zájmové sdružení Evropské seskupení pro územní spolupráci Fyzická osoba - podnikatel Garanční fond obchodníků s cennými papíry Honební společenstvo Komanditní společnost Komoditní burza Komora (hospodářská, agrární) Kraj Městská část hlavního města Prahy Mezinárodní nevládní organizace Mezinárodní odborová organizace Mezinárodní organizace zaměstnavatelů Nadace Nadační fond Národní podnik Občanské sdružení Obec Obecně prospěšná společnost Odborová organizace Odborová organizace a organizace zaměstnavatelů Odštěpný závod Odštěpný závod zahraniční fyzické osoby Odštěpný závod zahraniční právnické osoby Organizace zaměstnavatelů Organizační jednotka mezinárodní nevládní organizace Organizační jednotka občanského sdružení Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích Organizační složka zahraničního nadačního fondu Organizační složka zahraniční nadace Ostatní Pobočná mezinárodní odborová organizace Pobočná mezinárodní organizace zaměstnavatelů Pobočná odborová organizace a organizace zaměstnavatelů Pobočný spolek Podnikající fyzická osoba tuzemská Podnik nebo hospodářské zařízení politické strany Podnik nebo hospodářské zařízení sdružení Podnik se zahraniční majetkovou účastí Podnik zahraničního obchodu Politická strana, politické hnutí Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku Příspěvková organizace Rada pro veřejný dohled nad auditem Regionální rada regionu soudržnosti Samosprávná stavovská organizace (profesní komora)  Samostatná drobná provozovna (obecního úřadu) Sdružení mezinárodního obchodu Školská právnická osoba Společenství vlastníků jednotek Společnost s ručením omezeným Společný podnik Spolek Státní banka československá Státní fond ze zákona Státní fond ze zákona nezapisující se do obchodního rejstříku Státní organizace Správa železnic Státní podnik Státní příspěvková organizace Svazy církví a náboženských společností Účelová zahraničně obchodní organizace Ústav Veřejná obchodní společnost Veřejná výzkumná instituce  Veřejné neziskové ústavní zdravotnické zařízení  Veřejnoprávní instituce Všeobecná zdravotní pojišťovna Vysoká škola (veřejná, státní) Zahraniční fyzická osoba  Zahraniční osoba Zahraniční pobočný spolek Zahraniční spolek Zájmové sdružení Zájmové sdružení právnických osob Zájmové sdružení právnických osob zapsané v OR Zdravotní pojišťovna (mimo VZP) Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích  
+
+Spisová zn.: *
+  
+vedená u:  Městský soud v Praze Krajský soud v Českých Budějovicích Krajský soud v Plzni Krajský soud v Ústí nad Labem Krajský soud v Hradci Králové Krajský soud v Brně Krajský soud v Ostravě  
+
+* Vyplňte alespoň jedno z polí: Název subjektu, Identifikační číslo, Spisová zn.. 
+
+
+
+Max. počet zobrazených položek:
+
+50 200 500  
+
+Typ hledání v názvu:
+
+Dle začátku slov Od začátku  
+
+Vyhledávat údaje:
+
+Jen platné Platné i neplatné  
+
+
+
+Vyhledat  — Nápověda Vyčistit formulář  ]]></Text><class><![CDATA[inner]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>61</SOURCE_INDEX><BOUNDINGRECT>194|180|960|318</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>DIV</TAG><range>0</range><Text><![CDATA[
+
+
+
+
+
+
+
+
+Název subjektu: *
+ 
+
+Identifikační číslo: *
+ 
+
+Obec:
+ 
+
+Ulice:
+ 
+
+Právní forma:
+ Akciová společnost Česká tisková kancelář Československé státní dráhy-státní organizace Církve a náboženské společnosti Dobrovolný svazek obcí Družstvo Evidované církevní právnické osoby Evropská družstevní společnost Evropská společnost Evropské hospodářské zájmové sdružení Evropské seskupení pro územní spolupráci Fyzická osoba - podnikatel Garanční fond obchodníků s cennými papíry Honební společenstvo Komanditní společnost Komoditní burza Komora (hospodářská, agrární) Kraj Městská část hlavního města Prahy Mezinárodní nevládní organizace Mezinárodní odborová organizace Mezinárodní organizace zaměstnavatelů Nadace Nadační fond Národní podnik Občanské sdružení Obec Obecně prospěšná společnost Odborová organizace Odborová organizace a organizace zaměstnavatelů Odštěpný závod Odštěpný závod zahraniční fyzické osoby Odštěpný závod zahraniční právnické osoby Organizace zaměstnavatelů Organizační jednotka mezinárodní nevládní organizace Organizační jednotka občanského sdružení Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích Organizační složka zahraničního nadačního fondu Organizační složka zahraniční nadace Ostatní Pobočná mezinárodní odborová organizace Pobočná mezinárodní organizace zaměstnavatelů Pobočná odborová organizace a organizace zaměstnavatelů Pobočný spolek Podnikající fyzická osoba tuzemská Podnik nebo hospodářské zařízení politické strany Podnik nebo hospodářské zařízení sdružení Podnik se zahraniční majetkovou účastí Podnik zahraničního obchodu Politická strana, politické hnutí Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku Příspěvková organizace Rada pro veřejný dohled nad auditem Regionální rada regionu soudržnosti Samosprávná stavovská organizace (profesní komora)  Samostatná drobná provozovna (obecního úřadu) Sdružení mezinárodního obchodu Školská právnická osoba Společenství vlastníků jednotek Společnost s ručením omezeným Společný podnik Spolek Státní banka československá Státní fond ze zákona Státní fond ze zákona nezapisující se do obchodního rejstříku Státní organizace Správa železnic Státní podnik Státní příspěvková organizace Svazy církví a náboženských společností Účelová zahraničně obchodní organizace Ústav Veřejná obchodní společnost Veřejná výzkumná instituce  Veřejné neziskové ústavní zdravotnické zařízení  Veřejnoprávní instituce Všeobecná zdravotní pojišťovna Vysoká škola (veřejná, státní) Zahraniční fyzická osoba  Zahraniční osoba Zahraniční pobočný spolek Zahraniční spolek Zájmové sdružení Zájmové sdružení právnických osob Zájmové sdružení právnických osob zapsané v OR Zdravotní pojišťovna (mimo VZP) Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích  
+
+Spisová zn.: *
+  
+vedená u:  Městský soud v Praze Krajský soud v Českých Budějovicích Krajský soud v Plzni Krajský soud v Ústí nad Labem Krajský soud v Hradci Králové Krajský soud v Brně Krajský soud v Ostravě  
+
+* Vyplňte alespoň jedno z polí: Název subjektu, Identifikační číslo, Spisová zn.. 
+
+
+
+Max. počet zobrazených položek:
+
+50 200 500  
+
+Typ hledání v názvu:
+
+Dle začátku slov Od začátku  
+
+Vyhledávat údaje:
+
+Jen platné Platné i neplatné  
+
+
+
+Vyhledat  — Nápověda Vyčistit formulář  ]]></Text><class><![CDATA[inner]]></class><id><![CDATA[AdvancedSearch]]></id></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>62</SOURCE_INDEX><BOUNDINGRECT>218|181|960|316</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>FORM</TAG><range>0</range><Text><![CDATA[
+
+
+
+
+
+
+
+Název subjektu: *
+ 
+
+Identifikační číslo: *
+ 
+
+Obec:
+ 
+
+Ulice:
+ 
+
+Právní forma:
+ Akciová společnost Česká tisková kancelář Československé státní dráhy-státní organizace Církve a náboženské společnosti Dobrovolný svazek obcí Družstvo Evidované církevní právnické osoby Evropská družstevní společnost Evropská společnost Evropské hospodářské zájmové sdružení Evropské seskupení pro územní spolupráci Fyzická osoba - podnikatel Garanční fond obchodníků s cennými papíry Honební společenstvo Komanditní společnost Komoditní burza Komora (hospodářská, agrární) Kraj Městská část hlavního města Prahy Mezinárodní nevládní organizace Mezinárodní odborová organizace Mezinárodní organizace zaměstnavatelů Nadace Nadační fond Národní podnik Občanské sdružení Obec Obecně prospěšná společnost Odborová organizace Odborová organizace a organizace zaměstnavatelů Odštěpný závod Odštěpný závod zahraniční fyzické osoby Odštěpný závod zahraniční právnické osoby Organizace zaměstnavatelů Organizační jednotka mezinárodní nevládní organizace Organizační jednotka občanského sdružení Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích Organizační složka zahraničního nadačního fondu Organizační složka zahraniční nadace Ostatní Pobočná mezinárodní odborová organizace Pobočná mezinárodní organizace zaměstnavatelů Pobočná odborová organizace a organizace zaměstnavatelů Pobočný spolek Podnikající fyzická osoba tuzemská Podnik nebo hospodářské zařízení politické strany Podnik nebo hospodářské zařízení sdružení Podnik se zahraniční majetkovou účastí Podnik zahraničního obchodu Politická strana, politické hnutí Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku Příspěvková organizace Rada pro veřejný dohled nad auditem Regionální rada regionu soudržnosti Samosprávná stavovská organizace (profesní komora)  Samostatná drobná provozovna (obecního úřadu) Sdružení mezinárodního obchodu Školská právnická osoba Společenství vlastníků jednotek Společnost s ručením omezeným Společný podnik Spolek Státní banka československá Státní fond ze zákona Státní fond ze zákona nezapisující se do obchodního rejstříku Státní organizace Správa železnic Státní podnik Státní příspěvková organizace Svazy církví a náboženských společností Účelová zahraničně obchodní organizace Ústav Veřejná obchodní společnost Veřejná výzkumná instituce  Veřejné neziskové ústavní zdravotnické zařízení  Veřejnoprávní instituce Všeobecná zdravotní pojišťovna Vysoká škola (veřejná, státní) Zahraniční fyzická osoba  Zahraniční osoba Zahraniční pobočný spolek Zahraniční spolek Zájmové sdružení Zájmové sdružení právnických osob Zájmové sdružení právnických osob zapsané v OR Zdravotní pojišťovna (mimo VZP) Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích  
+
+Spisová zn.: *
+  
+vedená u:  Městský soud v Praze Krajský soud v Českých Budějovicích Krajský soud v Plzni Krajský soud v Ústí nad Labem Krajský soud v Hradci Králové Krajský soud v Brně Krajský soud v Ostravě  
+
+* Vyplňte alespoň jedno z polí: Název subjektu, Identifikační číslo, Spisová zn.. 
+
+
+
+Max. počet zobrazených položek:
+
+50 200 500  
+
+Typ hledání v názvu:
+
+Dle začátku slov Od začátku  
+
+Vyhledávat údaje:
+
+Jen platné Platné i neplatné  
+
+
+
+Vyhledat  — Nápověda Vyčistit formulář  ]]></Text><class><![CDATA[search-form noprint]]></class><id><![CDATA[id1]]></id><action><![CDATA[]]></action><enctype><![CDATA[application/x-www-form-urlencoded]]></enctype><method><![CDATA[get]]></method></PROPERTIES><CTX_PROPS><CONTROLTYPE>FORM</CONTROLTYPE><SOURCE_INDEX>63</SOURCE_INDEX><BOUNDINGRECT>242|198|912|298</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>DIV</TAG><range>0</range><style><![CDATA[left: -100px; top: -100px; width: 0px; height: 0px; overflow: hidden; position: absolute;]]></style></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>64</SOURCE_INDEX><BOUNDINGRECT>-100|-100|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>INPUT</TAG><range>0</range><name><![CDATA[id1_hf_0]]></name><id><![CDATA[id1_hf_0]]></id><type><![CDATA[hidden]]></type></PROPERTIES><CTX_PROPS><CONTROLTYPE>INPUT</CONTROLTYPE><SOURCE_INDEX>65</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>INPUT</TAG><range>1</range><name><![CDATA[./rejstrik-$firma]]></name><type><![CDATA[hidden]]></type><value><![CDATA[]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>INPUT</CONTROLTYPE><SOURCE_INDEX>66</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>DIV</TAG><range>1</range><Text><![CDATA[
+
+
+
+
+Název subjektu: *
+ 
+
+Identifikační číslo: *
+ 
+
+Obec:
+ 
+
+Ulice:
+ 
+
+Právní forma:
+ Akciová společnost Česká tisková kancelář Československé státní dráhy-státní organizace Církve a náboženské společnosti Dobrovolný svazek obcí Družstvo Evidované církevní právnické osoby Evropská družstevní společnost Evropská společnost Evropské hospodářské zájmové sdružení Evropské seskupení pro územní spolupráci Fyzická osoba - podnikatel Garanční fond obchodníků s cennými papíry Honební společenstvo Komanditní společnost Komoditní burza Komora (hospodářská, agrární) Kraj Městská část hlavního města Prahy Mezinárodní nevládní organizace Mezinárodní odborová organizace Mezinárodní organizace zaměstnavatelů Nadace Nadační fond Národní podnik Občanské sdružení Obec Obecně prospěšná společnost Odborová organizace Odborová organizace a organizace zaměstnavatelů Odštěpný závod Odštěpný závod zahraniční fyzické osoby Odštěpný závod zahraniční právnické osoby Organizace zaměstnavatelů Organizační jednotka mezinárodní nevládní organizace Organizační jednotka občanského sdružení Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích Organizační složka zahraničního nadačního fondu Organizační složka zahraniční nadace Ostatní Pobočná mezinárodní odborová organizace Pobočná mezinárodní organizace zaměstnavatelů Pobočná odborová organizace a organizace zaměstnavatelů Pobočný spolek Podnikající fyzická osoba tuzemská Podnik nebo hospodářské zařízení politické strany Podnik nebo hospodářské zařízení sdružení Podnik se zahraniční majetkovou účastí Podnik zahraničního obchodu Politická strana, politické hnutí Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku Příspěvková organizace Rada pro veřejný dohled nad auditem Regionální rada regionu soudržnosti Samosprávná stavovská organizace (profesní komora)  Samostatná drobná provozovna (obecního úřadu) Sdružení mezinárodního obchodu Školská právnická osoba Společenství vlastníků jednotek Společnost s ručením omezeným Společný podnik Spolek Státní banka československá Státní fond ze zákona Státní fond ze zákona nezapisující se do obchodního rejstříku Státní organizace Správa železnic Státní podnik Státní příspěvková organizace Svazy církví a náboženských společností Účelová zahraničně obchodní organizace Ústav Veřejná obchodní společnost Veřejná výzkumná instituce  Veřejné neziskové ústavní zdravotnické zařízení  Veřejnoprávní instituce Všeobecná zdravotní pojišťovna Vysoká škola (veřejná, státní) Zahraniční fyzická osoba  Zahraniční osoba Zahraniční pobočný spolek Zahraniční spolek Zájmové sdružení Zájmové sdružení právnických osob Zájmové sdružení právnických osob zapsané v OR Zdravotní pojišťovna (mimo VZP) Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích  
+
+Spisová zn.: *
+  
+vedená u:  Městský soud v Praze Krajský soud v Českých Budějovicích Krajský soud v Plzni Krajský soud v Ústí nad Labem Krajský soud v Hradci Králové Krajský soud v Brně Krajský soud v Ostravě  
+
+* Vyplňte alespoň jedno z polí: Název subjektu, Identifikační číslo, Spisová zn.. 
+
+
+
+Max. počet zobrazených položek:
+
+50 200 500  
+
+Typ hledání v názvu:
+
+Dle začátku slov Od začátku  
+
+Vyhledávat údaje:
+
+Jen platné Platné i neplatné  ]]></Text><class><![CDATA[search clearfix]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>67</SOURCE_INDEX><BOUNDINGRECT>242|198|912|267</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>DIV</TAG><range>0</range><Text><![CDATA[
+
+
+
+Název subjektu: *
+ 
+
+Identifikační číslo: *
+ 
+
+Obec:
+ 
+
+Ulice:
+ 
+
+Právní forma:
+ Akciová společnost Česká tisková kancelář Československé státní dráhy-státní organizace Církve a náboženské společnosti Dobrovolný svazek obcí Družstvo Evidované církevní právnické osoby Evropská družstevní společnost Evropská společnost Evropské hospodářské zájmové sdružení Evropské seskupení pro územní spolupráci Fyzická osoba - podnikatel Garanční fond obchodníků s cennými papíry Honební společenstvo Komanditní společnost Komoditní burza Komora (hospodářská, agrární) Kraj Městská část hlavního města Prahy Mezinárodní nevládní organizace Mezinárodní odborová organizace Mezinárodní organizace zaměstnavatelů Nadace Nadační fond Národní podnik Občanské sdružení Obec Obecně prospěšná společnost Odborová organizace Odborová organizace a organizace zaměstnavatelů Odštěpný závod Odštěpný závod zahraniční fyzické osoby Odštěpný závod zahraniční právnické osoby Organizace zaměstnavatelů Organizační jednotka mezinárodní nevládní organizace Organizační jednotka občanského sdružení Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích Organizační složka zahraničního nadačního fondu Organizační složka zahraniční nadace Ostatní Pobočná mezinárodní odborová organizace Pobočná mezinárodní organizace zaměstnavatelů Pobočná odborová organizace a organizace zaměstnavatelů Pobočný spolek Podnikající fyzická osoba tuzemská Podnik nebo hospodářské zařízení politické strany Podnik nebo hospodářské zařízení sdružení Podnik se zahraniční majetkovou účastí Podnik zahraničního obchodu Politická strana, politické hnutí Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku Příspěvková organizace Rada pro veřejný dohled nad auditem Regionální rada regionu soudržnosti Samosprávná stavovská organizace (profesní komora)  Samostatná drobná provozovna (obecního úřadu) Sdružení mezinárodního obchodu Školská právnická osoba Společenství vlastníků jednotek Společnost s ručením omezeným Společný podnik Spolek Státní banka československá Státní fond ze zákona Státní fond ze zákona nezapisující se do obchodního rejstříku Státní organizace Správa železnic Státní podnik Státní příspěvková organizace Svazy církví a náboženských společností Účelová zahraničně obchodní organizace Ústav Veřejná obchodní společnost Veřejná výzkumná instituce  Veřejné neziskové ústavní zdravotnické zařízení  Veřejnoprávní instituce Všeobecná zdravotní pojišťovna Vysoká škola (veřejná, státní) Zahraniční fyzická osoba  Zahraniční osoba Zahraniční pobočný spolek Zahraniční spolek Zájmové sdružení Zájmové sdružení právnických osob Zájmové sdružení právnických osob zapsané v OR Zdravotní pojišťovna (mimo VZP) Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích  
+
+Spisová zn.: *
+  
+vedená u:  Městský soud v Praze Krajský soud v Českých Budějovicích Krajský soud v Plzni Krajský soud v Ústí nad Labem Krajský soud v Hradci Králové Krajský soud v Brně Krajský soud v Ostravě  
+
+* Vyplňte alespoň jedno z polí: Název subjektu, Identifikační číslo, Spisová zn.. ]]></Text><class><![CDATA[search-main]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>68</SOURCE_INDEX><BOUNDINGRECT>242|198|600|267</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TABLE</TAG><range>0</range><Text><![CDATA[
+
+
+
+Název subjektu: *
+ 
+
+Identifikační číslo: *
+ 
+
+Obec:
+ 
+
+Ulice:
+ 
+
+Právní forma:
+ Akciová společnost Česká tisková kancelář Československé státní dráhy-státní organizace Církve a náboženské společnosti Dobrovolný svazek obcí Družstvo Evidované církevní právnické osoby Evropská družstevní společnost Evropská společnost Evropské hospodářské zájmové sdružení Evropské seskupení pro územní spolupráci Fyzická osoba - podnikatel Garanční fond obchodníků s cennými papíry Honební společenstvo Komanditní společnost Komoditní burza Komora (hospodářská, agrární) Kraj Městská část hlavního města Prahy Mezinárodní nevládní organizace Mezinárodní odborová organizace Mezinárodní organizace zaměstnavatelů Nadace Nadační fond Národní podnik Občanské sdružení Obec Obecně prospěšná společnost Odborová organizace Odborová organizace a organizace zaměstnavatelů Odštěpný závod Odštěpný závod zahraniční fyzické osoby Odštěpný závod zahraniční právnické osoby Organizace zaměstnavatelů Organizační jednotka mezinárodní nevládní organizace Organizační jednotka občanského sdružení Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích Organizační složka zahraničního nadačního fondu Organizační složka zahraniční nadace Ostatní Pobočná mezinárodní odborová organizace Pobočná mezinárodní organizace zaměstnavatelů Pobočná odborová organizace a organizace zaměstnavatelů Pobočný spolek Podnikající fyzická osoba tuzemská Podnik nebo hospodářské zařízení politické strany Podnik nebo hospodářské zařízení sdružení Podnik se zahraniční majetkovou účastí Podnik zahraničního obchodu Politická strana, politické hnutí Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku Příspěvková organizace Rada pro veřejný dohled nad auditem Regionální rada regionu soudržnosti Samosprávná stavovská organizace (profesní komora)  Samostatná drobná provozovna (obecního úřadu) Sdružení mezinárodního obchodu Školská právnická osoba Společenství vlastníků jednotek Společnost s ručením omezeným Společný podnik Spolek Státní banka československá Státní fond ze zákona Státní fond ze zákona nezapisující se do obchodního rejstříku Státní organizace Správa železnic Státní podnik Státní příspěvková organizace Svazy církví a náboženských společností Účelová zahraničně obchodní organizace Ústav Veřejná obchodní společnost Veřejná výzkumná instituce  Veřejné neziskové ústavní zdravotnické zařízení  Veřejnoprávní instituce Všeobecná zdravotní pojišťovna Vysoká škola (veřejná, státní) Zahraniční fyzická osoba  Zahraniční osoba Zahraniční pobočný spolek Zahraniční spolek Zájmové sdružení Zájmové sdružení právnických osob Zájmové sdružení právnických osob zapsané v OR Zdravotní pojišťovna (mimo VZP) Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích  
+
+Spisová zn.: *
+  
+vedená u:  Městský soud v Praze Krajský soud v Českých Budějovicích Krajský soud v Plzni Krajský soud v Ústí nad Labem Krajský soud v Hradci Králové Krajský soud v Brně Krajský soud v Ostravě  ]]></Text><class><![CDATA[wide]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>TABLE</CONTROLTYPE><SOURCE_INDEX>69</SOURCE_INDEX><BOUNDINGRECT>242|198|600|242</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>COLGROUP</TAG><range>0</range><span><![CDATA[1]]></span></PROPERTIES><CTX_PROPS><CONTROLTYPE>COLGROUP</CONTROLTYPE><SOURCE_INDEX>70</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>COL</TAG><range>0</range><width><![CDATA[150]]></width><span><![CDATA[1]]></span></PROPERTIES><CTX_PROPS><CONTROLTYPE>COL</CONTROLTYPE><SOURCE_INDEX>71</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>COL</TAG><range>1</range><span><![CDATA[1]]></span></PROPERTIES><CTX_PROPS><CONTROLTYPE>COL</CONTROLTYPE><SOURCE_INDEX>72</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TBODY</TAG><range>0</range><Text><![CDATA[
+Název subjektu: *
+ 
+
+Identifikační číslo: *
+ 
+
+Obec:
+ 
+
+Ulice:
+ 
+
+Právní forma:
+ Akciová společnost Česká tisková kancelář Československé státní dráhy-státní organizace Církve a náboženské společnosti Dobrovolný svazek obcí Družstvo Evidované církevní právnické osoby Evropská družstevní společnost Evropská společnost Evropské hospodářské zájmové sdružení Evropské seskupení pro územní spolupráci Fyzická osoba - podnikatel Garanční fond obchodníků s cennými papíry Honební společenstvo Komanditní společnost Komoditní burza Komora (hospodářská, agrární) Kraj Městská část hlavního města Prahy Mezinárodní nevládní organizace Mezinárodní odborová organizace Mezinárodní organizace zaměstnavatelů Nadace Nadační fond Národní podnik Občanské sdružení Obec Obecně prospěšná společnost Odborová organizace Odborová organizace a organizace zaměstnavatelů Odštěpný závod Odštěpný závod zahraniční fyzické osoby Odštěpný závod zahraniční právnické osoby Organizace zaměstnavatelů Organizační jednotka mezinárodní nevládní organizace Organizační jednotka občanského sdružení Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích Organizační složka zahraničního nadačního fondu Organizační složka zahraniční nadace Ostatní Pobočná mezinárodní odborová organizace Pobočná mezinárodní organizace zaměstnavatelů Pobočná odborová organizace a organizace zaměstnavatelů Pobočný spolek Podnikající fyzická osoba tuzemská Podnik nebo hospodářské zařízení politické strany Podnik nebo hospodářské zařízení sdružení Podnik se zahraniční majetkovou účastí Podnik zahraničního obchodu Politická strana, politické hnutí Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku Příspěvková organizace Rada pro veřejný dohled nad auditem Regionální rada regionu soudržnosti Samosprávná stavovská organizace (profesní komora)  Samostatná drobná provozovna (obecního úřadu) Sdružení mezinárodního obchodu Školská právnická osoba Společenství vlastníků jednotek Společnost s ručením omezeným Společný podnik Spolek Státní banka československá Státní fond ze zákona Státní fond ze zákona nezapisující se do obchodního rejstříku Státní organizace Správa železnic Státní podnik Státní příspěvková organizace Svazy církví a náboženských společností Účelová zahraničně obchodní organizace Ústav Veřejná obchodní společnost Veřejná výzkumná instituce  Veřejné neziskové ústavní zdravotnické zařízení  Veřejnoprávní instituce Všeobecná zdravotní pojišťovna Vysoká škola (veřejná, státní) Zahraniční fyzická osoba  Zahraniční osoba Zahraniční pobočný spolek Zahraniční spolek Zájmové sdružení Zájmové sdružení právnických osob Zájmové sdružení právnických osob zapsané v OR Zdravotní pojišťovna (mimo VZP) Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích  
+
+Spisová zn.: *
+  
+vedená u:  Městský soud v Praze Krajský soud v Českých Budějovicích Krajský soud v Plzni Krajský soud v Ústí nad Labem Krajský soud v Hradci Králové Krajský soud v Brně Krajský soud v Ostravě  ]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>TBODY</CONTROLTYPE><SOURCE_INDEX>73</SOURCE_INDEX><BOUNDINGRECT>242|198|600|242</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TR</TAG><range>0</range><Text><![CDATA[Název subjektu: *
+ ]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>TR</CONTROLTYPE><SOURCE_INDEX>74</SOURCE_INDEX><BOUNDINGRECT>242|198|600|35</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TH</TAG><range>0</range><Text><![CDATA[Název subjektu: *]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[1]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TH</CONTROLTYPE><SOURCE_INDEX>75</SOURCE_INDEX><BOUNDINGRECT>242|198|150|35</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>LABEL</TAG><range>0</range><Text><![CDATA[Název subjektu:]]></Text><id><![CDATA[id2-w-lbl]]></id><for><![CDATA[id2]]></for></PROPERTIES><CTX_PROPS><CONTROLTYPE>LABEL</CONTROLTYPE><SOURCE_INDEX>76</SOURCE_INDEX><BOUNDINGRECT>242|204|109|18</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>SUP</TAG><range>0</range><Text><![CDATA[*]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>SUP</CONTROLTYPE><SOURCE_INDEX>77</SOURCE_INDEX><BOUNDINGRECT>355|205|6|10</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TD</TAG><range>0</range><Text><![CDATA[ ]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[2]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TD</CONTROLTYPE><SOURCE_INDEX>78</SOURCE_INDEX><BOUNDINGRECT>392|198|450|35</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SPAN</TAG><range>0</range><Text><![CDATA[ ]]></Text><class><![CDATA[field field-text]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>79</SOURCE_INDEX><BOUNDINGRECT>392|203|300|25</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>INPUT</TAG><range>0</range><name><![CDATA[nazev]]></name><title><![CDATA[Název subjektu]]></title><class><![CDATA[text hint]]></class><id><![CDATA[id2]]></id><type><![CDATA[text]]></type><maxlength><![CDATA[40]]></maxlength><value><![CDATA[]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>INPUT</CONTROLTYPE><SOURCE_INDEX>80</SOURCE_INDEX><BOUNDINGRECT>392|203|300|25</BOUNDINGRECT></CTX_PROPS></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TR</TAG><range>1</range><Text><![CDATA[Identifikační číslo: *
+ ]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>TR</CONTROLTYPE><SOURCE_INDEX>81</SOURCE_INDEX><BOUNDINGRECT>242|233|600|34</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TH</TAG><range>0</range><Text><![CDATA[Identifikační číslo: *]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[1]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TH</CONTROLTYPE><SOURCE_INDEX>82</SOURCE_INDEX><BOUNDINGRECT>242|233|150|34</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>LABEL</TAG><range>0</range><Text><![CDATA[Identifikační číslo:]]></Text><class><![CDATA[tiny]]></class><id><![CDATA[id3-w-lbl]]></id><for><![CDATA[id3]]></for></PROPERTIES><CTX_PROPS><CONTROLTYPE>LABEL</CONTROLTYPE><SOURCE_INDEX>83</SOURCE_INDEX><BOUNDINGRECT>242|239|126|18</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>SUP</TAG><range>0</range><Text><![CDATA[*]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>SUP</CONTROLTYPE><SOURCE_INDEX>84</SOURCE_INDEX><BOUNDINGRECT>372|240|6|10</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TD</TAG><range>0</range><Text><![CDATA[ ]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[2]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TD</CONTROLTYPE><SOURCE_INDEX>85</SOURCE_INDEX><BOUNDINGRECT>392|233|450|34</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SPAN</TAG><range>0</range><Text><![CDATA[ ]]></Text><class><![CDATA[field field-text]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>86</SOURCE_INDEX><BOUNDINGRECT>392|238|95|24</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>INPUT</TAG><range>0</range><name><![CDATA[ico]]></name><title><![CDATA[Identifikační číslo]]></title><class><![CDATA[text hint tiny]]></class><id><![CDATA[id3]]></id><type><![CDATA[text]]></type><maxlength><![CDATA[10]]></maxlength><value><![CDATA[]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>INPUT</CONTROLTYPE><SOURCE_INDEX>87</SOURCE_INDEX><BOUNDINGRECT>392|238|95|24</BOUNDINGRECT></CTX_PROPS></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TR</TAG><range>2</range><Text><![CDATA[Obec:
+ ]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>TR</CONTROLTYPE><SOURCE_INDEX>88</SOURCE_INDEX><BOUNDINGRECT>242|267|600|35</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TH</TAG><range>0</range><Text><![CDATA[Obec:]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[1]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TH</CONTROLTYPE><SOURCE_INDEX>89</SOURCE_INDEX><BOUNDINGRECT>242|267|150|35</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>LABEL</TAG><range>0</range><Text><![CDATA[Obec:]]></Text><class><![CDATA[short]]></class><id><![CDATA[id4-w-lbl]]></id><for><![CDATA[id4]]></for></PROPERTIES><CTX_PROPS><CONTROLTYPE>LABEL</CONTROLTYPE><SOURCE_INDEX>90</SOURCE_INDEX><BOUNDINGRECT>242|274|39|18</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TD</TAG><range>0</range><Text><![CDATA[ ]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[2]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TD</CONTROLTYPE><SOURCE_INDEX>91</SOURCE_INDEX><BOUNDINGRECT>392|267|450|35</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SPAN</TAG><range>0</range><Text><![CDATA[ ]]></Text><class><![CDATA[field field-text]]></class><id><![CDATA[obec-field]]></id></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>92</SOURCE_INDEX><BOUNDINGRECT>392|272|150|25</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>INPUT</TAG><range>0</range><name><![CDATA[obec]]></name><title><![CDATA[Obec]]></title><class><![CDATA[text hint short]]></class><id><![CDATA[id4]]></id><type><![CDATA[text]]></type><maxlength><![CDATA[150]]></maxlength><value><![CDATA[]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>INPUT</CONTROLTYPE><SOURCE_INDEX>93</SOURCE_INDEX><BOUNDINGRECT>392|272|150|25</BOUNDINGRECT></CTX_PROPS></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TR</TAG><range>3</range><Text><![CDATA[Ulice:
+ ]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>TR</CONTROLTYPE><SOURCE_INDEX>94</SOURCE_INDEX><BOUNDINGRECT>242|302|600|34</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TH</TAG><range>0</range><Text><![CDATA[Ulice:]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[1]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TH</CONTROLTYPE><SOURCE_INDEX>95</SOURCE_INDEX><BOUNDINGRECT>242|302|150|34</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>LABEL</TAG><range>0</range><Text><![CDATA[Ulice:]]></Text><class><![CDATA[short]]></class><id><![CDATA[id5-w-lbl]]></id><for><![CDATA[id5]]></for></PROPERTIES><CTX_PROPS><CONTROLTYPE>LABEL</CONTROLTYPE><SOURCE_INDEX>96</SOURCE_INDEX><BOUNDINGRECT>242|308|38|18</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TD</TAG><range>0</range><Text><![CDATA[ ]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[2]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TD</CONTROLTYPE><SOURCE_INDEX>97</SOURCE_INDEX><BOUNDINGRECT>392|302|450|34</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SPAN</TAG><range>0</range><Text><![CDATA[ ]]></Text><class><![CDATA[field field-text]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>98</SOURCE_INDEX><BOUNDINGRECT>392|307|150|24</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>INPUT</TAG><range>0</range><name><![CDATA[ulice]]></name><title><![CDATA[Ulice]]></title><class><![CDATA[text hint short]]></class><id><![CDATA[id5]]></id><type><![CDATA[text]]></type><maxlength><![CDATA[150]]></maxlength><value><![CDATA[]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>INPUT</CONTROLTYPE><SOURCE_INDEX>99</SOURCE_INDEX><BOUNDINGRECT>392|307|150|24</BOUNDINGRECT></CTX_PROPS></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TR</TAG><range>4</range><Text><![CDATA[Právní forma:
+ Akciová společnost Česká tisková kancelář Československé státní dráhy-státní organizace Církve a náboženské společnosti Dobrovolný svazek obcí Družstvo Evidované církevní právnické osoby Evropská družstevní společnost Evropská společnost Evropské hospodářské zájmové sdružení Evropské seskupení pro územní spolupráci Fyzická osoba - podnikatel Garanční fond obchodníků s cennými papíry Honební společenstvo Komanditní společnost Komoditní burza Komora (hospodářská, agrární) Kraj Městská část hlavního města Prahy Mezinárodní nevládní organizace Mezinárodní odborová organizace Mezinárodní organizace zaměstnavatelů Nadace Nadační fond Národní podnik Občanské sdružení Obec Obecně prospěšná společnost Odborová organizace Odborová organizace a organizace zaměstnavatelů Odštěpný závod Odštěpný závod zahraniční fyzické osoby Odštěpný závod zahraniční právnické osoby Organizace zaměstnavatelů Organizační jednotka mezinárodní nevládní organizace Organizační jednotka občanského sdružení Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích Organizační složka zahraničního nadačního fondu Organizační složka zahraniční nadace Ostatní Pobočná mezinárodní odborová organizace Pobočná mezinárodní organizace zaměstnavatelů Pobočná odborová organizace a organizace zaměstnavatelů Pobočný spolek Podnikající fyzická osoba tuzemská Podnik nebo hospodářské zařízení politické strany Podnik nebo hospodářské zařízení sdružení Podnik se zahraniční majetkovou účastí Podnik zahraničního obchodu Politická strana, politické hnutí Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku Příspěvková organizace Rada pro veřejný dohled nad auditem Regionální rada regionu soudržnosti Samosprávná stavovská organizace (profesní komora)  Samostatná drobná provozovna (obecního úřadu) Sdružení mezinárodního obchodu Školská právnická osoba Společenství vlastníků jednotek Společnost s ručením omezeným Společný podnik Spolek Státní banka československá Státní fond ze zákona Státní fond ze zákona nezapisující se do obchodního rejstříku Státní organizace Správa železnic Státní podnik Státní příspěvková organizace Svazy církví a náboženských společností Účelová zahraničně obchodní organizace Ústav Veřejná obchodní společnost Veřejná výzkumná instituce  Veřejné neziskové ústavní zdravotnické zařízení  Veřejnoprávní instituce Všeobecná zdravotní pojišťovna Vysoká škola (veřejná, státní) Zahraniční fyzická osoba  Zahraniční osoba Zahraniční pobočný spolek Zahraniční spolek Zájmové sdružení Zájmové sdružení právnických osob Zájmové sdružení právnických osob zapsané v OR Zdravotní pojišťovna (mimo VZP) Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích  ]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>TR</CONTROLTYPE><SOURCE_INDEX>100</SOURCE_INDEX><BOUNDINGRECT>242|336|600|35</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TH</TAG><range>0</range><Text><![CDATA[Právní forma:]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[1]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TH</CONTROLTYPE><SOURCE_INDEX>101</SOURCE_INDEX><BOUNDINGRECT>242|336|150|35</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>LABEL</TAG><range>0</range><Text><![CDATA[Právní forma:]]></Text><class><![CDATA[wide]]></class><id><![CDATA[id6-w-lbl]]></id><for><![CDATA[id6]]></for></PROPERTIES><CTX_PROPS><CONTROLTYPE>LABEL</CONTROLTYPE><SOURCE_INDEX>102</SOURCE_INDEX><BOUNDINGRECT>242|343|150|18</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TD</TAG><range>0</range><Text><![CDATA[ Akciová společnost Česká tisková kancelář Československé státní dráhy-státní organizace Církve a náboženské společnosti Dobrovolný svazek obcí Družstvo Evidované církevní právnické osoby Evropská družstevní společnost Evropská společnost Evropské hospodářské zájmové sdružení Evropské seskupení pro územní spolupráci Fyzická osoba - podnikatel Garanční fond obchodníků s cennými papíry Honební společenstvo Komanditní společnost Komoditní burza Komora (hospodářská, agrární) Kraj Městská část hlavního města Prahy Mezinárodní nevládní organizace Mezinárodní odborová organizace Mezinárodní organizace zaměstnavatelů Nadace Nadační fond Národní podnik Občanské sdružení Obec Obecně prospěšná společnost Odborová organizace Odborová organizace a organizace zaměstnavatelů Odštěpný závod Odštěpný závod zahraniční fyzické osoby Odštěpný závod zahraniční právnické osoby Organizace zaměstnavatelů Organizační jednotka mezinárodní nevládní organizace Organizační jednotka občanského sdružení Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích Organizační složka zahraničního nadačního fondu Organizační složka zahraniční nadace Ostatní Pobočná mezinárodní odborová organizace Pobočná mezinárodní organizace zaměstnavatelů Pobočná odborová organizace a organizace zaměstnavatelů Pobočný spolek Podnikající fyzická osoba tuzemská Podnik nebo hospodářské zařízení politické strany Podnik nebo hospodářské zařízení sdružení Podnik se zahraniční majetkovou účastí Podnik zahraničního obchodu Politická strana, politické hnutí Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku Příspěvková organizace Rada pro veřejný dohled nad auditem Regionální rada regionu soudržnosti Samosprávná stavovská organizace (profesní komora)  Samostatná drobná provozovna (obecního úřadu) Sdružení mezinárodního obchodu Školská právnická osoba Společenství vlastníků jednotek Společnost s ručením omezeným Společný podnik Spolek Státní banka československá Státní fond ze zákona Státní fond ze zákona nezapisující se do obchodního rejstříku Státní organizace Správa železnic Státní podnik Státní příspěvková organizace Svazy církví a náboženských společností Účelová zahraničně obchodní organizace Ústav Veřejná obchodní společnost Veřejná výzkumná instituce  Veřejné neziskové ústavní zdravotnické zařízení  Veřejnoprávní instituce Všeobecná zdravotní pojišťovna Vysoká škola (veřejná, státní) Zahraniční fyzická osoba  Zahraniční osoba Zahraniční pobočný spolek Zahraniční spolek Zájmové sdružení Zájmové sdružení právnických osob Zájmové sdružení právnických osob zapsané v OR Zdravotní pojišťovna (mimo VZP) Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích  ]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[2]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TD</CONTROLTYPE><SOURCE_INDEX>103</SOURCE_INDEX><BOUNDINGRECT>392|336|450|35</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SPAN</TAG><range>0</range><Text><![CDATA[ Akciová společnost Česká tisková kancelář Československé státní dráhy-státní organizace Církve a náboženské společnosti Dobrovolný svazek obcí Družstvo Evidované církevní právnické osoby Evropská družstevní společnost Evropská společnost Evropské hospodářské zájmové sdružení Evropské seskupení pro územní spolupráci Fyzická osoba - podnikatel Garanční fond obchodníků s cennými papíry Honební společenstvo Komanditní společnost Komoditní burza Komora (hospodářská, agrární) Kraj Městská část hlavního města Prahy Mezinárodní nevládní organizace Mezinárodní odborová organizace Mezinárodní organizace zaměstnavatelů Nadace Nadační fond Národní podnik Občanské sdružení Obec Obecně prospěšná společnost Odborová organizace Odborová organizace a organizace zaměstnavatelů Odštěpný závod Odštěpný závod zahraniční fyzické osoby Odštěpný závod zahraniční právnické osoby Organizace zaměstnavatelů Organizační jednotka mezinárodní nevládní organizace Organizační jednotka občanského sdružení Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích Organizační složka zahraničního nadačního fondu Organizační složka zahraniční nadace Ostatní Pobočná mezinárodní odborová organizace Pobočná mezinárodní organizace zaměstnavatelů Pobočná odborová organizace a organizace zaměstnavatelů Pobočný spolek Podnikající fyzická osoba tuzemská Podnik nebo hospodářské zařízení politické strany Podnik nebo hospodářské zařízení sdružení Podnik se zahraniční majetkovou účastí Podnik zahraničního obchodu Politická strana, politické hnutí Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku Příspěvková organizace Rada pro veřejný dohled nad auditem Regionální rada regionu soudržnosti Samosprávná stavovská organizace (profesní komora)  Samostatná drobná provozovna (obecního úřadu) Sdružení mezinárodního obchodu Školská právnická osoba Společenství vlastníků jednotek Společnost s ručením omezeným Společný podnik Spolek Státní banka československá Státní fond ze zákona Státní fond ze zákona nezapisující se do obchodního rejstříku Státní organizace Správa železnic Státní podnik Státní příspěvková organizace Svazy církví a náboženských společností Účelová zahraničně obchodní organizace Ústav Veřejná obchodní společnost Veřejná výzkumná instituce  Veřejné neziskové ústavní zdravotnické zařízení  Veřejnoprávní instituce Všeobecná zdravotní pojišťovna Vysoká škola (veřejná, státní) Zahraniční fyzická osoba  Zahraniční osoba Zahraniční pobočný spolek Zahraniční spolek Zájmové sdružení Zájmové sdružení právnických osob Zájmové sdružení právnických osob zapsané v OR Zdravotní pojišťovna (mimo VZP) Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích  ]]></Text><class><![CDATA[field field-enum]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>104</SOURCE_INDEX><BOUNDINGRECT>392|341|450|25</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SELECT</TAG><range>0</range><Text><![CDATA[ Akciová společnost Česká tisková kancelář Československé státní dráhy-státní organizace Církve a náboženské společnosti Dobrovolný svazek obcí Družstvo Evidované církevní právnické osoby Evropská družstevní společnost Evropská společnost Evropské hospodářské zájmové sdružení Evropské seskupení pro územní spolupráci Fyzická osoba - podnikatel Garanční fond obchodníků s cennými papíry Honební společenstvo Komanditní společnost Komoditní burza Komora (hospodářská, agrární) Kraj Městská část hlavního města Prahy Mezinárodní nevládní organizace Mezinárodní odborová organizace Mezinárodní organizace zaměstnavatelů Nadace Nadační fond Národní podnik Občanské sdružení Obec Obecně prospěšná společnost Odborová organizace Odborová organizace a organizace zaměstnavatelů Odštěpný závod Odštěpný závod zahraniční fyzické osoby Odštěpný závod zahraniční právnické osoby Organizace zaměstnavatelů Organizační jednotka mezinárodní nevládní organizace Organizační jednotka občanského sdružení Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích Organizační složka zahraničního nadačního fondu Organizační složka zahraniční nadace Ostatní Pobočná mezinárodní odborová organizace Pobočná mezinárodní organizace zaměstnavatelů Pobočná odborová organizace a organizace zaměstnavatelů Pobočný spolek Podnikající fyzická osoba tuzemská Podnik nebo hospodářské zařízení politické strany Podnik nebo hospodářské zařízení sdružení Podnik se zahraniční majetkovou účastí Podnik zahraničního obchodu Politická strana, politické hnutí Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku Příspěvková organizace Rada pro veřejný dohled nad auditem Regionální rada regionu soudržnosti Samosprávná stavovská organizace (profesní komora)  Samostatná drobná provozovna (obecního úřadu) Sdružení mezinárodního obchodu Školská právnická osoba Společenství vlastníků jednotek Společnost s ručením omezeným Společný podnik Spolek Státní banka československá Státní fond ze zákona Státní fond ze zákona nezapisující se do obchodního rejstříku Státní organizace Správa železnic Státní podnik Státní příspěvková organizace Svazy církví a náboženských společností Účelová zahraničně obchodní organizace Ústav Veřejná obchodní společnost Veřejná výzkumná instituce  Veřejné neziskové ústavní zdravotnické zařízení  Veřejnoprávní instituce Všeobecná zdravotní pojišťovna Vysoká škola (veřejná, státní) Zahraniční fyzická osoba  Zahraniční osoba Zahraniční pobočný spolek Zahraniční spolek Zájmové sdružení Zájmové sdružení právnických osob Zájmové sdružení právnických osob zapsané v OR Zdravotní pojišťovna (mimo VZP) Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích ]]></Text><name><![CDATA[forma]]></name><title><![CDATA[Právní forma]]></title><class><![CDATA[hint wide]]></class><id><![CDATA[id6]]></id><data-validations><![CDATA[#forma-validations]]></data-validations></PROPERTIES><CTX_PROPS><CONTROLTYPE>SELECT</CONTROLTYPE><SOURCE_INDEX>105</SOURCE_INDEX><BOUNDINGRECT>392|341|450|25</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>OPTION</TAG><range>0</range><selected><![CDATA[true]]></selected><value><![CDATA[]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>106</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>1</range><Text><![CDATA[Akciová společnost]]></Text><value><![CDATA[as]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>107</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>2</range><Text><![CDATA[Česká tisková kancelář]]></Text><value><![CDATA[ctk]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>108</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>3</range><Text><![CDATA[Československé státní dráhy-státní organizace]]></Text><value><![CDATA[ce_st_dr_st_or]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>109</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>4</range><Text><![CDATA[Církve a náboženské společnosti]]></Text><value><![CDATA[ci_na_sp]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>110</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>5</range><Text><![CDATA[Dobrovolný svazek obcí]]></Text><value><![CDATA[do_sv_ob]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>111</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>6</range><Text><![CDATA[Družstvo]]></Text><value><![CDATA[dr]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>112</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>7</range><Text><![CDATA[Evidované církevní právnické osoby]]></Text><value><![CDATA[ev_ci_pr_os]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>113</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>8</range><Text><![CDATA[Evropská družstevní společnost]]></Text><value><![CDATA[evr_dr_spol]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>114</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>9</range><Text><![CDATA[Evropská společnost]]></Text><value><![CDATA[evr_spol]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>115</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>10</range><Text><![CDATA[Evropské hospodářské zájmové sdružení]]></Text><value><![CDATA[evr_hzs]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>116</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>11</range><Text><![CDATA[Evropské seskupení pro územní spolupráci]]></Text><value><![CDATA[ev_se_pr_uz_sp]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>117</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>12</range><Text><![CDATA[Fyzická osoba - podnikatel]]></Text><value><![CDATA[fo]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>118</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>13</range><Text><![CDATA[Garanční fond obchodníků s cennými papíry]]></Text><value><![CDATA[gf_ocp]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>119</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>14</range><Text><![CDATA[Honební společenstvo]]></Text><value><![CDATA[ho_sp]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>120</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>15</range><Text><![CDATA[Komanditní společnost]]></Text><value><![CDATA[ks]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>121</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>16</range><Text><![CDATA[Komoditní burza]]></Text><value><![CDATA[kom_bur]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>122</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>17</range><Text><![CDATA[Komora (hospodářská, agrární)]]></Text><value><![CDATA[komora_ha]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>123</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>18</range><Text><![CDATA[Kraj]]></Text><value><![CDATA[kraj]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>124</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>19</range><Text><![CDATA[Městská část hlavního města Prahy]]></Text><value><![CDATA[me_ca_hm_pr]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>125</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>20</range><Text><![CDATA[Mezinárodní nevládní organizace]]></Text><value><![CDATA[nevlad_org]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>126</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>21</range><Text><![CDATA[Mezinárodní odborová organizace]]></Text><value><![CDATA[m_odbor_org]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>127</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>22</range><Text><![CDATA[Mezinárodní organizace zaměstnavatelů]]></Text><value><![CDATA[m_org_zam]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>128</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>23</range><Text><![CDATA[Nadace]]></Text><value><![CDATA[nad]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>129</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>24</range><Text><![CDATA[Nadační fond]]></Text><value><![CDATA[nad_f]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>130</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>25</range><Text><![CDATA[Národní podnik]]></Text><value><![CDATA[np]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>131</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>26</range><Text><![CDATA[Občanské sdružení]]></Text><value><![CDATA[os]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>132</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>27</range><Text><![CDATA[Obec]]></Text><value><![CDATA[obec]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>133</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>28</range><Text><![CDATA[Obecně prospěšná společnost]]></Text><value><![CDATA[ops]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>134</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>29</range><Text><![CDATA[Odborová organizace]]></Text><value><![CDATA[odbor_organizace]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>135</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>30</range><Text><![CDATA[Odborová organizace a organizace zaměstnavatelů]]></Text><value><![CDATA[odbor_org]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>136</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>31</range><Text><![CDATA[Odštěpný závod]]></Text><value><![CDATA[oz]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>137</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>32</range><Text><![CDATA[Odštěpný závod zahraniční fyzické osoby]]></Text><value><![CDATA[os_zfo]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>138</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>33</range><Text><![CDATA[Odštěpný závod zahraniční právnické osoby]]></Text><value><![CDATA[os_zpo]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>139</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>34</range><Text><![CDATA[Organizace zaměstnavatelů]]></Text><value><![CDATA[org_zam]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>140</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>35</range><Text><![CDATA[Organizační jednotka mezinárodní nevládní organizace]]></Text><value><![CDATA[p_nevlad_org]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>141</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>36</range><Text><![CDATA[Organizační jednotka občanského sdružení]]></Text><value><![CDATA[or_je_ob_sd]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>142</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>37</range><Text><![CDATA[Organizační jednotka zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích]]></Text><value><![CDATA[p_zvlastni_org]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>143</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>38</range><Text><![CDATA[Organizační složka zahraničního nadačního fondu]]></Text><value><![CDATA[os_z_nad_f]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>144</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>39</range><Text><![CDATA[Organizační složka zahraniční nadace]]></Text><value><![CDATA[os_z_nad]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>145</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>40</range><Text><![CDATA[Ostatní]]></Text><value><![CDATA[ostatni]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>146</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>41</range><Text><![CDATA[Pobočná mezinárodní odborová organizace]]></Text><value><![CDATA[p_m_odbor_org]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>147</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>42</range><Text><![CDATA[Pobočná mezinárodní organizace zaměstnavatelů]]></Text><value><![CDATA[p_m_org_zam]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>148</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>43</range><Text><![CDATA[Pobočná odborová organizace a organizace zaměstnavatelů]]></Text><value><![CDATA[p_odbor_org]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>149</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>44</range><Text><![CDATA[Pobočný spolek]]></Text><value><![CDATA[pobocny_spolek]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>150</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>45</range><Text><![CDATA[Podnikající fyzická osoba tuzemská]]></Text><value><![CDATA[pfot]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>151</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>46</range><Text><![CDATA[Podnik nebo hospodářské zařízení politické strany]]></Text><value><![CDATA[podn_hz_ps]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>152</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>47</range><Text><![CDATA[Podnik nebo hospodářské zařízení sdružení]]></Text><value><![CDATA[podn_hz_sdr]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>153</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>48</range><Text><![CDATA[Podnik se zahraniční majetkovou účastí]]></Text><value><![CDATA[po_se_za_ma_uc]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>154</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>49</range><Text><![CDATA[Podnik zahraničního obchodu]]></Text><value><![CDATA[po_za_ob]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>155</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>50</range><Text><![CDATA[Politická strana, politické hnutí]]></Text><value><![CDATA[po_st_po_hn]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>156</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>51</range><Text><![CDATA[Právnická osoba zřízená zvláštním zákonem zapisovaná do veřejného rejstříku]]></Text><value><![CDATA[po_zzz]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>157</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>52</range><Text><![CDATA[Příspěvková organizace]]></Text><value><![CDATA[prisp]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>158</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>53</range><Text><![CDATA[Rada pro veřejný dohled nad auditem]]></Text><value><![CDATA[ra_pr_ve_do_na_a]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>159</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>54</range><Text><![CDATA[Regionální rada regionu soudržnosti]]></Text><value><![CDATA[re_ra_re_so]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>160</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>55</range><Text><![CDATA[Samosprávná stavovská organizace (profesní komora) ]]></Text><value><![CDATA[sa_st_or]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>161</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>56</range><Text><![CDATA[Samostatná drobná provozovna (obecního úřadu)]]></Text><value><![CDATA[sam_dr_prov]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>162</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>57</range><Text><![CDATA[Sdružení mezinárodního obchodu]]></Text><value><![CDATA[sd_me_ob]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>163</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>58</range><Text><![CDATA[Školská právnická osoba]]></Text><value><![CDATA[sk_pr_os]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>164</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>59</range><Text><![CDATA[Společenství vlastníků jednotek]]></Text><value><![CDATA[svj]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>165</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>60</range><Text><![CDATA[Společnost s ručením omezeným]]></Text><value><![CDATA[sro]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>166</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>61</range><Text><![CDATA[Společný podnik]]></Text><value><![CDATA[spol_pod]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>167</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>62</range><Text><![CDATA[Spolek]]></Text><value><![CDATA[spolek]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>168</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>63</range><Text><![CDATA[Státní banka československá]]></Text><value><![CDATA[stat_banka_cs]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>169</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>64</range><Text><![CDATA[Státní fond ze zákona]]></Text><value><![CDATA[sf_zz]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>170</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>65</range><Text><![CDATA[Státní fond ze zákona nezapisující se do obchodního rejstříku]]></Text><value><![CDATA[sf_nor]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>171</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>66</range><Text><![CDATA[Státní organizace Správa železnic]]></Text><value><![CDATA[szdc]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>172</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>67</range><Text><![CDATA[Státní podnik]]></Text><value><![CDATA[sp]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>173</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>68</range><Text><![CDATA[Státní příspěvková organizace]]></Text><value><![CDATA[st_prisp]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>174</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>69</range><Text><![CDATA[Svazy církví a náboženských společností]]></Text><value><![CDATA[sv_ci_na_sp]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>175</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>70</range><Text><![CDATA[Účelová zahraničně obchodní organizace]]></Text><value><![CDATA[uc_za_ob_or]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>176</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>71</range><Text><![CDATA[Ústav]]></Text><value><![CDATA[ustav]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>177</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>72</range><Text><![CDATA[Veřejná obchodní společnost]]></Text><value><![CDATA[vos]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>178</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>73</range><Text><![CDATA[Veřejná výzkumná instituce ]]></Text><value><![CDATA[ve_vy_or]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>179</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>74</range><Text><![CDATA[Veřejné neziskové ústavní zdravotnické zařízení ]]></Text><value><![CDATA[ve_ne_us_zd_za]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>180</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>75</range><Text><![CDATA[Veřejnoprávní instituce]]></Text><value><![CDATA[ve_inst]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>181</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>76</range><Text><![CDATA[Všeobecná zdravotní pojišťovna]]></Text><value><![CDATA[vzp]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>182</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>77</range><Text><![CDATA[Vysoká škola (veřejná, státní)]]></Text><value><![CDATA[vs]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>183</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>78</range><Text><![CDATA[Zahraniční fyzická osoba ]]></Text><value><![CDATA[zahr_fos]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>184</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>79</range><Text><![CDATA[Zahraniční osoba]]></Text><value><![CDATA[zahr_os]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>185</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>80</range><Text><![CDATA[Zahraniční pobočný spolek]]></Text><value><![CDATA[z_pobocny_spolek]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>186</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>81</range><Text><![CDATA[Zahraniční spolek]]></Text><value><![CDATA[za_sp]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>187</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>82</range><Text><![CDATA[Zájmové sdružení]]></Text><value><![CDATA[zaj_sdr]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>188</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>83</range><Text><![CDATA[Zájmové sdružení právnických osob]]></Text><value><![CDATA[n_zaj_sdr_po]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>189</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>84</range><Text><![CDATA[Zájmové sdružení právnických osob zapsané v OR]]></Text><value><![CDATA[zaj_sdr_po]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>190</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>85</range><Text><![CDATA[Zdravotní pojišťovna (mimo VZP)]]></Text><value><![CDATA[zp]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>191</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>86</range><Text><![CDATA[Zvláštní organizace pro zastoupení českých zájmů v mezinárodních nevládních organizacích]]></Text><value><![CDATA[zvlastni_org]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>192</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TR</TAG><range>5</range><Text><![CDATA[Spisová zn.: *
+  ]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>TR</CONTROLTYPE><SOURCE_INDEX>193</SOURCE_INDEX><BOUNDINGRECT>242|371|600|34</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TH</TAG><range>0</range><Text><![CDATA[Spisová zn.: *]]></Text><rowspan><![CDATA[2]]></rowspan><colspan><![CDATA[1]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TH</CONTROLTYPE><SOURCE_INDEX>194</SOURCE_INDEX><BOUNDINGRECT>242|371|150|69</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SUP</TAG><range>0</range><Text><![CDATA[*]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>SUP</CONTROLTYPE><SOURCE_INDEX>195</SOURCE_INDEX><BOUNDINGRECT>327|378|6|10</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TD</TAG><range>0</range><Text><![CDATA[ ]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[1]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TD</CONTROLTYPE><SOURCE_INDEX>196</SOURCE_INDEX><BOUNDINGRECT>392|371|122|34</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SPAN</TAG><range>0</range><Text><![CDATA[ ]]></Text><class><![CDATA[field field-text]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>197</SOURCE_INDEX><BOUNDINGRECT>392|376|95|24</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>INPUT</TAG><range>0</range><name><![CDATA[oddil]]></name><title><![CDATA[Identifikace oddílu (A, B, C, Dr, Pr, H, N, O, S, L, U)]]></title><class><![CDATA[text hint placeholder tiny]]></class><type><![CDATA[text]]></type><maxlength><![CDATA[12]]></maxlength><placeholder><![CDATA[Oddíl]]></placeholder><value><![CDATA[]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>INPUT</CONTROLTYPE><SOURCE_INDEX>198</SOURCE_INDEX><BOUNDINGRECT>392|376|95|24</BOUNDINGRECT></CTX_PROPS></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TD</TAG><range>1</range><Text><![CDATA[ ]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[1]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TD</CONTROLTYPE><SOURCE_INDEX>199</SOURCE_INDEX><BOUNDINGRECT>514|371|328|34</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SPAN</TAG><range>0</range><Text><![CDATA[ ]]></Text><class><![CDATA[field field-text]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>200</SOURCE_INDEX><BOUNDINGRECT>514|376|150|24</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>INPUT</TAG><range>0</range><name><![CDATA[vlozka]]></name><title><![CDATA[Číslo vložky (je součástí údaje "Spisová značka")]]></title><class><![CDATA[text hint placeholder short]]></class><type><![CDATA[text]]></type><maxlength><![CDATA[10]]></maxlength><placeholder><![CDATA[Vložka]]></placeholder><value><![CDATA[]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>INPUT</CONTROLTYPE><SOURCE_INDEX>201</SOURCE_INDEX><BOUNDINGRECT>514|376|150|24</BOUNDINGRECT></CTX_PROPS></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TR</TAG><range>6</range><Text><![CDATA[vedená u:  Městský soud v Praze Krajský soud v Českých Budějovicích Krajský soud v Plzni Krajský soud v Ústí nad Labem Krajský soud v Hradci Králové Krajský soud v Brně Krajský soud v Ostravě  ]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>TR</CONTROLTYPE><SOURCE_INDEX>202</SOURCE_INDEX><BOUNDINGRECT>242|405|600|35</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TD</TAG><range>0</range><Text><![CDATA[vedená u: ]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[1]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TD</CONTROLTYPE><SOURCE_INDEX>203</SOURCE_INDEX><BOUNDINGRECT>392|405|122|35</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>STRONG</TAG><range>0</range><Text><![CDATA[vedená u: ]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>STRONG</CONTROLTYPE><SOURCE_INDEX>204</SOURCE_INDEX><BOUNDINGRECT>392|412|66|15</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>LABEL</TAG><range>0</range><Text><![CDATA[vedená u:]]></Text><class><![CDATA[auto]]></class><id><![CDATA[id7-w-lbl]]></id><for><![CDATA[id7]]></for></PROPERTIES><CTX_PROPS><CONTROLTYPE>LABEL</CONTROLTYPE><SOURCE_INDEX>205</SOURCE_INDEX><BOUNDINGRECT>392|412|66|18</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TD</TAG><range>1</range><Text><![CDATA[ Městský soud v Praze Krajský soud v Českých Budějovicích Krajský soud v Plzni Krajský soud v Ústí nad Labem Krajský soud v Hradci Králové Krajský soud v Brně Krajský soud v Ostravě  ]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[1]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TD</CONTROLTYPE><SOURCE_INDEX>206</SOURCE_INDEX><BOUNDINGRECT>514|405|328|35</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SPAN</TAG><range>0</range><Text><![CDATA[ Městský soud v Praze Krajský soud v Českých Budějovicích Krajský soud v Plzni Krajský soud v Ústí nad Labem Krajský soud v Hradci Králové Krajský soud v Brně Krajský soud v Ostravě  ]]></Text><class><![CDATA[field field-enum]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>207</SOURCE_INDEX><BOUNDINGRECT>514|410|256|25</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SELECT</TAG><range>0</range><Text><![CDATA[ Městský soud v Praze Krajský soud v Českých Budějovicích Krajský soud v Plzni Krajský soud v Ústí nad Labem Krajský soud v Hradci Králové Krajský soud v Brně Krajský soud v Ostravě ]]></Text><name><![CDATA[soud]]></name><title><![CDATA[Místně příslušný rejstříkový soud]]></title><class><![CDATA[hint auto]]></class><id><![CDATA[id7]]></id></PROPERTIES><CTX_PROPS><CONTROLTYPE>SELECT</CONTROLTYPE><SOURCE_INDEX>208</SOURCE_INDEX><BOUNDINGRECT>514|410|256|25</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>OPTION</TAG><range>0</range><selected><![CDATA[true]]></selected><value><![CDATA[]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>209</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>1</range><Text><![CDATA[Městský soud v Praze]]></Text><value><![CDATA[MSPH]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>210</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>2</range><Text><![CDATA[Krajský soud v Českých Budějovicích]]></Text><value><![CDATA[KSCB]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>211</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>3</range><Text><![CDATA[Krajský soud v Plzni]]></Text><value><![CDATA[KSPL]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>212</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>4</range><Text><![CDATA[Krajský soud v Ústí nad Labem]]></Text><value><![CDATA[KSUL]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>213</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>5</range><Text><![CDATA[Krajský soud v Hradci Králové]]></Text><value><![CDATA[KSHK]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>214</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>6</range><Text><![CDATA[Krajský soud v Brně]]></Text><value><![CDATA[KSBR]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>215</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>7</range><Text><![CDATA[Krajský soud v Ostravě]]></Text><value><![CDATA[KSOS]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>216</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>P</TAG><range>0</range><Text><![CDATA[* Vyplňte alespoň jedno z polí: Název subjektu, Identifikační číslo, Spisová zn.. ]]></Text><id><![CDATA[AdvancedSearch-validation]]></id></PROPERTIES><CTX_PROPS><CONTROLTYPE>P</CONTROLTYPE><SOURCE_INDEX>217</SOURCE_INDEX><BOUNDINGRECT>242|445|600|20</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SPAN</TAG><range>0</range><Text><![CDATA[* Vyplňte alespoň jedno z polí: Název subjektu, Identifikační číslo, Spisová zn..]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>218</SOURCE_INDEX><BOUNDINGRECT>242|447|512|14</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SUP</TAG><range>0</range><Text><![CDATA[*]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>SUP</CONTROLTYPE><SOURCE_INDEX>219</SOURCE_INDEX><BOUNDINGRECT>242|447|5|11</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>STRONG</TAG><range>0</range><Text><![CDATA[Název subjektu]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>STRONG</CONTROLTYPE><SOURCE_INDEX>220</SOURCE_INDEX><BOUNDINGRECT>431|447|104|14</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>STRONG</TAG><range>1</range><Text><![CDATA[Identifikační číslo]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>STRONG</CONTROLTYPE><SOURCE_INDEX>221</SOURCE_INDEX><BOUNDINGRECT>544|447|121|14</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>STRONG</TAG><range>2</range><Text><![CDATA[Spisová zn.]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>STRONG</CONTROLTYPE><SOURCE_INDEX>222</SOURCE_INDEX><BOUNDINGRECT>673|447|77|14</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>DIV</TAG><range>1</range><Text><![CDATA[
+Max. počet zobrazených položek:
+
+50 200 500  
+
+Typ hledání v názvu:
+
+Dle začátku slov Od začátku  
+
+Vyhledávat údaje:
+
+Jen platné Platné i neplatné  ]]></Text><class><![CDATA[search-settings]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>223</SOURCE_INDEX><BOUNDINGRECT>904|198|250|192</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TABLE</TAG><range>0</range><Text><![CDATA[
+Max. počet zobrazených položek:
+
+50 200 500  
+
+Typ hledání v názvu:
+
+Dle začátku slov Od začátku  
+
+Vyhledávat údaje:
+
+Jen platné Platné i neplatné  ]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>TABLE</CONTROLTYPE><SOURCE_INDEX>224</SOURCE_INDEX><BOUNDINGRECT>904|198|223|192</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TBODY</TAG><range>0</range><Text><![CDATA[
+Max. počet zobrazených položek:
+
+50 200 500  
+
+Typ hledání v názvu:
+
+Dle začátku slov Od začátku  
+
+Vyhledávat údaje:
+
+Jen platné Platné i neplatné  ]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>TBODY</CONTROLTYPE><SOURCE_INDEX>225</SOURCE_INDEX><BOUNDINGRECT>904|198|223|192</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TR</TAG><range>0</range><Text><![CDATA[Max. počet zobrazených položek:]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>TR</CONTROLTYPE><SOURCE_INDEX>226</SOURCE_INDEX><BOUNDINGRECT>904|198|223|29</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TH</TAG><range>0</range><Text><![CDATA[Max. počet zobrazených položek:]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[1]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TH</CONTROLTYPE><SOURCE_INDEX>227</SOURCE_INDEX><BOUNDINGRECT>904|198|223|29</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>LABEL</TAG><range>0</range><Text><![CDATA[Max. počet zobrazených položek:]]></Text><class><![CDATA[]]></class><id><![CDATA[id8-w-lbl]]></id><for><![CDATA[id8]]></for></PROPERTIES><CTX_PROPS><CONTROLTYPE>LABEL</CONTROLTYPE><SOURCE_INDEX>228</SOURCE_INDEX><BOUNDINGRECT>904|204|223|18</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TR</TAG><range>1</range><Text><![CDATA[50 200 500  ]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>TR</CONTROLTYPE><SOURCE_INDEX>229</SOURCE_INDEX><BOUNDINGRECT>904|227|223|35</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TD</TAG><range>0</range><Text><![CDATA[50 200 500  ]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[1]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TD</CONTROLTYPE><SOURCE_INDEX>230</SOURCE_INDEX><BOUNDINGRECT>904|227|223|35</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SPAN</TAG><range>0</range><Text><![CDATA[50 200 500  ]]></Text><class><![CDATA[field field-enum]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>231</SOURCE_INDEX><BOUNDINGRECT>904|232|56|25</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SELECT</TAG><range>0</range><Text><![CDATA[50 200 500 ]]></Text><name><![CDATA[polozek]]></name><title><![CDATA[Max. počet zobrazených položek]]></title><class><![CDATA[hint]]></class><id><![CDATA[id8]]></id></PROPERTIES><CTX_PROPS><CONTROLTYPE>SELECT</CONTROLTYPE><SOURCE_INDEX>232</SOURCE_INDEX><BOUNDINGRECT>904|232|56|25</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>OPTION</TAG><range>0</range><Text><![CDATA[50]]></Text><selected><![CDATA[true]]></selected><value><![CDATA[50]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>233</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>1</range><Text><![CDATA[200]]></Text><value><![CDATA[200]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>234</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>2</range><Text><![CDATA[500]]></Text><value><![CDATA[500]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>235</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TR</TAG><range>2</range><Text><![CDATA[Typ hledání v názvu:]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>TR</CONTROLTYPE><SOURCE_INDEX>236</SOURCE_INDEX><BOUNDINGRECT>904|262|223|30</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TH</TAG><range>0</range><Text><![CDATA[Typ hledání v názvu:]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[1]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TH</CONTROLTYPE><SOURCE_INDEX>237</SOURCE_INDEX><BOUNDINGRECT>904|262|223|30</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>LABEL</TAG><range>0</range><Text><![CDATA[Typ hledání v názvu:]]></Text><class><![CDATA[]]></class><id><![CDATA[id9-w-lbl]]></id><for><![CDATA[id9]]></for></PROPERTIES><CTX_PROPS><CONTROLTYPE>LABEL</CONTROLTYPE><SOURCE_INDEX>238</SOURCE_INDEX><BOUNDINGRECT>904|269|139|18</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TR</TAG><range>3</range><Text><![CDATA[Dle začátku slov Od začátku  ]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>TR</CONTROLTYPE><SOURCE_INDEX>239</SOURCE_INDEX><BOUNDINGRECT>904|292|223|34</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TD</TAG><range>0</range><Text><![CDATA[Dle začátku slov Od začátku  ]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[1]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TD</CONTROLTYPE><SOURCE_INDEX>240</SOURCE_INDEX><BOUNDINGRECT>904|292|223|34</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SPAN</TAG><range>0</range><Text><![CDATA[Dle začátku slov Od začátku  ]]></Text><class><![CDATA[field field-enum]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>241</SOURCE_INDEX><BOUNDINGRECT>904|297|132|24</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SELECT</TAG><range>0</range><Text><![CDATA[Dle začátku slov Od začátku ]]></Text><name><![CDATA[typHledani]]></name><title><![CDATA[Typ hledání v názvu]]></title><class><![CDATA[hint]]></class><id><![CDATA[id9]]></id></PROPERTIES><CTX_PROPS><CONTROLTYPE>SELECT</CONTROLTYPE><SOURCE_INDEX>242</SOURCE_INDEX><BOUNDINGRECT>904|297|132|24</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>OPTION</TAG><range>0</range><Text><![CDATA[Dle začátku slov]]></Text><value><![CDATA[CONTAINS]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>243</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>1</range><Text><![CDATA[Od začátku]]></Text><selected><![CDATA[true]]></selected><value><![CDATA[STARTS_WITH]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>244</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TR</TAG><range>4</range><Text><![CDATA[Vyhledávat údaje:]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>TR</CONTROLTYPE><SOURCE_INDEX>245</SOURCE_INDEX><BOUNDINGRECT>904|326|223|30</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TH</TAG><range>0</range><Text><![CDATA[Vyhledávat údaje:]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[1]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TH</CONTROLTYPE><SOURCE_INDEX>246</SOURCE_INDEX><BOUNDINGRECT>904|326|223|30</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>LABEL</TAG><range>0</range><Text><![CDATA[Vyhledávat údaje:]]></Text><class><![CDATA[]]></class><id><![CDATA[ida-w-lbl]]></id><for><![CDATA[ida]]></for></PROPERTIES><CTX_PROPS><CONTROLTYPE>LABEL</CONTROLTYPE><SOURCE_INDEX>247</SOURCE_INDEX><BOUNDINGRECT>904|333|122|18</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>TR</TAG><range>5</range><Text><![CDATA[Jen platné Platné i neplatné  ]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>TR</CONTROLTYPE><SOURCE_INDEX>248</SOURCE_INDEX><BOUNDINGRECT>904|356|223|34</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>TD</TAG><range>0</range><Text><![CDATA[Jen platné Platné i neplatné  ]]></Text><rowspan><![CDATA[1]]></rowspan><colspan><![CDATA[1]]></colspan></PROPERTIES><CTX_PROPS><CONTROLTYPE>TD</CONTROLTYPE><SOURCE_INDEX>249</SOURCE_INDEX><BOUNDINGRECT>904|356|223|34</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SPAN</TAG><range>0</range><Text><![CDATA[Jen platné Platné i neplatné  ]]></Text><class><![CDATA[field field-enum]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>250</SOURCE_INDEX><BOUNDINGRECT>904|361|134|24</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SELECT</TAG><range>0</range><Text><![CDATA[Jen platné Platné i neplatné ]]></Text><name><![CDATA[jenPlatne]]></name><title><![CDATA[Vyhledávat údaje]]></title><class><![CDATA[hint]]></class><id><![CDATA[ida]]></id></PROPERTIES><CTX_PROPS><CONTROLTYPE>SELECT</CONTROLTYPE><SOURCE_INDEX>251</SOURCE_INDEX><BOUNDINGRECT>904|361|134|24</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>OPTION</TAG><range>0</range><Text><![CDATA[Jen platné]]></Text><selected><![CDATA[true]]></selected><value><![CDATA[PLATNE]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>252</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>OPTION</TAG><range>1</range><Text><![CDATA[Platné i neplatné]]></Text><value><![CDATA[VSECHNY]]></value></PROPERTIES><CTX_PROPS><CONTROLTYPE>OPTION</CONTROLTYPE><SOURCE_INDEX>253</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>DIV</TAG><range>2</range><id><![CDATA[idb]]></id></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>254</SOURCE_INDEX><BOUNDINGRECT>242|465|912|0</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>P</TAG><range>0</range><Text><![CDATA[Vyhledat  — Nápověda Vyčistit formulář  ]]></Text><class><![CDATA[search-buttons]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>P</CONTROLTYPE><SOURCE_INDEX>255</SOURCE_INDEX><BOUNDINGRECT>242|470|912|26</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>BUTTON</TAG><range>0</range><Text><![CDATA[ Vyhledat ]]></Text><class><![CDATA[button]]></class><onclick><![CDATA[var e=document.getElementById('id1_hf_0'); e.name='p::submit'; e.value='x';var f=document.getElementById('id1');var ff=f;if (ff.onsubmit != undefined) { if (ff.onsubmit()==false) return false; }f.submit();e.value='';e.name='';return false;]]></onclick><type><![CDATA[submit]]></type></PROPERTIES><CTX_PROPS><CONTROLTYPE>BUTTON</CONTROLTYPE><SOURCE_INDEX>256</SOURCE_INDEX><BOUNDINGRECT>242|470|87|26</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SPAN</TAG><range>0</range><Text><![CDATA[ Vyhledat]]></Text><class><![CDATA[ i-16 i-search]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>257</SOURCE_INDEX><BOUNDINGRECT>249|471|73|24</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>A</TAG><range>0</range><Text><![CDATA[Nápověda]]></Text><href><![CDATA[https://or.justice.cz/ias/ui/napoveda]]></href><target><![CDATA[_blank]]></target><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>258</SOURCE_INDEX><BOUNDINGRECT>349|474|60|14</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>A</TAG><range>1</range><Text><![CDATA[ Vyčistit formulář ]]></Text><class><![CDATA[button search-clear]]></class><href><![CDATA[https://or.justice.cz/ias/ui/rejstrik-$firma]]></href><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>259</SOURCE_INDEX><BOUNDINGRECT>721|470|133|26</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SPAN</TAG><range>0</range><Text><![CDATA[ Vyčistit formulář]]></Text><class><![CDATA[i-16 i-cancel]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>260</SOURCE_INDEX><BOUNDINGRECT>728|471|119|24</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>DIV</TAG><range>2</range><Text><![CDATA[Jak na to?
+Podmínky provozu
+Rejstříkové soudy
+Evidence úpadců
+Insolvenční rejstřík
+Veřejný rejstřík podle subjektů
+Veřejný rejstřík podle právnických osob v angažmá
+Veřejný rejstřík podle fyzických osob v angažmá
+Automatické aktualizace ze základních registrů
+Podání do veřejného rejstříku
+Co s elektronickým výpisem
+Portál pro podnikatele: BusinessInfo.cz
+Průvodce: Jak založit firmu / společnost
+Informační místa pro podnikatele
+Technická podpora
+
+
+© 2012-2015 Ministerstvo spravedlnosti České republiky
+ Verze aplikace: 9.18.1 ]]></Text><class><![CDATA[noprint]]></class><id><![CDATA[page-f]]></id></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>261</SOURCE_INDEX><BOUNDINGRECT>0|518|1348|247</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>DIV</TAG><range>0</range><Text><![CDATA[Jak na to?
+Podmínky provozu
+Rejstříkové soudy
+Evidence úpadců
+Insolvenční rejstřík
+Veřejný rejstřík podle subjektů
+Veřejný rejstřík podle právnických osob v angažmá
+Veřejný rejstřík podle fyzických osob v angažmá
+Automatické aktualizace ze základních registrů
+Podání do veřejného rejstříku
+Co s elektronickým výpisem
+Portál pro podnikatele: BusinessInfo.cz
+Průvodce: Jak založit firmu / společnost
+Informační místa pro podnikatele
+Technická podpora]]></Text><id><![CDATA[page-f-links]]></id></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>262</SOURCE_INDEX><BOUNDINGRECT>194|539|960|121</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>UL</TAG><range>0</range><Text><![CDATA[Jak na to?
+Podmínky provozu
+Rejstříkové soudy
+Evidence úpadců
+Insolvenční rejstřík]]></Text><class><![CDATA[links1]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>UL</CONTROLTYPE><SOURCE_INDEX>263</SOURCE_INDEX><BOUNDINGRECT>248|539|179|90</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>LI</TAG><range>0</range><Text><![CDATA[Jak na to?]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>LI</CONTROLTYPE><SOURCE_INDEX>264</SOURCE_INDEX><BOUNDINGRECT>248|539|179|18</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>A</TAG><range>0</range><Text><![CDATA[Jak na to?]]></Text><href><![CDATA[https://or.justice.cz/ias/ui/napoveda]]></href><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>265</SOURCE_INDEX><BOUNDINGRECT>248|541|56|13</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>LI</TAG><range>1</range><Text><![CDATA[Podmínky provozu]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>LI</CONTROLTYPE><SOURCE_INDEX>266</SOURCE_INDEX><BOUNDINGRECT>248|557|179|18</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>A</TAG><range>0</range><Text><![CDATA[Podmínky provozu]]></Text><href><![CDATA[https://or.justice.cz/ias/ui/podminky]]></href><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>267</SOURCE_INDEX><BOUNDINGRECT>248|559|101|13</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>LI</TAG><range>2</range><Text><![CDATA[Rejstříkové soudy]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>LI</CONTROLTYPE><SOURCE_INDEX>268</SOURCE_INDEX><BOUNDINGRECT>248|575|179|18</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>A</TAG><range>0</range><Text><![CDATA[Rejstříkové soudy]]></Text><href><![CDATA[https://or.justice.cz/ias/ui/soudy]]></href><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>269</SOURCE_INDEX><BOUNDINGRECT>248|577|98|13</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>LI</TAG><range>3</range><Text><![CDATA[Evidence úpadců]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>LI</CONTROLTYPE><SOURCE_INDEX>270</SOURCE_INDEX><BOUNDINGRECT>248|593|179|18</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>A</TAG><range>0</range><Text><![CDATA[Evidence úpadců]]></Text><href><![CDATA[http://upadci.justice.cz/cgi-bin/sqw1250.cgi/upkuk/s_i8.sqw]]></href><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>271</SOURCE_INDEX><BOUNDINGRECT>248|595|93|13</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>LI</TAG><range>4</range><Text><![CDATA[Insolvenční rejstřík]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>LI</CONTROLTYPE><SOURCE_INDEX>272</SOURCE_INDEX><BOUNDINGRECT>248|611|179|18</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>A</TAG><range>0</range><Text><![CDATA[Insolvenční rejstřík]]></Text><href><![CDATA[https://isir.justice.cz/isir/common/index.do]]></href><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>273</SOURCE_INDEX><BOUNDINGRECT>248|613|105|13</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>UL</TAG><range>1</range><Text><![CDATA[Veřejný rejstřík podle subjektů
+Veřejný rejstřík podle právnických osob v angažmá
+Veřejný rejstřík podle fyzických osob v angažmá
+Automatické aktualizace ze základních registrů
+Podání do veřejného rejstříku]]></Text><class><![CDATA[links2]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>UL</CONTROLTYPE><SOURCE_INDEX>274</SOURCE_INDEX><BOUNDINGRECT>451|539|396|90</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>LI</TAG><range>0</range><Text><![CDATA[Veřejný rejstřík podle subjektů]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>LI</CONTROLTYPE><SOURCE_INDEX>275</SOURCE_INDEX><BOUNDINGRECT>451|539|396|18</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>A</TAG><range>0</range><Text><![CDATA[Veřejný rejstřík podle subjektů]]></Text><href><![CDATA[https://or.justice.cz/ias/ui/rejstrik-$firma]]></href><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>276</SOURCE_INDEX><BOUNDINGRECT>451|541|170|13</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>LI</TAG><range>1</range><Text><![CDATA[Veřejný rejstřík podle právnických osob v angažmá]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>LI</CONTROLTYPE><SOURCE_INDEX>277</SOURCE_INDEX><BOUNDINGRECT>451|557|396|18</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>A</TAG><range>0</range><Text><![CDATA[Veřejný rejstřík podle právnických osob v angažmá]]></Text><href><![CDATA[https://or.justice.cz/ias/ui/rejstrik-$spolecnici]]></href><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>278</SOURCE_INDEX><BOUNDINGRECT>451|559|282|13</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>LI</TAG><range>2</range><Text><![CDATA[Veřejný rejstřík podle fyzických osob v angažmá]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>LI</CONTROLTYPE><SOURCE_INDEX>279</SOURCE_INDEX><BOUNDINGRECT>451|575|396|18</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>A</TAG><range>0</range><Text><![CDATA[Veřejný rejstřík podle fyzických osob v angažmá]]></Text><href><![CDATA[https://or.justice.cz/ias/ui/rejstrik-$osoba]]></href><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>280</SOURCE_INDEX><BOUNDINGRECT>451|577|267|13</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>LI</TAG><range>3</range><Text><![CDATA[Automatické aktualizace ze základních registrů]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>LI</CONTROLTYPE><SOURCE_INDEX>281</SOURCE_INDEX><BOUNDINGRECT>451|593|396|18</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>A</TAG><range>0</range><Text><![CDATA[Automatické aktualizace ze základních registrů]]></Text><href><![CDATA[https://or.justice.cz/ias/ui/zr]]></href><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>282</SOURCE_INDEX><BOUNDINGRECT>451|595|258|13</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>LI</TAG><range>4</range><Text><![CDATA[Podání do veřejného rejstříku]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>LI</CONTROLTYPE><SOURCE_INDEX>283</SOURCE_INDEX><BOUNDINGRECT>451|611|396|18</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>A</TAG><range>0</range><Text><![CDATA[Podání do veřejného rejstříku]]></Text><href><![CDATA[https://or.justice.cz/ias/ui/podani]]></href><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>284</SOURCE_INDEX><BOUNDINGRECT>451|613|163|13</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>UL</TAG><range>2</range><Text><![CDATA[Co s elektronickým výpisem
+Portál pro podnikatele: BusinessInfo.cz
+Průvodce: Jak založit firmu / společnost
+Informační místa pro podnikatele
+Technická podpora]]></Text><class><![CDATA[links3]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>UL</CONTROLTYPE><SOURCE_INDEX>285</SOURCE_INDEX><BOUNDINGRECT>871|539|229|90</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>LI</TAG><range>0</range><Text><![CDATA[Co s elektronickým výpisem]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>LI</CONTROLTYPE><SOURCE_INDEX>286</SOURCE_INDEX><BOUNDINGRECT>871|539|229|18</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>A</TAG><range>0</range><Text><![CDATA[Co s elektronickým výpisem]]></Text><href><![CDATA[https://or.justice.cz/ias/ui/evypisy]]></href><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>287</SOURCE_INDEX><BOUNDINGRECT>871|541|154|13</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>LI</TAG><range>1</range><Text><![CDATA[Portál pro podnikatele: BusinessInfo.cz]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>LI</CONTROLTYPE><SOURCE_INDEX>288</SOURCE_INDEX><BOUNDINGRECT>871|557|229|18</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>A</TAG><range>0</range><Text><![CDATA[Portál pro podnikatele: BusinessInfo.cz]]></Text><href><![CDATA[http://www.businessinfo.cz/]]></href><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>289</SOURCE_INDEX><BOUNDINGRECT>871|559|215|13</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>LI</TAG><range>2</range><Text><![CDATA[Průvodce: Jak založit firmu / společnost]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>LI</CONTROLTYPE><SOURCE_INDEX>290</SOURCE_INDEX><BOUNDINGRECT>871|575|229|18</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>A</TAG><range>0</range><Text><![CDATA[Průvodce: Jak založit firmu / společnost]]></Text><href><![CDATA[http://www.businessinfo.cz/cs/clanky/obchodni-spolecnosti-zalozeni-vznik-opu-13164.html]]></href><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>291</SOURCE_INDEX><BOUNDINGRECT>871|577|219|13</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>LI</TAG><range>3</range><Text><![CDATA[Informační místa pro podnikatele]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>LI</CONTROLTYPE><SOURCE_INDEX>292</SOURCE_INDEX><BOUNDINGRECT>871|593|229|18</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>A</TAG><range>0</range><Text><![CDATA[Informační místa pro podnikatele]]></Text><href><![CDATA[http://www.komora.cz/hk-cr/inmp/lang_1/Default.aspx]]></href><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>293</SOURCE_INDEX><BOUNDINGRECT>871|595|183|13</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>LI</TAG><range>4</range><Text><![CDATA[Technická podpora]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>LI</CONTROLTYPE><SOURCE_INDEX>294</SOURCE_INDEX><BOUNDINGRECT>871|611|229|18</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>A</TAG><range>0</range><Text><![CDATA[Technická podpora]]></Text><href><![CDATA[https://or.justice.cz/ias/ui/podpora]]></href><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>295</SOURCE_INDEX><BOUNDINGRECT>871|613|103|13</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>SPAN</TAG><range>0</range><id><![CDATA[footer-logo]]></id></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>296</SOURCE_INDEX><BOUNDINGRECT>630|677|88|22</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>P</TAG><range>0</range><Text><![CDATA[© 2012-2015 Ministerstvo spravedlnosti České republiky
+ Verze aplikace: 9.18.1 ]]></Text><class><![CDATA[center]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>P</CONTROLTYPE><SOURCE_INDEX>297</SOURCE_INDEX><BOUNDINGRECT>0|704|1348|36</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>BR</TAG><range>0</range></PROPERTIES><CTX_PROPS><CONTROLTYPE>BR</CONTROLTYPE><SOURCE_INDEX>298</SOURCE_INDEX><BOUNDINGRECT>831|706|0|13</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>SPAN</TAG><range>0</range><Text><![CDATA[9.18.1]]></Text></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>299</SOURCE_INDEX><BOUNDINGRECT>700|724|36|13</BOUNDINGRECT></CTX_PROPS><CHILDREN></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>P</TAG><range>0</range><class><![CDATA[center noprint]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>P</CONTROLTYPE><SOURCE_INDEX>300</SOURCE_INDEX><BOUNDINGRECT>0|789|1348|62</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>SPAN</TAG><range>0</range><id><![CDATA[footer-logo-eu]]></id></PROPERTIES><CTX_PROPS><CONTROLTYPE>SPAN</CONTROLTYPE><SOURCE_INDEX>301</SOURCE_INDEX><BOUNDINGRECT>366|789|617|62</BOUNDINGRECT></CTX_PROPS></ITEM></CHILDREN></ITEM></CHILDREN></ITEM><ITEM><PROPERTIES><TAG>DIV</TAG><range>1</range><class><![CDATA[tooltip]]></class><style><![CDATA[left: 0px; top: 0px; width: auto; display: none; visibility: hidden;]]></style></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>302</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS><CHILDREN><ITEM><PROPERTIES><TAG>A</TAG><range>0</range><class><![CDATA[close img-16 i-cancel]]></class><shape><![CDATA[]]></shape></PROPERTIES><CTX_PROPS><CONTROLTYPE>A</CONTROLTYPE><PREFIX>bt</PREFIX><SOURCE_INDEX>303</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>DIV</TAG><range>0</range><class><![CDATA[arr]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>304</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM><ITEM><PROPERTIES><TAG>DIV</TAG><range>1</range><class><![CDATA[content]]></class></PROPERTIES><CTX_PROPS><CONTROLTYPE>DIV</CONTROLTYPE><SOURCE_INDEX>305</SOURCE_INDEX><BOUNDINGRECT>0|0|0|0</BOUNDINGRECT></CTX_PROPS></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN></ITEM></CHILDREN><PERFO>XML Capture done in 13 milliseconds</PERFO></PAGE>

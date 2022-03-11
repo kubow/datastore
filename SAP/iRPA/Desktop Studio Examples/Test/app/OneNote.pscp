@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ConteXtorStudio Version="StudioReco V1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" noNamespaceSchemaLocation="XsdStudio.xsd">
+	<PROCESSUS>
+		<PROCESS Name="GLOBAL" Key="NoKey" Comment="Global Processus">
+			<_DECLAREVAR>
+				<STRUCTUREDON Name="GLOBAL" />
+			</_DECLAREVAR>
+			<SCRIPTS />
+			<RESOURCES />
+		</PROCESS>
+	</PROCESSUS>
+	<APPLICATIONS>
+		<APPLI Name="OneNote" CtxtId="60b8e9fa-4b99-450b-9be8-6f59392e1c15" Nature="WIN" TechnoSDK="V3">
+			<CAPTURE Name="APPLI_KBCOneNote_1" CtxtId="2" Techno="WIN" />
+			<CRITERE>
+				<EXE Scan="Full"><![CDATA[ONENOTE.EXE]]></EXE>
+			</CRITERE>
+			<_DECLAREVAR>
+				<STRUCTUREDON Name="OneNote" />
+			</_DECLAREVAR>
+			<_ECRANS>
+				<PAGE Name="ListCustomers" Comment="NetUIHWND" CtxtId="380e1f29-d4d6-4cc1-a7f7-2ec1de8e5a12">
+					<CRITERE>
+						<CLASS Scan="Full"><![CDATA[NetUIHWND]]></CLASS>
+						<STYLE><![CDATA[WS_CHILD WS_VISIBLE]]></STYLE>
+					</CRITERE>
+					<OBJETS />
+					<CAPTURE Name="PAGE_NetUIHWND_1610186_1" Comment="NetUIHWND" CtxtId="2" Techno="WIN" CapturedPos="2.R0R4R1R0R0" Timestamp="27/04/2020 16:10:18" MaskRectangle="1162|110|210|625" />
+				</PAGE>
+			</_ECRANS>
+		</APPLI>
+	</APPLICATIONS>
+</ConteXtorStudio>

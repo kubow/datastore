@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>SAP Adaptive Server Enterprise 16 SP01 ew Features</title>
+</head>
+<body>
+
+<h1>SAP Adaptive Server Enterprise 16 SP01 New Features - 20 May 2015 07:39</h1>
+<h1><a name="0">0. Contents</a></h1>
+<ul>
+<li><a href="#1">1. Dynamic histograms</a></li>
+<li><a href="#2">2. Mount and unmount encrypted databases</a></li>
+<li><a href="#3">3. Using select into in multistatement transactions</a></li>
+<li><a href="#4">4. Create or alter databases to use compressed indexes</a></li>
+<li><a href="#5">5. Terse Help</a></li>
+<h1><a name="1">1. Dynamic histograms</a></h1>
+<p>Dynamic histograms allow you to specify columns for which a new range cell is dynamically maintained
+at the end of an existing histogram.</p>
+<p>For DML operations on this column, the new range cell includes the maximum value and dynamically 
+maintains a row count.</p>
+<p>The boundaries of the original cells of the histogram remain unchanged, but the weights of the original
+cells are proportionally decreased as the weight of the new cell is increased.</p>
+<pre>
+update statistics <table_name> (<column_name>, ...)
+... 
+     [using dynamic_histogram [ on | off ] 
+...
+</pre>
+<h1><a name="2">2. Mount and unmount encrypted databases</a></h1>
+<p>mount and unmount encrypted databases the same as mounting unencrypted databases</p>
+<p>The master key and database encryption keys stored in the master database must be the same.</p>
+<h1><a name="3">3. Using select into in multistatement transactions</a></h1>
+<p>SAP ASE allows you to use the select into command against permanent and temporary tables in multistatement transactions</p>
+<h1><a name="4">4. Create or alter databases to use compressed indexes</a></h1>
+<p>Use the create database ... index_compression parameter to create databases that include compressed indexes.</p>
+<p>Use the alter database ... set index_compression to enable or disable index compression on existing databases.</p>
+<h1><a name="5">5. Terse Help</a></h1>
+<p>sp_help terse – allows you to determine the amount, and the content, of information displayed by sp_help.</p>
+<p>sp_helpartition terse – allows you to determine the amount, and the content, of information displayed by sp_helpartition.</p>
+<p>sp_helpindex terse – allows you to determine the amount, and the content, of information displayed by sp_helpindex.</p>
+</body>
+</html>

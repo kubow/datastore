@@ -1,0 +1,1271 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+</head>
+<body>
+
+<center><font face="TIMES"><font size=+4>Recovering Sybase</font></font></center>
+
+<p><font face="TIMES"><font size=-1>Recovering from a database problem
+starts with diagnosing exactly what is wrong with the database. Maybe <i>isql</i>
+will not connect to the dataserver, maybe the database is marked suspect,
+or maybe an error message in the errorlog occurs when the dataserver is
+started. In all of these cases and others, something has gone wrong where
+it had gone right before. Fortunately, with the proper backups, many of
+these problems can be fixed and the database restored to full working order.</font></font>
+<p><font face="TIMES"><font size=-1>Sybase has many parts that are inter-related,
+but like Sherlock Holmes investigating a mystery, if we eliminate from
+consideration the items that are working correctly, only the error-causing
+parts will remain. This section provides step-by-step directions to diagnosing
+and repairing all of these error-causing parts, and when completed, will
+leave a fully functional dataserver.</font></font>
+<p><font face="TIMES"><font size=-1>A flow-chart that appears at the beginning
+of these steps should help you in the recovery process. Each item in the
+chart is numbered the same as the steps and procedures below. The electronic
+version of this procedure contains a flowchart that is an HTML image map.
+Each decision or action box in the flow chart is a hyperlink to the appropriate
+section of the printed procedure. For more detailed information about individual
+steps, please consult Sybase's System Administration documentation, especially
+the "Backup and Recovery" chapter.</font></font>
+<p><font face="TIMES"><font size=-1>To begin the investigation, start the
+dataserver like it is normally started. If problems show up in the Sybase
+error log file, or the dataserver does not come up start with Step 1 to
+begin the recovery/diagnosis procedure.</font></font>
+<br>&nbsp;
+<p><map NAME="flowchrt"><area HREF="#Step6" SHAPE="RECT" COORDS="596,138,746,216"><area HREF="#Step5" SHAPE="POLY" COORDS="597,71,674,29,744,72,671,117,597,71"><area HREF="#Step23" SHAPE="POLY" COORDS="612,303,614,303,691,258,764,303,689,346,612,303"><area HREF="#Step15" SHAPE="POLY" COORDS="615,409,692,366,763,412,688,454,615,409"><area HREF="#Step16" SHAPE="RECT" COORDS="623,482,754,551"><area HREF="#Step15" SHAPE="POLY" COORDS="522,703,598,662,669,704,594,749,522,703"><area HREF="#Step24" SHAPE="RECT" COORDS="620,755,723,824"><area HREF="#Step18" SHAPE="POLY" COORDS="612,904,691,862,763,909,688,951,612,904"><area HREF="#Step19" SHAPE="RECT" COORDS="637,975,738,1045"><area HREF="#Step25" SHAPE="RECT" COORDS="21,1098,133,1177"><area HREF="#Step19" SHAPE="RECT" COORDS="463,1074,565,1144"><area HREF="#Step18" SHAPE="POLY" COORDS="438,1005,516,962,587,1010,515,1052,438,1005"><area HREF="#Step22" SHAPE="RECT" COORDS="465,869,564,939"><area HREF="#Step13" SHAPE="RECT" COORDS="176,964,295,1037"><area HREF="#Step19" SHAPE="RECT" COORDS="288,871,389,937"><area HREF="#Step12" SHAPE="RECT" COORDS="152,824,274,898"><area HREF="#Step26" SHAPE="RECT" COORDS="16,894,133,968"><area HREF="#Step27" SHAPE="RECT" COORDS="17,795,132,869"><area HREF="#Step16" SHAPE="RECT" COORDS="470,755,572,825"><area HREF="#Step18" SHAPE="POLY" COORDS="265,732,341,689,412,734,342,778,265,732"><area HREF="#Step11" SHAPE="RECT" COORDS="95,707,226,777"><area HREF="#Step21" SHAPE="POLY" COORDS="437,614,438,614,514,574,590,619,515,661,437,614"><area HREF="#Step17" SHAPE="RECT" COORDS="272,573,400,660"><area HREF="#Step10" SHAPE="POLY" COORDS="88,619,166,576,238,620,161,664,88,619"><area HREF="#Step16" SHAPE="RECT" COORDS="448,481,578,551"><area HREF="#Step16" SHAPE="RECT" COORDS="270,483,400,549"><area HREF="#Step9" SHAPE="RECT" COORDS="93,481,226,549"><area HREF="#Step15" SHAPE="POLY" COORDS="442,408,442,407,516,365,589,410,513,453,442,408"><area HREF="#Step15" SHAPE="POLY" COORDS="267,408,341,365,413,410,338,453,267,408"><area HREF="#Step8" SHAPE="POLY" COORDS="89,408,89,407,165,366,237,410,164,451,89,408"><area HREF="#Step20" SHAPE="POLY" COORDS="439,303,441,303,518,258,589,305,516,343,439,303"><area HREF="#Step14" SHAPE="POLY" COORDS="265,301,343,260,413,304,336,348,265,301"><area HREF="#Step7" SHAPE="POLY" COORDS="86,299,165,259,167,259,236,303,161,345,86,299"><area HREF="#Step4" SHAPE="RECT" COORDS="395,140,547,216"><area HREF="#Step2" SHAPE="RECT" COORDS="188,137,340,215"><area HREF="#Step3" SHAPE="POLY" COORDS="398,70,478,28,547,71,472,116,398,70"><area HREF="#Step1" SHAPE="POLY" COORDS="189,70,190,70,264,28,338,70,264,115,189,70"></map><img SRC="sybase.gif" NAME="flowchrt" USEMAP="#flowchrt" height=1213 width=828>
+<br>&nbsp;
+<p><a NAME="Step1"></a><b><font face="TIMES"><font size=+1>Step 1: Runfile
+Ok?</font></font></b>
+<p><font size=-1><font face="TIMES">Sybase starts up by using the <i>startserver</i>
+program. In both OSs, the program take an additional parameter <i>-f runfilename</i>
+that is the file containing the server startup command and parameters.
+If this file is missing, or the path given for the runfile is incorrect,
+the <i>startserver</i> command will return an error "</font><font face="Courier">Cannot
+execute file</font><font face="TIMES"> <i>runfilename</i>". If the path
+is incorrect for the file, correct it and start again. If you are unsure
+of the path being used, change your directory to the location of the runfile
+then run the command, but only specify the runfile name. Sybase will then
+try looking in your current default directory for the file.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>If the runfile is OK, proceed to
+step 3. If not, proceed to step 2.</font></font></dir>
+</dir>
+<a NAME="Step2"></a><b><font face="TIMES"><font size=+1>Step 2: Restore
+or Recreate Runfile</font></font></b>
+<p><font face="TIMES"><font size=-1>If the file is missing, it can be recreated
+fairly easily. There is nothing magical about this text file. It contains
+the command and parameters to start the server. Figure F contains a sample
+runfile for a Unix system.</font></font>
+<dir><font face="Courier"><font size=-2>#!/bin/sh</font></font>
+<p><font face="Courier"><font size=-2>#</font></font>
+<p><font face="Courier"><font size=-2># SQL Server Information:</font></font>
+<p><font face="Courier"><font size=-2># name: SYB_TITANIA</font></font>
+<p><font face="Courier"><font size=-2># master device: /sybdata/master.dbf</font></font>
+<p><font face="Courier"><font size=-2># master device size: 10752</font></font>
+<p><font face="Courier"><font size=-2># errorlog: /opt/sybase/logs/SYB_MYDB.errorlog</font></font>
+<p><font face="Courier"><font size=-2># interfaces: /opt/sybase</font></font>
+<p><font face="Courier"><font size=-2>#</font></font>
+<p><font face="Courier"><font size=-2>/opt/sybase/bin/dataserver -d/sybdata/master.dbf
+-sSYB_MYDB \</font></font>
+<p><font face="Courier"><font size=-2>-e/opt/sybase/logs/SYB_MYDB.errorlog
+-i/opt/sybase</font></font>
+<dir>
+<center><i><font face="TIMES"><font size=-1>Figure F: Sample runfile</font></font></i></center>
+</dir>
+</dir>
+<i>As seen in the comment lines, dataserver takes a number of different
+parameters. Again, check Sybase’s documentation for your OS for more details.
+The most important parameter shown is the master device. The master device
+is the primary device used by the master database, and the master database
+is one of the keystones of a Sybase server. The master database contains
+a majority of the information about all the other databases, devices, and
+other dataserver objects, including the location of the master device.The
+-s dataservername is how the dataserver knows what name to call itself.
+If this is omitted, Sybase assumes a dataserver of the name </i><font size=-1><font face="Courier">SYBASE</font><font face="TIMES">
+is being started.</font></font>
+<p><font face="TIMES"><font size=-1>The <i>-e errorlog</i> points to the
+full filename and path of the dataserver’s errorlog. During an install,
+Sybase defaults to the <i>$SYBASE/install</i> directory. Because this directory
+contains a number of important files other than the error log, it is recommended
+that this be changed to point to another directory, maybe <i>$SYBASE/logs/</i>.
+Also, if there is more than one dataserver on the system, the <i>errorlog</i>
+filename should be changed. Appending the ".errorlog" suffix to each dataserver
+name provides each server with its individual <i>errorlog</i> file, making
+tracking errors down much simpler.</font></font>
+<p><font face="TIMES"><font size=-1>The next parameter to look at is interface
+parameter, <i>-i interfacedir</i>. This is the directory where Sybase can
+find the interface file. In some systems, there might be two interface
+files - one or more for the users to use, and one for the Sybase system
+to use. The different interface files could contain different selections
+of server entries, preventing the users or the dataserver from accessing
+all the Sybase servers available. If this parameter is omitted, Sybase
+will look in the directory pointed to by <i>$SYBASE</i> environmental variable.</font></font>
+<p><font face="TIMES"><font size=-1>One parameter that is not shown here
+is the configuration file parameter <i>-c configfile</i>. As of version
+11, Sybase can be started using a configuration file. This file contains
+the text of all the configuration options on the dataserver, and their
+values. When no -c parameter is specified, Sybase defaults to the file
+<i>servername.cfg</i>
+found in the directory where the dataserver is started.</font></font>
+<p><font face="TIMES"><font size=-1>Two additional parameters can be used
+with the dataserver program - the version parameter <i>-v</i> and the single
+user mode parameter <i>-m</i>. The version number parameter is handy to
+use when you need to see the current version of the database program, and
+do not want to search for it in the errorlog.</font></font>
+<p><font face="TIMES"><font size=-1>The single-user mode <i>-m</i>, or
+maintenance mode is used to bring the dataserver up so only the "sa" account
+can access the dataserver. This is required when doing certain recovery
+procedures, and in general, when there is a need to prevent user access
+while maintenance is being done.</font></font>
+<p><font face="TIMES"><font size=-1>It is easy to recreate this file by
+using a text editor to create a script like the one above, but with the
+values of your dataserver. Once the file is created, and the account that
+starts the dataserver has access to it, run the <i>startserver –f runfile
+</i>command.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>Once you've replace the runfile,
+return to step 1.</font></font></dir>
+</dir>
+<a NAME="Step3"></a><b><font face="TIMES"><font size=+1>Step 3: Able to
+Get Shared Memory?</font></font></b>
+<p><font face="TIMES"><font size=-1>Like most database products, Sybase
+uses shared memory to communicate between dataserver processes, process
+queries, and store sections of the database for quick access. If Sybase
+is prevented from acquiring the minimum shared memory it needs, it will
+fail to come up and instead will error out with a message like the following:</font></font>
+<dir><font face="Courier"><font size=-2>00:1999/03/21 23:39:02.78 kernel
+os_create_region: can't allocate 2147479552</font></font>
+<p><font face="Courier"><font size=-2>bytes</font></font>
+<p><font face="Courier"><font size=-2>00:1999/03/21 23:39:02.80 kernel
+kbcreate: couldn't create kernel region.</font></font>
+<p><font face="Courier"><font size=-2>00:1999/03/21 23:39:02.80 kernel
+kistartup: could not create shared memory</font></font>
+<dir><font face="TIMES"><font size=-1>If you are able to get to shared
+memory, proceed to Step 6. If not, proceed to Step 4.</font></font></dir>
+</dir>
+<a NAME="Step4"></a><b><font face="TIMES"><font size=+1>Step 4: Free Up
+Shared Memory or Reconfigure Memory in Configuration File</font></font></b>
+<p><font face="TIMES"><font size=-1>As mentioned above, changes in configuration
+parameters can cause the Sybase server to need additional memory. This
+in turn can required the Sybase server to request a larger shared memory
+segment from the OS. There are two things that can prevent this from happening.
+One, the maximum shared memory segment size is undersized, and two, there
+is not enough shared memory on the system to allow this to run.</font></font>
+<p><font face="TIMES"><font size=-1>In the first case, the solution is
+to increase the maximum shared memory segment value appropriately for the
+OS. Because Sybase is supported on many different OSs, how to change this
+is not shown here. Please refer to the appropriate operating system sybase
+installation manual for further information on setting this value.</font></font>
+<p><font face="TIMES"><font size=-1>In the second case, either shared memory
+needs to be added to the system, or shared memory needs to be freed up
+from other processes. Please contact a System Administrator for help in
+accomplishing either of these.</font></font>
+<p><font face="TIMES"><font size=-1>You can view the shared memory being
+used by using the <i>ipcs</i> command. Check the man pages for the correct
+usage of the command, but the output should look something like this:</font></font>
+<dir><font face="Courier"><font size=-2>------ Shared Memory Segments --------</font></font>
+<p><font face="Courier"><font size=-2>shmid owner perms bytes nattch status</font></font>
+<p><font face="Courier"><font size=-2>129 sybase 600 11964416 1</font></font>
+<p><font face="Courier"><font size=-2>2 sybase 666 1024 3</font></font>
+<p><font face="Courier"><font size=-2>56 curtis 606 33334342 3</font></font></dir>
+<font face="TIMES"><font size=-1>Here, the "curtis" process has also taken
+some of the shared memory for itself. By stopping this process, the shared
+memory should be freed up. If stopping the process does not free up the
+memory, it can be freed using the Unix command <i>ipcrm</i>. Again, check
+the Unix man pages for more information on this command on your operating
+system.</font></font>
+<p><font face="TIMES"><font size=-1>If none of these solutions helps the
+problem, the changes in the configuration options will need to be reverted
+to allow the dataserver to come up correctly.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>Helpful Hint: If possible, make one
+change to the configuration options at a time. Sybase configuration options
+interact, some causing the system to need more memory, other less. By making
+one change at a time, the configuration option that prevents the system
+from restarting is known and can be adjusted accordingly.</font></font>
+<p><font face="TIMES"><font size=-1>Once you have corrected these problems,
+return to step 1.</font></font></dir>
+</dir>
+<a NAME="Step5"></a><b><font face="TIMES"><font size=+1>Step 5: Able to
+Connect to Dataserver?</font></font></b>
+<p><font size=-1>When Sybase starts, it needs the interface file so it
+can set up all the interprocess and network communication parameters. This
+interfaces file is usually named interfaces, interface, or sql.ini, depending
+on the operating system.</font>
+<dir>
+<dir><font face="TIMES"><font size=-1>If you are able to connect, proceed
+to step 7. If not, proceed to step 6.</font></font></dir>
+</dir>
+<a NAME="Step6"></a><b><font face="TIMES"><font size=+1>Step 6: Check Interface
+File</font></font></b>
+<p><font face="TIMES"><font size=-1>If Sybase cannot find the file, or
+there is something wrong with it, Sybase will error-out during startup
+with a message like one of the following:</font></font>
+<dir><font face="Courier"><font size=-2>00:1999/03/22 00:17:46.54 kernel
+Could not open interface file</font></font>
+<p><font face="Courier"><font size=-2>'/opt/sybase/interfaces'</font></font>
+<p><font face="Courier"><font size=-2>00:1999/03/22 00:22:16.15 kernel
+Could not find name 'SYB_MYDB' in the</font></font>
+<p><font face="Courier"><font size=-2>interfaces file /opt/sybase/interfaces</font></font></dir>
+<font face="TIMES"><font size=-1>To correct the first error, make sure
+the interface file is located where the <i>runfile</i> says it should be
+located. If the interface file is in a different directory, either adjust
+the <i>runfile</i> to point to the correct directory, or move the interface
+file to the directory specified in the <i>runfile</i>.</font></font>
+<p><font size=-1><font face="TIMES">The second entry means the lines for
+the dataserver being started (in this case </font><font face="Courier">SYB_MYDB</font><font face="TIMES">)
+cannot be found in the interface file. To fix this problem, either add
+an entry using the appropriate method for your operating system. Please
+see the Sybase Operating System specific documentation for more information.</font></font>
+<p><font face="TIMES"><font size=-1>Once the entry is in the correct interface
+file, re-run the <i>startserver</i> command to see if this has fixed the
+problem.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>Once you have corrected any problems
+with the interfaces file, return to step 1.</font></font></dir>
+</dir>
+<a NAME="Step7"></a><b><font face="TIMES"><font size=+1>Step 7: Master
+Database Initialized?</font></font></b>
+<p><font face="TIMES"><font size=-1>The master database is the most important
+database in the system; not only does it contain all the information about
+all the other databases, but it is also the repository of all information
+regarding logins, roles, devices, usage of those devices, and configuration
+options on the system. It is imperative that this database comes up correctly.
+Otherwise, the rest of the dataserver would not work at all.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>If the Master database did initialize,
+proceed to step 14. If it did not, proceed to step 8.</font></font></dir>
+</dir>
+<a NAME="Step8"></a><b><font face="TIMES"><font size=+1>Step 8: Master
+Device/File Missing?</font></font></b>
+<p><font face="TIMES"><font size=-1>The first information that something
+is wrong with the master database would most likely be the following error
+messages displayed during startup:</font></font>
+<dir><font face="Courier"><font size=-2>00:1999/03/22 00:53:48.44 kernel
+kdconfig: unable to read primary master</font></font>
+<p><font face="Courier"><font size=-2>device</font></font>
+<p><font face="Courier"><font size=-2>00:1999/03/22 00:53:48.44 kernel
+kiconfig: read of config block failed</font></font></dir>
+<font face="TIMES"><font size=-1>These lines are preceded by a line that
+will tell you why the system could not read the primary master device.
+To fix these problems, go to the section on "Problems With Data Devices."
+If none of the solutions in that section corrects the problem, you must
+restore the master database (proceed to Step 9).</font></font>
+<p><font face="TIMES"><font size=-1>If there are no problems accessing
+the master data device, then the problem might be the master database has
+been corrupted. This type of problem could show a number of strange symptoms
+if the dataserver was already running. For example, isql will crash with
+program errors when trying to connect, or currently running queries will
+also crash.</font></font>
+<p><font face="TIMES"><font size=-1>If strange things like these start
+happening, the best thing to do is to try to restart the dataserver. Because
+in situations like this, almost all access to the dataserver will, the
+normal use of the <i>isql</i> command <i>shutdown</i> cannot be used. Instead,
+the <i>dataserver</i> process must be stopped at the operating system level.
+In Unix, this can be done using the <i>kill</i> command. This should only
+ever be used during extreme situations such as when the dataserver is consuming
+up all the processing of the system. Only use <i>kill</i> if nothing else
+will help because it could cause corruption of the databases in the dataserver.</font></font>
+<p><font face="TIMES"><font size=-1>Once the dataserver is down, check
+to make sure memory used by Sybase has been freed. See Step 5.for more
+information on shared memory. When the shared memory has been freed, try
+starting the dataserver using normal starting procedures.</font></font>
+<p><font face="TIMES"><font size=-1>If the dataserver fails to start, see
+if there are errors on the master device in the dataserver error log. Go
+to Step 15. and make sure their are no problems there. If there are, correct
+the problem with the device, and try restarting again.</font></font>
+<p><font face="TIMES"><font size=-1>If there are no problems with the physical
+devices, the master database will need to be completely recovered from
+backup.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>If there are any problems with the
+physical devices, proceed to step 9. Otherwise, proceed to step 10.</font></font></dir>
+</dir>
+<a NAME="Step9"></a><b><font face="TIMES"><font size=+1>Step 9: Restoring
+Generic Master Database</font></font></b>
+<p><font face="TIMES"><font size=-1>Follow these steps to restore the generic
+master database:</font></font>
+<ol>
+<li>
+<font face="TIMES"><font size=-1>Backup Server Up?</font></font></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><font face="TIMES"><font size=-1>Make sure your backup server is up
+and running. It will be used later to restore any backups of the master
+database and to back up the restored database when the recovery is finished.</font></font>
+<li>
+<font face="TIMES"><font size=-1>Create data device</font></font></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><font face="TIMES"><font size=-1>Since the master device was corrupted,
+it must be created anew. Open up the <i>runfile</i> used to start the Sybase
+server in a text editor. Note the master device path and the size of the
+master device; they will be used in the <i>buildmaster</i> command below
+to recreate the master device.</font></font>
+<p><font face="TIMES"><font size=-1>To recreate the master device, enter
+the following <i>buildmaster</i> command or the OS equivalent needed by
+the downed server:</font></font>
+<p><b><font face="Courier"><font size=-2>buildmaster –d /sybdata/master.dbf
+–s 8704</font></font></b>
+<p><font face="TIMES"><font size=-1>The <i>–d</i> option is the master
+device path and the <i>-s</i> is the size in pages. For this example, the
+master device being created is 17MB (8704 2K pages) on <i>/sybdata/master.dbf</i>.</font></font>
+<li>
+<font face="TIMES"><font size=-1>Startup in Master Recovery Mode</font></font></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><font face="TIMES"><font size=-1>To start the dataserver in master recovery
+mode, first make a copy of the current <i>runfile</i>. Edit this file,
+and add the <i>-m</i> master recovery mode parameter. When the change is
+done, use this file to start the dataserver process with the <i>startserver
+–f master_runfile</i> command. This mode will allow the master database’s
+system tables to be updated and prevent users from accessing the system.</font></font>
+<li>
+<font face="TIMES"><font size=-1>Recreate Master’s Entries in Usages</font></font></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><font size=-1><font face="TIMES">Before anything more can be done to
+restore the data into the master database, the master device needs to be
+restored to the same usage as it was when the last backup of the master
+database was performed. Using hardcopies of the system tables </font><font face="Courier">sysusages</font><font face="TIMES">,
+</font><font face="Courier">sysdevices</font><i><font face="TIMES">,
+</font></i></font><i>and
+</i><font size=-1><font face="Courier">sysdatabases</font><b><i><font face="TIMES">,</font></i></b></font><b>
+the entries in </b><font size=-1><font face="Courier">sysusages</font><font face="TIMES">
+can be recreated with <i>alter database</i> and <i>create database</i>
+commands.</font></font>
+<p><font size=-1><font face="TIMES">To decide if anything needs to be done
+to at this point, examine the </font><font face="Courier">dbid</font><font face="TIMES">
+column in </font><font face="Courier">sysusages</font><font face="TIMES">.
+If more than one entry for </font><font face="Courier">dbid</font><font face="TIMES">
+equals 1 (see </font><font face="Courier">sysdatabases</font><font face="TIMES">,
+dbid = 1 = master db), additional space will need to be added into the
+master database to make the </font><font face="Courier">sysusages</font><font face="TIMES">
+in the server match the one on paper. If there is only one entry, the </font><font face="Courier">sysusages</font><font face="TIMES">
+entry does not need any work and the next step is "Add Backup Server Entry
+into sysservers".</font></font>
+<p><font face="TIMES"><font size=-1>Figures G-I contain example outputs
+of the three tables needed for this restore. Note: the <i>T-SQL</i> statement
+to extract this information is provided above the table output.</font></font>
+<p><b><font face="Courier"><font size=-2>select name,dbid from sysdatabases
+order by dbid</font></font></b>
+<p><b>name dbid</b>
+<p><b>------------------------------ ------</b>
+<p><b>master 1</b>
+<p><b>tempdb 2</b>
+<p><b>model 3</b>
+<p><b>sybsystemprocs 4</b>
+<p><b>sybsyntax 5</b>
+<p><b>mydb 6</b>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<br>
+<center>
+<p><i><font face="TIMES"><font size=-1>Figure G: sysdatabases</font></font></i></center>
+
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p><b><font face="Courier"><font size=-2>select * from sysusages order
+by vstart</font></font></b>
+<p><b>dbid segmap lstart size vstart pad unreservedpgs</b>
+<p><b>------ ----------- ----------- ----------- ----------- ------ -------------</b>
+<p><b>1 7 0 1536 4 NULL 112</b>
+<p><b>3 7 0 1024 1540 NULL 608</b>
+<p><b>2 7 0 1024 2564 NULL 608</b>
+<p><b>1 7 1536 1024 3588 NULL 920</b>
+<p><b>5 7 0 1024 4612 NULL 272</b>
+<p><b>1 7 2560 2048 5636 NULL 2048</b>
+<p><b>4 7 0 8192 16777216 NULL 864</b>
+<p><b>6 3 0 5120 67108864 NULL 4720</b>
+<p><b>6 4 5120 2560 83886080 NULL 2552</b>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<br>
+<center>
+<p><i><font face="TIMES"><font size=-1>Figure H: sysusages</font></font></i></center>
+
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p><b><font face="Courier"><font size=-2>select * from sysdevices</font></font></b>
+<p><b>low high status cntrltype name phyname</b>
+<p><b>-------- ----------- ------ --------- ------------ --------------------------</b>
+<p><b>0 10751 3 0 master d_master</b>
+<p><b>67108864 67113983 2 0 mydbdev /sybdata/mydbdev.dbf</b>
+<p><b>83886080 83888639 2 0 mydblogdev /sybdata/mydblogdev.dbf</b>
+<p><b>16777216 16785407 2 0 sysprocsdev /sybdata/sybprocs.dbf</b>
+<p><b>0 1280 16 3 tapedump1 /dev/st0</b>
+<p><b>0 20000 16 4 tapedump2 /dev/st1</b>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<br>
+<center>
+<p><i><font face="TIMES"><font size=-1>Figure I: sysdevices</font></font></i></center>
+
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p><i>Since this is a recovery of the master database, we only have to
+restore up to the last master database entry in sysusages. These would
+be those where "dbid = 1," and the vstart less than or equal to the high
+value from the master device, master, in sysdevices. Notice that there
+are entries between the first and last master db entries on the master
+device. When restoring the master database, these entries must also be
+duplicated. In this example,</i>
+<p><i>Fortunately, buildmaster has already done part of the work by recreating
+the first three entries that correspond with the master, tempdb, and model
+databases. In this example, there are only three entries to restore.</i>
+<p><i>Now that the entries to be restored are known, the work of restoring
+them with the alter database and create database commands can begin. Use
+the dbid value in </i><font size=-1><font face="Courier">sysusages</font><font face="TIMES">
+to find out which database entry needs to be added next. In this example,
+the master database was extended for an additional 1024 blocks. This equates
+to 2MB of spaces on the master device. Because the master database already
+exists, this <i>alter database</i> command must be used.</font></font>
+<p><b><font face="Courier"><font size=-2>alter database master on master
+= 2</font></font></b>
+<p><font size=-1><font face="TIMES">The next entry has a <i>dbid</i> that
+corresponds to the </font><font face="Courier">sybsyntax</font><font face="TIMES">
+database. Its segment size is also 1024, so it size is 2MB. Since this
+database has not been created yet, the following create database command
+must be used:</font></font>
+<p><b><font face="Courier"><font size=-2>create database sybsyntax on master
+= 2</font></font></b>
+<p><font face="TIMES"><font size=-1>Continuing to the final entry, the
+<i>dbid</i>
+signifies that it is another entry for the master database. The size in
+this case is 2048 Blocks that equals 4MB (2048/512). The next command to
+run would therefore be:</font></font>
+<p><b><font face="Courier"><font size=-2>alter database master on master
+= 4</font></font></b>
+<p><font face="TIMES"><font size=-1>Now that all the entries for the master
+database are finished, a load can be performed of the backup, but only
+after the dataserver knows about the backup server.</font></font>
+<li>
+<font face="TIMES"><font size=-1>Add Backup Server Entry into sysservers</font></font></li>
+</ol>
+
+<dir><font size=-1><font face="TIMES">To be able to do the recovery, the
+dataserver needs to know the name of the backup server. If it is not </font><font face="Courier">SYB_BACKUP</font><font face="TIMES">,
+an entry will need to be added to </font><font face="Courier">sysservers</font><font face="TIMES">.</font></font>
+<p><font size=-1><font face="TIMES">Use the following <i>T-SQL</i> command
+to update an entry into </font><font face="Courier">sysservers</font><font face="TIMES">.</font></font>
+<p><b><font face="Courier"><font size=-2>begin transaction</font></font></b>
+<p><b><font face="Courier"><font size=-2>update sysservers</font></font></b>
+<p><b><font face="Courier"><font size=-2>set srvnetname = "BIG_BACKUP"</font></font></b>
+<p><b><font face="Courier"><font size=-2>where srvname = "SYB_BACKUP"</font></font></b>
+<p><b><font face="Courier"><font size=-2>go</font></font></b>
+<p><b><font face="Courier"><font size=-2>/* Make sure the change is correct
+*/</font></font></b>
+<p><b><font face="Courier"><font size=-2>select srvnetname,srvname from
+sysservers</font></font></b>
+<p><b><font face="Courier"><font size=-2>where srvname = "SYB_BACKUP"</font></font></b>
+<p><b><font face="Courier"><font size=-2>/* If the change is correct */</font></font></b>
+<p><b><font face="Courier"><font size=-2>commit transaction</font></font></b>
+<p><b><font face="Courier"><font size=-2>/* If the change is not correct
+*/</font></font></b>
+<p><b><font face="Courier"><font size=-2>rollback transaction</font></font></b>
+<br>&nbsp;
+<br>&nbsp;
+<dir><font face="TIMES"><font size=-1>Proceed to step 10.</font></font></dir>
+</dir>
+<a NAME="Step10"></a><b><font face="TIMES"><font size=+1>Step 10: Recent
+Dump of Master Database?</font></font></b>
+<dir>
+<dir><font face="TIMES"><font size=-1>If there is a recent dump of the
+master database, proceed to step 12. If one does not exist, proceed to
+step 13.</font></font></dir>
+</dir>
+<a NAME="Step11"></a><b><font face="TIMES"><font size=+1>Step 11: Restore
+Master from Dump</font></font></b>
+<dir><font face="TIMES"><font size=-1>Use the following <i>T-SQL</i> command
+to load the backup of the master database into the system. You might have
+to change the "from" section of the command to match what is needed for
+your operating system and environment. Review the section on using the
+load command for more information. When the backup finishes, the dataserver
+will automatically shut itself down.</font></font>
+<p><b><font face="Courier"><font size=-2>load database master from "/dev/nrmt0"</font></font></b>
+<dir><font face="TIMES"><font size=-1>Proceed to step 12.</font></font></dir>
+</dir>
+<a NAME="Step12"></a><b><font face="TIMES"><font size=+1>Step 12: Update
+Number of Devices in the Configuration</font></font></b>
+<dir><font face="TIMES"><font size=-1>When a <i>buildmaster</i> is performed,
+the configuration options of the system start at their default values.
+This can cause problems when the system next comes up because the "number
+of devices" is one of those values. It needs to be set to the value it
+was when the backup was done, or not all the original devices will come
+up.</font></font>
+<p><font face="TIMES"><font size=-1>If the Sybase version of the dataserver
+is before version 11, follow the procedures in the Sybase System Administration
+manual to set the value of "Number of Devices" to the value it was before
+the recovery began.</font></font>
+<p><font face="TIMES"><font size=-1>If the version is 11 and later, edit
+the dataserver’s configuration file, and make sure the "number of devices"
+is set correctly. Next, edit the <i>runfile</i> created earlier, adding
+or modifying the <i>-c</i> configuration file parameter to point to the
+proper configuration file.</font></font>
+<p><font face="TIMES"><font size=-1>At this point, the recovery is nearly
+done, but before the users are allowed back onto the system, it is best
+to double check all the changes made during the recovery. Also, if additional
+device or database changes were made since the time of the master database
+backup, these changes will all need to be made.</font></font>
+<p><font face="TIMES"><font size=-1>To prevent the users from accessing
+the system, and to allow the system tables to be updated, again start the
+dataserver in master recovery mode. Use the <i>runfile</i> edited in Step
+2 in a start server command appropriate for your operating system.</font></font>
+<dir><font face="TIMES"><font size=-1>Proceed to step 13.</font></font></dir>
+</dir>
+<a NAME="Step13"></a><b><font face="TIMES"><font size=+1>Step 13: Restore
+System Tables Using disk reinit and disk refit</font></font></b>
+<p><font size=-1><font face="TIMES">Once the system comes up, check the
+system tables </font><font face="Courier">sysusages</font><i><font face="TIMES">,
+</font></i><font face="Courier">sysdevices</font><i><font face="TIMES">,
+</font></i></font><i>and
+</i><font size=-1><font face="Courier">sysdatabases</font><font face="TIMES">
+against the backup hardcopies. If there are devices on your hardcopy that
+are not listed in the system, then an additional device was added since
+the master backup was performed. In this case, a <i>disk reinit</i> will
+update the </font><font face="Courier">sysdevices</font><font face="TIMES">
+table from information on the device. If the <i>alter database</i> or <i>create
+database</i> commands were run since the last backup, <i>disk refit</i>
+must be run to resync the dataserver with the additional devices and databases
+available on the system.</font></font>
+<p><b><font face="TIMES"><font size=-1>disk reinit</font></font></b>
+<p><font size=-1><font face="TIMES">The command to resync devices is <i>disk
+reinit</i>, and it will add a device back into the </font><font face="Courier">sysdevices</font><font face="TIMES">
+table without initializing the device itself. To run this command correctly,
+you will need the parameters used when the device was first being created
+with the <i>disk reinit</i> command. The command syntax is in Figure J:</font></font>
+<dir><b><font face="Courier"><font size=-2>begin transaction</font></font></b>
+<p><b><font face="Courier"><font size=-2>disk reinit</font></font></b>
+<p><b><font face="Courier"><font size=-2>name = " <i>device_name</i>",</font></font></b>
+<p><b><font face="Courier"><font size=-2>physname = "<i>physical_name</i>",</font></font></b>
+<p><b><font face="Courier"><font size=-2>vdevno = <i>virtual_device_number</i>,</font></font></b>
+<p><b><font face="Courier"><font size=-2>size = <i>number_of_blocks</i></font></font></b>
+<p><b><font face="Courier"><font size=-2>[, vstart = <i>virtual_address</i>,</font></font></b>
+<p><b><font face="Courier"><font size=-2>cntrltype = <i>controller_number</i>]</font></font></b>
+<p><b><font face="Courier"><font size=-2>go</font></font></b>
+<p><b><font face="Courier"><font size=-2>/* Review the sysdevices table
+to make sure it matches with</font></font></b>
+<p><b><font face="Courier"><font size=-2>what is in hard copy */</font></font></b>
+<p><b><font face="Courier"><font size=-2>select * from sysdevices</font></font></b>
+<p><b><font face="Courier"><font size=-2>go</font></font></b>
+<p><b><font face="Courier"><font size=-2>/* If everything matches */</font></font></b>
+<p><b><font face="Courier"><font size=-2>commit transaction</font></font></b>
+<p><b><font face="Courier"><font size=-2>/* If there are differences */</font></font></b>
+<p><b><font face="Courier"><font size=-2>rollback transaction</font></font></b>
+<dir>
+<center><i><font face="TIMES"><font size=-1>Figure J: Syntax of disk reinit</font></font></i></center>
+</dir>
+</dir>
+<i>As you can see, the syntax is exactly like the disk init command except
+for the word reinit. Make sure to run this only for devices that do not
+already appear in the </i><font size=-1><font face="Courier">sysdevices</font><font face="TIMES">
+table.</font></font>
+<p><b><font face="TIMES"><font size=-1>disk refit</font></font></b>
+<p><font size=-1><font face="TIMES">Once all devices that had been added
+to the system after the backup have been redefined in </font><font face="Courier">sysdevices</font><font face="TIMES">,
+all databases additions and changes to databases after the backup can be
+resynced. The command to do this is called <i>disk refit</i>. What it does
+is visit every disk defined on the system, and use system information stored
+in it to reset the </font><font face="Courier">sysusages</font><font face="TIMES">
+and </font><font face="Courier">sysdatabases</font><font face="TIMES">
+tables to what they should be. The command syntax is in Figure ?:</font></font>
+<dir><b><font face="Courier"><font size=-2>disk reinit</font></font></b>
+<dir>
+<center><i><font face="TIMES"><font size=-1>Figure J: Syntax of disk refit</font></font></i></center>
+</dir>
+</dir>
+<i>There are two restrictions on this command. First, it must be run as
+SA, and second, the system must be started in single-user mode or the command
+will not be allowed. Once the command finishes running, the system will
+automatically shutsdown.</i>
+<p><i>Once either or both of these commands have been run, compare the
+values in </i><font size=-1><font face="Courier">sysusages</font><font face="TIMES">
+and </font><font face="Courier">sysdatabases</font><font face="TIMES">
+to make sure they match the hardcopy of these tables. If they do not, the
+system could come up without all devices and databases being online.</font></font>
+<p><font face="TIMES"><font size=-1>For more information on how to run
+<i>disk
+refit</i> and <i>disk reinit</i>, see the Sybase System Administration
+Guide.</font></font>
+<p><b><font face="TIMES"><font size=-1>Review sysusages/sysdatabases/sysdevices/syslogins/sysloginroles</font></font></b>
+<p><font face="TIMES"><font size=-1>Because the master database contains
+information about all the other databases, it is important to make sure
+everything is in working order. Follow these checks to help confirm the
+fitness of your newly restored master database.</font></font>
+<ol>
+<li>
+<font size=-1><font face="TIMES">Check the </font><font face="Courier">sysdevices,
+sysusages</font><font face="TIMES"> and </font><font face="Courier">sysdatabases</font><font face="TIMES">
+system tables.</font></font></li>
+
+<li>
+<font face="TIMES"><font size=-1>Review each database, checking all the
+major tables. Run common selects on these tables verifying the data inside.</font></font></li>
+
+<li>
+<font face="TIMES"><font size=-1>Run the <i>dbcc checkalloc</i> command
+on all databases. See the section <i>Database consistency checker: the
+dbcc utility</i> for information on how to run this command.</font></font></li>
+
+<li>
+<font face="TIMES"><font size=-1>Double-check the ownership and permissions
+of all databases. If user logins were added or deleted since the backup
+of the master database, these changes will need to be run against the system
+again in the same order they were originally added to the system. If these
+changes are done out of order, the <i>suids</i> of the logins added will
+be different than when they were first added to the system. This will cause
+a mismatch between the suid controlling the ownership and permissions in
+a database and those in the system logins. Because of this, there could
+be problems with access to the databases and objects in the dataserver.</font></font></li>
+</ol>
+
+<dir><font size=-1><font face="TIMES">To make sure the suids are the same,
+compare the hardcopy of the </font><font face="Courier">syslogin</font><font face="TIMES">
+system table and the online version of the table. If they do not match,
+there could be problems. Refer to Sybase’s Security Information Guide for
+more information on recreating changes to logins if the original scripts
+cannot be found.</font></font>
+<p><font size=-1><font face="TIMES">Another art of Sybase’s security is
+login roles. The </font><font face="Courier">sysloginroles</font><font face="TIMES">
+system table contains information regarding these roles. It is important
+that this table also is checked to make sure all roles are the same as
+before the problem started, otherwise users might not have the same abilities
+as before. To make sure they are the same, compare the hardcopy of </font><font face="Courier">sysloginroles</font><font face="TIMES">
+system table and the online version of the table. Refer to Sybase’s Security
+Information Guide to help recreate changes to the system roles if they
+do not match.</font></font>
+<dir><font face="TIMES"><font size=-1>Proceed to step 25.</font></font></dir>
+</dir>
+<a NAME="Step14"></a><b><font face="TIMES"><font size=+1>Step 14: Sybsystemprocs
+Available?</font></font></b>
+<p><font size=-1><font face="TIMES">The </font><font face="Courier">sybsystemprocs</font><font face="TIMES">
+database is where Sybase locates all the system stored procedures. When
+a stored procedure is created here, it is available from any database in
+the dataserver. Therefore, when this database is unavailable, many important
+system stored procedures will be unavailable, such as </font><font face="Courier">sp_help</font><font face="TIMES">,
+</font><font face="Courier">sp_helpdb</font><font face="TIMES">,
+and </font><font face="Courier">sp_helpdevices</font><font face="TIMES">.
+The rest of the dataserver databases will come up as long as they do not
+have problems, but the functionality of the dataserver will be severely
+degraded.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>If sybsystemprocs is available, proceed
+to Step 20. Otherwise, proceed to step 15.</font></font></dir>
+</dir>
+<a NAME="Step15"></a><b><font face="TIMES"><font size=+1>Step 15: Problem
+With Data Devices?</font></font></b>
+<p><font face="TIMES"><font size=-1>If the dataservers error log file shows
+there are problems initializing a data device, then follow these commands
+to check OS device problems, fix them, and maybe replace them.</font></font>
+<ol>
+<li>
+<font face="TIMES"><font size=-1>Check ownership and permissions on devices.</font></font></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><font face="TIMES"><font size=-1>Use the OS commands to check permissions
+and make sure the process running the Sybase dataserver program has permissions
+to read and write to these devices. If they do not, either change the permissions
+on the devices, or change the user that is running the dataserver program
+to one that does have the correct permissions</font></font>
+<li>
+<font face="TIMES"><font size=-1>Is the device functioning correctly or
+does the device even exist?</font></font></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><font face="TIMES"><font size=-1>Sometimes, because of a change in the
+system, the operating system might no longer "see" the device. Also, there
+might be hardware failures or configuration errors that could cause the
+device to not appear. Use the appropriate OS procedure to check the device’s
+status and review all errorlogs.</font></font>
+<li>
+<font face="TIMES"><font size=-1>Unable to Detect Device at Startup?</font></font></li>
+</ol>
+
+<dir><font face="TIMES"><font size=-1>Sometimes, when an OS cannot detect
+a device when a Sybase server is started, the device will be unavailable,
+and Sybase will not be able to recover the database. In this case, the
+database will be marked "suspect". This flag on the database tells Sybase
+not to waste anytime trying to recover this database the next time the
+dataserver restarts. This is efficient, but if the device’s problems are
+fixed with the data intact, the database should be able to come up the
+next time the system starts.</font></font>
+<p><font face="TIMES"><font size=-1>To get around this problem, the "suspect"
+flag must be cleared from the database. Unfortunately, there is no easy
+stored procedure to run to do this. If you are sure the database will come
+up ok on a restart, run the <i>T-SQL</i> commands in Figure K, replacing
+<i>yourdbname</i>
+with the name of the database the server needs to recover.</font></font>
+<p><font face="Courier"><font size=-2>use master</font></font>
+<p><font face="Courier"><font size=-2>/* tell dataserver to allow changes
+to system tables */</font></font>
+<p><font face="Courier"><font size=-2>sp_configure "allow updates", 1</font></font>
+<p><font face="Courier"><font size=-2>reconfigure with override</font></font>
+<p><font face="Courier"><font size=-2>go</font></font>
+<p><font face="Courier"><font size=-2>/* change the suspect status bit
+*/</font></font>
+<p><font face="Courier"><font size=-2>begin transaction</font></font>
+<p><font face="Courier"><font size=-2>update sysdatdabases /* Only make
+change */</font></font>
+<p><font face="Courier"><font size=-2>set status = status – 256 /* Turn
+the suspect flag (2<sup>8</sup> bit set) off */</font></font>
+<p><font face="Courier"><font size=-2>where dbname = ‘yourdbname’ /* only
+on this database */</font></font>
+<p><font face="Courier"><font size=-2>and status &amp; 256 = 256 /* and
+only if flag is set */</font></font>
+<p><font face="Courier"><font size=-2>go</font></font>
+<p><font face="Courier"><font size=-2>commit transaction</font></font>
+<p><font face="Courier"><font size=-2>/* tell dataserver to Not allow changes
+to system tables */</font></font>
+<p><font face="Courier"><font size=-2>sp_configure "allow updates", 0</font></font>
+<p><font face="Courier"><font size=-2>reconfigure</font></font>
+<dir>
+<center><i><font face="TIMES"><font size=-1>Figure K: Removing the suspect
+flag</font></font></i></center>
+</dir>
+<i>Restart the server at this point. If the database still does not come
+back on, then something else must be wrong with the database. Review the
+dataserver error log for more information, and possible contact Sybase
+support.</i>
+<dir><i>If there are still problems with the device files, repeat Step
+15, then proceed to Step 16. If the device files are fine, proceed to step
+17.</i></dir>
+</dir>
+<a NAME="Step16"></a><b><font face="TIMES"><font size=+1>Step 16: Replace
+Device/Disk File</font></font></b>
+<p><font face="TIMES"><font size=-1>If a drive goes bad, but another one
+of the same size is available, the new one can be used in the place of
+the old in the Sybase database. This is because Sybase uses logical devices
+that point to the actual devices.</font></font>
+<p><font face="TIMES"><font size=-1>All databases that were using this
+device will need to be restored. To find out which databases these are,
+run the <i>T-SQL</i> command shown in Figure L:</font></font>
+<dir><b><font face="Courier"><font size=-2>select sysdevices.name as DevName,</font></font></b>
+<p><b><font face="Courier"><font size=-2>sysdatabases.name as DBName,</font></font></b>
+<p><b><font face="Courier"><font size=-2>sysusages.size/512 as Size</font></font></b>
+<p><b><font face="Courier"><font size=-2>from sysdatabases, sysusages,
+sysdevices</font></font></b>
+<p><b><font face="Courier"><font size=-2>where</font></font></b>
+<p><b><font face="Courier"><font size=-2>sysdevices.name="BadDeviceName"
+and</font></font></b>
+<p><b><font face="Courier"><font size=-2>sysdevices.low &lt;= sysusages.vstart
+and</font></font></b>
+<p><b><font face="Courier"><font size=-2>sysdevices.high >= sysusages.vstart
+and</font></font></b>
+<p><b><font face="Courier"><font size=-2>sysusages.dbid = sysdatabases.dbid</font></font></b>
+<p><b><i>Example Output:</i></b>
+<p><b>DevName DBName Size</b>
+<p><b>----------------------------- ------------------------------ -----------</b>
+<p><b>BusDev1 BillingDB 3</b>
+<p><b>BusDev1 ClientDB 2</b>
+<br>&nbsp;
+<br>&nbsp;
+<dir>
+<center><i><font face="TIMES"><font size=-1>Figure L: Locating databases
+that use a particular device</font></font></i></center>
+
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p><i>This command will only work if the master database at least comes
+up.</i></dir>
+</dir>
+<i>With this information, the original device must first be deleted from
+the system before the new device can be added. Before this, all databases
+that were using this device must first be dropped from the system. Use
+the drop database or the dbcc repairdb(dropdb,dbname) commands to drop
+the databases. Once they are all gone, then the device can be dropped by
+using the sp_dropdevice stored procedure.</i>
+<p><i>Once the device is dropped, the new device can be added back into
+its place. Use the same disk init command that was used to create the bad
+device, but replace the physical name of the bad device with the name of
+the good device and use a different vdevno. For example, if the original
+disk’s physical name was /dev/rdsk/c0t2d1s0 with a disk init command of:</i>
+<dir><font face="Courier"><font size=-2>disk init</font></font>
+<p><font face="Courier"><font size=-2>name="BusDev1",</font></font>
+<p><font face="Courier"><font size=-2>physname="/dev/dsk/c0t2d1s0",</font></font>
+<p><font face="Courier"><font size=-2>vdevno=6,</font></font>
+<p><font face="Courier"><font size=-2>size=2048</font></font></dir>
+<font face="TIMES"><font size=-1>The new command using the replacement
+device <i>/dev/dsk/c1t3d0s1</i> would be:</font></font>
+<dir><font face="Courier"><font size=-2>disk init</font></font>
+<p><font face="Courier"><font size=-2>name="BusDev1",</font></font>
+<p><font face="Courier"><font size=-2>physname="/dev/dsk/c1t3d0s1",</font></font>
+<p><font face="Courier"><font size=-2>vdevno=10,</font></font>
+<p><font face="Courier"><font size=-2>size=2048</font></font></dir>
+<font face="TIMES"><font size=-1>Once the device has been restored, then
+all the database’s that were using that device need to be restored.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>Proceed to step 17.</font></font></dir>
+</dir>
+<a NAME="Step17"></a><b><font face="TIMES"><font size=+1>Step 17: Restore
+base sybsystemprocs from sybsystemprocs script</font></font></b>
+<p><font size=-1><font face="TIMES">When the </font><font face="Courier">sybsystemprocs
+</font><font face="TIMES">database
+needs to be restored, follow these directions:</font></font>
+<ol>
+<li>
+<font size=-1><font face="TIMES">Find out which devices </font><font face="Courier">sybsystemprocs</font><font face="TIMES">
+was installed on.</font></font></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><font face="TIMES"><font size=-1>First, try the command <i>sp_helpdb
+sybsystemprocs</i> to find out how large and on what device it was created
+on. Most likely this will not work. In that case, run the <i>T-SQL</i>
+command in Figure M instead:</font></font>
+<p><b><font face="Courier"><font size=-2>select sysdevices.name, sysusages.size/512</font></font></b>
+<p><b><font face="Courier"><font size=-2>from sysdatabases, sysusages,
+sysdevices</font></font></b>
+<p><b><font face="Courier"><font size=-2>where</font></font></b>
+<p><b><font face="Courier"><font size=-2>sysdatabases.name = "sybsystemprocs"
+and</font></font></b>
+<p><b><font face="Courier"><font size=-2>sysusages.dbid = sysdatabases.dbid
+and</font></font></b>
+<p><b><font face="Courier"><font size=-2>sysdevices.low &lt;= sysusages.vstart
+and</font></font></b>
+<p><b><font face="Courier"><font size=-2>sysdevices.high >= sysusages.vstart</font></font></b>
+<p><b><i>Example output:</i></b>
+<p><b>name</b>
+<p><b>------------------------------ -----------</b>
+<p><b>sysprocsdev 16</b>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<br>
+<center>
+<p><i><font face="TIMES"><font size=-1>Figure M: Finding out size of device</font></font></i></center>
+
+<p><br>
+<br>
+<br>
+<br>
+<li>
+<i>Drop the </i><font size=-1><font face="Courier">sybsystemprocs</font><font face="TIMES">
+database.</font></font></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><font size=-1><font face="TIMES">In case the </font><font face="Courier">sybsystemprocs</font><font face="TIMES">
+database is corrupt, it is best to drop it and recreate it fresh. First
+try the <i>T-SQL</i> command <i>drop database sybsystemprocs</i>. But,
+if it is not allowed by the system, use <i>dbcc dbrepair (sybsystemprocs,dropdb)</i>
+to drop the database.</font></font>
+<li>
+<font size=-1><font face="TIMES">Recreate the </font><font face="Courier">sybsystemprocs</font><font face="TIMES">
+database on the device shown in the above command.</font></font></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><font face="Courier"><font size=-2>1> <b>create database sybsystemprocs
+on sysprocsdev= 16MB</b></font></font>
+<li>
+<font face="TIMES"><font size=-1>Run <i>installmaster</i> or Restore from
+Backup</font></font></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><font size=-1><font face="TIMES">If there is a current backup of the
+</font><font face="Courier">sybsystemprocs</font><font face="TIMES">
+database, then it can be used to restore the database with the load command
+like this:</font></font>
+<p><b><font face="Courier"><font size=-2>load database sybsystemprocs from
+"<i>device</i>"</font></font></b>
+<p><font face="TIMES"><font size=-1>Use the appropriate OS command for
+the dataserver environment.</font></font>
+<p><font size=-1><font face="TIMES">If there is no backup of the </font><font face="Courier">sybsystemprocs</font><font face="TIMES">
+database, it will need to be recreated using <i>T-SQL</i> script <i>installmaster</i>.
+This script can be run safely without worry that it will affect other databases.
+To run the script, provide it as input to the <i>isql</i> program like
+this:</font></font>
+<p><b><font face="Courier"><font size=-2>isql –U sa –S <i>SYB_MYDB</i>
+–P <i>mypasswd</i> \</font></font></b>
+<p><b><font face="Courier"><font size=-2>–i <i>$SYBASE</i>/scripts/installmaster</font></font></b>
+<p><font face="TIMES"><font size=-1>or</font></font>
+<p><b><font face="Courier"><font size=-2>isql –U sa –S <i>SYB_MYDB</i>
+–P <i>mypasswd</i> \</font></font></b>
+<p><b><font face="Courier"><font size=-2>&lt; <i>$SYBASE</i>/scripts/installmaster</font></font></b>
+<p><font face="TIMES"><font size=-1>There will be a lot of output from
+this command, but it can be safely ignored until the script ends with the
+message "Loading of the master database is complete".</font></font>
+<li>
+<font face="TIMES"><font size=-1>Add any additional Stored Procedures/Changes</font></font></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><font face="TIMES"><font size=-1>If additional stored procedures were
+added to the system since the backup or since the initial install, recreate
+them now using the the scripts used to original create them or by entering
+the commands interactively.</font></font>
+<li>
+<font face="TIMES"><font size=-1>Check Stored Procedures</font></font></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><font size=-1><font face="TIMES">Like with all the other recoveries,
+it is important to check out the recovery. The following command will show
+if the </font><font face="Courier">sybsystemprocs</font><font face="TIMES">
+database is restored correctly.</font></font>
+<p><b><font face="Courier"><font size=-2>sp_helpdb sybsystemprocs</font></font></b>
+<p><font size=-1><font face="TIMES">If output describing the </font><font face="Courier">sybsystemprocs</font><font face="TIMES">
+database is displayed when this is run, then system stored procedures have
+been restored correctly. Run any user defined stored procedures to confirm
+they run correctly.</font></font>
+<li>
+<font size=-1><font face="TIMES">Dump the </font><font face="Courier">sybsystemprocs</font><font face="TIMES">
+database</font></font></li>
+</ol>
+
+<dir><font face="TIMES"><font size=-1>Once the database has been restored,
+make a complete backup of it with the <i>dump </i>command.</font></font>
+<dir><font face="TIMES"><font size=-1>Proceed to step 18.</font></font></dir>
+</dir>
+<a NAME="Step18"></a><b><font face="TIMES"><font size=+1>Step 18: Recent
+Dump of database?</font></font></b>
+<dir>
+<dir><font face="TIMES"><font size=-1>If there is no dump of database to
+restore, go to step 25 to reapply any creation/alteration scripts and load
+any bcp from database. If there is a recent dump, continue step 19.</font></font></dir>
+</dir>
+<a NAME="Step19"></a><b><font face="TIMES"><font size=+1>Step 19 : Restore
+from Dump</font></font></b>
+<p><font face="TIMES"><font size=-1>If the database is still offline at
+this point, then something is wrong with it internally, and it should be
+restored from backup. Before anything else is done, retrieve information
+about the database to use in the recreation. Enter the command in Figure
+N to find out about the allocations used by this database.</font></font>
+<dir><b><font face="Courier"><font size=-2>select sysdevices.name,</font></font></b>
+<p><b><font face="Courier"><font size=-2>size as Blocks,</font></font></b>
+<p><b><font face="Courier"><font size=-2>size/512 as Mbytes</font></font></b>
+<p><b><font face="Courier"><font size=-2>from sysusages, sysdevices, sysdatabases</font></font></b>
+<p><b><font face="Courier"><font size=-2>where sysdatabases.name = "<i>baddbname</i>"
+and</font></font></b>
+<p><b><font face="Courier"><font size=-2>sysusages.dbid = sysdatabases.dbid
+and</font></font></b>
+<p><b><font face="Courier"><font size=-2>sysdevices.low &lt;= sysusages.vstart
+and</font></font></b>
+<p><b><font face="Courier"><font size=-2>sysdevices.high >= sysusages.vstart
+and</font></font></b>
+<p><b><font face="Courier"><font size=-2>sysdevices.cntrltype = 0</font></font></b>
+<p><b><font face="Courier"><font size=-2>order by vstart</font></font></b>
+<p><b><i>Example Output:</i></b>
+<p><b>name Blocks Mbytes</b>
+<p><b>---------------------- ---------- ---------</b>
+<p><b>device1 1536 3</b>
+<p><b>logdev1 1024 2</b>
+<p><b>device3 2048 4</b>
+<dir>
+<center><i><font face="TIMES"><font size=-1>Figure N: Database allocations</font></font></i></center>
+</dir>
+</dir>
+
+<ol>
+<li>
+<i>Drop the database</i></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><i>First, try to drop the database using this T-SQL command:</i>
+<p><b><font face="Courier"><font size=-1>drop database<i>baddbname</i></font></font></b>
+<p><font face="TIMES"><font size=-1>If this command fails, use this <i>dbcc</i>
+command to drop the database:</font></font>
+<p><b><font face="Courier"><font size=-1>dbcc repairdb(dropdb,<i>baddbname</i>)</font></font></b>
+<p><font face="TIMES"><font size=-1>To verify the database has been dropped,
+run the stored procedure <i>sp_helpdb</i>. If the database is shown in
+the output, something went wrong with the drop command.</font></font>
+<li>
+<font face="TIMES"><font size=-1>Recreate the database</font></font></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><font face="TIMES"><font size=-1>Using the information from Step 2 above,
+recreate the database using the same allocations it had. Here is an example
+based upon the example output in Step 2.</font></font>
+<p><b><font face="Courier"><font size=-2>create database <i>baddbname</i></font></font></b>
+<p><b><font face="Courier"><font size=-2>on device1 = 3</font></font></b>
+<p><b><font face="Courier"><font size=-2>log on logdev1 = 2</font></font></b>
+<p><b><font face="Courier"><font size=-2>alter database <i>baddbname</i></font></font></b>
+<p><b><font face="Courier"><font size=-2>on device3 = 4</font></font></b>
+<li>
+<font face="TIMES"><font size=-1>Bring the database online.</font></font></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><font size=-1><font face="TIMES">At this point, the database has been
+recreated, but the system will not bring it online until it is told to.
+The reason the system does this is it has no way of knowing if there are
+any more transaction logs to process. To tell Sybase the database should
+be brought up by running the <i>online database </i></font><b><font face="Courier">baddbname</font></b><font face="TIMES">
+command.</font></font>
+<li>
+<font face="TIMES"><font size=-1>Load the database from dumps.</font></font></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><font face="TIMES"><font size=-1>Now reload the database using the most
+recent database and transaction dumps. First, apply the full database backup.
+For our example database, here is an example Unix <i>load</i> command using
+the tape device <i>/dev/nrmt0</i>.</font></font>
+<p><b><font face="Courier"><font size=-2>load database <i>baddbname</i>
+from</font></font> ‘/dev/nrmt0’</b>
+<p><font face="TIMES"><font size=-1>After this completes, apply each transaction
+log starting with the oldest and finishing with the newest. The system
+will not allow load of the transaction logs to occur out of order. In fact,
+if any of the logs are missing or corrupt, the rest of the logs cannot
+be applied. To load the transaction logs for our example above, enter the
+following command, repeating for each transaction dump:</font></font>
+<p><b><font face="Courier"><font size=-2>load transaction <i>baddbname</i>
+from ‘/dev/nrmt0’</font></font></b>
+<p><font face="TIMES"><font size=-1>For more information on how to load
+dumps and transaction logs, please refer to the section on Restoring from
+a hot backup.</font></font>
+<li>
+<font face="TIMES"><font size=-1>Dump the database.</font></font></li>
+</ol>
+
+<dir><font face="TIMES"><font size=-1>Whenever a database is restored,
+run a full backup on the database, and backup the master database too.
+The reason for the backup of the master database is because there was a
+removal and creation of a database. Whenever there are major changes to
+the dataserver, backup the master database. Continuing our example, the
+dump command would be:</font></font>
+<p><b><font face="Courier"><font size=-2>dump database <i>baddbname</i>
+to ‘/dev/nrmt0’</font></font></b></dir>
+<a NAME="Step20"></a><b><font face="TIMES"><font size=+1>Step 20: Is tempdb
+Available?</font></font></b>
+<p><font face="TIMES"><font size=-1>Is the tempdb online and available?
+To see this, review the messages generated when trying to start the database.
+There will be error messages complaining about tempdb not being available.
+The system will not be able to come up at this point.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>If there are error messages, proceed
+to Step 15 to make sure tempdb’s devices are all available. If tempdb is
+available, continue to Step 23 to begin checking all the user defined databases.</font></font></dir>
+</dir>
+<a NAME="Step21"></a><b><font face="TIMES"><font size=+1>Step 21: Model
+Database Available?</font></font></b>
+<dir>
+<dir><font face="TIMES"><font size=-1>If the model database online and
+available, proceed to step 24. If it is not, continue to step 22 to recreate
+the model database.</font></font></dir>
+</dir>
+<a NAME="Step22"></a><b><font face="TIMES"><font size=+1>Step 22: Recreate
+Generic Model Database</font></font></b>
+<p><font face="TIMES"><font size=-1>The model database is used by the dataserver
+when creating all other databases. If a specific attribute (larger size,
+tables, permissions, stored procedures) is required in all databases, make
+the change first in the model database. Then, from that point on, every
+database created will contain this change.</font></font>
+<p><font face="TIMES"><font size=-1>If you have a backup of the model database
+and you can use the <i>isql use</i> command, then the database can be restored
+directly from backup using the load command. If not, then the database
+must be restored from scratch. Follow the following commands to accomplish
+this:</font></font>
+<ol>
+<li>
+<font face="TIMES"><font size=-1>Run <i>buildmaster</i></font></font></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><font face="TIMES"><font size=-1>If there is no backup available of
+the model database, the <i>buildmaster</i> command can be used to restore
+the model database to the same state as when the dataserver was first installed.
+Here is a Unix example:</font></font>
+<p><b><font face="Courier"><font size=-2>buildmaster –d/syback/master.dbf
+–x</font></font></b>
+<p><font face="TIMES"><font size=-1>In this example, the <i>-d</i> parameter
+is the master database file path, and the <i>-x</i> parameter tells <i>buildmaster</i>
+to restore the model database. Be sure to use the appropriate <i>buildmaster</i>
+command for your OS. This can be found in the Sybase Utilities manual.</font></font>
+<li>
+<font face="TIMES"><font size=-1>If a backup of the model database is available,
+use it in a <i>load</i> command to restore it from the backup.</font></font></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><b><font face="Courier"><font size=-2>load database model from</font></font><i>"/sybackups/model.dmp"</i></b>
+<li>
+<font face="TIMES"><font size=-1>If additional changes were made since
+the last backup, apply them at this point.</font></font></li>
+
+<li>
+<font face="TIMES"><font size=-1>Backup the model database using the <i>dump</i>
+command.</font></font></li>
+</ol>
+
+<dir>
+<dir><font face="TIMES"><font size=-1>Return to step 18.</font></font></dir>
+</dir>
+<a NAME="Step23"></a><b><font face="TIMES"><font size=+1>Step 23: All Databases
+Online?</font></font></b>
+<p><font face="TIMES"><font size=-1>If when the dataserver is coming up,
+and an error occurs with any of the devices associated with that database,
+or something has corrupted the database, the non-system database could
+be prevented from coming and will be marked "suspect".</font></font>
+<p><font face="TIMES"><font size=-1>To see if all the databases after the
+system databases are online, review the messages generated when trying
+to start the database. There will be error messages complaining about any
+databases not being available. Fortunately, because all the system databases
+are available, the Sybase server will come up. If this happens, proceed
+to Step 15 to make sure all the user database devices are all available.
+If all the database are available, then the system is up and no recovery
+is required.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>If all the databases are online,
+you are done. If not, return to step 15.</font></font></dir>
+</dir>
+<a NAME="Step24"></a><b><font face="TIMES"><font size=+1>Step 24: Contact
+Sybase Support</font></font></b>
+<p><font face="TIMES"><font size=-1>If you have reached this step, then
+some problem that might be specific to the OS, version of Sybase, or other
+factors is occuring. Please refer to the Sybase System Administration guides
+for your OS, or contact Sybase support for additional help.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>Return to step 1.</font></font></dir>
+</dir>
+<a NAME="Step25"></a><b><font face="TIMES"><font size=+1>Step 25: Re-apply
+any additional scripts or bcp’s.</font></font></b>
+<p><font face="TIMES"><font size=-1>If any additional scripts had been
+run on the database since the last dump, then these scripts need to be
+run again. Since they are user created, you will need to refer to the user’s
+instructions on how to run these.</font></font>
+<p><font face="TIMES"><font size=-1>On top of additional scripts, there
+might be bcp files of data from these databases. Follow the steps needed
+to restore these data files to the originating database tables. Please
+refer to the Logical Backups section below on loading data into the system.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>Proceed to step 26.</font></font></dir>
+</dir>
+<a NAME="Step26"></a><b><font face="TIMES"><font size=+1>Step 26: Review
+against hardcopies</font></font></b>
+<p><font face="TIMES"><font size=-1>Using hardcopies of the system tables
+and any important user tables, compare the current data with the data captured
+in the hardcopies. If there are discrepancies, then there could be additional
+problems with the dataserver. Refer to the Sybase Administration manuals
+to find out if the differences need to be repaired or are ok. Double check
+all permissions on the database if any changes were made in the syslogin
+or sysrole tables. If there are, correct before turning the system over
+to the user population.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>Proceed to step 27.</font></font></dir>
+</dir>
+<a NAME="Step27"></a><b><font face="TIMES"><font size=+1>Step 27: Dump
+all Restored Databases</font></font></b>
+<p><font face="TIMES"><font size=-1>Now that the database has been restored,
+dump the database to a new dump file. This way a current dump of the database,
+including all scripts and data changes, will be saved. This will help facilitate
+recovery in case future problems.</font></font>
+<dir>
+<dir><font face="TIMES"><font size=-1>Return to step 1.</font></font></dir>
+</dir>
+
+</body>
+</html>

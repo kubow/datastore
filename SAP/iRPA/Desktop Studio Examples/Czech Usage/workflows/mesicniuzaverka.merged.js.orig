@@ -1,0 +1,86 @@
+﻿
+// ----------------------------------------------------------------
+//   Test menu for scenario overeniDluzniku 
+// ----------------------------------------------------------------
+GLOBAL.events.START.on(function (ev) {
+	if (ctx.options.isDebug) {
+		// Add item in systray menu.
+		systray.addMenu('', 'overeniDluzniku', 'Test overeniDluzniku', '', function (ev) {
+			var rootData = ctx.dataManagers.rootData.create();
+			
+			// Initialize your data here.
+			GLOBAL.scenarios.overeniDluzniku.start(rootData);
+		});
+	}
+});
+
+//---------------------------------------------------
+// Scenario overeniDluzniku Starter ()
+//---------------------------------------------------
+
+// ----------------------------------------------------------------
+//   Scenario: overeniDluzniku
+// ----------------------------------------------------------------
+GLOBAL.scenario({ overeniDluzniku: function(ev, sc) {
+	var rootData = sc.data;
+
+	sc.setMode(e.scenario.mode.clearIfRunning);
+	sc.setScenarioTimeout(600000); // Default timeout for global scenario.
+	sc.onError(function(sc, st, ex) { sc.endScenario(); }); // Default error handler.
+	sc.onTimeout(30000, function(sc, st) { sc.endScenario(); }); // Default timeout handler for each step.
+	sc.step(GLOBAL.steps.Nacteni_dat_z_excelu);
+}}, ctx.dataManagers.rootData).setId('549d0abd-bc54-4411-927c-412ee7b1f175') ;
+
+// ----------------------------------------------------------------
+//   Step: Nacteni_dat_z_excelu
+// ----------------------------------------------------------------
+GLOBAL.step({ Nacteni_dat_z_excelu: function(ev, sc, st) {
+	var rootData = sc.data;
+	// Initialize Excel
+	ctx.options.excel.newXlsInstance = false;
+	ctx.options.excel.visible = true;
+	ctx.options.excel.displayAlerts = false;
+	ctx.excel.initialize();
+	// Open existing Excel file
+	ctx.excel.file.open("C:\\_Run\\Project\\iRPA\\Provize.xlsx");
+	// Activate worksheet
+	ctx.excel.sheet.activate('Products');
+	// Get values
+	rootData.xlsZdroj.xProdukty[0] = ctx.excel.sheet.getFullRangeValues('A',1,'B',6, undefined);
+	// Activate worksheet
+	ctx.excel.sheet.activate('PointOfSales');
+	// Get values
+	rootData.xlsZdroj.xPoS[0] = ctx.excel.sheet.getFullRangeValues('A',1,'C',11, undefined);
+	// Activate worksheet
+	ctx.excel.sheet.activate('Provize');
+	// Get values
+	rootData.xlsZdroj.xProdej[0] = ctx.excel.sheet.getFullRangeValues('A',1,'F',19, undefined);
+	// Write log
+	ctx.log('tohle se načetlo:' + rootData.xlsZdroj.xProdej[0], e.logIconType.Info);
+	// Close Excel file
+	ctx.excel.file.close();
+	// End Excel
+	ctx.excel.end();
+	// Release Excel
+	ctx.excel.release();
+	ctx.fso.init();
+	ctx.outlook.init();
+		ctx.outlook.reset();// This makes the current email index as 0
+		// Path of your text file where you have written email body
+		var emailContent = ctx.fso.file.read('C:\\_Run\\Project\\iRPA\\emailBody.txt');
+		// Log statement. This will show email body content in desktop debugger
+		ctx.log('Email body is' + emailContent);
+		//Special characters will be replaced by name Baba
+	  //rootData.storeData.eMailBody = emailContent.replace('@@@@', 'Seller 1');
+		// Enter email id you want to send an email
+		ctx.outlook.mail.create({To: 'jakub.vajda@mdsaptech.com',
+		Subject:'Excel To PDF'});
+		//ctx.outlook.mail.setBodyHtml(0, rootData.storeData.eMailBody);
+		// Give the path of your converted PDF file. So that it will attach and send an email
+	  ctx.outlook.mail.attach(0, "C:\\_Run\\Project\\iRPA\\Provize.pdf");
+	  ctx.outlook.mail.show(0); //It helps to test without sending the actual mail.
+	  ctx.outlook.mail.send(0);
+	ctx.outlook.end();
+	sc.endStep(); // end Scenario
+	return;
+}});

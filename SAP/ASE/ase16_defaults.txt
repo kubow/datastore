@@ -1,0 +1,616 @@
+Group: Configuration Options  
+   
+   
+Group: Application Functionality  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ enable concurrent dump tran                                            0            dynamic             
+ enable functionality group                                             0            dynamic             
+ enable inline default sharing                                          0            dynamic             
+ enable large pool for load                                             0            dynamic             
+ enable permissive unicode                                              0            dynamic             
+ enable utility lvl 0 scan wait                                         0            dynamic             
+ quoted identifier enhancements                                         0            static              
+ select for update                                                      0            dynamic             
+ streamlined dynamic SQL                                                0            dynamic             
+ suppress js max task message                                           0            dynamic             
+  
+(1 row affected)  
+   
+Group: Backup/Recovery  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ allow remote access                                                    1            dynamic             
+ dump history filename                                           dumphist            dynamic             
+ enable backupserver HA                                                 1            dynamic             
+ enable dump history                                                    0            dynamic             
+ enforce dump configuration                                             0            dynamic             
+ max concurrently recovered db                                          0            dynamic             
+ number of checkpoint tasks                                             1            dynamic             
+ optimize dump for faster load                                          5            dynamic             
+ print recovery information                                             0            dynamic             
+ recovery interval in minutes                                           5            dynamic             
+ recovery prefetch size                                                 0            dynamic             
+ tape retention in days                                                 0            dynamic             
+   
+Group: Cache Manager  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ extended cache size                                                    0            dynamic             
+ global async prefetch limit                                           10            dynamic             
+ global cache partition number                                          1            static              
+ memory alignment boundary                                           4096            static              
+ number of index trips                                                  0            dynamic             
+ number of oam trips                                                    0            dynamic             
+ total data cache size                                                  0            read-only           
+   
+Group: Component Integration Services  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ cis bulk insert array size                                            50            dynamic             
+ cis bulk insert batch size                                             0            dynamic             
+ cis connect timeout                                                    0            dynamic             
+ cis cursor rows                                                       50            dynamic             
+ cis idle connection timeout                                            0            dynamic             
+ cis packet size                                                      512            dynamic             
+ cis rpc handling                                                       0            dynamic        
+enable cis                                                             1            static              
+ enable file access                                                     0            dynamic             
+ enable full-text search                                                0            dynamic             
+ enable snmp                                                            0            dynamic             
+ max cis remote connections                                             0            dynamic             
+   
+Group: DTM Administration  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ dtm detach timeout period                                              5            dynamic             
+ dtm lock timeout period                                              300            dynamic             
+ enable DTM                                                             0            static              
+ enable xact coordination                                               1            static              
+ number of dtx participants                                           500            dynamic             
+ strict dtm enforcement                                                 0            static              
+ txn to pss ratio                                                      16            dynamic             
+ xact coordination interval                                            60            dynamic             
+   
+Group: Diagnostics  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ average cap size                                                     200            static              
+ caps per ccb                                                          50            static              
+ dump on conditions                                                     0            dynamic             
+ engine memory log size                                                 0            dynamic             
+ maximum dump conditions                                               10            static              
+ memory dump compression level                                          0            dynamic             
+ number of ccbs                                                         0            static              
+ number of dump threads                                                 1            dynamic    
+  
+Group: Disk I/O  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ allow sql server async i/o                                             1            static              
+ disable disk mirroring                                                 1            static              
+ disk i/o structures                                                  256            dynamic             
+ enable hp posix async i/o                                              0            static              
+ number of devices                                                     10            dynamic             
+ number of disk tasks                                                   1            dynamic             
+ number of large i/o buffers                                            6            dynamic             
+ page utilization percent                                              95            dynamic             
+ solaris async i/o mode                                                 0            static              
+   
+Group: Error Log  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ event log computer name                                      LocalSystem            dynamic             
+ event logging                                                          1            dynamic             
+ log audit logon failure                                                0            dynamic             
+ log audit logon success                                                0            dynamic             
+   
+Group: Extended Stored Procedure  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ esp execution priority                                                 8            dynamic             
+ esp execution stacksize                                           196608            static              
+ esp unload dll                                                         0            dynamic        
+ start mail session                                                     0            dynamic             
+ start xp server during boot                                            0            static              
+ xp_cmdshell context                                                    1            dynamic             
+   
+Group: General Information  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ config file version                                                    1            read-only           
+ configuration file                                                     0            dynamic             
+   
+Group: Java Services  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ enable java                                                            0            static              
+ number of java sockets                                                 0            dynamic             
+ size of global fixed heap                                            300            dynamic             
+ size of process object heap                                         3000            dynamic             
+ size of shared class heap                                           6144            dynamic             
+   
+Group: Languages  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ default character set id                                               1            static              
+ default language id                                                    0            dynamic             
+ default sortorder id                                                  50            static              
+ disable character set conversi                                         0            static              
+ enable unicode conversions                                             1            dynamic
+   
+Group: Lock Manager  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ deadlock checking period                                             500            dynamic             
+ deadlock retries                                                       5            dynamic             
+ lock address spinlock ratio                                          100            static              
+ lock hashtable size                                                 2048            static              
+ lock scheme                                                     allpages            dynamic             
+ lock spinlock ratio                                                   85            static              
+ lock table spinlock ratio                                             20            static              
+ lock wait period                                              2147483647            dynamic             
+ number of locks                                                    10000            dynamic             
+ page lock promotion HWM                                              200            dynamic             
+ page lock promotion LWM                                              200            dynamic             
+ page lock promotion PCT                                              100            dynamic             
+ print deadlock information                                             0            dynamic             
+ read committed with lock                                               0            dynamic             
+ row lock promotion HWM                                               200            dynamic             
+ row lock promotion LWM                                               200            dynamic             
+ row lock promotion PCT                                               100            dynamic             
+   
+Group: Memory Use  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ CIPC large message pool size                                        2048            static              
+ CIPC regular message pool size                                     32768            static              
+ DMA object pool size                                               16384            static              
+ additional network memory                                              0            dynamic      
+ allocate max shared memory                                             0            dynamic             
+ allow resource limits                                                  0            static              
+ audit queue size                                                     100            dynamic             
+ average cap size                                                     200            static              
+ caps per ccb                                                          50            static              
+ compression memory size                                                0            dynamic             
+ deadlock pipe max messages                                             0            dynamic             
+ default network packet size                                         2048            static              
+ disk i/o structures                                                  256            dynamic             
+ dynamic SQL plan pinning                                               0            dynamic             
+ dynamic allocation on demand                                           1            dynamic             
+ enable HugePages                                                       0            static              
+ enable ISM                                                             0            static              
+ enable i/o fencing                                                     0            static              
+ enable large chunk elc                                                 1            static              
+ enable rep agent threads                                               0            dynamic             
+ engine local cache percent                                            50            static              
+ errorlog pipe max messages                                             0            dynamic             
+ event buffers per engine                                             100            static              
+ executable codesize + overhead                                         0            read-only           
+ heap memory per user                                                4096            dynamic             
+ kernel resource memory                                              6396            dynamic             
+ large allocation auto tune                                             1            static              
+ lock hashtable size                                                 2048            static              
+ lock spinlock ratio                                                   85            static              
+ lock timeout pipe max messages                                         0            dynamic             
+ max SQL text monitored                                                 0            static              
+ max memory                                                        139264            dynamic             
+ max nesting level                                                     16            static              
+ max number network listeners                                           5            dynamic     
+ max online Q engines                                                   0            static              
+ max online engines                                                     1            static              
+ memory per worker process                                           1024            dynamic             
+ messaging memory                                                     400            dynamic             
+ number of alarms                                                      40            dynamic             
+ number of aux scan descriptors                                       256            dynamic             
+ number of ccbs                                                         0            static              
+ number of devices                                                     10            dynamic             
+ number of dtx participants                                           500            dynamic             
+ number of java sockets                                                 0            dynamic             
+ number of large i/o buffers                                            6            dynamic             
+ number of locks                                                    10000            dynamic             
+ number of mailboxes                                                   30            dynamic             
+ number of messages                                                    64            dynamic             
+ number of open databases                                              12            dynamic             
+ number of open indexes                                               500            dynamic             
+ number of open objects                                               500            dynamic             
+ number of open partitions                                            500            dynamic             
+ number of remote connections                                          20            static              
+ number of remote logins                                               20            static              
+ number of remote sites                                                10            static              
+ number of user connections                                            25            dynamic             
+ number of worker processes                                             0            dynamic             
+ open index hash spinlock ratio                                       100            dynamic             
+ open index spinlock ratio                                            100            dynamic             
+ partition groups                                                    1024            dynamic             
+ partition spinlock ratio                                              10            dynamic             
+ permission cache entries                                              64            dynamic             
+ plan text pipe max messages                                            0            dynamic             
+ procedure cache size                                               14000            dynamic 
+ process wait events                                                    0            dynamic             
+ remote server pre-read packets                                         3            static              
+ scavenge temp objects                                                  1            dynamic             
+ size of global fixed heap                                            300            dynamic             
+ size of process object heap                                         3000            dynamic             
+ size of shared class heap                                           6144            dynamic             
+ size of unilib cache                                                   0            dynamic             
+ sql text pipe max messages                                             0            dynamic             
+ stack guard size                                                    4096            static              
+ stack size                                                        131072            static              
+ statement cache size                                                   0            dynamic             
+ statement pipe max messages                                            0            dynamic             
+ threshold event max messages                                           0            dynamic             
+ total data cache size                                                  0            read-only           
+ total logical memory                                              139264            read-only           
+ total physical memory                                                  0            read-only           
+ txn to pss ratio                                                      16            dynamic             
+ user log cache size                                                16384            static              
+ user log cache spinlock ratio                                         20            dynamic             
+ wait event timing                                                      0            dynamic             
+ workload manager cache size                                          140            dynamic             
+   
+Group: Meta-Data Caches  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ number of open databases                                              12            dynamic             
+ number of open indexes                                               500            dynamic             
+ number of open objects                                               500            dynamic             
+ number of open partitions                                            500            dynamic        
+ open index hash spinlock ratio                                       100            dynamic             
+ open index spinlock ratio                                            100            dynamic             
+ open object spinlock ratio                                           100            dynamic             
+ partition groups                                                    1024            dynamic             
+ partition spinlock ratio                                              10            dynamic             
+ scavenge temp objects                                                  1            dynamic             
+   
+Group: Monitoring  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ SQL batch capture                                                      0            dynamic             
+ deadlock pipe active                                                   0            dynamic             
+ deadlock pipe max messages                                             0            dynamic             
+ enable monitoring                                                      0            dynamic             
+ enable spinlock monitoring                                             0            dynamic             
+ enable stmt cache monitoring                                           0            dynamic             
+ errorlog pipe active                                                   0            dynamic             
+ errorlog pipe max messages                                             0            dynamic             
+ execution time monitoring                                              0            dynamic             
+ lock timeout pipe active                                               0            dynamic             
+ lock timeout pipe max messages                                         0            dynamic             
+ max SQL text monitored                                                 0            static              
+ object lockwait timing                                                 0            dynamic             
+ per object statistics active                                           0            dynamic             
+ performance monitoring option                                          0            dynamic             
+ plan text pipe active                                                  0            dynamic             
+ plan text pipe max messages                                            0            dynamic             
+ process wait events                                                    0            dynamic             
+ sql text pipe active                                                   0            dynamic 
+ sql text pipe max messages                                             0            dynamic             
+ statement pipe active                                                  0            dynamic             
+ statement pipe max messages                                            0            dynamic             
+ statement statistics active                                            0            dynamic             
+ threshold event max messages                                           0            dynamic             
+ threshold event monitoring                                             0            dynamic             
+ wait event timing                                                      0            dynamic             
+   
+Group: Network Communication  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ additional network memory                                              0            dynamic             
+ allow remote access                                                    1            dynamic             
+ allow sendmsg                                                          0            dynamic             
+ default network packet size                                         2048            static              
+ early row send increment                                      2147483647            dynamic             
+ max network packet size                                             2048            static              
+ max network peek depth                                                 0            dynamic             
+ max number network listeners                                           5            dynamic             
+ network polling mode                                            threaded            static              
+ number of early send rows                                              0            dynamic             
+ number of network tasks                                                1            dynamic             
+ number of remote connections                                          20            static              
+ number of remote logins                                               20            static              
+ number of remote sites                                                10            static              
+ remote server pre-read packets                                         3            static              
+ send doneinproc tokens                                                 1            dynamic             
+ syb_sendmsg port number                                                0            static              
+ tcp no delay                                                           1            static         
+   
+Group: O/S Resources  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ max async i/os per engine                                           1024            static              
+ max async i/os per server                                     2147483647            static              
+ max native threads per engine                                         50            dynamic             
+ o/s file descriptors                                                   0            read-only           
+ tcp no delay                                                           1            static              
+   
+Group: Physical Resources  
+   
+   
+Group: Physical Memory  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ additional network memory                                              0            dynamic             
+ allocate max shared memory                                             0            dynamic             
+ compression memory size                                                0            dynamic             
+ dynamic allocation on demand                                           1            dynamic             
+ enable HugePages                                                       0            static              
+ enable ISM                                                             0            static              
+ heap memory per user                                                4096            dynamic             
+ kernel resource memory                                              6396            dynamic             
+ lock shared memory                                                     0            static              
+ max memory                                                        139264            dynamic             
+ messaging memory                                                     400            dynamic             
+ shared memory starting address                                         0            static      
+ total logical memory                                              139264            read-only           
+ total physical memory                                                  0            read-only           
+   
+Group: Processors  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ max online Q engines                                                   0            static              
+ max online engines                                                     1            static              
+ network polling mode                                            threaded            static              
+ number of Q engines at startup                                         0            static              
+ number of disk tasks                                                   1            dynamic             
+ number of engines at startup                                           1            static              
+ number of network tasks                                                1            dynamic             
+   
+Group: Query Tuning  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ abstract plan cache                                                    0            dynamic             
+ abstract plan dump                                                     0            dynamic             
+ abstract plan load                                                     0            dynamic             
+ abstract plan replace                                                  0            dynamic             
+ abstract plan sharing                                                  0            dynamic             
+ allow backward scans                                                   1            dynamic             
+ auto query tuning                                                      0            dynamic             
+ builtin date strings                                                   0            dynamic             
+ capture missing statistics                                             0            dynamic             
+ cost of a cpu unit                                                  1000            dynamic             
+ cost of a logical io                                                   2            dynamic        
+ cost of a physical io                                                 25            dynamic             
+ deferred name resolution                                               0            dynamic             
+ enable compatibility mode                                              0            dynamic             
+ enable deferred parallel                                               0            dynamic             
+ enable literal autoparam                                               0            dynamic             
+ enable merge join                                                      2            dynamic             
+ enable plan sharing                                                    0            dynamic             
+ enable query tuning mem limit                                          1            dynamic             
+ enable query tuning time limit                                         1            dynamic             
+ enable sort-merge join and JTC                                         0            dynamic             
+ enable streamlined parallel                                            0            dynamic             
+ max buffers per lava operator                                       2048            dynamic             
+ max parallel degree                                                    1            dynamic             
+ max query parallel degree                                              1            dynamic             
+ max repartition degree                                                 1            dynamic             
+ max resource granularity                                              10            dynamic             
+ max scan parallel degree                                               1            dynamic             
+ max utility parallel degree                                            1            dynamic             
+ memory per worker process                                           1024            dynamic             
+ metrics elap max                                                       0            dynamic             
+ metrics exec max                                                       0            dynamic             
+ metrics lio max                                                        0            dynamic             
+ metrics pio max                                                        0            dynamic             
+ min pages for parallel scan                                          200            dynamic             
+ mnc_full_index_filter                                                  2            dynamic             
+ number of histogram steps                                             20            dynamic             
+ number of worker processes                                             0            dynamic             
+ optimization goal                                            allrows_mix            dynamic             
+ optimization timeout limit                                            10            dynamic             
+ optimize temp table resolution                                         0            dynamic       
+ optimizer level                                              ase_default            dynamic             
+ procedure deferred compilation                                         1            dynamic             
+ prod-consumer overlap factor                                          20            dynamic             
+ query tuning plan executions                                           3            dynamic             
+ sampling percent                                                       0            dynamic             
+ search engine timeout factor                                           0            dynamic             
+ sproc optimize timeout limit                                          40            dynamic             
+ update statistics hashing                                            off            dynamic             
+ utility statistics hashing                                           off            dynamic             
+   
+Group: Rep Agent Thread Administration  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ enable rep agent threads                                               0            dynamic             
+ replication agent memory size                                       4096            dynamic             
+   
+Group: SQL Server Administration  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ HADR mode                                                             -1            dynamic             
+ SQL Perfmon Integration                                                1            static              
+ aggressive task stealing                                               1            dynamic             
+ allow nested triggers                                                  1            static              
+ allow resource limits                                                  0            static              
+ allow statement rollback                                               0            dynamic             
+ allow updates to system tables                                         0            dynamic             
+ capture compression statistics                                         0            dynamic             
+ cluster redundancy level                                               1            static         
+ column default cache size                                           1024            dynamic             
+ compression info pool size                                          4096            dynamic             
+ cpu accounting flush interval                                        200            dynamic             
+ cpu grace time                                                       500            dynamic             
+ deadlock retries                                                       5            dynamic             
+ default database size                                                  6            dynamic             
+ default exp_row_size percent                                           5            dynamic             
+ default fill factor percent                                            0            dynamic             
+ disable jsagent core dump                                              0            dynamic             
+ disable varbinary truncation                                           0            dynamic             
+ dynamic SQL plan pinning                                               0            dynamic             
+ enable DTM                                                             0            static              
+ enable HA                                                              0            static              
+ enable async database init                                             0            dynamic             
+ enable compression                                                     0            dynamic             
+ enable console logging                                                 0            dynamic             
+ enable housekeeper GC                                                  1            dynamic             
+ enable job scheduler                                                   0            dynamic             
+ enable js restart logging                                              0            dynamic             
+ enable large chunk elc                                                 1            static              
+ enable metrics capture                                                 0            dynamic             
+ enable pci                                                             0            static              
+ enable real time messaging                                             0            dynamic             
+ enable semantic partitioning                                           0            dynamic             
+ enable sql debugger                                                    1            static              
+ enable webservices                                                     0            dynamic             
+ enable xml                                                             0            dynamic             
+ engine local cache percent                                            50            static              
+ event buffers per engine                                             100            static              
+ histogram tuning factor                                               20            dynamic          
+ housekeeper free write percent                                         1            dynamic             
+ i/o accounting flush interval                                       1000            dynamic             
+ i/o batch size                                                       100            dynamic             
+ i/o polling process count                                             10            dynamic             
+ identity burning set factor                                         5000            static              
+ identity grab size                                                     1            dynamic             
+ identity reservation size                                              1            dynamic             
+ job scheduler interval                                                 1            dynamic             
+ job scheduler tasks                                                    4            dynamic             
+ js heartbeat interval                                                  1            dynamic             
+ js job output width                                                   80            dynamic             
+ kernel mode                                                     threaded            static              
+ large allocation auto tune                                             1            static              
+ license information                                                    0            dynamic             
+ max js restart attempts                                                3            dynamic             
+ max pci slots                                                          0            dynamic             
+ max transfer history                                                  10            dynamic             
+ maximum job output                                                 32768            dynamic             
+ number of alarms                                                      40            dynamic             
+ number of aux scan descriptors                                       256            dynamic             
+ number of large i/o buffers                                            6            dynamic             
+ number of mailboxes                                                   30            dynamic             
+ number of messages                                                    64            dynamic             
+ number of open databases                                              12            dynamic             
+ number of open objects                                               500            dynamic             
+ number of pre-allocated extent                                         2            dynamic             
+ number of sort buffers                                               500            dynamic             
+ page lock promotion HWM                                              200            dynamic             
+ page lock promotion LWM                                              200            dynamic             
+ page lock promotion PCT                                              100            dynamic             
+ pci memory size                                                    32768            dynamic             
+ percent database for history                                          20            dynamic             
+ percent database for output                                           30            dynamic             
+ percent history free                                                  30            dynamic             
+ percent output free                                                   50            dynamic             
+ print deadlock information                                             0            dynamic             
+ print rollback information                                             0            dynamic             
+ procedure cache size                                               14000            dynamic             
+ row lock promotion HWM                                               200            dynamic             
+ row lock promotion LWM                                               200            dynamic             
+ row lock promotion PCT                                               100            dynamic             
+ rtm thread idle wait period                                          600            dynamic             
+ runnable process search count                                       2000            dynamic             
+ scavenge temp objects                                                  1            dynamic             
+ size of auto identity column                                          10            dynamic             
+ sql server clock tick length                                      100000            static              
+ statement cache size                                                   0            dynamic             
+ sysstatistics flush interval                                           0            dynamic             
+ text prefetch size                                                    16            dynamic             
+ time slice                                                           100            dynamic             
+ transfer utility memory size                                        4096            dynamic             
+ upgrade version                                                 16000000            dynamic             
+ wait on uncommitted insert                                             0            dynamic             
+   
+Group: Security Related  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ FIPS login password encryption                                         0            static              
+ allow procedure grouping                                               1            dynamic             
+ audit queue size                                                     100            dynamic             
+ auditing                                                               0            dynamic             
+ automatic master key access                                            0            dynamic             
+ check password for digit                                               0            dynamic             
+ curread change w/ open cursors                                         1            dynamic             
+ current audit table                                                    1            dynamic             
+ enable encrypted columns                                               0            dynamic             
+ enable granular permissions                                            0            dynamic             
+ enable ldap user auth                                                  0            dynamic             
+ enable logins during recovery                                          1            dynamic             
+ enable pam user auth                                                   0            dynamic             
+ enable predicated privileges                                           0            dynamic             
+ enable row level access                                                0            dynamic             
+ enable ssl                                                             0            static              
+ maximum failed logins                                                  0            dynamic             
+ minimum password length                                                6            dynamic             
+ msg confidentiality reqd                                               0            dynamic             
+ msg integrity reqd                                                     0            dynamic             
+ net password encryption reqd                                           0            dynamic             
+ restricted decrypt permission                                          0            dynamic             
+ secure default login                                               guest            dynamic             
+ select on syscomments.text                                             1            dynamic             
+ suspend audit when device full                                         1            dynamic             
+ systemwide password expiration                                         0            dynamic             
+ unified login required                                                 0            dynamic             
+ use security services                                                  0            static              
+   
+Group: Shared Disk Cluster  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ CIPC large message pool size                                        2048            static              
+ CIPC regular message pool size                                     32768            static              
+ DMA object pool size                                               16384            static              
+ automatic cluster takeover                                             1            dynamic             
+ cluster heartbeat interval                                            10            dynamic             
+ cluster heartbeat retries                                              1            dynamic             
+ cluster vote timeout                                                  60            dynamic             
+ enable i/o fencing                                                     0            static              
+ enable lock remastering                                                0            dynamic             
+ idle migration timeout                                                60            dynamic             
+ physical lock cushion                                                  0            dynamic             
+ quorum heartbeat interval                                              5            dynamic             
+ quorum heartbeat retries                                               2            dynamic             
+ session migration timeout                                            600            dynamic             
+ workload manager cache size                                          140            dynamic             
+   
+Group: Unicode  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ default unicode sortorder                                         binary            static              
+ default xml sortorder                                             binary            static              
+ enable surrogate processing                                            1            dynamic             
+ enable unicode conversions                                             1            dynamic             
+ enable unicode normalization                                           1            dynamic             
+ size of unilib cache                                                   0            dynamic             
+   
+Group: User Environment  
+   
+ Parameter Name                                               Default                Type                
+ ------------------------------------------------------------ ---------------------- --------------------
+ default network packet size                                         2048            static              
+ max nesting level                                                     16            static              
+ number of backup connections                                           0            dynamic             
+ number of user connections                                            25            dynamic             
+ permission cache entries                                              64            dynamic             
+ session tempdb log cache size                                       4096            static              
+ stack guard size                                                    4096            static              
+ stack size                                                        131072            static              
+ user log cache queue size                                              1            static              
+ user log cache size                                                16384            static              
+ user log cache spinlock ratio                                         20            dynamic      

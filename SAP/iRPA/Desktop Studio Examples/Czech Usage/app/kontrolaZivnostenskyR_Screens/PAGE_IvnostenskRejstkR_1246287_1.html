@@ -1,0 +1,1361 @@
+<html lang="cs"><head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style>.mox_stage.mox_verticalAxis.mox_semiCollapsed>div{filter:blur(10px);max-width:25px!important}.mox_stage.mox_verticalAxis.mox_semiCollapsed::after{cursor:pointer;content:"";display:block;position:absolute;top:0;width:100%;height:100%;background:center/contain no-repeat url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBpZD0ibGF5ZXJfMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTM5IDEzOTsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDEzOSAxMzkiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtmaWxsOm5vbmU7c3Ryb2tlOiNmZmZmZmY7c3Ryb2tlLXdpZHRoOjE2O3N0cm9rZS1taXRlcmxpbWl0OjEwO308L3N0eWxlPjxwb2x5bGluZSBjbGFzcz0ic3QwIiBpZD0iWE1MSURfNl8iIHBvaW50cz0iNzguNSwyMy41IDYwLjUsNjkuNSA3OC41LDExNS41ICIvPjwvc3ZnPg==),rgba(0,0,0,.3)}.mox_stage.mox_verticalAxis.mox_semiCollapsed.mox_expandToRight::after{transform:rotate(180deg)}.mox_prepared .mox_aspectRatio{width:1px!important;height:1px!important}.mox_ima_sdk iframe{position:absolute!important;top:0;left:0;z-index:2}.mox_wrapperLayer.mox_adSlot.mox_ima_sdk div{z-index:1!important;}.mox_stage{display:flex;flex-direction:row;font-size:0;z-index:2147483647;overflow:hidden;visibility:hidden;position:relative}.mox_stage.mox_horizontalAxis{width:100%;height:auto}.mox_stage.mox_verticalAxis{width:auto;height:100%}.mox_verticalAxis .mox_collapsed{max-width:0!important;margin:0!important}.mox_horizontalAxis .mox_collapsed{max-height:1px!important;margin:0!important}.mox_stage.mox_horizontalAxis.mox_fixed{width:auto}.mox_stage.mox_verticalAxis.mox_fixed{height:auto}.mox_proscenium{position:relative;border:0;display:inline-block;overflow:hidden;opacity:0}.mox_videoWrapper,.mox_uiElements{width:100%;height:100%;top:0;left:0;position:absolute}.mox_uiElements{pointer-events:none}.mox_videoWrapper{position:static;transition:transform .2s}.mox_videoPlayer{opacity:0;width:100%;height:100%;position:relative;left:50%;transform:translateX(-50%)}.mox_videoPlayer video{width:100%;height:100%;object-position:0;object-fit:cover}.mox_videoPlayer img.mox_aspectRatio{min-width:100%;min-height:100%;max-width:initial;max-height:initial}.mox_sticky .mox_videoPlayer video,.mox_sticky .mox_videoPlayer img.mox_aspectRatio{width:100%}.mox_videoPlayer video,.mox_wrapperLayer{position:absolute;top:0;left:0}.mox_wrapperLayer{pointer-events:none;width:100%;height:100%}.mox_wrapperLayer *{pointer-events:all}.mox_wrapperLayer.mox_clickThroughLayer a{display:block;width:100%;height:100%}.mox_wrapperLayer.mox_skipButtonLayer .mox_preSkipButton,.mox_wrapperLayer.mox_skipButtonLayer .mox_skipButton{position:absolute;bottom:20%;right:0;background:rgba(0,0,0,0.8);color:#e6e6e6;font-family:arial,sans-serif;text-align:center}.mox_wrapperLayer.mox_skipButtonLayer .mox_preSkipButton{min-width:155px;padding:6px;font-size:11px;line-height:21px}.mox_wrapperLayer.mox_skipButtonLayer .mox_skipButton{display:none;padding:7px 6px 7px 10px;cursor:pointer}.mox_wrapperLayer.mox_skipButtonLayer .mox_skipButton .mox_skipButtonText{float:left;font-size:18px;line-height:18px;margin:2px 2px 0 0}.mox_wrapperLayer.mox_skipButtonLayer .mox_skipButton::after{content:'';display:inline-block;width:24px;height:24px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAAZElEQVQ4y+3SwQmDQBBGYRFy9mYLSRXWEyvRRtKBbdhDUoTH8HkVllX+u++48GD2zTTNTYiPrnhDXeBnyAT+Zo9EgNUrE9iMmQCLvhTas2jXWY8jvbNPP5OsU5L1my0uPY2bCjtXdo6mqRVtTgAAAABJRU5ErkJggg==)}.mox_controlIcon{position:absolute;border-radius:3px;background-size:65%;border:1px solid rgba(0,0,0,0.05);cursor:pointer;pointer-events:auto}.mox_controlIcon.mox_closeControl{background:url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20fill%3D%22%23fff%22%3E%3Cpath%20d%3D%22M10.707%2010.5l5.646-5.646c.195-.195.195-.512%200-.707s-.512-.195-.707%200L10%209.793%204.354%204.147c-.195-.195-.512-.195-.707%200s-.195.512%200%20.707L9.293%2010.5l-5.646%205.646c-.195.195-.195.512%200%20.707.098.098.226.146.354.146s.256-.049.354-.146l5.646-5.646%205.646%205.646c.098.098.226.146.354.146s.256-.049.354-.146c.195-.195.195-.512%200-.707L10.709%2010.5z%22%2F%3E%3C%2Fsvg%3E) no-repeat center,rgba(0,0,0,0.5);background-size:80%}.mox_controlIcon.mox_mutedSpeaker,.mox_controlIcon.mox_unmutedSpeaker{background:url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2220%22%20fill%3D%22%23fff%22%3E%3Cpath%20d%3D%22M13.653%2014.881c-.145%200-.289-.063-.388-.184-.174-.214-.142-.529.072-.703C14.394%2013.135%2015%2011.861%2015%2010.501s-.606-2.633-1.662-3.493c-.214-.174-.247-.489-.072-.703s.489-.247.703-.072C15.26%207.283%2016%208.839%2016%2010.502s-.74%203.218-2.031%204.269c-.093.075-.204.112-.315.112zM11.762%2012.552c-.145%200-.289-.063-.388-.184-.174-.214-.142-.529.072-.703.352-.287.554-.711.554-1.164s-.202-.878-.554-1.164c-.214-.174-.247-.489-.072-.703s.489-.247.703-.072c.587.477.923%201.184.923%201.94s-.337%201.463-.923%201.94c-.093.075-.204.112-.315.112zM8.15%203.207c-.247%200-.494.104-.736.309L3.316%206.999H1.5c-.827%200-1.5.673-1.5%201.5v4c0%20.827.673%201.5%201.5%201.5h1.816l4.098%203.483c.241.205.489.309.736.309.272%200%20.516-.132.67-.362.119-.179.18-.408.18-.68v-12.5c0-.72-.427-1.043-.85-1.043zM1%2012.5v-4c0-.276.224-.5.5-.5H3v5H1.5c-.276%200-.5-.224-.5-.5zm7%204.169l-4-3.4V7.731l4-3.4v12.338z%22%2F%3E%3C%2Fsvg%3E) no-repeat center,rgba(0,0,0,0.5)}.mox_controlIcon.mox_mutedSpeaker{background:url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2220%22%20fill%3D%22%23fff%22%3E%3Cpath%20d%3D%22M8.15%203.207c-.247%200-.494.104-.736.309L3.316%206.999H1.5c-.827%200-1.5.673-1.5%201.5v4c0%20.827.673%201.5%201.5%201.5h1.816l4.098%203.483c.241.205.489.309.736.309.272%200%20.516-.132.67-.362.119-.179.18-.408.18-.68v-12.5c0-.72-.427-1.043-.85-1.043zM1%2012.5v-4c0-.276.224-.5.5-.5H3v5H1.5c-.276%200-.5-.224-.5-.5zm7%204.169l-4-3.4V7.731l4-3.4v12.338z%22%2F%3E%3C%2Fsvg%3E) no-repeat center,rgba(0,0,0,0.5);background-size:34%}.mox_brandIcon{position:absolute;cursor:pointer;background:url(data:image/svg+xml;utf8,%3Csvg%20id%3D%221%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22231.6%22%20height%3D%2260.4%22%3E%3Cstyle%3E.st0%7Bfill%3A%23e4446b%7D%3C%2Fstyle%3E%3Cg%20id%3D%22mox_logo%22%3E%3Cpath%20id%3D%22Path_30-2%22%20class%3D%22st0%22%20d%3D%22M0%2036.7v22.6h15.2V29.9L0%2036.7z%22%2F%3E%3Cpath%20id%3D%22Path_31-2%22%20class%3D%22st0%22%20d%3D%22M28.4%2053.6h11.2l13.3-28.8v34.5h15.2V1.1H49.6L34.1%2033.4%2018.5%201.1h-15l11.7%2024.5%2013.2%2028z%22%2F%3E%3Cpath%20id%3D%22Path_32-2%22%20class%3D%22st0%22%20d%3D%22M131.8%2014.7c-2.7-4.6-6.7-8.3-11.4-10.8-5-2.6-10.6-4-16.2-3.9C98.6-.1%2093%201.3%2088%203.9c-4.7%202.5-8.6%206.2-11.3%2010.8-2.8%204.7-4.2%2010-4.1%2015.4-.1%205%201.1%2010%203.5%2014.4l14.7-10c-.4-1.4-.5-2.9-.5-4.4%200-2.8.6-5.5%201.9-8%201.2-2.3%203-4.3%205.2-5.7%202.1-1.4%204.6-2.1%207.1-2.1s4.9.7%207%202.1c2.1%201.4%203.9%203.4%205%205.7%201.2%202.5%201.9%205.2%201.8%208%200%202.8-.6%205.6-1.8%208.1-1.1%202.3-2.9%204.3-5%205.7-2%201.4-4.5%202.1-6.9%202.1h-.6l-3.6%2014.2c1.3.1%202.6.2%203.9.2%205.6.1%2011.2-1.3%2016.2-3.9%204.7-2.5%208.6-6.3%2011.4-10.9%202.8-4.7%204.2-10.1%204.1-15.6-.1-5.4-1.5-10.7-4.2-15.3z%22%2F%3E%3Cpath%20id%3D%22Path_33-2%22%20class%3D%22st0%22%20d%3D%22M214.2%202.3h-38.1l-9.8%2013.9-9.4-13.9h-20L156%2030.7l-20.5%2029.5h20l10.8-16.5%2011%2016.5h35.9L231.6%2031%20214.2%202.3zm-7.1%2040.8h-7l-6.6-17.4H187v17.4h-6.8V25.8h-6.6v-5.4h25l5.2%2015.7%205.2-15.7h6.9l-8.8%2022.7z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E) no-repeat center;background-size:100%;pointer-events:auto}.mox_caption{position:absolute;color:#bbb;text-transform:uppercase;font-family:sans-serif;line-height:1}.mox_stretched{width:100%!important;height:100%!important}.mox_fixed{position:fixed}.mox_hidden{visibility:hidden}.mox_left{left:0}.mox_hcenter{left:50%;transform:translateX(-50%)}.mox_right{right:0}.mox_top{top:0}.mox_vcenter{align-self:center}.mox_bottom{top:100%;transform:translateY(-100%)}.mox_hcenter.mox_bottom{transform:translate(-50%,-100%)}.mox_rollAnimation{transition-property:max-width,max-height,margin}.mox_fadeAnimation{transition-property:opacity}.mox_fadeAnimation.mox_collapsed{opacity:0!important;max-width:initial!important;max-height:initial!important}.mox_VPAID,.mox_wrapperLayer.mox_adSlot div{border:0;min-width:100%;min-height:100%}.mox_wrapperLayer.mox_adSlot div{top:0;z-index:-1}.mox_scrollTrack{position:fixed;top:0;left:0;width:100%;height:100%;overflow:scroll;z-index:2147483647;visibility:hidden}.mox_pageShadow{width:100%;height:100%;background:rgba(0,0,0,.2)}.mox_resizeObserver{position:absolute;left:0;top:0;width:100%;height:100%;border:0}.mox{position:absolute!important;top:0!important;left:0!important;width:100%!important;height:100%!important}</style><script src="https://adx.adform.net/adx/?rp=3&amp;pv=1&amp;bWlkPTYxMDMzMiZybmQ9MC4yMDQ4MDc3MTYwNTU3MDcwOCZjYXQ9MzMmbWt2PW1jX21zZ190b3A6MTE0NTcmbWt2PW1jX21zZ19ydGI6MTA1OTY&amp;callback=_adform_cb_1598870790390_37468544274722165" type="text/javascript"></script><script src="https://s1.adform.net/banners/scripts/adx.js" type="text/javascript" async=""></script><script src="https://s.kurzy.cz/l/s_news.js?1598870" type="text/javascript" async=""></script><script src="https://pagead2.googlesyndication.com/pagead/show_companion_ad.js"></script><script src="https://s.kurzy.cz/l/s_social.js" type="text/javascript" async=""></script><script src="https://s.kurzy.cz/l/menu/11457-1.js?a=1" type="text/javascript" async=""></script><script src="https://ads.pubmatic.com/AdServer/js/userSync.js" defer="" type="text/javascript" async=""></script><script src="https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101"></script><script src="https://s0.2mdn.net/instream/video/client.js" type="text/javascript" async=""></script><script src="//gacz.hit.gemius.pl/xgemius.js" defer="defer" async="async"></script><script src="//www.google-analytics.com/analytics.js" type="text/javascript" async=""></script><script>z_start = new Date();</script>
+	<meta charset="windows-1250"><meta http-equiv="content-language" content="cs">
+	<title>Živnostenský rejstřík - rejstřík živnostníků | Kurzy.cz</title>
+	<meta name="description" content="Živnostenský rejstřík je rejstřík živnostníků a živnostenského podnikání."><meta content="https://img3.kurzy.cz/og/rejstrik-firem.kurzy.cz/zivnostensky-rejstrik___add[200831].png" property="og:image"><meta name="author" content="Kurzy.cz"><meta content="https://www.facebook.com/kurzy.cz" property="article:author">
+	
+	<link href="//s.kurzy.cz/l/lm3.css?v=05" rel="stylesheet" type="text/css" media="all">
+	<link href="//s.kurzy.cz/l/lm-print.css?v=0.1" rel="stylesheet" type="text/css" media="print">
+	<!--[if IE]> <link type="text/css" href="https://s.kurzy.cz/l/lm-IEcorection.css?lfm=02_05_2012" rel="stylesheet" /> <![endif]-->
+	
+	
+	<link title="RSS kurzy.cz" href="https://www.kurzy.cz/zpravy/util/forext.dat?type=rss" rel="alternate" type="application/rss+xml">
+	
+	<script src="//s.kurzy.cz/l/js/jquery.kurzy.cz.all-2020.js?v=0.3" charset="windows-1250"></script>
+	<link href="https://s1.kurzy.cz/l/css/obchodni-rejstrik.css?lmf=170531" rel="stylesheet" type="text/css" media="all">
+	
+		
+	
+	  <meta name="viewport" content="width=990">
+	  <script>
+	/* <![CDATA[ */
+    var a_adv={rs_time:0,rs_timeout:1E3,im:function(b,a,c,d,e,f,g,h){this.runfc("im",b,a,c,d,e,f,g,h)},ram:function(b){this.runfc("ram",b)},all:function(){this.runfc("all")},rscript:function(b,a){this.runfc("rscript",b,a)},mscript:function(){this.runfc("mscript")},repairIE:function(b,a){},passback:function(b,a,c){this.runfc("passback",b,a,c)},dfp_callback:function(b){this.runfc("dfp_callback",b)},cgs:function(b,a,c,d,e,f){this.runfc("cgs",b,a,c,d,e,f)},getCookie:function(b){var a=document.cookie,c=a.indexOf(" "+
+	b+"=");-1==c&&(c=a.indexOf(b+"="));-1==c?a=null:(c=a.indexOf("=",c)+1,b=a.indexOf(";",c),-1==b&&(b=a.length),a=unescape(a.substring(c,b)));return a},runfc:function(b,a,c,d,e,f,g,h,k,l,m){if("undefined"===typeof a_advs){0==this.rs_time&&(this.rs_time=(new Date).getTime());if((new Date).getTime()-this.rs_time<this.rs_timeout)switch(b){case "im":setTimeout(this.im.bind(this,a,c,d,e,f,g,h,k),100);break;case "ram":setTimeout(this.ram.bind(this,a),100);break;case "all":setTimeout(this.all.bind(this),100);
+	break;case "rscript":setTimeout(this.rscript.bind(this,a,c),100);break;case "mscript":setTimeout(this.mscript.bind(this),100);break;case "passback":setTimeout(this.passback.bind(this,a,c,d),100);break;case "dfp_callback":setTimeout(this.dfp_callback.bind(this,a),100);break;case "cgs":setTimeout(this.cgs.bind(this,a,c,d,e,f,g),100)}return!1}switch(b){case "im":a_advs.im(a,c,d,e,f,g,h,k);break;case "ram":a_advs.ram(a);break;case "all":a_advs.all();break;case "rscript":a_advs.rscript(a,c);break;case "mscript":a_advs.mscript();
+	break;case "passback":a_advs.passback(a,c,d);break;case "dfp_callback":a_advs.dfp_callback(a);break;case "cgs":a_advs.cgs(a,c,d,e,f,g)}}};
+
+	var alia_adv = {code:'wfCFStatPages',mc_msg_top:'11457',mc_msg_bot:'10596',mc_msg_rtb:'10596',AdFormCat:'33',tree_code:'wfCFStatPages',flavour:'full',noview:'',lv:'1'};  
+	var alia_gAdServer = 'rs.kurzy.cz'; 
+	/*var alia_gAdServer = 'www.kurzy.cz';*/ 
+	var alia_gAdPosition = 'wCentrumFirem';
+	var alia_gAdvBulkTemplates  = '______________';
+	
+		alia_adv.imm = '_cid_topnewsnew_ram_content_sky_stickyright_squaredole_left_doubleskylevy_250stranka_300adsense_topexclusiv_textovkaall_rectangle_stickyad_headertime_headerindexes_headerlogin_placenyzaznamall_doublesky_prezentace_bottom_mobile_rectanglespodni_jobscz_'; 
+		var alia_gAdvBulkPositions  = '_cid_ram_content_topnewsnew_sky_stickyright_squaredole_left_doubleskylevy_topexclusiv_headertime_headerindexes_headerlogin_250stranka_300adsense_doublesky_placenyzaznamall_textovkaall_bottom_rectangle_stickyad_prezentace_mobile_rectanglespodni_jobscz_'; 
+		var alia_gAdvPriority = '_doublesky_300adsense_|_250stranka_300adsense_|_topexclusiv_rectangle_|_rectangle_'
+	
+	var alia_gCode = 'wfCFStatPages';
+	var alia_gLV = '1'
+	var alia_gCid = '';
+	var alia_gAdSpecialPosition = ''
+	
+	var alia_gDFP = 1
+	
+	var alia_gSeznamSession = false
+	try {if (a_adv.getCookie('advseznam') != null) alia_gSeznamSession = true } catch(e){}
+	var alia_gSS = 0
+	try { alia_gSS = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth } catch(e) {}
+	var alia_gVS = 0
+	try { alia_gVS = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight } catch(e) {}
+	try { if (alia_gSS <= 990) { alia_gSS = screen.width; alia_gVS = screen.height} } catch(e) {}
+	//a_adv.call()
+	var alia_gAsync = true
+	/* ]]> */
+</script>
+
+	<script> if (alia_gSeznamSession) document.write('<scr' + 'ipt src="https://ssp.imedia.cz/static/js/ssp.js"></scr' + 'ipt>')</script>
+	
+
+	
+		<script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" async=""></script>
+		<script>
+		  window.googletag = window.googletag || {cmd: []};
+  		  if (!alia_gSeznamSession) {
+			  	googletag.cmd.push(function() {
+			  	if (alia_gSS > 1050) {
+					var googleslot_oramovani = googletag.defineSlot('/16466452/2000x1400_Kurzy_oramovani2', [[1,1], [2000, 1100], [2000, 1400]], 'div-gpt-ad-1550584191209-0').addService(googletag.pubads());
+				    var googleslot_leaderboard = googletag.defineSlot('/16466452/970x90_Kurzy_leaderboard', [[1, 1], [640, 90], [670, 90], [728, 90], [750, 100], [750, 200], [750, 300], [930, 180], [950, 90], [960, 90], [970, 66], [970, 90], [970, 210], [970, 250], [970, 310], [980, 90], [980, 120], [990, 200]], 'div-gpt-ad-1549530970626-0').addService(googletag.pubads());
+				} else {
+					var googleslot_leaderboard = googletag.defineSlot('/16466452/970x90_Kurzy_leaderboard', [[1, 1], [640, 90], [670, 90], [728, 90], [750, 100], [950, 90], [960, 90], [970, 66], [970, 90], [980, 90]], 'div-gpt-ad-1549530970626-0').addService(googletag.pubads());
+				}   
+			    //var googleslot_paticka = googletag.defineSlot('/16466452/970x90_Kurzy_paticka', [[1, 1], [640, 90], [670, 90], [728, 90], [750, 100], [750, 200], [750, 300], [930, 180], [950, 90], [960, 90], [970, 66], [970, 90], [970, 210], [970, 250], [970, 310], [980, 90], [980, 120], [990, 200]], 'div-gpt-ad-1549543956380-0').addService(googletag.pubads());
+			    if (alia_gSS > 1650) { 
+					var googleslot_doubleskylevy = googletag.defineSlot('/16466452/300x600_Kurzy_doubleskylevy', [[1, 1], [300, 600], [120, 600], [160, 600]], 'div-gpt-ad-1550135544323-0').addService(googletag.pubads()); 
+					var googleslot_stickyright = googletag.defineSlot('/16466452/300x600_Kurzy_stickyright', [[1,1], [300, 600], [120, 600], [160, 600]], 'div-gpt-ad-1551088684672-0').addService(googletag.pubads());
+					var googleslot_square = googletag.defineSlot('/16466452/300x250_Kurzy_IMG', [[1,1], [300, 250], [300, 300]], 'div-gpt-ad-1551086904491-0').addService(googletag.pubads());
+				}
+			    else if (alia_gSS > 1350) { 
+					var googleslot_left = googletag.defineSlot('/16466452/160x600_Kurzy_left', [[1, 1], [160, 600], [120, 600]], 'div-gpt-ad-1550135466208-0').addService(googletag.pubads()); 
+					var googleslot_stickyright = googletag.defineSlot('/16466452/300x600_Kurzy_stickyright', [[1,1], [120, 600], [160, 600]], 'div-gpt-ad-1551088684672-0').addService(googletag.pubads());
+					var googleslot_doubleskypravy = googletag.defineSlot('/16466452/300x600_Kurzy_pravy', [[1,1], [300, 300], [300, 600], [300, 250]], 'div-gpt-ad-1551086408428-0').addService(googletag.pubads());
+				} else {
+					var googleslot_doubleskypravy = googletag.defineSlot('/16466452/300x600_Kurzy_pravy', [[1,1], [300, 300], [300, 600], [300, 250]], 'div-gpt-ad-1551086408428-0').addService(googletag.pubads());
+				}
+				var googleslot_300adsense = googletag.defineSlot('/16466452/300x250_Kurzy_300adsense', [[1,1], [300, 300], [300, 250]], 'div-gpt-ad-1551100877217-0').addService(googletag.pubads());
+			    //var googleslot_squaredole = googletag.defineSlot('/16466452/300x600_Kurzy_DOLE', [[1,1], [300, 300], [300, 600], [300, 250]], 'div-gpt-ad-1551086699324-0').addService(googletag.pubads());
+				//var googleslot_rectanglespodni = googletag.defineSlot('/16466452/580x400_Kurzy_rectanglespodni', [[1,1], [480, 300], [580, 400], [670, 350]], 'div-gpt-ad-1551104386048-0').addService(googletag.pubads());
+				var googleslot_rectangle = googletag.defineSlot('/16466452/640x90_Kurzy_rectangle', [[1,1], [640, 90]], 'div-gpt-ad-1551105554847-0').addService(googletag.pubads());
+				try {
+					var pozice = "_" + "topclient1" + "_"
+					if (alia_adv.imm.indexOf(pozice) > -1) {
+						var googleslot_topclient = googletag.defineSlot('/16466452/675x80_Kurzy_topclient', [[1,1], [675, 80], [490, 110]], 'div-gpt-ad-1561463056780-0').addService(googletag.pubads());
+					}
+				} catch(e){}
+				
+				googletag.pubads().enableSingleRequest();
+				googletag.pubads().collapseEmptyDivs();
+			    googletag.pubads().setCentering(true);
+			    googletag.pubads().setTargeting('gAdPosition', 'wCentrumFirem')
+			    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+			    	var a_advcmm = a_adv; if (a_advcmm == undefined) { a_advcmm = a_advs};
+			 		try {a_advcmm.dfp_callback(event)} catch(e){}
+				});
+				var a_advcmm = a_adv; if (a_advcmm == undefined) { a_advcmm = a_advs};
+				if (a_advcmm) {
+					var google_cookie_consent = a_advcmm.getCookie('_advc_google');
+					if (google_cookie_consent == '1') {
+			        	googletag.pubads().setRequestNonPersonalizedAds(0)
+					} else {
+						googletag.pubads().setRequestNonPersonalizedAds(1)
+					}
+				}	
+				googletag.enableServices();
+			  });
+		  }
+		</script>
+	
+
+	  <script src="//s.kurzy.cz/l/adv_async.js?lfm=200702" async=""></script>
+	
+	
+	  <script>
+  window.addEventListener( "message", function (e) {
+	if (/https?:\/\/cas(\.eu)?\.criteo\.com/g.test(e.origin)) {
+	  id = e.data.match(/passback-\d{6,7}/g)
+	  if (id) {
+		id = id[0].replace('passback','crt')
+		document.getElementById(id).style.display = "none";}
+	} else {
+	  if (/https?:\/\/([a-z0-9-\.]*)?((kurzy|fin)\.cz|doubleclick\.net)/g.test(e.origin)) {
+		try {
+		  id = e.data.match(/passbackadx-.*/g)
+		  if (id) {
+			id = id[0].replace('passbackadx-','')
+			id = id.split('-')
+			a_adv.passback('adx', id[0], id[1])
+		  }
+		  id = e.data.match(/passback-.*/g)
+		  if (id) {
+			id = id[0].replace('passback-','')
+			id = id.split('-')
+			a_adv.passback(id[0], id[1], '')
+		  }
+		  id = e.data.match(/id-.*/g)
+		  if (id) {
+			id = id[0].replace('id-','')
+			id = id.split('-')
+			var el = document.getElementById(id[0])
+			if (el) {
+			  switch(id[1]) {
+				case 'width':
+				  el.style.width = id[2] + 'px'
+				  break;
+			  }
+			}
+		  }
+		}
+		catch(e){ return }
+	  }
+	  else
+	  {
+		return;
+	  }
+	}
+  }, false);
+</script>
+
+	
+	
+	<script>mobile_view=false;
+			
+	</script>
+  <script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2020082501.js" async=""></script><script src="https://trackad.cz/adtrack.php?d=kurzy.cz&amp;g=generic&amp;p=branding" type="" async=""></script><link href="https://adservice.google.cz/adsid/integrator.js?domain=rejstrik-firem.kurzy.cz" rel="preload"><script src="https://adservice.google.cz/adsid/integrator.js?domain=rejstrik-firem.kurzy.cz" type="text/javascript"></script><link href="https://adservice.google.com/adsid/integrator.js?domain=rejstrik-firem.kurzy.cz" rel="preload"><script src="https://adservice.google.com/adsid/integrator.js?domain=rejstrik-firem.kurzy.cz" type="text/javascript"></script><script src="https://adx.adform.net/adx/?mid=7421378&amp;rnd=1598870621967&amp;callback=_adform_callback_mb&amp;pos=atf&amp;cat=33&amp;mkv=mc_msg_top:10596&amp;mkv=mc_msg_rtb:10596&amp;mkw=Živnostenský rejstřík ,rejstřík živnostníků | Kurzy," type="" async=""></script><script type="text/javascript">var a_adv_done=true;</script><script src="//trackad.cz/js/3.28.3/online/public/bundle.aac9184a3267c68c38bc.js" charset="UTF-8"></script><link href="https://ea36725d9d437ea8742c0e142bc04d3c.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html" rel="prefetch"><link href="https://tpc.googlesyndication.com/safeframe/1-0-37/html/container.html" rel="prefetch"><script src="https://imasdk.googleapis.com/js/sdkloader/ima3.js" async=""></script><script src="https://adx.adform.net/adx/?mid=608063&amp;rnd=1598870624444&amp;callback=_adform_callback_br&amp;pos=atf&amp;cat=33&amp;mkv=mc_msg_top:10596&amp;mkv=mc_msg_rtb:10596&amp;mkw=Živnostenský rejstřík ,rejstřík živnostníků | Kurzy," type="" async=""></script><script type="text/javascript">var a_adv_done=true;</script><script src="https://adx.adform.net/adx/?mid=744793&amp;rnd=1598870624863&amp;callback=_adform_callback_brv&amp;pos=atf&amp;cat=33&amp;mkv=mc_msg_top:10596&amp;mkv=mc_msg_rtb:10596&amp;mkw=Živnostenský rejstřík ,rejstřík živnostníků | Kurzy," type="" async=""></script><script type="text/javascript">var a_adv_done=true;</script><script type="text/javascript">var a_adv_done=true;</script><script src="https://adx.adform.net/adx/?mid=612270&amp;rnd=1598870625393&amp;callback=_adform_callback_sk&amp;pos=atf&amp;cat=33&amp;mkv=mc_msg_top:10596&amp;mkv=mc_msg_rtb:10596&amp;mkw=Živnostenský rejstřík ,rejstřík živnostníků | Kurzy," type="" async=""></script><script type="text/javascript">var a_adv_done=true;</script><script src="https://adx.adform.net/adx/?mid=613968&amp;rnd=1598870625403&amp;callback=_adform_callback_le&amp;pos=atf&amp;cat=33&amp;mkv=mc_msg_top:10596&amp;mkv=mc_msg_rtb:10596&amp;mkw=Živnostenský rejstřík ,rejstřík živnostníků | Kurzy," type="" async=""></script><script type="text/javascript">var a_adv_done=true;</script><iframe width="0" height="0" src="https://ads.pubmatic.com/AdServer/js/showad.js#PIX&amp;kdntuid=1&amp;SPug=true&amp;p=158361&amp;s=603650&amp;predirect=&amp;userIdMacro=&amp;gdpr_consent=&amp;gdpr=1&amp;us_privacy=&amp;" border="0" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border: 0px currentColor; border-image: none; width: 0px; height: 0px; display: none;"></iframe><script src="https://trackad.cz/adtrack.php?d=kurzy.cz&amp;g=generic&amp;p=outstream" type="text/javascript"></script><script type="text/javascript">var a_adv_done=true;</script><script src="//prg.smartadserver.com/prebid?pbjscbk=adTrackCallback833176&amp;siteid=199594&amp;pgid=881553&amp;fmtid=61363&amp;ccy=EUR&amp;bidfloor=0&amp;sizes=640x360%2C1280x720&amp;async=true&amp;gdpr_consent=&amp;gdpr=0"></script><iframe width="0" height="0" src="https://sync.teads.tv/iframe?hb_provider=prebid&amp;hb_version=3.4&amp;placementId=127295" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" vspace="0" hspace="0" style="width: 0px; height: 0px; display: none;" allowtransparency="true"></iframe></head>
+  <body><div id="sprite-mox" hidden=""><!--?xml version="1.0" encoding="UTF-8"?--><!-- Icons made by <a href="https://www.flaticon.com/authors/google">Google</a>, <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> assert licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a> --><svg xmlns="http://www.w3.org/2000/svg"><symbol id="mox-close" viewBox="0 0 44 44"><path d="M 22 0 C 9.8 0 0 9.8 0 22 s 9.8 22 22 22 s 22 -9.8 22 -22 S 34.2 0 22 0 Z m 3.2 22.4 l 7.5 7.5 c 0.2 0.2 0.3 0.5 0.3 0.7 s -0.1 0.5 -0.3 0.7 l -1.4 1.4 c -0.2 0.2 -0.5 0.3 -0.7 0.3 c -0.3 0 -0.5 -0.1 -0.7 -0.3 l -7.5 -7.5 c -0.2 -0.2 -0.5 -0.2 -0.7 0 l -7.5 7.5 c -0.2 0.2 -0.5 0.3 -0.7 0.3 c -0.3 0 -0.5 -0.1 -0.7 -0.3 l -1.4 -1.4 c -0.2 -0.2 -0.3 -0.5 -0.3 -0.7 s 0.1 -0.5 0.3 -0.7 l 7.5 -7.5 c 0.2 -0.2 0.2 -0.5 0 -0.7 l -7.5 -7.5 c -0.2 -0.2 -0.3 -0.5 -0.3 -0.7 s 0.1 -0.5 0.3 -0.7 l 1.4 -1.4 c 0.2 -0.2 0.5 -0.3 0.7 -0.3 s 0.5 0.1 0.7 0.3 l 7.5 7.5 c 0.2 0.2 0.5 0.2 0.7 0 l 7.5 -7.5 c 0.2 -0.2 0.5 -0.3 0.7 -0.3 c 0.3 0 0.5 0.1 0.7 0.3 l 1.4 1.4 c 0.2 0.2 0.3 0.5 0.3 0.7 s -0.1 0.5 -0.3 0.7 l -7.5 7.5 c -0.2 0.1 -0.2 0.5 0 0.7 Z" /></symbol><symbol id="mox-copy" viewBox="0 0 96.991 96.991"><path d="M 84.813 40.106 L 73.244 28.535 a 1.778 1.778 0 0 0 -1.257 -0.521 H 60.774 V 13.35 c 0 -0.473 -0.188 -0.924 -0.521 -1.257 L 48.685 0.521 A 1.782 1.782 0 0 0 47.427 0 H 13.435 c -0.982 0 -1.778 0.796 -1.778 1.778 V 67.2 c 0 0.981 0.796 1.778 1.778 1.778 h 22.781 v 26.234 c 0 0.982 0.796 1.778 1.777 1.778 h 45.562 c 0.982 0 1.778 -0.796 1.778 -1.778 v -53.85 a 1.764 1.764 0 0 0 -0.52 -1.256 Z M 17.347 5.69 H 45 l 0.014 9.142 a 0.901 0.901 0 0 0 0.903 0.903 h 9.17 v 47.556 h -37.74 V 5.69 Z m 62.299 85.615 h -37.74 V 68.979 h 17.092 c 0.981 0 1.776 -0.795 1.776 -1.777 V 33.704 h 8.783 l 0.015 9.142 a 0.905 0.905 0 0 0 0.904 0.903 h 9.17 v 47.556 Z" /></symbol><symbol id="mox-email" viewBox="0 0 612 612"><path d="M 306 612 c -28.152 0 -55.284 -3.672 -81.396 -11.016 c -26.112 -7.347 -50.49 -17.646 -73.134 -30.906 s -43.248 -29.172 -61.812 -47.736 a 305.032 305.032 0 0 1 -47.736 -61.812 c -13.26 -22.646 -23.562 -47.022 -30.906 -73.135 C 3.672 361.284 0 334.152 0 306 s 3.672 -55.284 11.016 -81.396 s 17.646 -50.49 30.906 -73.134 s 29.172 -43.248 47.736 -61.812 s 39.168 -34.476 61.812 -47.736 s 47.022 -23.562 73.134 -30.906 S 277.848 0 306 0 c 42.024 0 81.702 8.058 119.034 24.174 s 69.768 37.944 97.308 65.484 s 49.368 59.976 65.484 97.308 S 612 263.976 612 306 c 0 28.152 -3.672 55.284 -11.016 81.396 c -7.347 26.109 -17.646 50.487 -30.906 73.134 a 305.087 305.087 0 0 1 -47.736 61.812 a 304.924 304.924 0 0 1 -61.812 47.736 c -22.646 13.26 -47.022 23.562 -73.136 30.906 C 361.284 608.328 334.152 612 306 612 Z m 147.492 -432.072 H 163.404 c -2.856 0 -5.304 0.918 -7.344 2.754 s -3.06 4.386 -3.06 7.65 v 32.436 c 0 1.632 0.612 2.448 1.836 2.448 l 152.388 86.904 l 1.227 0.612 c 0.813 0 1.428 -0.204 1.836 -0.612 l 147.492 -86.904 c 0.813 -0.408 1.428 -0.612 1.836 -0.612 c 0.405 0 1.02 -0.204 1.836 -0.612 c 1.632 0 2.448 -0.816 2.448 -2.448 v -31.212 c 0 -3.264 -1.021 -5.814 -3.063 -7.65 s -4.488 -2.754 -7.344 -2.754 Z m -208.08 130.356 c 0.408 -0.408 0.612 -1.021 0.612 -1.836 c 0 -1.227 -0.408 -1.836 -1.224 -1.836 l -87.516 -50.185 c -1.224 -0.408 -2.244 -0.408 -3.06 0 c -0.816 0 -1.224 0.612 -1.224 1.836 v 131.58 c 0 1.227 0.612 2.04 1.836 2.448 h 1.224 c 0.816 0 1.224 -0.204 1.224 -0.612 l 88.128 -81.395 Z m 106.488 9.792 c -0.408 -1.227 -1.431 -1.428 -3.063 -0.612 l -33.66 19.584 c -4.08 2.448 -8.361 2.448 -12.852 0 l -29.376 -16.521 c -1.224 -0.816 -2.244 -0.816 -3.06 0 l -111.996 104.04 c -0.408 0.405 -0.612 1.224 -0.612 2.445 c 0 0.408 0.408 1.021 1.224 1.836 c 2.448 0.816 4.08 1.227 4.896 1.227 H 450.43 c 0.816 0 1.635 -0.408 2.448 -1.227 c 0 -1.632 -0.204 -2.649 -0.612 -3.06 L 351.9 320.076 Z m 110.16 -66.096 h -2.445 l -83.232 49.572 c -0.813 0 -1.224 0.612 -1.224 1.836 c -0.408 0.408 -0.204 1.02 0.609 1.833 L 459 397.188 c 0.816 0.816 1.428 1.227 1.836 1.227 h 1.224 c 1.227 -1.227 1.839 -2.04 1.839 -2.448 V 256.429 c -0.003 -0.817 -0.615 -1.633 -1.839 -2.449 Z" /></symbol><symbol id="mox-enter-fullscreen" viewBox="0 0 298.667 298.667"><path d="M 42.667 192 H 0 v 106.667 h 106.667 V 256 h -64 Z M 0 106.667 h 42.667 v -64 h 64 V 0 H 0 Z M 192 0 v 42.667 h 64 v 64 h 42.667 V 0 Z M 256 256 h -64 v 42.667 h 106.667 V 192 H 256 Z" /></symbol><symbol id="mox-exit-fullscreen" viewBox="0 0 357 357"><path d="M 0 280.5 h 76.5 V 357 h 51 V 229.5 H 0 v 51 Z m 76.5 -204 H 0 v 51 h 127.5 V 0 h -51 v 76.5 Z m 153 280.5 h 51 v -76.5 H 357 v -51 H 229.5 V 357 Z m 51 -280.5 V 0 h -51 v 127.5 H 357 v -51 h -76.5 Z" /></symbol><symbol id="mox-external" viewBox="0 0 490.4 490.4"><path d="M 245.2 490.4 c 135.2 0 245.2 -110 245.2 -245.2 S 380.4 0 245.2 0 S 0 110 0 245.2 s 110 245.2 245.2 245.2 Z m 0 -465.9 c 121.7 0 220.7 99 220.7 220.7 s -99 220.7 -220.7 220.7 s -220.7 -99 -220.7 -220.7 s 99 -220.7 220.7 -220.7 Z" /><path d="M 138.7 257.5 h 183.4 l -48 48 c -4.8 4.8 -4.8 12.5 0 17.3 c 2.4 2.4 5.5 3.6 8.7 3.6 s 6.3 -1.2 8.7 -3.6 l 68.9 -68.9 c 4.8 -4.8 4.8 -12.5 0 -17.3 l -68.9 -68.9 c -4.8 -4.8 -12.5 -4.8 -17.3 0 s -4.8 12.5 0 17.3 l 48 48 H 138.7 c -6.8 0 -12.3 5.5 -12.3 12.3 c 0 6.8 5.5 12.2 12.3 12.2 Z" /></symbol><symbol id="mox-facebook" viewBox="0 0 112.196 112.196"><circle fill="#3b5998" cx="56.098" cy="56.098" r="56.098" /><path fill="#fff" d="M 70.201 58.294 h -10.01 v 36.672 H 45.025 V 58.294 h -7.213 V 45.406 h 7.213 v -8.34 c 0 -5.964 2.833 -15.303 15.301 -15.303 l 11.234 0.047 v 12.51 h -8.151 c -1.337 0 -3.217 0.668 -3.217 3.513 v 7.585 h 11.334 l -1.325 12.876 Z" /></symbol><symbol id="mox-left-angle" viewBox="0 0 137.065 137.064"><path d="M 55.12 68.532 l 51.606 -51.614 a 7.006 7.006 0 0 0 0 -9.911 l -4.955 -4.956 a 7.008 7.008 0 0 0 -9.91 0 L 30.337 63.577 a 7.01 7.01 0 0 0 0 9.911 l 61.524 61.523 a 7.007 7.007 0 0 0 9.91 0 l 4.955 -4.955 a 7.006 7.006 0 0 0 0 -9.911 L 55.12 68.532 Z" /></symbol><symbol id="mox-linkedin" viewBox="0 0 291.319 291.319"><path fill="#0e76a8" d="M 145.659 0 c 80.45 0 145.66 65.219 145.66 145.66 s -65.21 145.659 -145.66 145.659 S 0 226.1 0 145.66 S 65.21 0 145.659 0 Z" /><path fill="#fff" d="M 82.079 200.136 h 27.275 v -90.91 H 82.079 v 90.91 Z m 106.259 -94.059 c -13.237 0 -25.081 4.834 -33.483 15.504 v -12.654 H 127.48 v 91.21 h 27.375 v -49.324 c 0 -10.424 9.55 -20.593 21.512 -20.593 s 14.912 10.169 14.912 20.338 v 49.57 h 27.275 v -51.6 c -0.001 -35.842 -16.97 -42.451 -30.216 -42.451 Z m -92.749 -5.936 c 7.538 0 13.656 -6.118 13.656 -13.656 S 103.127 72.83 95.589 72.83 s -13.656 6.118 -13.656 13.656 s 6.118 13.655 13.656 13.655 Z" /></symbol><symbol id="mox-muted" viewBox="0 0 461.55 461.55"><path d="M 345.525 229.5 c 0 -45.9 -25.5 -84.15 -63.75 -102 v 56.1 l 63.75 63.75 V 229.5 Z m 63.75 0 c 0 22.95 -5.1 45.9 -12.75 66.3 l 38.25 38.25 c 17.85 -30.6 25.5 -68.85 25.5 -107.1 c 0 -109.65 -76.5 -201.45 -178.5 -224.4 V 56.1 c 73.95 25.5 127.5 91.8 127.5 173.4 Z M 34.425 0 L 1.275 33.15 L 121.125 153 H 1.275 v 153 h 102 l 127.5 127.5 V 262.65 l 109.65 109.65 c -17.851 12.75 -35.7 22.95 -58.65 30.601 v 53.55 c 35.7 -7.65 66.3 -22.95 94.35 -45.9 l 51 51 l 33.15 -33.149 l -229.5 -229.5 Z m 196.35 25.5 l -53.55 53.55 l 53.55 53.55 Z" /></symbol><symbol id="mox-next-track" viewBox="0 0 32 32"><path d="M 0 28 l 12 -12.001 L 0 4 Z M 28 4 h 4 v 24 h -4 Z M 14 28 l 12 -12.001 L 14 4 Z" /></symbol><symbol id="mox-pause" viewBox="0 0 357 357"><path d="M 25.5 357 h 102 V 0 h -102 v 357 Z m 204 -357 v 357 h 102 V 0 h -102 Z" /></symbol><symbol id="mox-play" viewBox="0 0 357 357"><path d="M 38.25 0 v 357 l 280.5 -178.5 Z" /></symbol><symbol id="mox-previous-track" viewBox="0 0 32 32"><path d="M 20 15.999 L 32 28 V 4 L 20 15.999 Z M 18 28 V 4 L 6 15.999 L 18 28 Z M 0 28 h 4 V 4 H 0 v 24 Z" /></symbol><symbol id="mox-replay" viewBox="0 0 510 510"><path d="M 255 102 V 0 L 127.5 127.5 L 255 255 V 153 c 84.15 0 153 68.85 153 153 s -68.85 153 -153 153 s -153 -68.85 -153 -153 H 51 c 0 112.2 91.8 204 204 204 s 204 -91.8 204 -204 s -91.8 -204 -204 -204 Z" /></symbol><symbol id="mox-restart" viewBox="0 0 426.667 426.667"><path d="M 213.333 85.333 V 0 L 106.667 106.667 l 106.667 106.667 V 128 c 70.72 0 128 57.28 128 128 s -57.28 128 -128 128 s -128 -57.28 -128 -128 H 42.667 c 0 94.293 76.373 170.667 170.667 170.667 S 384 350.293 384 256 S 307.627 85.333 213.333 85.333 Z" /></symbol><symbol id="mox-right-angle" viewBox="0 0 307.046 307.046"><path d="M 239.087 142.427 L 101.259 4.597 c -6.133 -6.129 -16.073 -6.129 -22.203 0 L 67.955 15.698 c -6.129 6.133 -6.129 16.076 0 22.201 l 115.621 115.626 l -115.621 115.61 c -6.129 6.136 -6.129 16.086 0 22.209 l 11.101 11.101 c 6.13 6.136 16.07 6.136 22.203 0 l 137.828 -137.831 c 6.135 -6.127 6.135 -16.058 0 -22.187 Z" /></symbol><symbol id="mox-seek-backward" viewBox="0 0 489.5 489.5"><path d="M 268.2 488.2 c 98.2 -11 176.9 -89.5 188.1 -187.7 C 471 172.1 371.2 62.8 246.1 61.4 V 3.8 c 0 -3.2 -4 -4.9 -6.7 -2.9 L 120.8 88 c -2 1.5 -2 4.4 0 5.9 L 239.4 181 c 2.7 2 6.7 0.2 6.7 -2.9 v -57.5 c 87.9 1.4 158.3 76.2 152.3 165.6 c -5.1 76.9 -67.8 139.3 -144.7 144.2 c -81.5 5.2 -150.8 -53 -163.2 -130 c -2.3 -14.3 -14.8 -24.7 -29.2 -24.7 c -17.9 0 -31.9 15.9 -29.1 33.6 c 17.4 109.7 118.7 192 236 178.9 Z" /><text font-family="Montserrat" font-size="200" font-weight="900" transform="translate(175 350)">5</text></symbol><symbol id="mox-seek-forward" viewBox="0 0 489.5 489.5"><path d="M 221.4 488.2 c -98.2 -11 -176.9 -89.5 -188.1 -187.7 C 18.6 172.1 118.4 62.8 243.5 61.4 V 3.8 c 0 -3.2 4 -4.9 6.7 -2.9 L 368.8 88 c 2 1.5 2 4.4 0 5.9 L 250.2 181 c -2.7 2 -6.7 0.2 -6.7 -2.9 v -57.5 C 155.6 122 85.2 196.8 91.2 286.2 c 5.1 76.9 67.8 139.3 144.7 144.2 c 81.5 5.2 150.8 -53 163.2 -130 c 2.3 -14.3 14.8 -24.7 29.2 -24.7 c 17.9 0 31.9 15.9 29.1 33.6 c -17.4 109.7 -118.7 192 -236 178.9 Z" /><text font-family="Montserrat" font-size="200" font-weight="900" transform="translate(175 350)">5</text></symbol><symbol id="mox-share" viewBox="0 0 511.626 511.627"><path d="M 506.206 179.012 L 360.025 32.834 c -3.617 -3.617 -7.898 -5.426 -12.847 -5.426 s -9.233 1.809 -12.847 5.426 c -3.617 3.619 -5.428 7.902 -5.428 12.85 v 73.089 H 264.95 c -135.716 0 -218.984 38.354 -249.823 115.06 C 5.042 259.335 0 291.03 0 328.907 c 0 31.594 12.087 74.514 36.259 128.762 c 0.57 1.335 1.566 3.614 2.996 6.849 a 603.829 603.829 0 0 0 3.854 8.565 c 1.146 2.471 2.384 4.565 3.715 6.276 c 2.282 3.237 4.948 4.859 7.994 4.859 c 2.855 0 5.092 -0.951 6.711 -2.854 c 1.615 -1.902 2.424 -4.284 2.424 -7.132 c 0 -1.718 -0.238 -4.236 -0.715 -7.569 c -0.476 -3.333 -0.715 -5.564 -0.715 -6.708 c -0.953 -12.938 -1.429 -24.653 -1.429 -35.114 c 0 -19.223 1.668 -36.449 4.996 -51.675 c 3.333 -15.229 7.948 -28.407 13.85 -39.543 c 5.901 -11.14 13.512 -20.745 22.841 -28.835 c 9.325 -8.09 19.364 -14.702 30.118 -19.842 c 10.756 -5.141 23.413 -9.186 37.974 -12.135 c 14.56 -2.95 29.215 -4.997 43.968 -6.14 s 31.455 -1.711 50.109 -1.711 h 63.953 v 73.091 c 0 4.948 1.807 9.232 5.421 12.847 c 3.62 3.613 7.901 5.424 12.847 5.424 c 4.948 0 9.232 -1.811 12.854 -5.424 l 146.178 -146.183 c 3.617 -3.617 5.424 -7.898 5.424 -12.847 c -0.001 -4.948 -1.807 -9.232 -5.421 -12.856 Z" /></symbol><symbol id="mox-twitter" viewBox="0 0 112.197 112.197"><circle fill="#55acee" cx="56.099" cy="56.098" r="56.098" /><path fill="#f1f2f2" d="M 90.461 40.316 a 26.753 26.753 0 0 1 -7.702 2.109 a 13.445 13.445 0 0 0 5.897 -7.417 a 26.843 26.843 0 0 1 -8.515 3.253 a 13.396 13.396 0 0 0 -9.79 -4.233 c -7.404 0 -13.409 6.005 -13.409 13.409 c 0 1.051 0.119 2.074 0.349 3.056 c -11.144 -0.559 -21.025 -5.897 -27.639 -14.012 a 13.351 13.351 0 0 0 -1.816 6.742 c 0 4.651 2.369 8.757 5.965 11.161 a 13.314 13.314 0 0 1 -6.073 -1.679 l -0.001 0.17 c 0 6.497 4.624 11.916 10.757 13.147 a 13.362 13.362 0 0 1 -3.532 0.471 c -0.866 0 -1.705 -0.083 -2.523 -0.239 c 1.706 5.326 6.657 9.203 12.526 9.312 a 26.904 26.904 0 0 1 -16.655 5.74 c -1.08 0 -2.15 -0.063 -3.197 -0.188 a 37.929 37.929 0 0 0 20.553 6.025 c 24.664 0 38.152 -20.432 38.152 -38.153 c 0 -0.581 -0.013 -1.16 -0.039 -1.734 a 27.192 27.192 0 0 0 6.692 -6.94 Z" /></symbol><symbol id="mox-volume-down" viewBox="0 0 341.333 341.333"><path d="M 26.667 106.667 v 128 H 112 l 106.667 106.666 V 0 L 112 106.667 Z M 261.333 84.8 v 171.84 c 31.573 -15.787 53.333 -48.32 53.333 -85.973 S 292.907 100.48 261.333 84.8 Z" /></symbol><symbol id="mox-volume" viewBox="0 0 459 459"><path d="M 0 153 v 153 h 102 l 127.5 127.5 v -408 L 102 153 H 0 Z m 344.25 76.5 c 0 -45.9 -25.5 -84.15 -63.75 -102 v 204 c 38.25 -17.85 63.75 -56.1 63.75 -102 Z M 280.5 5.1 v 53.55 C 354.45 81.6 408 147.899 408 229.5 s -53.55 147.9 -127.5 170.85 v 53.55 C 382.5 430.949 459 339.15 459 229.5 S 382.5 28.049 280.5 5.1 Z" /></symbol></svg></div>
+	
+	
+	<div id="adv_mobile"><script>a_adv.im('mobile')</script></div>
+	
+	<div class="ecb" id="ram" style="padding-top: 0px;">
+	
+	  
+		
+			<div id="adv_ram" style="left: 0px; position: relative;"><div style="display: flex; justify-content: center; align-items: center;"><!-- spir.czMonS[34__214X39_1_1] --><!-- Adform publisher tag --> 
+<!-- Tag for Kurzy.cz - Branding - Kurzy.cz - výprodej placement --> 
+<script src="//adx.adform.net/adx/?mid=744793&amp;rnd=1598870624863&amp;callback=_adform_callback_brv&amp;pos=atf&amp;cat=33&amp;mkv=mc_msg_top:10596&amp;mkv=mc_msg_rtb:10596&amp;mkw=Živnostenský rejstřík ,rejstřík živnostníků | Kurzy," defer="" async=""></script><!-- spir.czMonE --> 
+<script>try {a_advs.add_advcalltimeout('adform_branding')} catch(e) {}</script> 
+<script> try { a_advs.adv_ready['ram'] = true } catch(e) {} </script>
+<script> try { a_advs.ram('k')} catch(e){} </script></div></div>
+		
+	  
+
+	  <div class="ecb" id="ram_inner">
+		<script>a_adv.ram('k')</script>
+
+		
+		  <div class="ecb 1" id="contentnew">
+		
+
+		  
+			  
+				  <div id="adv_content"><div style="display: flex; justify-content: center; align-items: center;"><!-- /16466452/970x90_Kurzy_leaderboard --> 
+<div id="div-gpt-ad-1549530970626-0" data-google-query-id="CI_5hYShxesCFZon4AodxosLTw"> 
+ 
+<div id="google_ads_iframe_/16466452/970x90_Kurzy_leaderboard_0__container__" style="margin: auto; border: 0pt currentColor; border-image: none; width: 970px; height: 250px; text-align: center;"><iframe width="970" height="250" title="3rd party ad content" id="google_ads_iframe_/16466452/970x90_Kurzy_leaderboard_0" src="https://ea36725d9d437ea8742c0e142bc04d3c.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border: 0px currentColor; border-image: none; vertical-align: bottom;" data-google-container-id="2" data-is-safeframe="true" data-load-complete="true"></iframe></div></div> 
+<script> try { a_advs.adv_ready['content'] = true } catch(e) {} </script>
+<script> try { a_advs.ram('k')} catch(e){} </script></div></div>
+			  
+		  
+
+		  
+		  
+  
+
+  
+	<!-- levy pravy sloupec bez predelu -->
+	<div class="ecb" id="main">
+	  <div class="ecb" id="leftcolumn">
+		
+
+		<div class="breadcrumbs"><a title="Kurzy měn, akcie cz online a komodity, investice online - Kurzy.cz" href="https://www.kurzy.cz/">Kurzy.cz</a>  &gt; <a title="Obchodní rejstřík firem, justice.cz" href="https://rejstrik-firem.kurzy.cz/">Obchodní rejstřík</a> &gt; <a title="Informace o tom, co je obchodní rejstřík, kdo je v rejstříku zapsán a jaké vztahy eviduje." href="https://rejstrik-firem.kurzy.cz/obchodni-rejstrik/">O obchodním rejstříku</a></div>
+		<h1>Živnostenský rejstřík - rejstřík živnostníků</h1>
+		
+		<ul class="topmenu" clickcounter="/p/1572/11969/1939/7915/">
+		
+		</ul>
+
+		<!--lc-->
+		<div class="zprtext ecb">
+<h2>
+    Vyhledávání v Živnostenském rejstříku
+    <br>
+</h2>
+<p>Naše vyhledávání využívá data z Živnostenského rejstříku, ale také data z obchodního rejstříku a dalších veřejných rejstříků.</p>
+
+<form name="or_search" action="https://rejstrik-firem.kurzy.cz/hledej/" method="get" accept-charset="utf-8">
+    <table class="simpleform sfsmall" id="or_search_table" style="width: 100%;" border="0">
+        <tbody>
+            <tr class="formparthead">
+                <td>Vyhledávání v rejstříku</td></tr>
+            <tr>
+                <td style="padding: 0.5em 0px 0px 5px;"><label style="font-weight: normal;" for="s">Hledání v rejstříku podle IČO, jména a příjmení osoby, názvu firmy</label></td></tr>
+            <tr>
+                <td style="padding: 5px 0px 0px 5px;">
+                    <input name="s" id="id_s" style="width: 600px;" type="text" size="100" maxlength="40"></td></tr>
+            <tr>
+                <td style="padding: 0px 0px 5px 5px; font-size: 13px;">
+                    <ul id="id_r">
+                        <li><label for="id_r_0">
+                                <input name="r" id="id_r_0" type="radio" checked="true" value="True"> platné záznamy</label></li>
+                        <li><label for="id_r_1">
+                                <input name="r" id="id_r_1" type="radio" value="False"> všechny záznamy</label></li></ul></td></tr>
+            <tr>
+                <td style="padding: 3px; text-align: center;">
+                    <input class="mw" type="submit" value="Vyhledat firmu nebo osobu"></td></tr></tbody></table>
+</form>
+<p class="odkazvpravo"><a href="https://rejstrik-firem.kurzy.cz/hledej-dph/"><i>Hledání DIČ a plátce DPH</i></a>
+</p>
+<div id="ui-datepicker-div"></div>
+<div id="ui-datepicker-div"></div>
+<div id="ui-datepicker-div"></div>
+<div id="ui-datepicker-div"></div>
+<div id="ui-datepicker-div"></div>
+<br>
+<h2>
+    Živnostenský rejstřík na Internetu
+    <br>
+</h2>
+<p><a title="Internetový živnostenský rejstřík" href="http://www.rzp.cz/">Živnostenský rejstřík na internetu (Registr živnostenského podnikání - RŽP)</a> je užitečný veřejný registr, který poskytuje informace o subjektech podnikajících v Česku. Provozovatelem Registru živnostenského podnikání je Ministerstvo průmyslu a obchodu ČR.
+</p>
+<div id="adv_topexclusiv"><script type="text/javascript">// <![CDATA[
+ a_adv.im('topexclusiv')
+// ]]></script>
+</div>
+<div id="adv_rectangle"><script type="text/javascript"> a_adv.im('rectangle')</script>
+<div style="display: flex; justify-content: center; align-items: center;"><table style="width: 100%;" border="0"><tbody><tr><td><div id="adv_display" style="width: 100%;"><!-- /16466452/640x90_Kurzy_rectangle --> 
+<div id="div-gpt-ad-1551105554847-0" style="margin-top: 14px; display: none;" data-google-query-id="COOkhIShxesCFZon4AodxosLTw"> 
+<script> 
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1551105554847-0'); }); a_advs.dfp_callback('rectangle', true); 
+</script> 
+</div> 
+</div></td></tr> 
+<tr><td><div id="adv_outstream" style="width: 100%;"><div style="display: flex; justify-content: center; align-items: center;"><div id="AdTrackOutstream" style="width: 100%;" data-adtrack-container="C_48607"><iframe frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="margin: auto; border: 0px currentColor; border-image: none; width: 100%; height: 0px; display: block;"></iframe></div><script src="//trackad.cz/adtrack.php?d=kurzy.cz&amp;g=generic&amp;p=outstream" type="text/javascript"></script> 
+<script> try { a_advs.adv_ready['outstream'] = true } catch(e) {} </script>
+<script> try { a_advs.ram('k')} catch(e){} </script></div></div></td></tr></tbody></table> 
+<div id="adv_rectangle_x"></div> 
+ 
+<script> try { a_advs.adv_ready['rectangle'] = true } catch(e) {} </script>
+<script> try { a_advs.ram('k')} catch(e){} </script></div></div>
+<br>
+<h2>
+    Údaje v Registru živnostenského podnikání&nbsp; 
+    <br>
+</h2>
+<p>V Živnostenském rejstříku můžete najít podnikající fyzické osoby, firmy zapsané v Obchodním rejstříku a další právnické osoby zapsané v rejstřících zveřejněných ve Veřejném rejstříku na portálu justice.cz - ve spolkovém rejstříku, nadačním rejstříku, rejstříku ústavů, rejstříku společenství vlastníků jednotek a rejstříku obecně prospěšných společností. </p>
+<p> V Živnostenském rejstříku RŽP je možné vyhledávat konkrétní podnikatelský subjekt a veřejné údaje o něm. Živnostenský rejstřík také umožňuje vyhledání informací podle osoby a jejích vazeb v platných nebo již neplatných strukturách. </p>
+<p>Kromě vyhledávání v Živnostenském rejstříku je na portále RŽP uveden návod pro ohlašování živnosti a další informace pro 
+podnikatele. Již delší dobu je zprovozněna i možnost elektronického 
+podávání do Živnostenského rejstříku.  Dále je zde možné zjistit statistické údaje o českých živnostenských oprávněních za roční období. Ve veřejném registru RŽP se dá pořídit i aktuální a elektronicky podepsaný výpis ve formátu pdf.</p>
+<br>
+<h2>Zjednodušené vyhledávání v Živnostenském rejstříku</h2>
+<p>Vyhledávání v elektronickém Živnostenském rejstříku je zjednodušené. Nezáleží na správném dodržení diakritiky, nerozlišují se malá a velká písmena a nezáleží na pořadí slov v jednom vyhledávacím okně. Subjekt je možno vyhledat podle identifikačního čísla osoby IČO nebo podle názvu subjektu (příp. jen jeho začátku) nebo také podle adresy, na které sídlí, bydlí nebo provozuje živnost.  </p>
+<p><a href="http://www.rzp.cz/cgi-bin/aps_cacheWEB.sh?VSS_SERV=ZVWSBJFND">Vyhledat subjekt v Živnostenském rejstříku</a>
+    <br>
+</p>
+<div style="margin: 2em 0px 2em 200px;">
+    <p><a class="or_red" href="https://rejstrik-firem.kurzy.cz/ico/">IČO - informace, přidělování &gt;&gt;</a></p>
+    <p><a class="or_red" href="https://rejstrik-firem.kurzy.cz/ico/databaze/">IČO - databáze &gt;&gt;</a></p>
+    <p><a class="or_red" href="https://rejstrik-firem.kurzy.cz/ico/vyhledavani/">IČO - vyhledávání &gt;&gt;</a></p>
+    <p><a class="or_red" href="https://rejstrik-firem.kurzy.cz/ico/overeni/">IČO - ověření &gt;&gt;</a></p>
+    <p>&nbsp;</p>
+</div>
+<div id="ui-datepicker-div"></div>
+<div id="ui-datepicker-div"></div>
+<div id="ui-datepicker-div"></div></div>
+
+		<!--/lc-->
+
+		<div id="hsocial" style="padding: 10px 0px 0px; text-align: center;"><div style="margin: 0px auto; width: 350px; height: 50px; overflow: hidden;"><img alt="Social icons" src="https://v.kurzy.cz/l/main.svg" usemap="#socmap"><map name="socmap"><area title="Sdílet na Facebooku" href="https://www.facebook.com/sharer.php?u=https%3A//rejstrik-firem.kurzy.cz/zivnostensky-rejstrik/" shape="rect" coords="0,0,50,50"><area title="Sdílet na Twitter" href="https://twitter.com/share?url=https%3A//rejstrik-firem.kurzy.cz/zivnostensky-rejstrik/" shape="rect" coords="50,0,100,50"><area title="Sdílet na LinkedIn" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A//rejstrik-firem.kurzy.cz/zivnostensky-rejstrik/" shape="rect" coords="100,0,150,50"><area title="Sdílet na Google Plus" href="https://plus.google.com/share?url=https%3A//rejstrik-firem.kurzy.cz/zivnostensky-rejstrik/" shape="rect" coords="150,0,200,50"><area title="Komentovat, názory čtenářů" href="http://www.kurzy.cz/nazory/default.asp?A=V&amp;TT=W&amp;ST=10596" shape="rect" coords="200,0,250,50"><area title="Poslat emailem" href="mailto:?subject=Živnostenský rejstřík - rejstřík živnostníků | Kurzy.cz&amp;body=https%3A//rejstrik-firem.kurzy.cz/zivnostensky-rejstrik/" shape="rect" coords="250,0,300,50"><area title="Vytisknout" href="javascript:window.print()" shape="rect" coords="300,0,350,50"></map></div></div><div id="bzpravy"></div><hr><center id="adform480x300"><iframe width="1" height="1" id="adf_934376" src="javascript:'';" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" vspace="0" hspace="0" allowfullscreen="" style="width: 0px; height: 0px; vertical-align: middle;" allowtransparency="true" onload="eval(this.getAttribute('data-onload'))" mozallowfullscreen="" webkitallowfullscreen="" data-contents="<!doctype html><title>ad</title><style>*{vertical-align:middle;}body{margin:0;padding:0;}</style><body><script>inFIF=true;</script><script>var _nhide;window._adform=[['on.setup',function(s){_nhide=_nhide||s.options.type!='floating'||!setTimeout(function(){_nhide||(frameElement.style.display='none')},50)}]];window._adform.tagFrame = window.parent;window.onerror = function (error) {new Image().src = &quot;//track.adform.net/serving/jslog/?src=adxErrors&amp;msg=&quot; + encodeURIComponent('610332 - ' + error);window.onerror = null;return false;};</script><script type=&quot;text/javascript&quot;>document.write(_adform.tagFrame.p_670x300);</script><!-- --><script>(function(d){if (window.onload) {d.close();}var c = window._adform.tagFrame[window.__renderCallback__];c &amp;&amp; c(window.frameElement);})(document);</script>" data-onload='(function l(a,b){function c(){b?S.open():S.open("text/html","replace");S.write(Y);u.__rendered__=!0;&#10;C[F+"__rendered__"]=!0;m=a.offsetWidth;n=a.offsetHeight;q=u.document.body;q.style["float"]="left";h=q.offsetWidth;l=q.offsetHeight;r=q.scrollWidth;p=q.scrollHeight;u.adjustFrame=e;C[F]&amp;&amp;(J(C[F]),C[F]=null);C[F]=ba(e,50);w(f,3E3)}function d(){w(function(){J(C[F]);C[F]=null},5E3)}function f(){d();S.close()}function e(){var b=0,c=0;h=q.offsetWidth;l=q.offsetHeight;r=q.scrollWidth;p=q.scrollHeight;g=h>r?h:r;k=l>p?l:p;for(var d=0;d<q.childNodes.length;d++){var e=q.childNodes[d];e.offsetWidth&amp;&amp;(b=Math.max(b,&#10;e.offsetWidth),c=Math.max(c,e.offsetHeight))}if(m!=g||n!=k||t!=b||v!=c)b&amp;&amp;c&amp;&amp;b>=h&amp;&amp;c>=l?(T.width=b+"px",T.height=c+"px"):(T.width=g+"px",T.height=k+"px"),m=a.offsetWidth,n=a.offsetHeight;t=b;v=c}var g,k,h,l,m,n,r,p,q,t,v,u=a.contentWindow,C=u.parent,F="_inter_"+a.id,w=C.setTimeout,ba=C.setInterval,J=C.clearInterval,Y=a.getAttribute("data-contents"),T=a.style,S=u.document;u.__rendered__||C[F+"__rendered__"]||(u.__rendered__=!0,b?c():w(c,0))})(this,false)'></iframe><script style="display: none;" data-adfscript="adx.adform.net/adx/?mid=610332&amp;rnd=0.20480771605570708&amp;cat=33&amp;mkv=mc_msg_top:11457&amp;mkv=mc_msg_rtb:10596" parsed-adfscript="true"></script></center><div id="adv_rectanglespodni"><script>a_adv.im("rectanglespodni")</script></div><hr style="height: 12px; margin-top: 15px;"><div id="tagy">Označení stránky: živnostenský rejstřík fyzických osob, živnostenský rejstřík, výpis z živnostenského rejstříku, registr živnostníků, výpis z živnostenského rejstříku online, živnostenský rejstřík osob, výpis z živnostenský rejstřík fyzických osob, výpis z živnostenského rejstříku fyzických osob, výpis ze živnostenského rejstříku, živnostenský rejstřík fyzických</div><div id="pribuzne"><h2>Příbuzné stránky</h2> <ul class="ul"><li><a href="https://rejstrik-firem.kurzy.cz/27678598/emit-cz-sro/zivnosti/">EMIT-CZ, s.r.o. - Živnostenský rejstřík</a></li><li><a href="https://rejstrik-firem.kurzy.cz/28961382/eco-energie-systems-sro/zivnosti/">ECO-ENERGIE-SYSTEMS, s.r.o. - Živnostenský rejstřík</a></li><li><a href="https://rejstrik-firem.kurzy.cz/01397796/ac-promotion-czech-products-sro/zivnosti/">AC - PROMOTION czech products s.r.o. - Živnostenský rejstřík</a></li><li><a href="https://rejstrik-firem.kurzy.cz/45023620/mtz-servis-sro/zivnosti/">MTZ-SERVIS s.r.o. - Živnostenský rejstřík</a></li><li><a href="https://rejstrik-firem.kurzy.cz/49682032/pf-santos-sro/zivnosti/">PF - SANTOS, s.r.o. - Živnostenský rejstřík</a></li><li><a href="https://rejstrik-firem.kurzy.cz/27196445/huf-sarman-sro/zivnosti/">HUF - ŠARMAN, s.r.o. - Živnostenský rejstřík</a></li><li><a href="https://rejstrik-firem.kurzy.cz/28283937/vd-pro-sro/zivnosti/">VD-pro s.r.o. - Živnostenský rejstřík</a></li><li><a href="https://rejstrik-firem.kurzy.cz/06027482/ad-entrust-sro/zivnosti/">ad-entrust s.r.o. - Živnostenský rejstřík</a></li><li><a href="https://rejstrik-firem.kurzy.cz/26167085/a-z-bus-sro/zivnosti/">A-Z BUS, s.r.o. - Živnostenský rejstřík</a></li><li><a href="https://rejstrik-firem.kurzy.cz/60752165/city-tools-sro/zivnosti/">CITY-TOOLS, s.r.o. - Živnostenský rejstřík</a></li><li><a href="https://rejstrik-firem.kurzy.cz/25408232/ln-audit-sro/zivnosti/">LN - AUDIT s.r.o. - Živnostenský rejstřík</a></li><li><a href="https://rejstrik-firem.kurzy.cz/26914981/res-uh-sro/zivnosti/">RES-UH s.r.o. - Živnostenský rejstřík</a></li></ul></div>
+		
+		  <div id="adv_left"><div style="display: flex; justify-content: center; align-items: center;"><!-- Adform publisher tag --> 
+<!-- Tag for Kurzy.cz - left backup placement --> 
+<script src="//adx.adform.net/adx/?mid=613968&amp;rnd=1598870625403&amp;callback=_adform_callback_le&amp;pos=atf&amp;cat=33&amp;mkv=mc_msg_top:10596&amp;mkv=mc_msg_rtb:10596&amp;mkw=Živnostenský rejstřík ,rejstřík živnostníků | Kurzy," defer="" async=""></script> 
+<script> try { a_advs.adv_ready['left'] = true } catch(e) {} </script>
+<script> try { a_advs.ram('k')} catch(e){} </script></div></div>
+		  <div id="adv_doubleskylevy"> <script>a_adv.im('doubleskylevy')</script> </div>
+		
+	  </div> <!--/leftcolumn-->
+
+	  <div id="middlecolumn" onclick="Show_hide_rightcolumn()"></div>
+	  <div class="ecb" id="rightcolumn"><div title="Skrýt sloupec" id="rightcolumn_hidden_button" onclick="Show_hide_rightcolumn()">X&nbsp;</div>
+		
+		  
+	
+	
+	<div class="ecb" id="adv_250stranka">
+		<script> a_adv.im('250stranka')</script>
+	</div>
+	<div id="adv_250stranka_n"><script>a_adv.repairIE('250stranka')</script></div>
+	
+	
+	
+	<div class="ecb" id="adv_doublesky"><div style="display: flex; justify-content: center; align-items: center;"><!-- /16466452/300x600_Kurzy_pravy --> 
+<div id="div-gpt-ad-1551086408428-0" data-google-query-id="CJT_hYShxesCFZon4AodxosLTw"> 
+ 
+<div id="google_ads_iframe_/16466452/300x600_Kurzy_pravy_0__container__" style="margin: auto; border: 0pt currentColor; border-image: none; width: 300px; height: 600px; text-align: center;"><iframe width="300" height="600" title="3rd party ad content" id="google_ads_iframe_/16466452/300x600_Kurzy_pravy_0" src="https://ea36725d9d437ea8742c0e142bc04d3c.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border: 0px currentColor; border-image: none; vertical-align: bottom;" data-google-container-id="5" data-is-safeframe="true" data-load-complete="true"></iframe></div></div> 
+<script> try { a_advs.adv_ready['doublesky'] = true } catch(e) {} </script>
+<script> try { a_advs.ram('k')} catch(e){} </script></div></div>
+	<div id="adv_doublesky_n"><script>a_adv.repairIE('doublesky')</script></div>
+	
+	
+
+
+	<div id="adv_placenyzaznamall">
+		<script> a_adv.im('placenyzaznamall')</script>
+	</div>
+
+	
+
+
+
+
+
+<div class="ecb" id="adv_300adsense"><div style="display: flex; justify-content: center; align-items: center;"><!-- /16466452/300x250_Kurzy_300adsense --> 
+<div id="div-gpt-ad-1551100877217-0" data-google-query-id="CI2BhoShxesCFZon4AodxosLTw"> 
+ 
+<div id="google_ads_iframe_/16466452/300x250_Kurzy_300adsense_0__container__" style="margin: auto; border: 0pt currentColor; border-image: none; width: 300px; height: 250px; text-align: center;"><iframe width="300" height="250" title="3rd party ad content" id="google_ads_iframe_/16466452/300x250_Kurzy_300adsense_0" src="https://ea36725d9d437ea8742c0e142bc04d3c.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border: 0px currentColor; border-image: none; vertical-align: bottom;" data-google-container-id="6" data-is-safeframe="true" data-load-complete="true"></iframe></div></div> 
+<script> try { a_advs.adv_ready['300adsense'] = true } catch(e) {} </script>
+<script> try { a_advs.ram('k')} catch(e){} </script></div></div>
+
+
+
+
+	
+		
+		    <div id="adv_textovkaall">
+				<script> a_adv.im('textovkaall') </script>
+			</div>
+		
+			
+
+
+
+<div>
+    <form name="or_search" action="https://rejstrik-firem.kurzy.cz/hledej/" method="get">
+        <table class="simpleform sfsmall" id="or_search_table" style="width: 100%;">
+            <tbody>
+                <tr class="formparthead">
+                    <td>Obchodní rejstřík - hledání</td></tr>
+                <tr>
+                    <td style="padding: 0.5em 0px 0px 15px;"><label style="font-weight: normal;" for="s">Hledání v obchodním rejstříku podle IČO, jména a příjmení osoby nebo názvu firmy</label></td></tr>
+                <tr>
+                    <td style="padding: 1em 0px 0px 20px;">
+                        <input name="s" id="id_s" style="width: 260px;" type="text" size="30" maxlength="40"></td></tr>
+                <tr>
+                    <td style="padding: 1em; text-align: center;">
+                        <input class="mw" type="submit" value="Vyhledat firmu nebo osobu"></td></tr>
+                <tr>
+                    <td style="padding: 0px 0px 1em 10px; font-size: 13px;">
+                        <ul id="id_r">
+                            <li><label for="id_r_0">
+                                    <input name="r" id="id_r_0" type="radio" checked="true" value="True"> platné záznamy</label></li>
+                            <li><label for="id_r_1">
+                                    <input name="r" id="id_r_1" type="radio" value="False"> všechny záznamy</label></li></ul></td></tr>
+                <tr>
+                    <td style="padding: 1em 0px 0px 135px;"><a href="https://rejstrik-firem.kurzy.cz/hledej-dph/">Hledání DIČ / plátce DPH</a></td></tr></tbody></table></form>
+</div>
+<div class="simpleform sfsmall">
+    <h3 class="formparthead" style="text-align: left; padding-left: 10px;">Další odkazy</h3>
+    <table class="simpleform sfsmall" id="or_search_table" style="width: 100%;">
+        <tbody>
+            <tr>
+                <td style="padding: 0px;"><a href="http://obchodni-rejstrik.podnikani.cz/">Vizuální Obchodní rejstřík</a></td></tr>
+            <tr>
+                <td style="padding: 0px;"><a href="http://firemny-register.sk/">Vizuální Obchodní rejstřík, Slovensko</a></td></tr>
+            <tr>
+                <td style="padding: 0px;"><a title="Adresy, kontakty, telefony, email, www stránky firem." href="https://katalog.kurzy.cz">Finanční katalog, kontakty</a></td></tr>
+            <tr>
+                <td style="padding: 0px;"><a title="Mapa rozložení podnikatelských aktivit v státu ČR." href="https://regiony.kurzy.cz/">Mapa podnikatelských aktivit</a></td></tr></tbody></table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="https://s.kurzy.cz/l/jquery.jcarousellite.js?lmf=20121031"></script>
+	<div class="okenko-investora ecb"><h4><a title="Rubrika Okénko pro podnikatele" href="https://www.kurzy.cz/zpravy/okenko-pro-podnikatele/">Okénko pro podnikatele</a></h4><div class="okenko-investora-rotate2" style="left: 0px; height: 285px; overflow: hidden; visibility: visible; position: relative; z-index: 2;"><ul class="ecb" style="margin: 0px; padding: 0px; top: -570px; height: 1045px; list-style-type: none; position: relative; z-index: 1;"><li class="col jedno ecb" style="width: 280px; height: 85px; overflow: hidden; float: none;"><img width="60" height="64" style="float: left;" alt="Martin Krsňák" src="https://img3.kurzy.cz/news/foto/okenko-pro-podnikatele/Krsnak_Martin_Asseco_small.png"><p class="autor">Martin Krsňák, Asseco Solutions</p><p><span><a title="Jak postavit byznys na pevných základech? Pomůže ERP systém, co poroste s vámi" href="https://www.kurzy.cz/zpravy/554405-jak-postavit-byznys-na-pevnych-zakladech-pomuze-erp-system-co-poroste-s-vami/">Jak postavit byznys na pevných základech? Pomůže ERP systém, co poroste s vámi</a></span></p></li><li class="col jedno ecb" style="width: 280px; height: 85px; overflow: hidden; float: none;"><img width="60" height="64" style="float: left;" alt="Iva Palusková" src="https://img3.kurzy.cz/news/foto/okenko-pro-podnikatele/Iva_Paluskova-EH_small.png"><p class="autor">Iva Palusková, Euler Hermes</p><p><span><a title="Druhé čtvrtletí letošního roku přineslo rekordní zvyšování sektorového rizika. ČR nevyjímaje" href="https://www.kurzy.cz/zpravy/553435-druhe-ctvrtleti-letosniho-roku-prineslo-rekordni-zvysovani-sektoroveho-rizika-cr-nevyjimaje/">Druhé čtvrtletí letošního roku přineslo rekordní zvyšování sektorového rizika. ČR nevyjímaje</a></span></p></li><li class="col jedno ecb" style="width: 280px; height: 85px; overflow: hidden; float: none;"><img width="60" height="64" style="float: left;" alt="Jiří Pravenec" src="https://img1.kurzy.cz/news/foto/okenko-pro-podnikatele/Jiri_Pravenec_Geis_small.jpg"><p class="autor">Jiří Pravenec, Geis</p><p><span><a title="Udělej si sám, ale bez dopravy to nepůjde" href="https://www.kurzy.cz/zpravy/534479-udelej-si-sam-ale-bez-dopravy-to-nepujde/">Udělej si sám, ale bez dopravy to nepůjde</a></span></p></li><li class="col jedno ecb" style="width: 280px; height: 85px; overflow: hidden; float: none;"><img width="60" height="64" style="float: left;" alt="Ing. Martin Šandera" src="https://img3.kurzy.cz/news/foto/okenko-pro-podnikatele/martin_sandera_2_grantex_small.jpg"><p class="autor">Martin Šandera, GRANTEX</p><p><span><a title="Zrušení daně z nabytí: další vývoj" href="https://www.kurzy.cz/zpravy/555009-zruseni-dane-z-nabyti-dalsi-vyvoj/">Zrušení daně z nabytí: další vývoj</a></span></p></li><li class="col jedno ecb" style="width: 280px; height: 85px; overflow: hidden; float: none;"><img width="60" height="64" style="float: left;" alt="Juraj Cienik" src="https://img1.kurzy.cz/news/foto/okenko-pro-podnikatele/Juraj_Cienik_Trivi_small.jpg"><p class="autor">Juraj Cienik, Trivi</p><p><span><a title="Daňové odpisy dlouhodobého hmotného majetku. Víte jak na daňové odpisy?" href="https://www.kurzy.cz/zpravy/554828-danove-odpisy-dlouhodobeho-hmotneho-majetku-vite-jak-na-danove-odpisy/">Daňové odpisy dlouhodobého hmotného majetku. Víte jak na daňové odpisy?</a></span></p></li><li class="col jedno ecb" style="width: 280px; height: 85px; overflow: hidden; float: none;"><img width="60" height="64" style="float: left;" alt="Martin Krsňák" src="https://img3.kurzy.cz/news/foto/okenko-pro-podnikatele/Krsnak_Martin_Asseco_small.png"><p class="autor">Martin Krsňák, Asseco Solutions</p><p><span><a title="Jak postavit byznys na pevných základech? Pomůže ERP systém, co poroste s vámi" href="https://www.kurzy.cz/zpravy/554405-jak-postavit-byznys-na-pevnych-zakladech-pomuze-erp-system-co-poroste-s-vami/">Jak postavit byznys na pevných základech? Pomůže ERP systém, co poroste s vámi</a></span></p></li><li class="col jedno ecb" style="width: 280px; height: 85px; overflow: hidden; float: none;"><img width="60" height="64" style="float: left;" alt="Iva Palusková" src="https://img3.kurzy.cz/news/foto/okenko-pro-podnikatele/Iva_Paluskova-EH_small.png"><p class="autor">Iva Palusková, Euler Hermes</p><p><span><a title="Druhé čtvrtletí letošního roku přineslo rekordní zvyšování sektorového rizika. ČR nevyjímaje" href="https://www.kurzy.cz/zpravy/553435-druhe-ctvrtleti-letosniho-roku-prineslo-rekordni-zvysovani-sektoroveho-rizika-cr-nevyjimaje/">Druhé čtvrtletí letošního roku přineslo rekordní zvyšování sektorového rizika. ČR nevyjímaje</a></span></p></li><li class="col jedno ecb" style="width: 280px; height: 85px; overflow: hidden; float: none;"><img width="60" height="64" style="float: left;" alt="Jiří Pravenec" src="https://img1.kurzy.cz/news/foto/okenko-pro-podnikatele/Jiri_Pravenec_Geis_small.jpg"><p class="autor">Jiří Pravenec, Geis</p><p><span><a title="Udělej si sám, ale bez dopravy to nepůjde" href="https://www.kurzy.cz/zpravy/534479-udelej-si-sam-ale-bez-dopravy-to-nepujde/">Udělej si sám, ale bez dopravy to nepůjde</a></span></p></li><li class="col jedno ecb" style="width: 280px; height: 85px; overflow: hidden; float: none;"><img width="60" height="64" style="float: left;" alt="Ing. Martin Šandera" src="https://img3.kurzy.cz/news/foto/okenko-pro-podnikatele/martin_sandera_2_grantex_small.jpg"><p class="autor">Martin Šandera, GRANTEX</p><p><span><a title="Zrušení daně z nabytí: další vývoj" href="https://www.kurzy.cz/zpravy/555009-zruseni-dane-z-nabyti-dalsi-vyvoj/">Zrušení daně z nabytí: další vývoj</a></span></p></li><li class="col jedno ecb" style="width: 280px; height: 85px; overflow: hidden; float: none;"><img width="60" height="64" style="float: left;" alt="Juraj Cienik" src="https://img1.kurzy.cz/news/foto/okenko-pro-podnikatele/Juraj_Cienik_Trivi_small.jpg"><p class="autor">Juraj Cienik, Trivi</p><p><span><a title="Daňové odpisy dlouhodobého hmotného majetku. Víte jak na daňové odpisy?" href="https://www.kurzy.cz/zpravy/554828-danove-odpisy-dlouhodobeho-hmotneho-majetku-vite-jak-na-danove-odpisy/">Daňové odpisy dlouhodobého hmotného majetku. Víte jak na daňové odpisy?</a></span></p></li><li class="col jedno ecb" style="width: 280px; height: 85px; overflow: hidden; float: none;"><img width="60" height="64" style="float: left;" alt="Martin Krsňák" src="https://img3.kurzy.cz/news/foto/okenko-pro-podnikatele/Krsnak_Martin_Asseco_small.png"><p class="autor">Martin Krsňák, Asseco Solutions</p><p><span><a title="Jak postavit byznys na pevných základech? Pomůže ERP systém, co poroste s vámi" href="https://www.kurzy.cz/zpravy/554405-jak-postavit-byznys-na-pevnych-zakladech-pomuze-erp-system-co-poroste-s-vami/">Jak postavit byznys na pevných základech? Pomůže ERP systém, co poroste s vámi</a></span></p></li></ul></div></div><script type="text/javascript">
+		$(".okenko-investora-rotate2").jCarouselLite({
+			auto: 5000,
+			speed: 1000,
+			scroll: 1,
+			visible: 3,
+			vertical: true			  			
+		});
+	</script>
+
+
+    
+	<br>
+
+
+
+
+
+
+
+  
+	  
+		
+		<br>
+		<div id="adv_jobscz"> <script> a_adv.im('jobscz') </script> </div>
+	  
+  		
+
+
+
+	
+
+
+
+<div id="adv_stickyright"><div style="display: flex; justify-content: center; align-items: center;"><!-- Adform publisher tag --> 
+<!-- Tag for Kurzy.cz - sky (stickyright) backup placement --> 
+<script src="//adx.adform.net/adx/?mid=612270&amp;rnd=1598870625393&amp;callback=_adform_callback_sk&amp;pos=atf&amp;cat=33&amp;mkv=mc_msg_top:10596&amp;mkv=mc_msg_rtb:10596&amp;mkw=Živnostenský rejstřík ,rejstřík živnostníků | Kurzy," defer="" async=""></script> 
+<script> try { a_advs.adv_ready['stickyright'] = true } catch(e) {} </script>
+<script> try { a_advs.ram('k')} catch(e){} </script></div></div>
+
+	<div class="ecb" id="adv_squaredole"><div style="display: flex; justify-content: center; align-items: center;"><!-- aliascroll --> 
+<script> 
+ window.googletag.cmd.push(function() { 
+	var slot_exists = false  
+	for (i=0; i < window.googletag.pubads().getSlots().length; i++) { 
+		if (window.googletag.pubads().getSlots()[i].getSlotElementId() == 'div-gpt-ad-1551086699324-0') { 
+			slot_exists = true; break; 
+		} 
+	} 
+	if (!slot_exists){ 
+	    var googleslot_squaredole = window.googletag.defineSlot('/16466452/300x600_Kurzy_DOLE', [[1,1], [300, 300], [300, 600], [300, 250]], 'div-gpt-ad-1551086699324-0').addService(window.googletag.pubads()); 
+	    window.googletag.pubads().enableSingleRequest(); 
+	    window.googletag.pubads().collapseEmptyDivs(); 
+	    window.googletag.enableServices(); 
+	} 
+}); 
+</script><!-- /16466452/300x600_Kurzy_DOLE --> 
+<div id="div-gpt-ad-1551086699324-0" style="display: none;" data-google-query-id="CO6hj9ShxesCFQqD3godkssFbA"> 
+<script> 
+window.googletag.cmd.push(function() { window.googletag.display('div-gpt-ad-1551086699324-0'); }); 
+a_advs.dfp_callback('squaredole', true); 
+</script> 
+<div id="google_ads_iframe_/16466452/300x600_Kurzy_DOLE_0__container__" style="margin: auto; border: 0pt currentColor; border-image: none; width: 1px; height: 1px; text-align: center;"></div></div> 
+
+<script> try { a_advs.ram('k')} catch(e){} </script></div></div>
+
+
+<div id="adv_sky"> <script> a_adv.im('sky') </script> </div>
+
+
+
+
+
+		
+		<div id="rzpravy"><div class="outbox menuright"><div style="margin: 0px 0px 4px; width: 143px; height: 200px; overflow: hidden; float: left;"><h3 style="overflow: hidden; font-size: 80%; white-space: nowrap;"><a href="https://www.kurzy.cz/zpravy/makroekonomika/">Makroekonomika</a></h3><hr><a style="color: rgb(178, 34, 34);" onclick="this.href='https://www.kurzy.cz/zpravy/555341-zruseni-superhrube-mzdy-a-zavedeni-rouskovneho-zrejme-bude-vitezstvim-vladnich-stran-prohrou/#utm_source=box_dole&amp;utm_campaign=rzpravy'" href="https://www.kurzy.cz/zpravy/555341-zruseni-superhrube-mzdy-a-zavedeni-rouskovneho-zrejme-bude-vitezstvim-vladnich-stran-prohrou/"><img width="138" style="margin: 0px 0px 0px 5px; position: absolute; clip: rect(0px, 138px, 80px, 0px);" src="https://img.kurzy.cz/zpravy/obrazky/41/555341-zruseni-superhrube-mzdy-a-zavedeni-rouskovneho-zrejme-bude-vitezstvim-vladnich-stran-prohrou/seniori-covid-cl_w150h84.jpg"><div style="padding: 90px 4px 0px;">Zrušení superhrubé mzdy a zavedení rouškovného zřejmě bude vítězstvím vládních stran, prohrou ekonomiky jako celku a její budoucnosti</div></a></div><div style="margin: 0px 0px 4px; width: 143px; height: 200px; overflow: hidden; float: left;"><h3 style="overflow: hidden; font-size: 80%; white-space: nowrap;"><a href="https://www.kurzy.cz/zpravy/investice/">Investice</a></h3><hr><a style="color: rgb(178, 34, 34);" onclick="this.href='https://www.kurzy.cz/zpravy/555063-alena-schillerova-v-udalostech-komentare-duchodce-rozhodne-podporime/#utm_source=box_dole&amp;utm_campaign=rzpravy'" href="https://www.kurzy.cz/zpravy/555063-alena-schillerova-v-udalostech-komentare-duchodce-rozhodne-podporime/"><img width="138" style="margin: 0px 0px 0px 5px; position: absolute; clip: rect(0px, 138px, 80px, 0px);" src="https://img.kurzy.cz/zpravy/obrazky/63/555063-alena-schillerova-v-udalostech-komentare-duchodce-rozhodne-podporime/penize_big_w150h84.jpg"><div style="padding: 90px 4px 0px;">Alena Schillerová v Událostech komentáře: Důchodce rozhodně podpoříme</div></a></div><div style="margin: 0px 0px 4px; width: 143px; height: 200px; overflow: hidden; float: left;"><h3 style="overflow: hidden; font-size: 80%; white-space: nowrap;"><a href="https://www.kurzy.cz/zpravy/investice/">Investice</a></h3><hr><a style="color: rgb(178, 34, 34);" onclick="this.href='https://www.kurzy.cz/zpravy/555329-guverner-komentuje-nedavny-nakup-zlata/#utm_source=box_dole&amp;utm_campaign=rzpravy'" href="https://www.kurzy.cz/zpravy/555329-guverner-komentuje-nedavny-nakup-zlata/"><img width="138" style="margin: 0px 0px 0px 5px; position: absolute; clip: rect(0px, 138px, 80px, 0px);" src="https://img.kurzy.cz/zpravy/obrazky/29/555329-guverner-komentuje-nedavny-nakup-zlata/zlato-dolar-koruna-gram-unca-676-300_w150h84.png"><div style="padding: 90px 4px 0px;">Guvernér komentuje nedávný nákup zlata</div></a></div><div style="margin: 0px 0px 4px; width: 143px; height: 200px; overflow: hidden; float: left;"><h3 style="overflow: hidden; font-size: 80%; white-space: nowrap;"><a href="https://www.kurzy.cz/zpravy/investice/">Investice</a></h3><hr><a style="color: rgb(178, 34, 34);" onclick="this.href='https://www.kurzy.cz/zpravy/555185-vlada-schvalila-novou-alternativu-k-penzijnimu-a-zivotnimu-pojisteni-mel-by-zvysit-zajem-o-akcie-a/#utm_source=box_dole&amp;utm_campaign=rzpravy'" href="https://www.kurzy.cz/zpravy/555185-vlada-schvalila-novou-alternativu-k-penzijnimu-a-zivotnimu-pojisteni-mel-by-zvysit-zajem-o-akcie-a/"><img width="138" style="margin: 0px 0px 0px 5px; position: absolute; clip: rect(0px, 138px, 80px, 0px);" src="https://img.kurzy.cz/zpravy/obrazky/85/555185-vlada-schvalila-novou-alternativu-k-penzijnimu-a-zivotnimu-pojisteni-mel-by-zvysit-zajem-o-akcie-a/hra-akcie-a-opce_w150h84.jpg"><div style="padding: 90px 4px 0px;">Vláda schválila novou alternativu k penzijnímu a životnímu pojištění, měl by zvýšit zájem o akcie a dluhopisy</div></a></div><table></table></div></div>
+	  </div>
+	  <div title="Zobrazit sloupec" id="rightcolumn_hidden" onclick="Show_hide_rightcolumn()">Zobrazit sloupec&nbsp;</div>
+	  
+<div id="headerlogin">
+	<div id="breadservers" style="text-align: left;">
+		<span id="servers" style="margin-left: 0px;">  
+		 
+		
+		
+			<a title="Kurzy měn, kurzovní lístky ČNB." href="https://www.kurzy.cz/kurzy-men/">Kurzy měn</a> |
+		
+		
+			<a title="Akcie online - cz Burza Praha" href="https://www.kurzy.cz/akcie-cz/">Akcie</a> |
+		
+		
+
+			<a title="Zájezdy a dovolená" href="https://www.zajezdy.cz/">Zájezdy</a> 
+				| <a title="Last minute zájezdy" href="http://www.last-minute.cz/">Last minute</a>
+				| <a title="Počasí z yr.no - Předpověď počasí online" href="https://meteobox.cz/">Meteobox</a>
+				| <a title="Bydlení a reality" href="https://www.bydlet.cz/">Bydlet</a>
+				| <a title="Auta, prodej aut - AAA , ESA a další autobazary" href="https://yauto.cz/">YAuto</a>
+				| <a title="Kurzy, školení, rekvalifikace, daňové a účetní kurzy." href="https://studium.cz/">Studium</a>
+				| M
+				
+		
+		</span>
+	
+		
+
+		
+
+		
+		<div id="adv_headerlogin"><div style="display: flex; justify-content: center; align-items: center;"><div id="loginenter" onmouseover="lg.lg_mouseover()" onmouseout="lg.lg_mouseout()" onclick="lg.lg_Zobraz_skryj_logindiv()">Přihlášení</div> 
+<div id="logindiv"> 
+	<div id="loginoverlay"></div> 
+	<div id="loginform"> 
+		<div title="Zavřít" class="close" onclick="lg.lg_Zobraz_skryj_logindiv('skryj')">X</div> 
+		<form action="https://www.kurzy.cz/util/login.asp?AC=G" method="post"> 
+			<input name="BAS" type="hidden" value="6"> 
+			<input name="url_source" type="hidden" value="https://rejstrik-firem.kurzy.cz/zivnostensky-rejstrik/"> 
+	 
+			<div id="login_in"> 
+				<h3 class="nadpis">Přihlášení uživatele serveru Kurzy.cz</h3> 
+		 		<div> 
+		 			<div class="row"> 
+						<div class="cola">Přihlašovací jméno:</div> 
+						<div class="colb"><input name="uname" id="uname" size="20" maxlength="30" value=""></div> 
+						<br style="clear: both;"> 
+					</div>	 
+					<div class="row"> 
+						<div class="cola">Heslo:</div> 
+						<div class="colb"><input name="pwd" type="Password" size="20" maxlength="30" value=""></div> 
+						<br style="clear: both;"> 
+					</div>	 
+					<div class="row center"> 
+						<input class="isubmit" type="submit" value="Přihlásit >>"> 
+						<br style="clear: both;"> 
+					</div> 
+				</div>	 
+			</div>	 
+			<div class="reg_text"> 
+				<a href="https://www.kurzy.cz/util/comm.asp?AC=R">Registrace nového uživatele</a> 
+				<br style="clear: both;"> 
+			</div> 
+			<div class="login_text"> 
+				<a style="float: left;" href="http://www.aliaweb.cz/help/faq_login.asp">Help pro potíže s přihlášením</a><a title="Zaslání hesla na e-mailovou adresu uvedenou v registraci" style="float: right;" href="http://www.kurzy.cz/util/sendpass.asp">Zapoměli jste heslo?</a> 
+				<br style="clear: both;"> 
+			</div> 
+			<br> 
+			<div class="login_text"><i>Pozn.: Pro přihlášení je třeba prohlížeč, který podporuje cookies a protokol https. Pokud máte cookies vypnuté, nebude možné se přihlásit.&nbsp;&nbsp;&nbsp; <a title="Návod, jak nastavit prohlížeč, aby podporoval cookies" href="http://www.aliaweb.cz/help/faq_login.asp#3">Jak zapnout cookies?</a></i></div> 
+		</form> 
+	</div>	 
+</div> 
+ 
+<script> try { a_advs.adv_ready['headerlogin'] = true } catch(e) {} </script>
+<script> try { a_advs.ram('k')} catch(e){} </script></div></div>
+		<noscript>	
+			&lt;div style="float:right;"&gt;
+				&lt;!--[if IE]&gt;
+					&lt;iframe src="https://www.kurzy.cz/util/comm.asp?AC=IF1" style="border:0; width: 150px; height: 20px;" frameborder="0" scrolling="no"&gt;&lt;/iframe&gt;
+				&lt;![endif]--&gt; 	
+				&lt;object id="loginnojs" data="https://www.kurzy.cz/util/comm.asp?AC=IF1"&gt;&lt;/object&gt;
+			&lt;/div&gt;
+		</noscript>
+	
+		
+		  	  		
+		
+			
+		
+	</div>
+</div>
+
+<div class="ecb" id="headerlogonew">
+  <a id="mmenubutton" href="#mmenu"><img id="mmxopen" style="padding: 14px 18px 14px 0px; height: 22px; vertical-align: top;" alt="Menu" src="//s.kurzy.cz/svg/ikona-menu.svg" data-lazyload="no"></a>
+  <a title="Kurzy.cz - Kurzy měn, akcie, komodity, investice" href="https://www.kurzy.cz"><img width="220" height="59" alt="Kurzy.cz - Akcie cz, kurzy měn, forex, zlato." src="https://v.kurzy.cz/l/kurzy-cz-206px.svg" data-lazyload="no"></a>
+
+	<div id="adv_topnewsnew"><div style="display: flex; justify-content: center; align-items: center;"><!-- spir.czMonS[34__214X47_1_1] --><!-- Adform publisher tag --> 
+<!-- Tag for Kurzy.cz - Mobile banner 300x50 placement --> 
+<script src="//adx.adform.net/adx/?mid=7421378&amp;rnd=1598870621967&amp;callback=_adform_callback_mb&amp;pos=atf&amp;cat=33&amp;mkv=mc_msg_top:10596&amp;mkv=mc_msg_rtb:10596&amp;mkw=Živnostenský rejstřík ,rejstřík živnostníků | Kurzy," defer="" async=""></script><!-- spir.czMonE --> 
+<script> try { a_advs.adv_ready['topnewsnew'] = true } catch(e) {} </script>
+<script> try { a_advs.ram('k')} catch(e){} </script></div></div>
+
+	<form id="mains" action="https://www.kurzy.cz/hledani/" accept-charset="windows-1250">
+		<fieldset>
+			<input name="q" accesskey="v">
+			<input title="Vyhledat" type="submit" value="">
+		</fieldset>
+	</form>
+</div>	
+<div id="mainlinksnew">	
+
+	<div id="adv_headertime"><div style="display: flex; justify-content: center; align-items: center;"><a title="Dnes - události, kalendář" href="https://www.kurzy.cz/kalendar/dnes/">po 31.8.2020 12:42:51</a> 
+<script> try { a_advs.adv_ready['headertime'] = true } catch(e) {} </script>
+<script> try { a_advs.ram('k')} catch(e){} </script></div></div>
+	
+	
+	
+
+	TOP:
+	 
+	<a title="Akcie online - Burza cenných papírů Praha a RM Systém, kurzy ČEZ, Erste, Nokia." href="https://www.kurzy.cz/akcie-cz/">Akcie CZ</a>
+	<a title="Akcie ve světě" href="https://www.kurzy.cz/akcie-svet/">Akcie svět</a>
+	<a title="Kurzy měn, kurzovní lístky bank a směnáren i ČNB." href="https://www.kurzy.cz/kurzy-men/">Kurzy měn</a>
+	<a title="Komodity a deriváty, ropa, benzín, nafta, drahé kovy" href="https://www.kurzy.cz/komodity/">Komodity</a>
+	<a title="České dluhopisy, státní dluhopisy" href="https://www.kurzy.cz/dluhopisy/">Dluhopisy</a>
+	<a title="Zlato - Cena zlata, investiční zlato, výkup a prodej zlata" href="https://www.kurzy.cz/zlato/">Zlato</a>
+	<a title="Bitcoin a kryptoměny" href="https://www.kurzy.cz/bitcoin/">Bitcoin</a>
+	<a title="Hypotéka, kalkulačka, refinancování, nabídky hypotečních bank" href="https://www.kurzy.cz/hypoteky/">Hypotéky</a>
+	<a title="Tarify telefonů - tarify O2, t-mobile, vodafone" href="https://www.kurzy.cz/tarify/">Tarify</a>
+	<a title="Energie - srovnání ceny plynu a elektřiny. Tarify EON, ČEZ, Innogy." href="https://www.kurzy.cz/energie/">Energie</a>
+
+	<a title="Kalkulačky - Mzdová kalkulačka, hypoteční a důchová kalkulačka a další kalkulačky." href="https://www.kurzy.cz/kalkulacka/">Kalkulačka</a>
+	<a title="Zákony, sbírka zákonů - zákon o DPH, stavební, živnostenský a další zákony." href="https://zakony.kurzy.cz/">Zákony</a>			
+	<a title="Práce - Nabídky práce, volná pracovní místa, Úřad práce." href="https://www.kurzy.cz/prace/">Práce</a>
+
+	<a href="https://www.kurzy.cz/koronavirus/">Koronavirus</a>
+	
+		
+	
+</div>
+
+
+	</div> <!--/main-->
+  
+
+		
+		  </div>
+		
+			<div id="headernew">
+				<div id="adv_cid"><div style="display: flex; justify-content: center; align-items: center;"><script type="text/javascript"> 
+	//<![CDATA[ 
+	alia_gCid = 'bdrjyqakuc' 
+	//]]> 
+</script> 
+<script> try { a_advs.adv_ready['cid'] = true } catch(e) {} </script>
+<script> try { a_advs.ram('k')} catch(e){} </script></div></div>
+				
+ 
+
+<div class="navbar navbart" id="navbart">
+	
+	<ul>
+		<li><a title="Zprávy - Investice, osobní finance, podnikání. Zprávy z ekonomiky, kapitálových trhů, komentáře, analýzy, předpověď počasí z celého světa, oficiální sdělení" href="https://www.kurzy.cz/zpravy/">Zprávy</a></li>
+	</ul>
+	
+	<ul>
+		<li><a title="Investice - investice do akcií, dluhopisů, podílových fondů, investice do zlata a stříbra, nejlepší investice." href="https://www.kurzy.cz/investice/">Investice</a></li>
+	</ul>
+	
+	<ul>
+		<li><a title="Finance pro každého - osobní a rodinné finance" href="https://www.kurzy.cz/finance/">Osobní finance</a></li>
+	</ul>
+	
+	<ul>
+		<li class="active"><a title="Podnikání v České republice - Firmy a vazby, zákony, ochranné známky, firmy v regionech, zpravodajství, katalog subjektů" href="https://www.kurzy.cz/podnikani/">Podnikání</a></li>
+	</ul>
+	
+	<ul>
+		<li><a title="Reklama, pravidelné emaily, data a grafy pro vaše www stránky, registrace a přihlášení." href="https://www.kurzy.cz/sluzby/">Naše služby</a></li>
+	</ul>
+	
+	<ul>
+		<li><a title="Otázky, odpovědi, názory a ankety na téma investic." href="https://www.kurzy.cz/nazory/">Diskuze</a></li>
+	</ul>
+	
+	
+	<div id="ft"><a title="Kurzy.cz na Facebooku" href="https://www.facebook.com/kurzy.cz"><div id="tool_fb">Facebook - Kurzy.cz</div></a><a title="Kurzy.cz na Twitteru" href="https://twitter.com/kurzycz"><div id="tool_tw">Twitter - Kurzy.cz</div></a></div>
+</div>
+
+
+
+	
+<div class="navbar navbarb" id="navbarb">
+
+<ul><li class="active" id="nb10596"><a title="Obchodní rejstřík firem, justice.cz" class="mastera" href="https://rejstrik-firem.kurzy.cz/">Obchodní rejstřík<small> ▼</small></a>
+	
+		
+			
+				<div class="vyplaz">	<div class="vyplazitems">		<table><tbody><tr>			<td class="vyplazwrapitems first">						<ul><li class=" "><a title="Vyhledávání firem v obchodním rejstříku" href="https://rejstrik-firem.kurzy.cz/">Vyhledání firmy</a></li></ul>						<ul><li class=" "><a title="Vizuální obchodní rejstřík - grafická verze rejstříku firem" href="https://www.podnikani.cz/">Vizuální rejstřík</a></li></ul>						<ul><li class=" "><a title="Vyhledání adresy sídla firmy, výpis firem na adrese, v obci nebo ulici." href="https://regiony.kurzy.cz/">Firmy podle sídla</a></li></ul>						<ul><li class=" "><a title="Informace o tom, co je obchodní rejstřík, kdo je v rejstříku zapsán a jaké vztahy eviduje." href="https://rejstrik-firem.kurzy.cz/obchodni-rejstrik/">O obchodním rejstříku</a></li></ul>						<ul><li class=" "><a title="Nové firmy, firmy podle velikosti, statistiky" href="https://rejstrik-firem.kurzy.cz/rejstrik-firem/">Zajímavé seznamy</a></li></ul>						<ul><li class=" sub"><a title=" Nevyšší základní kapitál" href="https://rejstrik-firem.kurzy.cz/seznam-2/">Nevyšší základní kapitál</a></li></ul>						<ul><li class=" sub"><a title=" Nejvíce zaměstnanců" href="https://rejstrik-firem.kurzy.cz/seznam-9/">Nejvíce zaměstnanců</a></li></ul>						<ul><li class=" sub"><a title=" Holdingy" href="https://rejstrik-firem.kurzy.cz/seznam-5/">Holdingy</a></li></ul>			</td><td class="vyplazwrapitems">			<ul><li class=" sub"><a title=" Firmy s nejvíce společníky" href="https://rejstrik-firem.kurzy.cz/seznam-8/">Nejvíce společníků</a></li></ul>						<ul><li class=" "><a title="Skupinové registrace DIČ/DPH" href="https://rejstrik-firem.kurzy.cz/skupinova-registrace-dph/">Skupinové registrace DIČ/DPH</a></li></ul>						<ul><li class=" "><a title="Vizuální rejstřík firem" href="https://www.podnikani.cz/">Vizuální rejstřík firem</a></li></ul>						<ul><li class=" "><a title="Vyhledávání DIČ a ověření registrace DPH" href="https://www.kurzy.cz/dph/">Ověření DPH</a></li></ul>						<ul><li class=" "><a title="LEI" href="https://rejstrik-firem.kurzy.cz/lei/">LEI</a></li></ul>						<ul><li class=" "><a title="Zpravodajství" href="https://www.kurzy.cz/zpravy/obchodni-rejstrik/">Zpravodajství</a></li></ul>						<ul><li class=" sub"><a title=" Vizuální rejstřík, titulní" href="https://www.podnikani.cz/">Vizuální rejstřík, titulní</a></li></ul>						<ul><li class=" sub"><a title=" Vizuální rejstřík, detail firmy" href="https://www.podnikani.cz/45274649/cez-as/">Vizuální rejstřík, detail firmy</a></li></ul>			</td><td class="vyplazwrapitems">			<ul><li class=" sub"><a title=" Vizuální rejstřík, detail osoby" href="https://www.podnikani.cz/">Vizuální rejstřík, detail osoby</a></li></ul>						<ul><li class=" sub"><a title=" Vizuální rejstřík, popis aplikace" href="https://www.podnikani.cz/">Vizuální rejstřík, popis aplikace</a></li></ul>						<ul><li class=" sub"><a title=" Vizuální rejstřík, aplet" href="https://www.podnikani.cz/">Vizuální rejstřík, aplet</a></li></ul>						<ul><li class=" sub"><a title=" VOR hledani" href="#">VOR hledani</a></li></ul>						<ul><li class=" sub"><a title="  Instalace Java" href="#">Instalace Java</a></li></ul>						<ul><li class=" sub"><a title="  Detail firmy applet" href="#">Detail firmy applet</a></li></ul>						<ul><li class=" sub"><a title="  Detail firmy popis" href="#">Detail firmy popis</a></li></ul>						</td>		</tr></tbody></table>	</div>		<!-- zpravy --></div><!-- submenuitems and zpravy -->					</li></ul>
+
+<ul><li id="nb12236"><a title="Daně" class="mastera" href="https://www.kurzy.cz/dane/">Daně</a>
+	
+				<div class="vyplaz">	<div class="vyplazitems">		<table><tbody><tr>			<td class="vyplazwrapitems first">						<ul><li class=" "><a title="Daňový kalendář" href="https://www.kurzy.cz/dane-danova-priznani/danovy-kalendar-2020.htm">Daňový kalendář</a></li></ul>						<ul><li class=" "><a title="DPH - Daň z přidané hodnoty" href="https://www.kurzy.cz/dph/">DPH</a></li></ul>						<ul><li class=" sub"><a title=" Registr plátců DPH" href="https://www.kurzy.cz/dph/registr-platcu-dph/">Registr plátců DPH</a></li></ul>						<ul><li class=" sub"><a title=" Ověření DIČ, výpis registrace DPH, nespolehliví plátci, účty" href="https://rejstrik-firem.kurzy.cz/hledej-dph/">DPH - ověření DIČ</a></li></ul>						<ul><li class=" sub"><a title=" DIČ - daňové identifikační číslo" href="https://www.kurzy.cz/dic/">DIČ</a></li></ul>						<ul><li class=" sub"><a title="  Aktuální seznam nespolehlivých plátců" href="https://rejstrik-firem.kurzy.cz/seznam-11/">Nespolehliví plátci DPH</a></li></ul>						<ul><li class=" sub"><a title=" Elektronická evidence tržeb" href="https://www.kurzy.cz/dane/eet/">EET</a></li></ul>						<ul><li class=" "><a title="Daňové přiznání" href="https://www.kurzy.cz/dane-danova-priznani/">Daňové přiznání</a></li></ul>						<ul><li class=" sub"><a title=" Přehled daní" href="https://www.kurzy.cz/dane-danova-priznani/">Rozcestník daní</a></li></ul>			</td><td class="vyplazwrapitems">			<ul><li class=" sub"><a title=" Daňové přiznání zdarma" href="https://www.kurzy.cz/dane-danova-priznani/danova-priznani-xls-2019.htm">Daňové přiznání zdarma</a></li></ul>						<ul><li class=" sub"><a title=" Daň z nemovitosti" href="https://www.kurzy.cz/dane-danova-priznani/dan-z-nemovitosti.htm">Daň z nemovitosti</a></li></ul>						<ul><li class=" sub"><a title=" Daň z nabytí nemovitosti (z převodu nemovitostí)" href="https://www.kurzy.cz/dane-danova-priznani/dan-z-prevodu-nemovitosti.htm">Daň z nabytí nemovitosti</a></li></ul>						<ul><li class=" sub"><a title=" Daň z příjmů" href="https://www.kurzy.cz/danove-priznani/dan-z-prijmu.htm">Daň z příjmu</a></li></ul>						<ul><li class=" sub"><a title="  Daň z příjmu fyzických osob" href="https://www.kurzy.cz/dane-danova-priznani/dan-z-prijmu-fyzickych-osob.htm">Daň z příjmu fyzických osob</a></li></ul>						<ul><li class=" sub"><a title="  Daň z příjmu právnických osob" href="https://www.kurzy.cz/dane-danova-priznani/dan-z-prijmu-pravnickych-osob.htm">Daň z příjmu právnických osob</a></li></ul>						<ul><li class=" sub"><a title=" Silniční daň" href="https://www.kurzy.cz/dane-danova-priznani/dan-silnicni.htm">Silniční daň</a></li></ul>						<ul><li class=" sub"><a title=" Srážková daň" href="https://www.kurzy.cz/dane-danova-priznani/dan-z-prijmu-vybirana-srazkou.htm">Srážková daň</a></li></ul>						<ul><li class=" sub"><a title=" Darovací daň (daň z darů)" href="https://www.kurzy.cz/dane-danova-priznani/dan-darovaci.htm">Darovací daň</a></li></ul>			</td><td class="vyplazwrapitems">			<ul><li class=" sub"><a title=" Dědická daň" href="https://www.kurzy.cz/dane-danova-priznani/dan-dedicka.htm">Dědická daň</a></li></ul>						<ul><li class=" sub"><a title=" Spotřební daň" href="https://www.kurzy.cz/danove-priznani/spotrebni-dan.htm">Spotřební daň</a></li></ul>						<ul><li class=" sub"><a title="  Kalkulačka silniční daně" href="https://www.kurzy.cz/kalkulacka/silnicni-dan/">Kalkulačka silniční daně</a></li></ul>						<ul><li class=" sub"><a title=" Paušální daň pro živnostníky" href="https://www.kurzy.cz/danove-priznani/pausalni-dan/">Paušální daň</a></li></ul>						<ul><li class=" "><a title="Daňové formuláře" href="https://www.kurzy.cz/dane-danova-priznani/danova-priznani-2019-2020.htm">Daňové formuláře</a></li></ul>						<ul><li class=" sub"><a title=" " href="https://www.kurzy.cz/formular/">Všechny formuláře</a></li></ul>						<ul><li class=" "><a title="Daňové zpravodajství" href="https://www.kurzy.cz/zpravy/dane-a-ucetnictvi/">Daňové zpravodajství</a></li></ul>						</td>		</tr></tbody></table>	</div>		<!-- zpravy --></div><!-- submenuitems and zpravy -->					</li></ul>
+
+<ul><li id="nb10517"><a title="Aktuální úplná znění zákonů." class="mastera" href="https://www.kurzy.cz/zakony/">Zákony</a>
+	
+				<div class="vyplaz">	<div class="vyplazitems">		<table><tbody><tr>			<td class="vyplazwrapitems first">						<ul><li class=" "><a title="Autorský zákon" href="https://www.kurzy.cz/zakony/121-2000-autorsky-zakon/">Autorský zákon</a></li></ul>						<ul><li class=" "><a title="Exekuční řád" href="https://www.kurzy.cz/zakony/120-2001-exekucni-rad/">Exekuční řád</a></li></ul>						<ul><li class=" "><a title="Občanský soudní řád" href="https://www.kurzy.cz/zakony/99-1963-obcansky-soudni-rad/">Občanský soudní řád</a></li></ul>						<ul><li class=" "><a title="Občanský zákoník" href="https://www.kurzy.cz/zakony/89-2012-obcansky-zakonik/">Občanský zákoník</a></li></ul>						<ul><li class=" "><a title="Stavební zákon" href="https://www.kurzy.cz/zakony/183-2006-stavebni-zakon/">Stavební zákon</a></li></ul>			</td><td class="vyplazwrapitems">			<ul><li class=" "><a title="Trestní řád" href="https://www.kurzy.cz/zakony/141-1961-trestni-rad/">Trestní řád</a></li></ul>						<ul><li class=" "><a title="Trestní zákoník" href="https://www.kurzy.cz/zakony/40-2009-trestni-zakonik/">Trestní zákoník</a></li></ul>						<ul><li class=" "><a title="Zákon o obchodních korporacích" href="https://www.kurzy.cz/zakony/90-2012-zákon-o-obchodnich-korporacich/">Zákon o obchodních korporacích</a></li></ul>						<ul><li class=" "><a title="Zákon o dani silniční" href="https://www.kurzy.cz/zakony/16-1993-zakon-o-dani-silnicni/">Zákon o dani silniční</a></li></ul>						<ul><li class=" "><a title="Zákon o daních z příjmů" href="https://www.kurzy.cz/zakony/586-1992-zakon-o-danich-z-prijmu/">Zákon o daních z příjmů</a></li></ul>			</td><td class="vyplazwrapitems">			<ul><li class=" "><a title="Zákon o DPH" href="https://www.kurzy.cz/zakony/235-2004-zakon-o-dph/">Zákon o DPH</a></li></ul>						<ul><li class=" "><a title="Zákoník práce" href="https://www.kurzy.cz/zakony/262-2006-zakonik-prace/">Zákoník práce</a></li></ul>						<ul><li class=" "><a title="Živnostenský zákon" href="https://www.kurzy.cz/zakony/455-1991-zivnostensky-zakon/">Živnostenský zákon</a></li></ul>						<ul><li class=" "><a title="Zákony - zprávy, novinky, novely" href="https://www.kurzy.cz/zpravy/zakony/">Zprávy o zákonech</a></li></ul>						<ul><li class=" "><a title="Zákon o sociálně právní ochraně dětí" href="https://www.kurzy.cz/zakony/359-1999-zakon-o-socialne-pravni-ochrane-deti/">Zákon o sociálně právní ochraně dětí</a></li></ul>						</td>		</tr></tbody></table>	</div>		<!-- zpravy --></div><!-- submenuitems and zpravy -->					</li></ul>
+
+<ul><li id="nb11504"><a title="Města a obce v obchodním rejstříku - Firmy a podnikající osoby na konkrétní adrese, ulici či v obci, PSČ, statistiky, ekonomika regionů." class="mastera" href="https://regiony.kurzy.cz/">Města a obce</a>
+	
+				<div class="vyplaz">	<div class="vyplazitems">		<table><tbody><tr>			<td class="vyplazwrapitems first">						<ul><li class=" "><a title="Obce, ve kterých sídlí nejvíce firem" href="https://regiony.kurzy.cz/top/obec/firmy/">Největší obce</a></li></ul>						<ul><li class=" sub"><a title=" Ulice, ve kterých sídlí nejvíce firem" href="https://regiony.kurzy.cz/top/ulice/firmy/">Nejvíce firem v Ulici</a></li></ul>						<ul><li class=" sub"><a title=" Adresy, na kterých sídlí nejvíce firem" href="https://regiony.kurzy.cz/top/adresa/firmy/">Nejvíce firem na adrese</a></li></ul>			</td><td class="vyplazwrapitems">			<ul><li class=" "><a title="Katastr nemovitostí - nahlížení do katastru nemovitostí online" href="https://regiony.kurzy.cz/katastr/">Katastr nemovitostí</a></li></ul>						<ul><li class=" sub"><a title=" Pozemky bez majitele" href="https://regiony.kurzy.cz/katastr/uzsvm/">Pozemky bez majitele</a></li></ul>						<ul><li class=" sub"><a title=" Nové parcely a pozemky v katastru nemovitostí" href="https://regiony.kurzy.cz/katastr/top/nove-parcely">Nové parcely</a></li></ul>			</td><td class="vyplazwrapitems">			<ul><li class=" sub"><a title=" Nové stavební objekty v katastru nemovitostí" href="https://regiony.kurzy.cz/katastr/top/nove-budovy">Nové budovy</a></li></ul>						</td>		</tr></tbody></table>	</div>			<div class="vyplazitems">			<h4>Obce, ve kterých sídlí nejvíce firem</h4>		<table class="mensi"><tbody><tr>			<td class="vyplazwrapitems first">							<ul><li><a title="275479 firem v obci Praha" href="https://regiony.kurzy.cz/praha/">Praha</a></li></ul>							<ul><li><a title="52784 firem v obci Brno" href="https://regiony.kurzy.cz/brno/">Brno</a></li></ul>							<ul><li><a title="24499 firem v obci Ostrava" href="https://regiony.kurzy.cz/ostrava/">Ostrava</a></li></ul>							<ul><li><a title="14759 firem v obci Plzeň" href="https://regiony.kurzy.cz/plzen/">Plzeň</a></li></ul>							<ul><li><a title="9177 firem v obci Olomouc" href="https://regiony.kurzy.cz/olomouc/">Olomouc</a></li></ul>							<ul><li><a title="8742 firem v obci Liberec" href="https://regiony.kurzy.cz/liberec/">Liberec</a></li></ul>			</td><td class="vyplazwrapitems">				<ul><li><a title="8425 firem v obci České Budějovice" href="https://regiony.kurzy.cz/ceske-budejovice/">České Budějovice</a></li></ul>							<ul><li><a title="8064 firem v obci Hradec Králové" href="https://regiony.kurzy.cz/hradec-kralove/">Hradec Králové</a></li></ul>							<ul><li><a title="6951 firem v obci Pardubice" href="https://regiony.kurzy.cz/pardubice/">Pardubice</a></li></ul>							<ul><li><a title="6297 firem v obci Karlovy Vary" href="https://regiony.kurzy.cz/karlovy-vary/">Karlovy Vary</a></li></ul>							<ul><li><a title="6291 firem v obci Zlín" href="https://regiony.kurzy.cz/zlin/">Zlín</a></li></ul>							<ul><li><a title="6233 firem v obci Ústí nad Labem" href="https://regiony.kurzy.cz/usti-nad-labem/">Ústí nad Labem</a></li></ul>			</td><td class="vyplazwrapitems">				<ul><li><a title="4079 firem v obci Kladno" href="https://regiony.kurzy.cz/kladno-okres-kladno/">Kladno</a></li></ul>							<ul><li><a title="3449 firem v obci Jihlava" href="https://regiony.kurzy.cz/jihlava/">Jihlava</a></li></ul>							<ul><li><a title="3420 firem v obci Teplice" href="https://regiony.kurzy.cz/teplice/">Teplice</a></li></ul>							<ul><li><a title="3324 firem v obci Opava" href="https://regiony.kurzy.cz/opava/">Opava</a></li></ul>							<ul><li><a title="3139 firem v obci Frýdek-Místek" href="https://regiony.kurzy.cz/frydek-mistek/">Frýdek-Místek</a></li></ul>							<ul><li><a title="3035 firem v obci Most" href="https://regiony.kurzy.cz/most/">Most</a></li></ul>						</td>		</tr></tbody></table>	</div>	<!-- zpravy --></div><!-- submenuitems and zpravy -->					</li></ul>
+
+<ul><li id="nb11548"><a title="Ochranné známky" class="mastera" href="https://oz.kurzy.cz/">Ochranné známky</a>
+	
+				<div class="vyplaz">	<div class="vyplazitems">		<table><tbody><tr>			<td class="vyplazwrapitems first">						<ul><li class=" "><a title="Nové české  ochranné známky" href="https://oz.kurzy.cz/s/laste">Nové české OZ</a></li></ul>						<ul><li class=" "><a title="Nové světové ochranné známky" href="https://oz.kurzy.cz/s/lastw">Nové světové</a></li></ul>			</td><td class="vyplazwrapitems">			<ul><li class=" "><a title="Končící  ochranné známky" href="https://oz.kurzy.cz/s/expire0">Končící známky</a></li></ul>						<ul><li class=" "><a title="Zákon o  ochranných známkách" href="https://www.kurzy.cz/zakony/441-2003-zakon-o-ochrannych-znamkach/">Zákon o OZ</a></li></ul>			</td><td class="vyplazwrapitems">			<ul><li class=" "><a title="Ochranné známky dle data priority" href="https://oz.kurzy.cz/date/priority/">OZ dle data</a></li></ul>						<ul><li class=" "><a title="Nenalezeno" href="#">Nenalezeno</a></li></ul>						</td>		</tr></tbody></table>	</div>			<div class="vyplazitems">			<h4>Top majitelé a ochranné známky s nejčastějším zněním</h4>		<table class="mensi"><tbody><tr>			<td class="vyplazwrapitems first">							<ul><li><a title="Zentiva,  k.s. - majitel ochranných známek" href="https://oz.kurzy.cz/zentiva-ks/">Zentiva,  k.s.</a></li></ul>							<ul><li><a title="Česká televize - majitel ochranných známek" href="https://oz.kurzy.cz/ceska-televize/">Česká televize</a></li></ul>							<ul><li><a title="Beiersdorf AG - majitel ochranných známek" href="https://oz.kurzy.cz/beiersdorf-ag/">Beiersdorf AG</a></li></ul>							<ul><li><a title="SPOFA  a.s. - majitel ochranných známek" href="https://oz.kurzy.cz/spofa-as/">SPOFA  a.s.</a></li></ul>							<ul><li><a title="VLTAVA-LABE-PRESS,  a.s. - majitel ochranných známek" href="https://oz.kurzy.cz/vltava-labe-press-as/">VLTAVA-LABE-PRESS,  a.s.</a></li></ul>							<ul><li><a title="WTM s.r.o. - majitel ochranných známek" href="https://oz.kurzy.cz/wtm-sro/">WTM s.r.o.</a></li></ul>			</td><td class="vyplazwrapitems">				<ul><li><a title="mbank - znění ochranných známek" href="https://oz.kurzy.cz/mbank-zneni/">mbank</a></li></ul>							<ul><li><a title="IRIS - znění ochranných známek" href="https://oz.kurzy.cz/iris-1962-zneni/">IRIS</a></li></ul>							<ul><li><a title="ECONYL - znění ochranných známek" href="https://oz.kurzy.cz/econyl-zneni/">ECONYL</a></li></ul>							<ul><li><a title="NORDSON - znění ochranných známek" href="https://oz.kurzy.cz/nordson-zneni/">NORDSON</a></li></ul>							<ul><li><a title="ROBOCAR POLI - znění ochranných známek" href="https://oz.kurzy.cz/robocar-poli-zneni/">ROBOCAR POLI</a></li></ul>							<ul><li><a title="GODADDY - znění ochranných známek" href="https://oz.kurzy.cz/godaddy-zneni/">GODADDY</a></li></ul>			</td><td class="vyplazwrapitems">				<ul><li><a title="INTEL INSIDE &amp; OUT - znění ochranných známek" href="https://oz.kurzy.cz/intel-inside-out-zneni/">INTEL INSIDE &amp; OUT</a></li></ul>							<ul><li><a title="MIAMI DESIGN DISTRICT - znění ochranných známek" href="https://oz.kurzy.cz/miami-design-district-zneni/">MIAMI DESIGN DISTRICT</a></li></ul>							<ul><li><a title="GE - znění ochranných známek" href="https://oz.kurzy.cz/ge-zneni/">GE</a></li></ul>							<ul><li><a title="KAWASAKI - znění ochranných známek" href="https://oz.kurzy.cz/kawasaki-zneni/">KAWASAKI</a></li></ul>							<ul><li><a title="TITAN - znění ochranných známek" href="https://oz.kurzy.cz/titan-zneni/">TITAN</a></li></ul>							<ul><li><a title="ECH TP2 MEMBER OF ENERGOCHEMICA - znění ochranných známek" href="https://oz.kurzy.cz/ech-tp2-member-of-energochemica-zneni/">ECH TP2 MEMBER OF ENERGOCHEMICA</a></li></ul>						</td>		</tr></tbody></table>	</div>	<!-- zpravy --></div><!-- submenuitems and zpravy -->					</li></ul>
+
+<ul><li id="nb10313"><a title="Adresář finančních institucí." class="mastera" href="https://www.kurzy.cz/katalog/">Finanční katalog</a>
+	
+				<div class="vyplaz">	<div class="vyplazitems">		<table><tbody><tr>			<td class="vyplazwrapitems first">						<ul><li class=" "><a title="Srovnání Forex a CFD brokerů" href="https://kurzy.cz/katalog/forex-brokeri/">Forex brokeři</a></li></ul>						<ul><li class=" "><a title="Investiční zlato" href="https://kurzy.cz/katalog/investicni-zlato/">Prodej zlata</a></li></ul>						<ul><li class=" "><a title="Směnárny" href="https://kurzy.cz/katalog/smenarny/">Směnárny</a></li></ul>						<ul><li class=" "><a title="Banky v ČR" href="https://kurzy.cz/katalog/banky-v-cr">Banky v ČR</a></li></ul>			</td><td class="vyplazwrapitems">			<ul><li class=" "><a title="Finanční úřady" href="https://kurzy.cz/katalog/financni-urady/">Finanční úřady</a></li></ul>						<ul><li class=" "><a title="Investiční společnosti" href="https://kurzy.cz/katalog/investicni-spolecnosti/">Investiční společnosti</a></li></ul>						<ul><li class=" "><a title="Penzijní společnosti" href="https://kurzy.cz/katalog/penzijni-spolecnosti/">Penzijní společnosti</a></li></ul>						<ul><li class=" "><a title="Spotřebitelské úvěry" href="https://kurzy.cz/pujcky/poskytovatele">Spotřebitelské úvěry</a></li></ul>			</td><td class="vyplazwrapitems">			<ul><li class=" "><a title="Zahraniční fondy" href="https://kurzy.cz/katalog/zahranicni-fondy/">Zahraniční fondy</a></li></ul>						<ul><li class=" "><a title="Pojišťovny" href="https://kurzy.cz/katalog/pojistovny/">Pojišťovny</a></li></ul>						<ul><li class=" "><a title="Diskuze nad subjekty v katalogu" href="https://www.kurzy.cz/nazory/financni-katalog/">Názory =&gt;</a></li></ul>						</td>		</tr></tbody></table>	</div>		<!-- zpravy --></div><!-- submenuitems and zpravy -->					</li></ul>
+
+<ul><li class="borderr" id="nb12086"><a title="Dotace eu, kotlíkové dotace, SZIF" class="mastera" href="https://www.kurzy.cz/dotace/">Dotace</a>
+	
+				<!-- submenuitems and zpravy -->					</li></ul>
+
+<ul><li class="borderr" id="nb12200"><a title="Zpravodajství o podnikání" class="mastera" href="https://www.kurzy.cz/zpravy/podnikani/">Zpravodajství o podnikání</a>
+	
+				<!-- submenuitems and zpravy -->					</li></ul>
+
+<ul><li class="borderr" id="nb9105"><a title="Firmy" class="mastera" href="https://www.kurzy.cz/firmy/">Firmy</a>
+	
+				<!-- submenuitems and zpravy -->					</li></ul>
+
+<ul><li id="nb0"><a title="Další položky v této sekci" class="mastera" href="#">Další</a>
+	
+		
+			
+<div class="vyplaz vyplazr">
+	<div class="vyplazitems">
+		<table><tbody><tr>
+			<td class="vyplazwrapitems first">
+			
+			<ul><li class=" "><a title="Přeprava" href="https://www.kurzy.cz/podnikani/preprava/">Přeprava</a></li></ul>
+			</td><td class="vyplazwrapitems">
+			<ul><li class=" "><a title="Živnosti a živnostníci" href="#">Živnosti</a></li></ul>
+			
+			</td>
+		</tr></tbody></table>
+	</div>
+	
+	<!-- zpravy -->
+</div>
+<!-- submenuitems and zpravy -->
+
+		
+	
+</li></ul>
+
+
+</div>
+
+
+
+			</div>
+		
+		<div id="qr"></div>
+		</div> <!--/ram_inner-->
+
+		
+			<div class="ecb" id="adv_bottom" style="padding: 5px 30px; height: 100px;"><iframe height="93" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="margin-bottom: 10px;"></iframe></div>
+			<div class="ecb" id="adv_stickyad"><script> a_adv.im('stickyad') </script></div>
+		
+
+		
+
+	</div> <!--/ram-->
+
+	<div class="ecb" id="ram_paticka">
+		<div class="paticka">
+		  
+			<table>
+  <tbody><tr>
+	<td>
+	  <h4><a title="Kalkulačka - finanční kalkulačky online." href="https://www.kurzy.cz/kalkulacka/">Kalkulačka</a> - <a title="Výpočet - výpočty mzdy, důchodu, nemocenské." href="https://www.kurzy.cz/vypocet/">Výpočet</a></h4>
+	  <p><a title="Výpočet čisté mzdy - Čistá mzda, hrubá mzda, daně, kalkulačka mzdy." href="https://www.kurzy.cz/kalkulacka/vypocet-ciste-mzdy/">Výpočet čisté mzdy</a></p>
+	  <p><a title="Výpočet důchodu - kalkulačka odchodu do důchodu" href="https://www.kurzy.cz/kalkulacka/duchodova-kalkulacka/">Důchodová kalkulačka</a></p>
+	  <p><a title="Přídavky na dítě" href="https://www.kurzy.cz/kalkulacka/pridavky-na-dite/">Přídavky na dítě</a></p>
+	  <p><a title="Příspěvek na bydlení" href="https://www.kurzy.cz/kalkulacka/prispevek-na-bydleni/">Příspěvek na bydlení</a></p>
+	  <p><a title="Rodičovský příspěvek" href="https://www.kurzy.cz/kalkulacka/rodicovsky-prispevek/">Rodičovský příspěvek</a></p>
+	  <p><a title="Životní minimum" href="https://www.kurzy.cz/kalkulacka/zivotni-minimum/">Životní minimum</a></p>
+	  <p><a title="Hypoteční kalkulačka" href="https://www.kurzy.cz/kalkulacka/hypotecni-kalkulacka/">Hypoteční kalkulačka</a></p>
+	  <p><a title="POV - zákonné pojištění aut" href="https://www.kurzy.cz/povinne-ruceni/">Povinné ručení</a></p>
+	  
+	</td>
+	<td>
+	  <h4><a title="Banky a bankomaty - Česká spořitelna, ČSOB, Unicredit, GE money bank, Komerční banka" href="https://www.kurzy.cz/banky/">Banky</a> a <a href="https://www.kurzy.cz/banky/bankomaty/">Bankomaty</a></h4>
+	  <p><a title="Nejlepší úroky u českých bank." href="https://www.kurzy.cz/urokove-sazby/">Úrokové sazby</a></p>
+	  
+	  <p><a title="Hypotéky, kalkulačka, Nabídky hypotečních bank" href="https://www.kurzy.cz/hypoteky/">Hypotéky</a>, <a title="Srovnání nabídek - všechny stavební spořitelny, on-line prodej." href="https://www.kurzy.cz/stavebni-sporeni/">Stavební spoření</a></p>
+	  
+	  <p><a title="Směnárny v regionech - Praha, Plzeň, Ostrava, Brno, Olomouc." href="https://www.kurzy.cz/smenarny/">Směnárny</a> -
+	  <a title="Kurz Eura" href="https://www.kurzy.cz/kurzy-men/nejlepsi-kurzy/EUR-euro/">Euro</a>,
+	  <a title="Kurz dolaru" href="https://www.kurzy.cz/kurzy-men/nejlepsi-kurzy/USD-americky-dolar/">Dolar</a>
+	  </p>
+	  <h4><a href="https://www.kurzy.cz/prace/">Práce</a> - <a title="Volná pracovní místa - MPSV, Jobs" href="https://prace.kurzy.cz/urad-prace/volna-mista/">Volná místa</a></h4>
+	  <p><a title="Úřady práce, volná pracovní místa, nabídky práce." href="https://prace.kurzy.cz/urad-prace/">Úřad práce</a>,
+	  <a title="Mzdy - výpočet mzdy, průměrná mzda" href="https://www.kurzy.cz/mzda/">Mzdy</a>, <a title="Platy a platové tabulky" href="https://www.kurzy.cz/platy/">Platy</a> 
+	  </p>
+	  <h4><a title="Příspěvky - rodičovský, na péči, na bydlení, dávky podpory" href="https://www.kurzy.cz/prispevky-davky/">Dávky a příspěvky</a></h4>
+	  <p><a title="Nemocenská" href="https://www.kurzy.cz/prispevky-davky/nemocenska/">Nemocenská</a>, <a title=" Porodné" href="https://www.kurzy.cz/prispevky-davky/porodne/">Porodné</a></p>
+	  <p><a title="Podpora - nezaměstnanost" href="https://www.kurzy.cz/prispevky-davky/podpora-v-nezamestnanosti/">Podpora v nezaměstnanosti</a></p>
+	  <p><a title="Důchody, penze, penzijní." href="https://www.kurzy.cz/duchody/">Důchody</a></p>
+	  
+	</td>
+	<td>
+	  <h4><a href="https://www.kurzy.cz/investice/">Investice</a></h4>
+	  <p>
+	  <a title="Burza cenných papírů Praha (pražská burza)" href="https://www.kurzy.cz/akcie-cz/burza/">Burza</a>
+	  -
+	  <a title="Akcie ČEZ online, zprávy" href="https://www.kurzy.cz/akcie-cz/akcie/cez-183/">ČEZ</a>
+	  </p>
+	  <p><a title="Dluhopisy - státní a korporátní dluhopisy" href="https://www.kurzy.cz/dluhopisy/">Dluhopisy</a>, <a title="Výsledky podílových fondů." href="https://www.kurzy.cz/podilove-fondy/">Podílové fondy</a></p>
+	  <p><a title="Česká ekonomika" href="https://www.kurzy.cz/makroekonomika/">Ekonomika</a> - <a title="Hrubý domácí produkt" href="https://www.kurzy.cz/makroekonomika/hdp/">HDP</a>, <a title="Průměrná mzda" href="https://www.kurzy.cz/makroekonomika/mzdy/">Mzdy</a>
+	  </p>
+	  <p><a href="https://www.kurzy.cz/kryptomeny/">Kryptoměny</a> - <a href="https://www.kurzy.cz/bitcoin/">Bitcoin</a>, <a href="https://www.kurzy.cz/ethereum/">Ethereum</a>
+	  </p>
+	  <h4><a href="https://www.kurzy.cz/komodity/drahe-kovy/">Drahé kovy</a></h4><p><a title="Zlato - Cena zlata online" href="https://www.kurzy.cz/komodity/zlato-graf-vyvoje-ceny/">Zlato</a>, <a title="investiční zlato, prodej" href="https://zlato.kurzy.cz/">Investiční zlato</a>,
+	  <a title="Stříbro, investiční stříbro, cena stříbra" href="https://www.kurzy.cz/komodity/stribro-graf-vyvoje-ceny/">Stříbro</a>
+	  </p>
+	  <p>
+	  <a title="Ropa - cena ropy brent, graf" href="https://www.kurzy.cz/komodity/ropa-brent-graf-vyvoje-ceny/">Ropa</a>
+	  - <a title="Pohonné hmoty - vývoj cen" href="https://www.kurzy.cz/komodity/phm/">PHM</a>,
+	  <a href="https://www.kurzy.cz/komodity/benzin/">Benzín</a>,
+	  <a href="https://www.kurzy.cz/komodity/nafta/">nafta</a>
+	  </p>
+	  
+	</td>
+	<td>
+	  <h4><a href="https://www.kurzy.cz/podnikani/">Podnikání</a></h4>
+	  <p><a title="Obchodní rejstřík firem justice.cz" href="https://rejstrik-firem.kurzy.cz/">Obchodní rejstřík</a></p>
+	  <p><a title="Regiony - Podnikání v regionech." href="https://regiony.kurzy.cz/">Města a obce</a>, <a title="PSČ a pošty." href="https://regiony.kurzy.cz/psc/">PSČ</a> </p>
+	  <p><a title="Nahlížení do katastru nemovitostí online, katastrální úřady, mapy." href="https://regiony.kurzy.cz/katastr/">Katastr nemovitostí</a></p>
+	  <p><a title="Vyhledání ochranných známek" href="https://oz.kurzy.cz/">Ochranné známky</a></p>
+	  <p><a href="https://katalog.kurzy.cz/">Finanční katalog</a></p>
+	  <p><a title="Občanský zákoník od 2014, úplné znění" href="https://www.kurzy.cz/zakony/89-2012-obcansky-zakonik/">Občanský zákoník</a></p>
+	  <p><a href="https://www.kurzy.cz/zakony/262-2006-zakonik-prace/">Zákoník práce</a></p>
+	  <p><a href="https://www.kurzy.cz/zakony/183-2006-stavebni-zakon/">Stavební zákon</a></p>
+	  <p><a href="https://www.kurzy.cz/dane-danova-priznani/">Daně</a>, <a href="https://www.kurzy.cz/formulare/">formuláře</a></p>
+	</td>
+	<td>
+	  <h4>Další odkazy</h4>
+	  <p><a title="Auta - zpravodajství o výrobě a prodeji aut" href="https://www.kurzy.cz/auto/">Auto</a>, <a title="TÜV report - spolehlivost automobilů" href="https://www.kurzy.cz/tuv-testy-spolehlivosti-automobilu/">Spolehlivost Aut</a></p>
+	  <p><a title="Ekonomika - ekonomická témata" href="https://www.kurzy.cz/tema/">Monitoring ekonomiky</a></p>
+	  <p><a title="Volby 2019, 2020 - parlamentní, krajské, prezidentské volby, výsledky" href="https://volby.kurzy.cz/">Volby</a>, <a title="Hlavní sekce kurzy.cz" href="https://www.kurzy.cz/util/comm.asp?AC=MAPA&amp;S=2">Mapa webu</a></p>
+
+	  <h4><a title="Czech finance - Prague stock, commodities, exchange rates, news." href="https://eng.kurzy.cz/" hreflang="en">English version</a></h4>
+	  <p><a title="Czech currency exchange rates, czk to euro, dollar to czk." href="https://eng.kurzy.cz/english/czech-currency-rates/" hreflang="en">Czech currency</a></p>
+	  <p><a title="Praha/Prague stock exchange. Czech stock. realtime prices." href="https://prague-stock.kurzy.cz/" hreflang="en">Prague stock exchange</a></p>
+	</td>
+  </tr>
+</tbody></table>
+<hr>
+
+
+
+
+		  
+
+		  <div class="paticka2">
+
+			
+			<a title="Kurzy měn, akcie, komodity" class="logo" href="https://www.kurzy.cz">Kurzy.cz titulní stránka</a>
+			
+
+			
+
+			<div style="float: left;">
+			  <p><a href="https://www.kurzy.cz/?cwOchranaUdaju.htm">Ochrana dat</a></p>
+			  <p><a href="https://www.kurzy.cz/osobni-udaje/cookies/">Používání cookies</a></p>
+			  <p>Copyright © 2000 - 2020 </p>
+			  <p>Kurzy.cz, spol. s r.o., AliaWeb, spol. s r.o.</p>
+			  
+				<p>ISSN 1801-8688</p>
+				<p><a href="https://www.kurzy.cz/?cwOchranaUdaju.htm">Ochrana dat</a> | <a href="https://www.kurzy.cz/osobni-udaje/cookies/">Používání cookies</a></p>
+			  
+			</div>
+			
+			
+			<div class="noprint" style="font-size: 12px; margin-left: 50px; float: left;">
+			  <p><a title="Informace o reklamě na internetových stránkách serverů AliaWeb, ceník, kontakty." href="https://www.kurzy.cz/reklama/">Reklama na kurzy.cz</a></p>
+			  <p><a title="Nákup reklamy na kurzy.cz v RTB" href="https://www.kurzy.cz/reklama/rtb.htm">RTB reklama</a></p>
+			  
+			  <p><a title="RSS kanály kurzy.cz/zpravy" href="https://www.kurzy.cz/rss/">RSS</a> | <a title="HTML kódy pro váš web nebo blog s aktuálními kurzy." href="https://www.kurzy.cz/html-kody/">HTML kódy</a></p>
+			  <p><a title="Kontakty na pracovníky firmy kurzy.cz." href="https://www.kurzy.cz/kontakty/">Kontakty pro kurzy.cz</a></p>
+			</div>
+			
+			
+		  </div>
+		</div> <!--/paticka-->
+
+		
+		  <div class="dole"></div>
+		  <div id="adv_aux">
+  <script>a_adv.all()</script>
+  <div id="adv_topnewsnew_s"><script>a_adv.rscript('topnewsnew')</script></div>
+  <div id="adv_bottom_s"><script>a_adv.rscript('bottom')</script></div>
+  <div id="adv_partner_s"><script>a_adv.rscript('partner')</script></div>
+  <div id="adv_partner2_s"><script>a_adv.rscript('partner2')</script></div>
+  <div id="adv_partner300_s"><script>a_adv.rscript('partner300')</script></div>
+  <div id="adv_prezentace_s"><script>a_adv.rscript('prezentace')</script></div>
+  <div id="adv_topclient2_s"><script>a_adv.rscript('topclient2')</script></div>
+  <div id="adv_viphorni_s"><script>a_adv.rscript('viphorni')</script></div>
+  <div id="adv_vipdolni_s"><script>a_adv.rscript('vipdolni')</script></div>
+  <script>a_adv.mscript()</script>
+
+</div>
+
+		
+	</div><!--/ram_paticka-->
+
+	<div>
+	  <script src="//s.kurzy.cz/l/foot3.js?v=1"></script><iframe width="1" height="1" src="//s.kurzy.cz/e/gaic.asp" frameborder="0" marginwidth="0" marginheight="0" style="display: none;"></iframe><iframe width="1" height="1" src="https://s.kurzy.cz/l/toplist.html" frameborder="0" marginwidth="0" marginheight="0" style="display: none;"></iframe> 
+	  
+		
+		<script>a_adv.ram('k')</script>
+	  
+	</div>
+	<!-- mc_msg_bot=10596 -->
+
+	  
+	  <nav class="mm-spn mm-spn--light mm-spn--vertical" id="mmenu">
+  <ul id="mainmmmenu">
+	<li><a href="https://rejstrik-firem.kurzy.cz/">Hledání rejstřík</a></li><li><a href="https://regiony.kurzy.cz/">Hledání adresa</a></li><li><a href="https://rejstrik-firem.kurzy.cz/hledej-dph/">DPH ověření</a></li><li><a href="https://www.podnikani.cz/">Vizuální rejstřík</a></li><li><a href="https://oz.kurzy.cz/">Ochranné známky</a></li><li><a href="https://www.kurzy.cz/prodej-dat/databaze-firmy.htm">Prodej dat z rejstříků</a></li>
+	
+<li><a href="https://www.kurzy.cz/podnikani/">PODNIKÁNÍ</a>
+  
+  <ul>
+	
+	<li><a href="https://rejstrik-firem.kurzy.cz/">Obchodní rejstřík</a></li>
+	
+	<li><a href="https://www.kurzy.cz/dane/">Daně</a></li>
+	
+	<li><a href="https://www.kurzy.cz/zakony/">Zákony</a></li>
+	
+	<li><a href="https://www.kurzy.cz/dph/">DPH, DIČ</a></li>
+	
+	<li><a href="https://www.kurzy.cz/kalkulacka/">Kalkulačky</a></li>
+	
+	<li><a href="https://regiony.kurzy.cz/">Města a obce</a></li>
+	
+	<li><a href="https://oz.kurzy.cz/">Ochranné známky</a></li>
+	
+	<li><a href="https://www.kurzy.cz/mzda/">Mzdy</a></li>
+	
+	<li><a href="https://www.kurzy.cz/dotace/">Dotace</a></li>
+	
+	<li><a href="https://www.kurzy.cz/zpravy/podnikani/">Zprávy</a></li>
+	
+	<li><a href="https://www.kurzy.cz/katalog/">Katalog</a></li>
+	
+  </ul>
+  
+</li>
+
+<li><a href="https://www.kurzy.cz/zpravy/">ZPRÁVY</a>
+  
+  <ul>
+	
+	<li><a href="https://www.kurzy.cz/zpravy/investice/">Z investic</a></li>
+	
+	<li><a href="https://www.kurzy.cz/zpravy/osobni-finance/">Z osobních financí</a></li>
+	
+	<li><a href="https://www.kurzy.cz/zpravy/podnikani/">Z podnikání</a></li>
+	
+	<li><a href="https://www.kurzy.cz/pocasi/">Počasí</a></li>
+	
+	<li><a href="https://www.kurzy.cz/zpravy/politika/">Z politiky a událostí</a></li>
+	
+	<li><a href="https://www.kurzy.cz/kurzy-men/">Kurzy měn</a></li>
+	
+	<li><a href="https://www.kurzy.cz/akcie-cz/">Akcie ČR</a></li>
+	
+	<li><a href="https://www.kurzy.cz/komodity/">Komodity</a></li>
+	
+	<li><a href="https://www.kurzy.cz/stat/">Stát</a></li>
+	
+	<li><a href="https://www.kurzy.cz/zpravy/tiskove-zpravy/">Tiskové zprávy</a></li>
+	
+  </ul>
+  
+</li>
+
+<li><a href="https://www.kurzy.cz/investice/">INVESTICE</a>
+  
+  <ul>
+	
+	<li><a href="https://www.kurzy.cz/akcie-cz/">Akcie ČR</a></li>
+	
+	<li><a href="https://www.kurzy.cz/akcie-svet/">Akcie svět</a></li>
+	
+	<li><a href="https://www.kurzy.cz/komodity/">Komodity</a></li>
+	
+	<li><a href="https://www.kurzy.cz/zlato/">Zlato</a></li>
+	
+	<li><a href="https://www.kurzy.cz/kurzy-men/aktualni/">Měny online</a></li>
+	
+	<li><a href="https://www.kurzy.cz/forex/">Forex</a></li>
+	
+	<li><a href="https://www.kurzy.cz/kryptomeny/">Kryptoměny</a></li>
+	
+	<li><a href="https://www.kurzy.cz/makroekonomika/">Ekonomika</a></li>
+	
+	<li><a href="https://www.kurzy.cz/podilove-fondy/">Podílové fondy</a></li>
+	
+	<li><a href="https://www.kurzy.cz/dluhopisy/">Dluhopisy</a></li>
+	
+	<li><a href="https://www.kurzy.cz/zpravy/investice/">Zprávy z investic</a></li>
+	
+	<li><a href="https://www.kurzy.cz/big-expert/">Big Expert</a></li>
+	
+  </ul>
+  
+</li>
+
+<li><a href="https://www.kurzy.cz/finance/">OSOBNÍ FINANCE</a>
+  
+  <ul>
+	
+	<li><a href="https://www.kurzy.cz/bydleni/">Bydlení</a></li>
+	
+	<li><a href="https://www.kurzy.cz/prace/">Práce</a></li>
+	
+	<li><a href="https://www.kurzy.cz/auto/">Auto</a></li>
+	
+	<li><a href="https://www.kurzy.cz/tarify/">Telefony</a></li>
+	
+	<li><a href="https://www.kurzy.cz/duchod/">Důchod</a></li>
+	
+	<li><a href="https://www.kurzy.cz/ucty-sporeni/">Účty a spoření</a></li>
+	
+	<li><a href="https://www.kurzy.cz/prispevky-davky/">Dávky</a></li>
+	
+	<li><a href="https://www.kurzy.cz/energie/">Energie</a></li>
+	
+	<li><a href="https://www.kurzy.cz/pujcky/">Půjčky</a></li>
+	
+	<li><a href="https://www.kurzy.cz/kalkulacka/">Kalkulačky</a></li>
+	
+	<li><a href="https://www.kurzy.cz/banky/">Banky a bankomaty</a></li>
+	
+	<li><a href="https://www.kurzy.cz/insolvence/">Insolvence</a></li>
+	
+	<li><a href="https://www.kurzy.cz/dovolena/">Dovolená</a></li>
+	
+	<li><a href="https://www.kurzy.cz/kalendar/">Kalendář</a></li>
+	
+	<li><a href="https://www.kurzy.cz/zpravy/osobni-finance/">Zprávy</a></li>
+	
+  </ul>
+  
+</li>
+
+<li><a href="https://www.kurzy.cz/kurzy-men/">KURZY MĚN</a>
+  
+  <ul>
+	
+	<li><a href="https://www.kurzy.cz/kurzy-men/nejlepsi-kurzy/EUR-euro/">Euro</a></li>
+	
+	<li><a href="https://www.kurzy.cz/kurzy-men/nejlepsi-kurzy/USD-americky-dolar/">Dolar</a></li>
+	
+	<li><a href="https://www.kurzy.cz/kurzy-men/aktualni/">Kurzy měn online</a></li>
+	
+	<li><a href="https://www.kurzy.cz/kurzy-men/kurzovni-listek/ceska-narodni-banka/">Kurzy ČNB</a></li>
+	
+	<li><a href="https://www.kurzy.cz/kurzy-men/kurzovni-listek/">Kurzovní lístky bank</a></li>
+	
+	<li><a href="https://www.kurzy.cz/kurzy-men/prevodnik-men/">Převodník měn</a></li>
+	
+	<li><a href="https://www.kurzy.cz/smenarny/">Směnárny</a></li>
+	
+	<li><a href="https://www.kurzy.cz/forex/">Forex</a></li>
+	
+	<li><a href="https://www.kurzy.cz/forex/krizove-kurzy/">Forex křížové kurzy</a></li>
+	
+  </ul>
+  
+</li>
+
+<li><a href="https://www.kurzy.cz/kalkulacka/">KALKULAČKY</a>
+  
+</li>
+
+<li><a href="https://www.kurzy.cz/sluzby/">NAŠE SLUŽBY</a>
+  
+  <ul>
+	
+	<li><a href="https://www.kurzy.cz/reklama/">Reklama</a></li>
+	
+	<li><a href="https://www.kurzy.cz/zasilani-e-mailem/">Zasílání mailem</a></li>
+	
+	<li><a href="https://www.kurzy.cz/html-kody/">Kódy pro Vaše stránky</a></li>
+	
+	<li><a href="https://www.kurzy.cz/util/comm.asp?AC=R">Registrace</a></li>
+	
+	<li><a href="https://www.kurzy.cz/rss/">RSS zpravodajství</a></li>
+	
+	<li><a href="https://www.kurzy.cz/prodej-dat/">Prodej dat</a></li>
+	
+	<li><a href="https://volby.kurzy.cz/">Volby</a></li>
+	
+  </ul>
+  
+</li>
+
+<li><a href="https://www.kurzy.cz/nazory/">DISKUSE</a>
+  
+  <ul>
+	
+	<li><a href="https://www.kurzy.cz/nazory/">Hlavní diskuse</a></li>
+	
+	<li><a href="https://www.kurzy.cz/nazory/vsechna-temata/">Přehled témat</a></li>
+	
+	<li><a href="https://www.kurzy.cz/nazory/default.asp?A=C&amp;amp;L=0">Nejnovější příspěvky</a></li>
+	
+	<li><a href="https://www.kurzy.cz/nazory/default.asp?A=F">Hledání</a></li>
+	
+  </ul>
+  
+</li>
+
+
+  </ul>
+</nav>
+
+<div id="smenu" style="width: 100%; text-align: center; line-height: 3;">
+  <form class="simpleform" style="background: rgb(250, 251, 247); border: currentColor; border-image: none;" action="/hledej/" method="get">
+	<input name="s" style="width: 30%; height: 30px;" type="text" value=""> 
+	<input name="r" style="width: 80%; height: 30px;" type="submit" value="Hledat">
+  </form>
+</div>
+
+<div id="umenu" style="width: 100%; text-align: center; line-height: 2;">
+  <form class="simpleform" style="background: rgb(250, 251, 247); margin: 0px; border: currentColor; border-image: none;" onkeypress="return event.keycode != 13;">  
+	<div style="padding: 10px 0px 0px 10px; text-align: left;">
+	  <b id="id_emb_boxtitle"></b>
+	</div>
+	<div id="mobile_emb" style="margin: 0px auto; padding: 10px 15px 15px 10px; width: 100%; text-align: left; display: none; max-width: 320px;">
+	<div id="asuccess" style="display: none;">Vaše zadání bylo přijato.  Na Váš e-mail byla odeslána žádost o potvrzení požadované služby. Děkujeme Vám za zájem. <br></div>
+	<div class="xalt" id="ainfo" style="width: 92%; color: red; display: none;">Zadaný výběr máte již objednán a potvrzen.</div>
+	<div class="xalt" id="aerror" style="width: 92%; color: red; display: none;"></div>
+	<span class="atype" style="color: gray;">Váš e-mail:</span><br><input name="mail" id="id_mail" style="width: 92%;" type="email" value="@">
+	<div class="atype" style="margin: 5px 0px 0px;">
+	  <span id="id_emb_boxcatname" style="display: none;"></span>
+	  <span id="id_emb_boxcattext" style="font-weight: bold; display: none;"></span>
+	</div>
+	<div style="width: 92%; text-align: right;">
+	  <button id="email_order_btn" style="padding: 2px 0.8em; border-radius: 3px; border: 2px outset rgb(89, 89, 89); border-image: none; color: white; font-size: 100%; font-weight: bold; background-color: rgb(89, 89, 89);" type="button">Zasílat</button>
+	</div>
+  </div>
+  </form>
+  
+  <div id="mobileuseron" style="background: rgb(250, 251, 247); border-width: 1px medium medium; border-style: solid none none; border-color: rgb(192, 192, 192) currentColor currentColor; margin: 0px auto; padding: 10px; border-image: none; text-align: left;"> 
+	Uživatel: <span id="mobileuserfullname"></span>
+	<table style="width: 100%; max-width: 320px;">
+	  <tbody><tr>
+		<td><a title="Opravit registrační údaje" class="clblack" href="https://www.kurzy.cz/util/comm.asp?AC=R" target="_top"><i>Upravit profil</i></a></td>	
+		<td style="text-align: right;"><button style="padding: 2px 0.8em; border-radius: 3px; border: 2px outset rgb(89, 89, 89); border-image: none; color: white; font-size: 100%; font-weight: bold; background-color: rgb(89, 89, 89);" onclick="window.location.href='https://www.kurzy.cz/util/login.asp?AC=OF'" type="button">ODHLÁŠENÍ</button></td>
+	  </tr>
+	</tbody></table>
+  </div>  
+
+  <div id="mobileuseroff">
+  <form class="simpleform" style="background: rgb(250, 251, 247); margin: 0px; border: currentColor; border-image: none;" action="https://www.kurzy.cz/util/login.asp?AC=G" method="get">
+	<div style="padding: 10px 0px 0px 10px; text-align: left; border-top-color: rgb(192, 192, 192); border-top-width: 1px; border-top-style: solid;">
+	  <b>Přihlášení</b>
+	</div>
+	<table class="pdw" style="margin: 0px auto; padding: 10px 15px 15px 10px; width: 100%; text-align: left; max-width: 320px;">
+	  <tbody><tr><td style="width: 100px;">Jméno:</td><td> <input name="uname" style="width: 220px;" size="30" maxlength="30" value=""> </td></tr>
+	  <tr><td>Heslo: </td><td> <input name="pwd" style="width: 220px;" type="Password" size="30" maxlength="30" value=""> </td></tr>
+	</tbody></table>
+	<table style="margin: 0px auto; padding: 0px 15px 15px 10px; width: 100%; max-width: 320px;">
+	  <tbody><tr>
+	  <td style="text-align: left;"><a class="clblack" href="https://www.kurzy.cz/util/sendpass.asp">Zapomenuté heslo ?</a> </td>
+	  <td class="rght"><input type="submit" value="Přihlásit"></td>
+		</tr>
+	</tbody></table>
+
+	<div style="padding: 10px; text-align: left; border-top-color: rgb(192, 192, 192); border-top-width: 1px; border-top-style: solid;">
+	  <b><a class="clblack" href="https://www.kurzy.cz/util/comm.asp?AC=R">Registrace nového uživatele</a></b>
+	</div>
+  </form>
+  </div>
+</div>
+
+<div id="adv_headerlogin"> <script>a_adv.im('headerlogin')</script> </div>
+
+<script>
+$(function() {
+  var menuopen=0;
+  var menu = new MmenuLight( document.querySelector( '#mmenu' ));
+  var navigator = menu.navigation({ slidingSubmenus: false });
+  var drawer = menu.offcanvas();
+
+  var smenuopen=0;
+  var smenu = new MmenuLight( document.querySelector( '#smenu' ));
+  var sdrawer = smenu.offcanvas();
+
+  var umenuopen=0;
+  var umenu = new MmenuLight( document.querySelector( '#umenu' ));
+  var udrawer = umenu.offcanvas();
+
+  function hideshowb(x, d) {
+	if (d){
+	  $('#'+x+'mxclose').hide();
+	  $('#'+x+'mxopen').show();	
+	} else {
+	  $('#'+x+'mxopen').hide();
+	  $('#'+x+'mxclose').show();	
+	}
+  }
+
+  $('a[href="#umenu"]').click(function() {
+	if (menuopen == 1) {
+	  drawer.close();
+	  menuopen=0;
+	  hideshowb('m', 1);
+	}
+	if (smenuopen == 1) {
+	  sdrawer.close();
+	  smenuopen=0;
+	  hideshowb('s', 1);
+	}
+	if (umenuopen == 0) {
+	  event.preventDefault();
+	  udrawer.open();
+	  umenuopen=1;
+	  $('#umenu').parent().css("height","100px");
+	  hideshowb('u', 0);
+	} else {
+	  udrawer.close();
+	  umenuopen=0;
+	  hideshowb('u', 1);
+	}
+  });
+
+
+  $('a[href="#mmenu"]').click(function() {
+	if (smenuopen == 1) {
+	  sdrawer.close();
+	  smenuopen=0;
+	  hideshowb('s', 1);
+	}
+	if (umenuopen == 1) {
+	  udrawer.close();
+	  umenuopen=0;
+	  hideshowb('u', 1);
+	}
+	if (menuopen == 0) {
+	  event.preventDefault();
+	  drawer.open();
+	  if( $('#mmxclose').length ) {
+		menuopen=1;
+		hideshowb('m', 0);
+	  }
+	} else {
+	  drawer.close();
+	  menuopen=0;
+	  hideshowb('m', 1);
+	}
+  });
+
+  $('a[href="#smenu"]').click(function() {
+	if (menuopen == 1) {
+	  drawer.close();
+	  menuopen=0;
+	  hideshowb('m', 1);
+	}
+	if (umenuopen == 1) {
+	  udrawer.close();
+	  umenuopen=0;
+	  hideshowb('u', 1);
+	}
+	if (smenuopen == 0) {
+	  event.preventDefault();
+	  sdrawer.open();
+	  smenuopen=1;
+	  $('#smenu').parent().css("height","100px");
+	  hideshowb('s', 0);
+	} else {
+	  sdrawer.close();
+	  smenuopen=0;
+	  hideshowb('s', 1);
+	}
+  });
+
+var last_y_scroll = 0;
+$(window).scroll(function(event){
+   var height = $(window).height() / 2;
+   var Pos = $(this).scrollTop();
+  if (Pos > height ) { 
+   if (Pos > last_y_scroll ){
+	$('#mmheader').css('height', '0px');
+   } else {
+      $('#mmheader').css('height', '100px');
+   }
+   last_y_scroll = Pos;
+ }
+});
+
+
+});
+</script>
+
+	
+
+	<div>
+	  <script>
+		try {
+		  var noview_all = ''
+		  try { if (alia_adv.noview != '' && alia_adv.noview != undefined) noview_all = alia_adv.noview } catch(e){}	
+		  if (!(alia_gSeznamSession) && alia_gSS <= 990 && noview_all != 'all') { 
+			var a_rand = Math.random()
+    		if (a_rand <= 0.090909) {	            
+			  	document.write('<scr'+'ipt src="//adx.adplace.cz/kernel/js.php?id=2314"></scr'+'ipt>')				  					
+				admaster7898 = new Image(1,1); 
+				admaster7898.src='https://rsc.kurzy.cz/p/2923/11928/2814/7898/'
+			} else {
+				document.write('<scr'+'ipt src="//trackad.cz/get/kurzy.cz/generic/fixed"></scr'+'ipt>')
+				r2b27995 = new Image(1,1); 
+				r2b27995.src='https://rsc.kurzy.cz/p/2923/12054/2866/7995/'
+			}			
+		  }
+		} catch(e) {}
+	  </script>
+	</div>
+	
+	<!-- (C)2013 Gemius SA - gemiusAudience / Kurzy.cz / Obchodni rejstrik -->
+	<script>
+	<!--//--><![CDATA[//><!--
+	var pp_gemius_identifier = '0niQAutsv0Sx00j7k26sM8cPDkFkqUMVN0OZjsogK7T.r7';
+	function gemius_pending(i) { window[i] = window[i] || function() {var x = window[i+'_pdata'] = window[i+'_pdata'] || []; x[x.length]=arguments;};};
+	gemius_pending('gemius_hit'); gemius_pending('gemius_event'); gemius_pending('pp_gemius_hit'); gemius_pending('pp_gemius_event');
+	(function(d,t) {try {var gt=d.createElement(t),s=d.getElementsByTagName(t)[0]; gt.setAttribute('async','async'); gt.setAttribute('defer','defer');
+	 gt.src='//gacz.hit.gemius.pl/xgemius.js'; s.parentNode.insertBefore(gt,s);} catch (e) {}})(document,'script');
+	//--><!]]>
+	</script>
+		
+  
+
+<div id="ui-datepicker-div"></div><iframe name="lsgetframe" width="0" height="0" id="gemius_hcconn_1598870622036_52084522" src="https://ls.hit.gemius.pl/lsget.html" scrolling="no" style="display: none; visibility: hidden;" sandbox="allow-scripts allow-same-origin"></iframe><iframe name="__cmpLocator" width="1" height="1" style="margin: 0px; padding: 0px; top: -100px; position: absolute;"></iframe><div style="display: none;"><a title="Do not click me1!" id="hp1" href="#">&lt;!Ă˘â‚¬â€ś- Don't click me1 Ă˘â‚¬â€ś-&gt;</a></div><a title="Don't click!" id="hp2" href="#"><img width="1" height="1" id="hp1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="></a><iframe name="google_osd_static_frame" id="google_osd_static_frame_9294951913437" style="width: 0px; height: 0px; display: none;"></iframe></body></html>

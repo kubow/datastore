@@ -1,0 +1,494 @@
+<html>
+<head>
+<title>SAP Adaptive Server Enterprise 16 New Features</title>
+</head>
+<body>
+
+<h1>SAP Adaptive Server Enterprise 16 New Features - 20 May 2015 04:05</h1>
+<h1><a name="0">0. Contents</a></h1>
+<ul>
+<li><a href="#1">1. Speed enhancements</a></li>
+<li><a href="#1.1">1.1. Index compression</a></li>
+<li><a href="#1.2">1.2. Sort Operator Performance Improvement</a></li>
+<li><a href="#1.3">1.3. Hash Join Operator Performance Improvement</a></li>
+<li><a href="#1.4">1.4. Query Plan Optimization with Star Joins</a></li>
+<li><a href="#1.5">1.5. Dynamic Thread Assignment</a></li>
+<li><a href="#1.6">1.6. Load Performance Enhancements for SAP Business Warehouse</a></li>
+<li><a href="#2">2. Scale enhancements</a></li>
+<li><a href="#2.1">2.1. Run-time Logging Enhancements.</a></li>
+<li><a href="#2.2">2.2. Metadata Cache and Latch Enhancements</a></li>
+<li><a href="#2.3">2.3. Lock Management Enhancements</a></li>
+<li><a href="#2.4">2.4. Partition-level Locking</a></li>
+<li><a href="#2.5">2.5. Relaxed Query Limits</a></li>
+<li><a href="#3">3. Security enhancements</a></li>
+<li><a href="#3.1">3.1. Full-Database Encryption</a></li>
+<li><a href="#3.2">3.2. Residual Data Removal</a></li>
+<li><a href="#3.3">3.3. Full-text Auditing</a></li>
+<li><a href="#3.4">3.4. Auditing for Authorization Checks Inside Stored Procedures</a></li>
+<li><a href="#4">4. Simplicity enhancements</a></li>
+<li><a href="#4.1">4.1. Multi-trigger Support</a></li>
+<li><a href="#4.2">4.2. Integrated Disaster and Recovery Support with Synchronous Replication for SAP Business Suite</a></li>
+<li><a href="#4.3">4.3. ASE to HANA Data Access</a></li>
+<li><a href="#4.4">4.4. Support “create or replace” command for database objects</a></li>
+<li><a href="#4.5">4.5. Enhanced SAP Control Center Support</a></li>
+<li><a href="#4.5.1">4.5.1 Compression Advisor Utility</a></li>
+<li><a href="#4.5.2">4.5.2 Create or replace command</a></li>
+<li><a href="#4.5.3">4.5.3 Partition-level locking</a></li>
+<li><a href="#4.5.4">4.5.4 Index compression</a></li>
+<li><a href="#4.5.5">4.5.5 Error log enhancements</a></li>
+<li><a href="#4.5.6">4.5.6 Server configuration alert</a></li>
+<li><a href="#4.5.7">4.5.7 Management of Large scale deploymen</a></li>
+<li><a href="#4.5.8">4.5.8 Secure Store</a></li>
+<li><a href="#4.5.9">4.5.9 Data Cache Spinlock Contention Monitoring</a></li>
+<li><a href="#4.6">4.6 Configuration History Tracking</a></li>
+<li><a href="#4.7">4.7 Cyclic Redundancy Checks for Dump Databases</a></li>
+<li><a href="#4.8">4.8 Calculating Transaction Log Growth Rate</a></li>
+<li><a href="#4.9">4.9 Monitoring Threshold-based Events</a></li>
+<li><a href="#4.10">4.10 Statistics Stickiness Enhancements</a></li>
+<li><a href="#4.11">4.11 ddlgen</a></li>
+<li><a href="#4.12">4.12 sybmigrate</a></li>
+<li><a href="#4.13">4.13 sybrestore</a></li>
+<li><a href="#4.14">4.14 dbisql</a></li>
+<li><a href="#4.15">4.15 Query Plan and Execution Statistics in HTML</a></li>
+<li><a href="#4.16">4.16 SAP JVM Support</a></li>
+</ul>
+<h1><a name="1">1. Speed enhancements</a></h1>
+<h2><a name="1.1">1.1. Index compression</a></h3>
+<p>Page compression is now supported for indicies</p>
+<pre>
+create table a (b int)
+sp_configure 'enable compression',1
+create index a1 on a(b) with index_compression = page
+sp_help 'a' shows
+a1                    b                  
+	 nonclustered, compressed, contain compressed data 
+create index a2
+    on a(b) 
+    local index ip1 with index_compression = PAGE, 
+    ip2 with index_compression = PAGE,ip3 
+</pre>
+<p>Session options are: set compression default|ON|OFF</p>
+<p>This command affects only leaf rows that are built for compressed indexes after the command is executed.</p>
+<p>create table b (c int) with index_compression = PAGE|NONE</p>
+<p>alter table order_line set index_compress = PAGE|NONE</p>
+<p>alter table sales modify partition Y2009 set index_compression = PAGE</p>
+<p>alter index a.b set index_compression = PAGE|NONE</p>
+<h2><a name="1.2">1.2. Sort Operator Performance Improvement</a></h2>
+<p>This applies to a the parallel query where:<p>
+<ul>
+<li>A SORT operator appears on top of the Exchange operator</li>
+<li>Exchange operator must be a Replicated Exchange with a single producer and multiple consumers.</li>
+</ul>
+<p>SAP ASE version 16.0 and later moves the build part of the SORT operator below the Exchange Operator 
+and keeps the sort-table reading part above the Exchange</p>
+<p>The benefits of the new parallel SORT operator are<p>
+<ul>
+<li>Splits the SORT operator into two operators: SORTBUILD and GETSORTED. A single sort table built by the SORTBUILD is used by 
+multiple instances of GETSORTED for a parallel reading of sorted rows, reducing the I/Os. The DEFAULT SORT operator plan creates
+multiple copies of SortTables.</li>
+<li>Sends a single row containing meta data from the SORTBUILD operator to multiple instances of GETSORTED operator, providing 
+a reference for accessing the sort-table directly, which avoids copying and propagating many rows via Exchange.</li>
+</ul>
+<p>The parallel SORT operator includes these restrictions:</p>
+<ul>
+<li>Does not support Repartitioned Exchange. However, SORT operators that occur above Repartitioned Exchange use the 
+DEFAULT sort in the query execution plan.</li>
+<li>Although abstract plans do not explicitly support forcing GETSORTED and SORTBUILD, you can force these plans by 
+making sure the SORT operator appears above the Replicated Exchange.</li>
+<li>SAP ASE implicitly disables dynamic thread assignment (DTA) for the query execution plan that contains 
+GETSORTED and SORTBUILD operators.</li>
+</li>
+</ul>
+<h2><a name="1.3">1.3. Hash Join Operator Performance Improvement</a></h2>
+<p>SAP ASE 16.0 replaces the HASH JOIN operator with the HASH PROBE and the HASH BUILD operators, and includes the 
+replicated EXCHANGE operator between these operators. The HASH BUILD operator builds the hash table and the HASH 
+PROBE operator reads the inner stream and probes the hash table to find matching rows (in earlier releases of SAP 
+ASE, the HASH JOIN operator performed both these steps).</p>
+<p>A single worker thread executes the HASH BUILD operator, building a single hash table. The query engine passes 
+this hash table through memory pipes to all producers executing the HASH PROBE operator. These producers share this
+hash table and probe it for matches to the joining columns in their inner streams. Earlier releases of SAP ASE required 
+multiple producers to execute the HASH JOIN operator.</p>
+<p>A query plan must include these attributes for the query processor to use the HASH JOIN improvements:</p>
+<ul>
+<li>The query processor executes the HASH JOIN operator in parallel</li>
+<li>The left child Operator of the HASH JOIN Operator is a Replicated EXCHANGE Operator with a single Producer</li>
+</ul>
+<h2><a name="1.4">1.4. Query Plan Optimization with Star Joins</a></h2>
+<p>To improve performance for star join query evaluation these changes have been made in version 16.0:</p>
+<ul>
+<li>For parallel plans, the bloom filter probe moves below the Xchg operator.</li>
+<li>A new star join hint uses abstract plan to help the query processor better detect star join queries.</li>
+<li>he final plan of any star join is now forced to use bloom filter under the use fact_table hint.</li>
+<li>Hash joins and a join orders are forced based on the selectivities between fact and dimension tables 
+for the star join query under the use fact_table hint. The query processor adjusts the query plan to provide 
+the greatest benefit from the bloom filter.</li>
+</ul>
+<p>The query optimizer uses star joins when appropriate. However, SAP does recommend that you enable the 
+set join_bloom_filter option and parallel query processing when using star joins.</p>
+<p>SAP ASE version 16.0 introduces the use fact_table abstract plan hint, which specifies the central fact table in a star join query, and triggers special query plan optimization strategies for the query.</p>
+<p>PLAN '(use fact_table fact_table_name_or_alias_name)'</p>
+<p>The use fact_table abstract plan hint allows the query processor to chose a parallel hash join plan for the star join query.
+Parallel plans enable the query processor to push bloom filter probings (which allow for faster joins between dimension and fact tables) 
+below the EXCHANGE operator, further reducing the number of qualifying rows from fact tables.</p>
+<h2><a name="1.5">1.5. Dynamic Thread Assignment</a></h2>
+<p>SAP ASE applies dynamic thread assignment to parallel lava query plans that are generated for select queries to use fewer resources</p>
+<p>The following commands continue to use static thread assignment:</p>
+<ul
+<li>select into</li>
+<li>reorg commands that include a data copy</li>
+<li>alter table commands that include a data copy</li>
+<li>create index</li>
+</ul>
+<p>Dynamic thread assignment improves performance by:</p>
+<ul>
+<li>Executing query plans in parallel with fewer threads (static thread assignment requires serial query execution).</li>
+<li>Executing dynamic load balancing between worker threads: When there are fewer threads executing the query plan than 
+there are work units, the threads that execute the smallest work units complete their task more quickly, freeing themselves 
+to execute the remaining available work units while the threads executing larger work units complete their tasks.</li>
+<li>Using existing semantic partitioning in joins more effectively. Dynamic thread assignment allows a partition-to-partition 
+join when joining two tables that are already partitioned on the joining column, as opposed to static thread assignment, 
+which joins all the partitions of the outer table to all of the partitions of the inner table in one operation. Dynamic thread 
+assignment allows a single worker thread to join the first partition of the outer table to the first partition of the inner table,
+then reexecutes the query plan fragment to join the second partition, and so on.</li>
+</ul>
+<h2><a name="1.6">1.6. Load Performance Enhancements for SAP Business Warehouse</a></h2>
+<p>2 enhancements improve load times for SAP Business Warehouse</p>
+<ul>
+<li>Improves the performance of data insertion and index maintenance for merge into commands, leveraging both bulk inserts
+and parallel index updates</li>
+<li>Automatically triggers the use of the bulk insert mode at runtime based on insert/load performance statistics.</li>
+</ul>
+<h1><a name="2">2. Scale enhancements</a></h1>
+<h2><a name="2.1">2.1. Run-time Logging Enhancements.</a></h2>
+<p>ASE version 16.0 and later partitions each user log cache into a number of smaller blocks, each the size of the server's logical
+page size. SAP ASE version 16.0 adds log records directly to the current active block within the user log cache 
+(the same manner that earlier releases add log records directly to the user log cache). When concurrent open transactions make 
+changes to the same data page, instead of moving log records directly from the user log cache to syslogs, SAP ASE adds (or links) 
+the current block within the user log cache to the end of the global queue; it can later transfer the log records from the global 
+queue to syslogs. This enables SAP ASE to efficiently batch additions to syslogs, improving the performance of run-time logging, 
+regardless of issues associated with datarow-locked tables.</p>
+<p>After the current block is added to the global queue, a new free block within the user log cache becomes the current block,
+and continues to accept log records from the transaction.</p>
+<p>Use the "user log cache queue size" configuration parameter to enable and disable this functionality.</p>
+<ul>
+<li>1 – SAP ASE uses the queuing strategy (the default)</li>
+<li>0 – SAP ASE use the pre-16.0 version behavior</li>
+</ul>
+<h2><a name="2.2">2.2. Metadata Cache and Latch Enhancements</a></h2>
+<p>ASE 16 reduces CPU utilization for latch conflicts with very high transaction rates</p>
+<p>There is decreased contention:</p>
+<ul>
+<li>On internal structures during very high transaction rate cross-database queries and transactions, including contention on locks, latches, and data caches due to implicit or explicit cross-database references</li>
+<li>During high transaction-rate operations on tables with a large number of partitions</li>
+<li>On internal structures during very high rates of create and drop table, including decreased lock and latch contention on some system tables</li>
+</ul>
+<p>The metadata and latch management enhancements are enabled by default, and you need not to perform any configuration to enable these enhancements.</p>
+<p>ASE 16 allows setting exp_row_size for tables with only fixed length columns to reduce contention on a single page</p>
+<p>ASE 16 increased the default amount of procedure cache used for Engine Local Cache(ELC) from 25% to 50%</p>
+<p>This is controlled by new parameter "engine local cache percent"</p>
+<p>Additional parameters are "enable large chunk elc" (replaces traceflag 758) and "large allocation auto tune" (replaces traceflag 753)</p>
+<p>Defaults are static parameter "enable large chunk elc" enabled, static parameter "large allocation auto tune" enabled
+<h2><a name="2.3">2.3. Lock Management Enhancements</a></h2>
+<p>Lock management improvements are:</p>
+<ul>
+<li>Engine lock transfer – Improves the transfers of locks between global pool and engine local caches.</li>
+<li>Engine lock caching – Optimizes the number of locks an engine can cache locally by:
+ <ul>
+ <li>Increasing the default engine local cache size</li>
+ <li>Increasing the transfer size of locks from global to local caches.</li>
+ <li>Improves lock transfers between local and global by using of blocks of locks instead of individual locks</li>
+ <li>Draining or reclaiming locks from local to global caches less frequently</li>
+ </ul>
+</li>
+<li>LOCK_VERIFY operations – Optimizes LOCK_VERIFY operations to deploy an optimistic approach when possible and avoid taking locks.</li>
+<li>Lock promotion - Tracks repeatedly failed lock promotion attempts, and disables lock promotion for the DML statement incurring the failed lock promotion after a number of attempts.</li>
+<li>Log semaphore locks - Avoids taking locks for log semaphores since only one lock can be held by the semawait.</li>
+<li>Deadlock checking - Ensures that specifying a small value for the deadlock checking period never results in a value less than 1, and that deadlock checks are performed on a dedicated service thread</li>
+<li>Hot DOL tables - Allows DOL tables to be hot tables, which alleviates high table lock contention</li>
+</ul>
+<h2><a name="2.4">2.4. Partition-level Locking</a></h2>
+<p>Locks now indentified by database,object and parttion, -1 = all partitions</p>
+<p>Enable with sp_chgattribute object, 'ptn_locking', 1</p>
+<p>sp_lock,sp_familylock,monLocks,monDeadLock now include partitionid</p>
+<p>Set partition lock promotion thresholds with sp_setpglockpromote_ptn,sp_setrowlockpromote_ptn,sp_ dropglockpromote_ptn,sp_droprowlockpromote_ptn</p>
+<p>Partition level operations now only block operations on the same partition, other partitions are no affectedL</p>
+<ul>
+<li>alter table … split partition,merge partition,move partition,drop partition</li>
+<li>truncate partition</li>
+<li>dbcc checkindex,checktable,tablealloc,indexalloc</li>
+</ul>
+<p>alter table x [merge|drop|move|split] partition...with online</p>
+<p>truncate table x partition y with online</p>
+<p>For partition-level online operations, such as splitting a partition or moving a partition, the table must have a local unique index.</p>
+<p>The move command is allowed for concurrent DMLs to all partitions in the table, including ones being operated by split.</p>
+<p>With a global index:</p>
+<ul>
+<li>Concurrent DML access to a table does not use global index while a partition-level operation is in progress on the table. 
+SAP ASE uses alternate local index scan or table scan for concurrent DML scans.</li>
+<li>Multiple partition-level operations on different partitions can operate concurrently. Each one does not perform global index 
+rebuild. Only the last committed partition-level operation performs global index rebuild.</li>
+<li>The last partition-level operation leading to abort may result in global index marked as suspect. 
+The global index in such case has to be explicitly rebuilt.</li>
+</ul>
+<p>Schema locks allow enhanced partition-level operations to update table schema or metadata by achieving isolation from concurrent operations.</p>
+<p>The new schema locks are:</p>
+<ul>
+<li>Shared schema lock – indicates that a task is using the current schema of the table for query execution. Scans and DMLs acquire this lock before starting the execution of the query.</li>
+<li>Exclusive schema lock – indicates that a task is changing the schema of the table. The partition-level operation acquires this lock to update the schema of the table.</li>
+</ul>
+<h2><a name="2.5">2.5. Relaxed Query Limits</a></h2>
+<p>The number of tables in a select query has been increased from 50 to 250</p>
+<p>The number of subqueries in a select query has been increased from 50 to 250</p>
+<p>The maximum number of columns allowed in an order by clause has been increased from 31 to 400</p>
+<h2><a name="3.1">3.1. Full-Database Encryption</a></h2>
+<p>First we need to create a database encryption key (DEK) in the master database which is used to encrypt the database</p>
+<p>To create a database encryption key (DEK):</p>
+<ul>
+<li>sp_configure "enable encrypted columns",1</li>
+<li>Create a master key and optionally a dual master key</li>
+<li>create encryption key master with passwd "password"</li>
+<li>set encryption passwd 'password' for key master</li>
+<li>Create the database encryption key</li>
+<li>create encryption key dbkey for database encryption</li>
+</ul>
+<p>Options for creating a database encryption key are:</p>
+<p>create encryption key &lt;name&gt; [ for &lt;algorithm&gt;] for database encryption [with
+ {[master key] [key_length 256] [init_vector random] [[no] dual_control]}<p>
+<p>Currently algorithm must be AES and key_length must be 256</p>
+<p>init_vector must be randon for full database encryption</p>
+<p>Encrpytion key can also be encrypted for dual control</p>
+<p>The way the encryption key is protected and the owner can be changed with "alter encryption key"</p>
+<p>You must backup the Database Encryption Key,master or dual master key and encrypted database</p>
+<p>E.g. use ddlgen to generate the sql for creating the keys</p>
+<p>To load an encrypted database restore the master key and DEK, create the database for encryption with the same DEK as the original database</p>
+<p>load database with verify only = full is not supported as the backup server cannot decrypt</p>
+<p>You cannot mount/unmounted encrypted database</p>
+<p>Keys can be dropped via "drop encryption key"</p>
+<p>create database &lt;name&gt; encrypt with &lt;keyname&gt;</p>
+<p>You cannot encrypt an in-memory database</p>
+<p>An existing database can be encrypted via:</p>
+<p>alter database &lt;name&gt; encrypt with &lt;keyname&gt; [parallel N]</p>
+<p>alter database &lt;name&gt; resume encryption [parallel N]</p>
+<p>alter database &lt;name&gt; suspend encryption</p>
+<p>To check if a database is encrypted as well as progress either use sp_helpdb or</p>
+<ul>
+<li>select dbencryption_status(“status”, db_id(“existdb”))</li>
+<li>select dbencryption_status(“progress”, db_id(“existdb”))</li>
+</ul>
+<h2><a name="3.2">3.2. Residual Data Removal</a></h2>
+<p>Databases can be marked as sensitive and have residual data removed (zero-ed out)</p>
+<p>Residual data cannot be removed from system databases e.g. master,sybsystemdb,sybsystemprocs</p>
+<pre>
+sp_dboption dbname, "erase residual data", true # Database level
+create table a (b int) with "erase residual data" {on | off} # Table level - overrides database level
+alter table a set "erase residual data" {on | off} # Table level
+set erase_residual_data {on | off} # Session level - overrides database and table level settings 
+</pre>
+<h2><a name="3.3">3.3. Full-text Auditing</a></h2>
+<p>Full Text Auditing prints parameter names and values with sensitive parameters masked when DML Auditing is enabled</p>
+<p>Full-Text Auditing is recorded for select,insert,update,delete,select into</p>
+<pre>
+ASE-16_0/bin/auditinit
+Restart ASE
+sp_configure 'auditing',1 
+sp_audit "update", "all", "a", "on"
+insert into a values(1)
+update a set b=2 where b=1
+use sybsecurity
+select extrainfo from sysaudits_01
+sa_role sso_role oper_role sybase_ts_role mon_role; update a set b=2 where b=1;
+	  ; ; ; ; sa/ase;
+</pre>
+<p>See also <a href="http://help.sap.com/Download/Multimedia/pdf-adaptive-server-enterprise/asesecadmin.pdf">Security Administration Guide</a></p>
+<h2><a name="3.4">3.4. Auditing for Authorization Checks Inside Stored Procedures</a></h2>
+<p>The audit option sproc_auth enables auditing for authorization checks that are performed inside system stored procedures.</p>
+<p>The audit event 80 is audited when the audit option security is enabled, or when the audit option sproc_auth is enabled.</p>
+<p>The audit event 146 is only audited when the option sproc_auth is enabled.</p>
+<h1><a name="4">4. Simplicity enhancements</a></h1>
+<h2><a name="4.1">4.1. Multi-trigger Support</a></h2>
+<p>Multiple triggers can be created and the order in which they fire can be controlled</p>
+<p>Up to 50 triggers for each command (insert,update,delete) can be created and the new "order" parameter specified.</p>
+<p>Multiple triggers can be created without an "order" clause</p>
+<pre>
+create or replace trigger [owner].trigger_name on [owner].tablename for 
+[insert|delete|update] 
+[order &lt;integer&gt;]
+as &lt;sql_statement&gt;
+</pre>
+<p>Triggers created without an order have an order of 0 and fire after triggers defined with an order</p>
+<p>The set of triggers created without an order fire as a set in a undefined order</p>
+<p>The "order" clause cannot be used with "instead of" triggers</p>
+<p>Attempting to create a duplicate "order" number is an error</p>
+<p>To change the "order" number for a trigger recreate the trigger - potentially via "create or replace"</p>
+<p>The "merge" statement fires triggers in a special order (insert,update,delete) which overrides the "order" number</p>
+<p>Within each operation e.g. "insert" the triggers are fired in "order" number sequence</p>
+<p>A rollback statement in a trigger rolls back the previous triggers and does not fire any more triggers</p>
+<p>Multiple triggers can be enabled/disabled via alter table tablename [disable|enable] trigger triggername</p>
+<p>Global variable @@triggername contains the name of the currently executed or last executed trigger</p>
+<h2><a name="4.2">4.2. Integrated Disaster and Recovery Support with Synchronous Replication for SAP Business Suite</a></h2>
+<p>SAP ASE 16 with SAP Replication Server 15.7 SP200 adds several enhancements</p>
+<ul>
+<li>Synchronous replication for "zero data loss" - transactions are also written to the replication server stable queue before being committed</li>
+<li>A new DR Agent manages the complete failover/switching of active systems</li>
+<li>There are 3 modes of synchronous replication - Sync, Near-Sync and Async</li>
+</ul>
+<h2><a name="4.3">4.3. ASE to HANA CIS Access</a></h2>
+<p>ASE 16 adds a native ODBC interface to CIS which allows direct connection to HANA</p>
+<p>The SAP HANA Client Package must be installed on the same machine as ASE</p>
+<p>In Windows use the "HDBODBC" ODBC driver</p>
+<p>Also add the HANA Server to the interfaces file</p>
+<pre>
+UNIX:
+HANA_DB
+       query tcp ether 157.133.66.75 1870 libodbcHDB.so 
+Windows:
+[HANA_DB]
+Query=NLWNSCK,157.133.66.75,1870,HDBODBC 
+</pre>
+<p>SAP ASE uses a Pluggable Component Interface (PCI) Bridge which implements on-demand software dispatching, to load shared objects when it invokes a target function.</p>
+<p>ODBC Driver Manager is typically bootstrapped from the pluggable component adapter for ODBC (PCA/OBDC), which is configured with PCI Bridge.</p>
+<p>PCA/ODBC acts as a broker, managing service requests between the SAP ASE and the ODBC Driver Manager.</p>
+<p>PCA/ODBC forwards and controls requests in both directions—from the SAP ASE to ODBC Driver Manager, and vice versa.</p>
+<p>SAP ASE requires the sybpcidb database when you enable PCI Bridge.  The sybpcidb contains all configuration data for PCI Bridge and its associated PCAs, such as PCA/ODBC.</p>
+<ul>
+<li>Create the sybpcidb database using srvbuild,sybconfig or by running ${SYBASE}/${SYBASE_ASE}/scripts/installpcidb</li>
+<li>sp_configure "enable pci",1</li>
+<li>Restart ASE</li>
+<li>Use sp_odbcconfig to config parameters
+<ul>
+<li>pca_odbc_load_dir - UNIX only,array containing the location of ODBC Drivers sp_odbcconfig 'add/delete', 'pca_odbc_load_dir', 'path_to_driver_location'</li>
+<li>Restart ASE after making changes to pca_odbc_load_dir</li>
+<li>pca_odbc_root_dir - UNIX only, folder contains odbc.ini file, default $SYBASE, sp_odbcconfig 'update', 'pca_odbc_root_dir', 'old_path', 'new_path'</li>
+<li>Restart ASE if the ODBC Driver is already loaded under the control of PCA/ODBC</li>
+<li>pca_odbc_dsn_enabled – enables or disables the DSN mode for the PCA/ODBC subsystem.</li>
+<li>0 – disables DSN (the default). SAP ASE automatically gathers DSN information from the SAP directory control layer (DCL) from the interfaces file.</li>
+<li>1 – enables DSN. SAP ASE consults the DSN records stored under odbc.ini.</li>
+<li>UNIX only, add $SYBASE/DataAccess64/ODBC/dm/lib64 to the LD_LIBRARY_PATH.</li>
+</ul>
+<li>Add the server using server class HANAODBC - sp_addserver logical_server_name, HANAODBC, ODBC_DSN_name</li>
+<li>Use sp_addexternlogin to map the SAP ASE login account and password.</li>
+<li>sp_addexternlogin hana_server, sa, HANA_login, HANA_login_password</li>
+</ul>
+<p>Data type mapping are listed at <a href="http://infocenter.sybase.com/help/topic/com.sybase.infocenter.dc00641.1600/doc/html/mas1365712715509.html">Datatype Mapping Between SAP ASE and HANA</a></p>
+<p>Restrictions are listed at <a href="http://infocenter.sybase.com/help/topic/com.sybase.infocenter.dc00641.1600/doc/html/mas1369851936419.html">Restrictions</a></p>
+<h2><a name="4.4">4.4. Support “create or replace” command for database objects</a></h2>
+<p>create or replace has been added to the following commands</p>
+<ul>
+<li>create default</li>
+<li>create function</li>
+<li>create function (SQLJ)</li>
+<li>create procedure</li>
+<li>create procedure (SQLJ)</li>
+<li>create rule</li>
+<li>create trigger</li>
+<li>create view</li>
+</ul>
+<p>create or replace is only supported for objects which do not contain data</p>
+<p>When an object is replaced, SAP ASE replaces its definition in the following system tables: sysprocedures, syscomments, sysdepends, and syscolumns. Some fields in the sysobjects table are also updated. The query tree for the object is normalized before being replaced in sysprocedures.</p>
+<p>With granular permissions enabled or disabled, you must be the object owner to replace a compiled object. You cannot replace a compiled object by impersonating the object owner through an alias or setuser. However, if you are the owner through set proxy, you can replace a compiled object.</p>
+<p>Stored procedures used in install scripts have been changed to use create or replace.</p>
+<p. The create or replace functionality performs an implicit drop followed by create in the same transaction. Because of this, additional transaction log space is required.</p>
+<p>The default sizes for system databases have been increased to account for the additional log/data space requirements for create or replace</p>
+<p>Default system database size changes are listed at <a href="http://infocenter.sybase.com/help/topic/com.sybase.infocenter.dc00641.1600/doc/html/car1391704575660.html">Data and Log Segment Changes</a></p>
+<h2><a name="4.5">4.5. Enhanced SAP Control Center Support</a></h2>
+<h3><a name="4.5.1">4.5.1 Compression Advisor Utility</a></h3>
+<p>The Compression Advisor can be used to provide estimates space savings for row/page level and column level compression</p>
+<h3><a name="4.5.2">4.5.2 Automatic backups</a></h3>
+<p>The SCC backup scheduling and task management features can be used to control backups</p>
+<h3><a name="4.5.2">4.5.3 Create or replace command</a></h3>
+<p>A new Create wizard is provides to implement these commands</p>
+<h3><a name="4.5.3">4.5.3 Partition-level locking</a></h3>
+<p>Enable and disable partition locking and provide ‘online’ option for move, merge,split, delete partition operations.</p>
+<h3><a name="4.5.4">4.5.4 Index compression</a></h3>
+<p>Enhanced Create Table and Create Index wizards to support index compression</p>
+<h3><a name="4.5.5">4.5.5 Error log enhancements</a></h3>
+<p>Error logs can be imported from multiple servers</p>
+<h3><a name="4.5.6">4.5.6 Server configuration alert</a></h3>
+<p>Alerts can be configured when the percentage utilization of any resource (sp_monitorconfig) exceeds a configurable threshold</p>
+<h3><a name="4.5.7">4.5.7 Management of Large scale deploymen</a></h3>
+<p>Support up to 250 managed resources</p>
+<h3><a name="4.5.8">4.5.8 Secure Store</a></h3>
+<p>Allow removal of residual data when a database,table or index is dropped</p>
+<h3><a name="4.5.9">4.5.9 Data Cache Spinlock Contention Monitoring</a></h3>
+<p>Enhance the Monitoring View for SAP ASE with metrics for data cache spinlock contention.</p>
+<h2><a name="4.6">4.6 Configuration History Tracking</a></h2>
+<p>The sp_confighistory system procedure manages the history of configuration changes, and stores data about the changes in the sybsecurity database.</p>
+<p>Tracked items include</p>
+<ul>
+<li>Changes to the server configuration file.</li>
+<li>Reading the configuration File</li>
+<li>sp_configure Changes</li>
+<li>Changes to server options</li>
+<li>Changes to database options</li>
+<li>Changes to cache configuration</li>
+<li>Changes to trace flags and switches</li>
+<li>Changes to number of engines</li>
+<li>SAP ASE startup and shutdown events</li>
+<li>Enabling or disabling auditing</li>
+</ul>
+<p>The sybsecurity database must be installed to track these changes</p>
+<p>sp_confighistory displays SAP ASE configuration changes, including which configuration option has been changed, the old and new values, the user who made the change, and when the change was made.</p>
+<p>The ch_events view can be queried in the sybsecurity database to see these changes</p>
+<p>The ch_events view collects information from audit_tables can be give errors if audit tables are dropped/created</p>
+<p>Use sp_confighistory create_view to update ch_events when you add or remove audit tables.</p>
+<p>To enable Configuration History Tracking:</p>
+<ul>
+<li>sp_audit "config_history", "all", "all", "on"</li>
+<li>sp_configure 'auditing', 1</li>
+<li>use sybsecurity</li>
+<li>sp_confighistory create_view</li>
+</ul>
+<p>The ch_events view does not record changes if the new value is the same as the old value.</p>
+<h2><a name="4.7">4.7 Cyclic Redundancy Checks for Dump Databases</a></h2>
+<p>CRCs can be added to database dumps</p>
+<p>dump database database_name to dump_device with compression=n,verify={crc | read_after_write}</p>
+<p>load database database_name from dump_device with verify[only]=crc</p>
+<p>This feature requires a version of Backup Server which includes this functionality otherwise dumps are not readable as the backup format changes.</p>
+<h2><a name="4.8">4.8 Calculating Transaction Log Growth Rate</a></h2>
+<p>sp_logging_rate displays the minumum, maximum, and average rate of transaction log growth, in gigabytes per hour, for the period of time you run the system procedure, providing the result as an averaged sum of the calculations, or as iterative results.</p>
+<pre>
+Display  a summary the log growth for the transaction log over a 24 hour period, calculating the growth in one-hour intervals:
+
+sp_logging_rate 'sum', '1,00:00:00', '01:00:00'
+=========================
+Total Summary Information
+=========================
+Transaction Log Growth Rate      Min GB/h        Max GB/h        Avg GB/h
+---------------------------   --------------  --------------  --------------
+                                  0.000000        1.970084        1.566053
+</pre>
+<h2><a name="4.9">4.9 Monitoring Threshold-based Events</a></h2>
+<p>SAP ASE 16 allows administrators to configure, record and list SAP ASE Resource Governor threshold violation events.</p>
+<p>This new feature uses the monTresholdEvent table to record and report the thresholds for events and records all violations of 
+configured resource limits.</p>
+<p>Set the report action using sp_add_resource_limit</p>
+<h2><a name="4.10">4.10 Statistics Stickiness Enhancements</a></h2>
+<p>In previous releases of SAP ASE certain update statistics options ware attached to 
+a column once they were executed for the first time as their ‘stickiness’ bits were 
+automatically set in the catalog. A new feature in an upcoming release of SAP ASE 
+16, will provide a way to report and unset this stickiness behavior.</p>
+<h2><a name="4.11">4.11 ddlgen</a></h2>
+<p>ddlgen can create DDL of fully encrypted databases and database encryption keys.</p>
+<h2><a name="4.12">4.11 sybmigrate</a></h2>
+<p>sybmigrate can migrate fully encrypted databases - use ddlgen to create the same encryption keys on source and target</p>
+<h2><a name="4.13">4.13 sybrestore</a></h2>
+<p>sybrestore can now handle master database corruption using srvbuild(UNIX)/sybatch(Windows) to rebuild the instance and 
+the  restoring user databases.</p>
+<h2><a name="4.14">4.14 dbisql</a></h2>
+<p>dbisql adds an improved Excel import/export capability through a generic ODBC plug-in and offers more options to control
+results and message output</p>
+<p>Additionally, it offers an improved Connect Dialog, which can now encrypt password by default, start a discovered/down SAP ASE,
+and connect to the last-used database, instead of default database.</p>
+<h2><a name="4.15">4.15 Query Plan and Execution Statistics in HTML</a></h2>
+<p>With the introduction of DTA, the Query Plan and Execution Statistics in HTML feature has been updated to correctly reflect the new parallel execution model.</p>
+<p>The HTML representation reports the execution statistics per plan fragment execution (or work units), allowing several executions of the same plan
+fragment to be reported separately. To better identify the work unit execution following the new DTA model, for each plan fragment execution, the 
+output is indicated by "Work unit execution" and provides the SPID for the thread and additional values such as the Root operator identifier 
+(for the plan fragment) and producer ID.</p>
+<p>The SET STATISTICS QUERY_NAME_HTML command helps differentiate or identify files that are related to multiple executions of the same query.</p>
+<h2><a name="4.16">4.16 SAP JVM Support</a></h2>
+<p>SAP ASE uses SAP JRE to support Java applications which by default is installed in $SYBASE/shared/SAPJRE-7_*</p>
+<p>The installer automatically sets the SAP_JRE7, SAP_JRE7_32, and SAP_JRE7_64 environment variables.</p>
+<p>For IBM AIX set the data size resource limit to umlimited when using any Java application: limit datasize unlimited</p>
+</body>
+</html>
