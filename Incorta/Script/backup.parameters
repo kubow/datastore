@@ -1,0 +1,174 @@
+############################################################## GENERAL PARAMETERS ###############################################################
+
+### Enter backups repository path after the equal sign or leave blank if you want to use default repo
+### which is 'backups' under the current working directory
+BACKUPS_REPO=
+
+### Enter logs directory path after the equal sign or leave blank if you want to use default directory
+### which is 'backups/logs' under the current working directory
+LOGS_DIR=
+
+### Enter maximum size of backup repository in kilobytes
+BACKUPS_REPO_MAX_SIZE=1000000
+
+### Enter retention period for backup files in days
+RETENTION_PERIOD=10
+
+### Enter email address you want to notify upon success or failure of backup operation
+SEND_TO=<user-email>
+
+########################################################### INCORTA CLUSTER PARAMETERS ##########################################################
+
+### Cluster configurations include:
+### - CMC node configurations: cmcData, conf, and incorta directories.
+### - Incorta nodes configurations:
+### - Services configurations: conf and incorta directories.
+### - NodeAgent configurations: nodeAgent.cfg
+### - node.properties file
+### - Spark and Zookeeper configurations: conf directories.
+
+### Enter cluster name where backup script shall run on after the equal sign
+CLUSTER_NAME=<cluster-name>
+
+### Enter one value from (Y, y) if you want to backup cluster configurations or leave blank
+BACKUP_CLUSTER_CONFIG=Y
+
+### Enter number of Incorta nodes in the cluster, enter zero for none
+NUM_INCORTA_NODES=1
+
+### Enter number of Spark nodes in the cluster, enter zero for none
+NUM_SPARK_NODES=1
+
+### Enter number of Zookeeper nodes in the cluster, enter zero for none
+NUM_ZOOKEEPER_NODES=1
+
+####################################### INCORTA CMC NODE PARAMETERS #######################################
+
+##### Notes #####
+### 1 - If password and private key are specified to any node, the higher precedence is for the private key.
+###     if both are not specified public key authentication is used.
+
+CMC_NODE_HOSTNAME=<hostname/ip-address>
+CMC_NODE_USERNAME=<username>
+CMC_NODE_PASSWORD=<password>
+CMC_NODE_KEY_PATH=<private-key-path>
+CMC_HOME=<cmc-home-path>
+
+######################################### INCORTA NODE PARAMETERS #########################################
+
+##### Notes #####
+### 1 - To provide parameters for nodes in a cluster you should follow the pattern shown in the sample
+###     provided below and provide parameters according to the structure of the cluster.
+### 2 - If password and private key are specified to any node, the higher precedence is for the private key.
+###     if both are not specified public key authentication is used.
+
+######## Sample Nodes ########
+### INCORTA_NODE_1_HOSTNAME=<hostname/ip-address>
+### INCORTA_NODE_1_USERNAME=<username>
+### INCORTA_NODE_1_PASSWORD=<password>
+### INCORTA_NODE_1_KEY_PATH=<private-key-path>
+### INCORTA_NODE_1_HOME=<incorta-home-path>
+
+### INCORTA_NODE_2_HOSTNAME=<hostname/ip-address>
+### INCORTA_NODE_2_USERNAME=<username>
+### INCORTA_NODE_2_PASSWORD=<password>
+### INCORTA_NODE_2_KEY_PATH=<private-key-path>
+### INCORTA_NODE_2_HOME=<incorta-home-path>
+
+###########################################################################################################
+
+######## Node #1 ########
+INCORTA_NODE_1_HOSTNAME=<hostname/ip-address>
+INCORTA_NODE_1_USERNAME=<username>
+INCORTA_NODE_1_PASSWORD=<password>
+INCORTA_NODE_1_KEY_PATH=<private-key-path>
+INCORTA_NODE_1_HOME=<incorta-home-path>
+
+########################################## SPARK NODE PARAMETERS ##########################################
+
+##### Notes #####
+### 1 - To provide parameters for nodes in a cluster you should follow the pattern shown in the sample
+###     provided below and provide parameters according to the structure of the cluster.
+### 2 - If password and private key are specified to any node, the higher precedence is for the private key.
+###     if both are not specified public key authentication is used.
+
+######## Sample Nodes ########
+### SPARK_NODE_1_HOSTNAME=<hostname/ip-address>
+### SPARK_NODE_1_USERNAME=<username>
+### SPARK_NODE_1_PASSWORD=<password>
+### SPARK_NODE_1_KEY_PATH=<private-key-path>
+### SPARK_NODE_1_HOME=<spark-home-path>
+
+### SPARK_NODE_2_HOSTNAME=<hostname/ip-address>
+### SPARK_NODE_2_USERNAME=<username>
+### SPARK_NODE_2_PASSWORD=<password>
+### SPARK_NODE_2_KEY_PATH=<private-key-path>
+### SPARK_NODE_2_HOME=<spark-home-path>
+
+###########################################################################################################
+
+######## Node #1 ########
+SPARK_NODE_1_HOSTNAME=<hostname/ip-address>
+SPARK_NODE_1_USERNAME=<username>
+SPARK_NODE_1_PASSWORD=<password>
+SPARK_NODE_1_KEY_PATH=<private-key-path>
+SPARK_NODE_1_HOME=<spark-home-path>
+
+######################################## ZOOKEEPER NODE PARAMETERS ########################################
+
+##### Notes #####
+### 1 - To provide parameters for nodes in a cluster you should follow the pattern shown in the sample
+###     provided below and provide parameters according to the structure of the cluster.
+### 2 - If password and private key are specified to any node, the higher precedence is for the private key.
+###     if both are not specified public key authentication is used.
+
+######## Sample Nodes ########
+### ZOOKEEPER_NODE_1_HOSTNAME=<hostname/ip-address>
+### ZOOKEEPER_NODE_1_USERNAME=<username>
+### ZOOKEEPER_NODE_1_PASSWORD=<password>
+### ZOOKEEPER_NODE_1_KEY_PATH=<private-key-path>
+### ZOOKEEPER_NODE_1_HOME=<zookeeper-home-path>
+
+### ZOOKEEPER_NODE_2_HOSTNAME=<hostname/ip-address>
+### ZOOKEEPER_NODE_2_USERNAME=<username>
+### ZOOKEEPER_NODE_2_PASSWORD=<password>
+### ZOOKEEPER_NODE_2_KEY_PATH=<private-key-path>
+### ZOOKEEPER_NODE_2_HOME=<zookeeper-home-path>
+
+###########################################################################################################
+
+######## Node #1 ########
+ZOOKEEPER_NODE_1_HOSTNAME=<hostname/ip-address>
+ZOOKEEPER_NODE_1_USERNAME=<username>
+ZOOKEEPER_NODE_1_PASSWORD=<password>
+ZOOKEEPER_NODE_1_KEY_PATH=<private-key-path>
+ZOOKEEPER_NODE_1_HOME=<zookeeper-home-path>
+
+########################################################### INCORTA TENANT PARAMETERS ###########################################################
+
+### Enter tenant name you wish to backup after the equal sign or leave blank if tenant backup is not needed
+TENANT_NAME=<tenant-name>
+
+### Since this version of the backup and restore scripts assumes that both operations (backup and restore) will be instantiated
+### from the CMC node to make tenant backup easier. So It needs the path where the TMT shell script exists.
+
+### Enter TMT home path on CMC node after the equal sign or leave blank if tenant backup is not needed
+TMT_HOME=<tmt-home-path>
+
+### Enter one value from (Y, y) if you want to backup tenant metadata or leave blank
+BACKUP_TENANT_METADATA=Y
+
+### Enter one value from (Y, y) if you want to backup tenant data files or leave blank
+BACKUP_DATA=Y
+
+### Enter one value from (Y, y) if you want to backup tenant parquet files or leave blank
+BACKUP_PARQUET=Y
+
+### Enter one value from (Y, y) if you want to backup tenant snapshots files or leave blank
+BACKUP_SNAPSHOTS=Y
+
+### Enter one value from (Y, y) if you want to backup tenant compacted parquet files or leave blank
+BACKUP_COMPACTED=Y
+
+### Enter one value from (Y, y) if you want to backup schemas time log files or leave blank
+BACKUP_SCHEMAS_TIME_LOG=Y
