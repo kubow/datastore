@@ -130,5 +130,3 @@ dmypy.json
 
 # Ignore custom settings and cherrytree backups
 *.ctb~*
-/.obsidian/*
-/.vscode/*
