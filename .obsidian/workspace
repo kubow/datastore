@@ -7,11 +7,9 @@
         "id": "3d8dfc1ab4c076ca",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "README.md",
-            "mode": "source",
-            "source": false
+            "file": "MS/MSBI-Cheat-Sheet-1.png"
           }
         }
       }
@@ -77,7 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "MS/MSBI-Cheat-Sheet-1.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +92,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "MS/MSBI-Cheat-Sheet-1.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "MS/MSBI-Cheat-Sheet-1.png"
               }
             }
           }
@@ -128,8 +126,13 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "3d8dfc1ab4c076ca",
+  "active": "85bd82c41dd42e18",
   "lastOpenFiles": [
+    "MS/powerBI_advantages.jpg",
+    "MS/MSBI-Cheat-Sheet-1.png",
+    "Oracle/oracle.gif",
+    "Apache/Kafka.md",
+    "README.md",
     "SAP/ASE/Scripts/commands.md"
   ]
 }
