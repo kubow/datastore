@@ -9,7 +9,7 @@
         "state": {
           "type": "image",
           "state": {
-            "file": "MS/MSBI-Cheat-Sheet-1.png"
+            "file": "MS/powerBI_advantages.jpg"
           }
         }
       }
@@ -75,7 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MS/MSBI-Cheat-Sheet-1.png",
+                "file": "MS/powerBI_advantages.jpg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -92,7 +92,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MS/MSBI-Cheat-Sheet-1.png",
+                "file": "MS/powerBI_advantages.jpg",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -115,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MS/MSBI-Cheat-Sheet-1.png"
+                "file": "MS/powerBI_advantages.jpg"
               }
             }
           }
@@ -126,10 +126,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "85bd82c41dd42e18",
+  "active": "3d8dfc1ab4c076ca",
   "lastOpenFiles": [
-    "MS/powerBI_advantages.jpg",
     "MS/MSBI-Cheat-Sheet-1.png",
+    "MS/powerBI_advantages.jpg",
     "Oracle/oracle.gif",
     "Apache/Kafka.md",
     "README.md",
