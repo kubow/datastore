@@ -1,6 +1,6 @@
 # General repository about data storing techniques
 
-## Covered data storing concepts
+## Covered [[Data Concepts|data storing]] concepts
 
 - SQL / NoSQL ![sql_vs_nosql](sql_vs_nosql.jpg)
 - On-Premise / Cloud / Hybrid
@@ -10,18 +10,19 @@
 ***Data storage engine** is referred here as a [Database engine (source: Wikipedia)](https://en.wikipedia.org/wiki/Database_engine) (interchangeable with terms "Database server" or "DBMS")
 
 
-- Apache (Mostly Arrow, Derby, Parquet, Kafka and Hadoop)
-- GoodData
+- [[Apache]](Mostly Arrow, Derby, Parquet, [[Kafka]] and Hadoop)
+- GoodData ([[GoodData.CN|CN]], [[GoodData.UI|UI]])
 - Incorta
 - JSON
-- MariaDB
+- [[MariaDB]]
 - MS (*Access, Excel, SQLServ*)
 - MySQL
 - Oracle (just basic stuff)
 - PostgreSQL
 - QLIK (mostly Data Integration)
-- SAP (*ASA, ASE, IQ, HANA, iRPA)
-- SQLite 3
+- SAP (*ASA, [[SAP ASE|ASE]], [[SAP IQ|IQ]], HANA, iRPA)
+- [[SQLite|SQLite 3]]
+- [[Teradata]]
 - XML (*both standalone and XML native database)
 
 

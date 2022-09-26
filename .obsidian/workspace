@@ -7,10 +7,8 @@
         "id": "3d8dfc1ab4c076ca",
         "type": "leaf",
         "state": {
-          "type": "image",
-          "state": {
-            "file": "MS/powerBI_advantages.jpg"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -38,7 +36,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "readme",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -75,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MS/powerBI_advantages.jpg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -92,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MS/powerBI_advantages.jpg",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -114,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "MS/powerBI_advantages.jpg"
-              }
+              "state": {}
             }
           }
         ]
@@ -128,11 +122,15 @@
   },
   "active": "3d8dfc1ab4c076ca",
   "lastOpenFiles": [
-    "MS/MSBI-Cheat-Sheet-1.png",
-    "MS/powerBI_advantages.jpg",
-    "Oracle/oracle.gif",
-    "Apache/Kafka.md",
+    "GoodData/GoodData.CN.md",
     "README.md",
-    "SAP/ASE/Scripts/commands.md"
+    "GoodData/GoodData.UI.md",
+    "SAP/ASE/SAP ASE.md",
+    "SAP/ASE/Scripts/commands.md",
+    "SAP/ASE/Dumping.md",
+    "DataStorage/Data Concepts.md",
+    "SQLite/SQLite.md",
+    "Teradata/Teradata.md",
+    "SAP/ASE/asemon/asemon_setup.md"
   ]
 }
