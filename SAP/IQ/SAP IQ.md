@@ -3,11 +3,12 @@ Created by: Jakub Vajda @ MDSapTech 2022
 
 Kurz je rozdělen na 5 dní v těchto oblastech:
 
-1. [[SAP IQ 1 System | Systémové prvky v SAP IQ]]
-2. [[SAP IQ 2 Maintenance | Údržba SAP IQ]]
-3. [[SAP IQ 3 Programming | Programovací jazyky v SAP IQ]]
-4. [[SAP IQ 4 SQL Dialects | SQL dialekty v SAP IQ]]
-5. [[SAP IQ 5 Transactions | Správa transakcí v SAP IQ]]
+1. [[SAP IQ 1 System|Systémové prvky v SAP IQ]]
+2. [[SAP IQ 2 Install|Instalace SAP IQ a licencování]]
+3. [[SAP IQ 3 Maintenance|Údržba SAP IQ]]
+4. [[SAP IQ 4 Programming|Programovací jazyky v SAP IQ]]
+5. [[SAP IQ 5 SQL Dialects | SQL dialekty v SAP IQ]]
+6. [[SAP IQ 6 Transactions | Správa transakcí v SAP IQ]]
 
 
 Informace pro tuto prezentaci jsou čerpány z následujích zdrojů:

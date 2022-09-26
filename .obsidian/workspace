@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "GoodData/GoodData.CN.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "GoodData/GoodData.CN.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "GoodData/GoodData.CN.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "GoodData/GoodData.CN.md"
               }
             }
           }
@@ -132,13 +132,13 @@
   "lastOpenFiles": [
     "GoodData/GoodData.UI.md",
     "GoodData/GoodData.CN.md",
+    "SAP/ASE/SAP ASE 1 System.md",
+    "SAP/ASE/SAP ASE 2 Install.md",
     "README.md",
-    "SAP/ASE/SAP ASE.md",
-    "SAP/ASE/Scripts/commands.md",
-    "SAP/ASE/Dumping.md",
-    "DataStorage/Data Concepts.md",
-    "SQLite/SQLite.md",
-    "Teradata/Teradata.md",
-    "SAP/ASE/asemon/asemon_setup.md"
+    "SAP/IQ/SAP IQ 2 Install.md",
+    "SAP/IQ/SAP IQ 6 Transactions.md",
+    "SAP/IQ/SAP IQ 5 SQL Dialects.md",
+    "SAP/IQ/SAP IQ 4 Programming.md",
+    "SAP/IQ/SAP IQ.md"
   ]
 }

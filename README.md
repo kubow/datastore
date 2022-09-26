@@ -31,11 +31,14 @@
 
 ### Model structure for any product ###
 
-- Versions / Products
-	- what editions x platforms
-- Installation
-- Architecture
-- Maintain
+- System
+	- Architecture
+	- Product fundamentals
+- Install
+	- Versions / Products
+- Maintenance
+	- Administration
+	- Buckup / Recovery
 
 
 ### engines overview database description (sqlite3) ###
