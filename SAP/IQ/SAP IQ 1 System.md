@@ -1,0 +1,67 @@
+# Den 1. Systémové prvky v SAP IQ
+
+[![](https://mermaid.ink/img/pako:eNp1kkFvwjAMhf-KlRNMlInuVqFJQC-TQNoo2qXl4DYGojVpSdINBPz3pbTbgG29xHLep_fi-sCyghML2CovPrINagvTeaIATJWuNZYbiOavcTR6hqcXiEi_k17W1wBcaMqsKBQsxk3nGxkP4hAtpmgIViIn0yLX2Hjx0w0HcSdhzmKGQkFkC03DVD927vpi201Ydwl970Ltt-pobyzJ-4kzy4v1FcdT8GAUjf6gH1p6QbIsNOr9jaGV5ZlqEFL89nl-PHVu_7_sayD1N42bqYELuISd5-0u7gZxE0SjMtiwTtYGcZWL8YvxG2ZGxuCaLvRiK82ZuMrdHqHveY_OsK4nuSBlDQy9vusdNW0rMtYc618NiWI9JklLFNytxaEGEmY3JClhgSs56reEJerkdFjZItqrjAVWV9RjVcnRUijQDUqyYIW5cV3iws131uzZed1On4Okv-k)](https://mermaid.live/edit#pako:eNp1kkFvwjAMhf-KlRNMlInuVqFJQC-TQNoo2qXl4DYGojVpSdINBPz3pbTbgG29xHLep_fi-sCyghML2CovPrINagvTeaIATJWuNZYbiOavcTR6hqcXiEi_k17W1wBcaMqsKBQsxk3nGxkP4hAtpmgIViIn0yLX2Hjx0w0HcSdhzmKGQkFkC03DVD927vpi201Ydwl970Ltt-pobyzJ-4kzy4v1FcdT8GAUjf6gH1p6QbIsNOr9jaGV5ZlqEFL89nl-PHVu_7_sayD1N42bqYELuISd5-0u7gZxE0SjMtiwTtYGcZWL8YvxG2ZGxuCaLvRiK82ZuMrdHqHveY_OsK4nuSBlDQy9vusdNW0rMtYc618NiWI9JklLFNytxaEGEmY3JClhgSs56reEJerkdFjZItqrjAVWV9RjVcnRUijQDUqyYIW5cV3iws131uzZed1On4Okv-k)
+
+Pro vlastní ukládání dat jsou použity **dbspaces**, jejichž přehled uvádí následující tabulka:
+
+| Store         | Dbspace       | typ uložených dat  | 
+|---------------|---------------|--------------------| 
+| **IQ Main**       | **IQ_SYSTEM_MAIN** | Databázová struktura, <br> metadata pro incremental bacup, <br> data pro database space/identity | 
+|               | USER_DBSPACES | Tabulky a metadata, <br> indexy polí a joinů | 
+| **IQ Catalog**       | SYSTEM catalog | Systémové tabulky a pohledy, <br> uložené procedury, <br> ASA tabulky a definice funkcí | 
+|               | Other catalog | ASA tabulky |
+| **IQ Temporary**  | **IQ_SYSTEM_TEMP** | Soubor dočasných souborů <br> které definují dočasný dbspace | 
+|               | IQ_SYSTEM_MSG | Externí soubor držící zprávy <br>o aktivitě databáze | 
+|               | IQ_SHARED_TEMP | Sdílený dočasný prostor pro <br> zjednodušení multiplex operací | 
+| | RLV_DBSPACE | RLV transakční logy |
+
+
+Součásti produktu:
+
+- SAP IQ Server Components
+	- SAP IQ Server
+	- SAP Control Center (deprecated)
+	- [SAP IQ Cockpit](https://help.sap.com/docs/SAP_IQ/14180868751e10149705b0ef6818ec08/5536c2c36e244afeaa8dc483d5a63f5d.html?version=16.1.1.0)
+	- SySAM utilities
+- SAP IQ Client Components
+	- Interactive SQL
+	- [isql](https://help.sap.com/docs/SAP_IQ/a893062984f21015b9e8b03f96ed0cbb/a2749f8784f21015b3ad89edd5ed5bf0.html?version=16.1.1.0) (a další [utility](https://help.sap.com/docs/SAP_IQ/a893062984f21015b9e8b03f96ed0cbb/1478006e20e54b359889483512791d9e.html?version=16.1.1.0))
+	- SAP IQ Web Drivers
+	- SAP IQ ODBC Driver
+	- SAP jConnect for JDBC
+
+
+## Databáze
+[Before you create a database](https://help.sap.com/docs/SAP_IQ/a8937bea84f21015a80bc776cf758d50/a6fc27ef84f21015bb99a329a7118b34.html?version=16.1.1.0
+
+Možnosti vytvoření databáze:
+
+
+[CREATE DATABASE Statement](https://help.sap.com/saphelp_iq1610_iqrefso/helpdata/en/a6/16791184f210158207cc6972cf879d/frameset.htm)
+[CREATE DATABASE Defaults](https://help.sap.com/docs/SAP_IQ/a8937bea84f21015a80bc776cf758d50/a6fe2d0884f210158733eba14e7e0dee.html?version=16.1.1.0)
+[IQ database Options - SAP IQ - Support Wiki](https://wiki.scn.sap.com/wiki/display/SYBIQ/IQ+database+Options)
+
+
+## Tabulky
+
+
+## Pohledy
+
+
+## Procedury
+
+
+
+```
+call sa_eng_properties;
+
+call sa_server_option('parameter_name', 'value');
+
+select * from sa_db_properties();
+
+select * from SYS.SYSINFO;
+
+sp_iqstatus;
+
+sp_iqlmconfig;
+```
