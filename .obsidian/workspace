@@ -7,8 +7,12 @@
         "id": "3d8dfc1ab4c076ca",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "README.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -73,6 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -110,7 +116,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "README.md"
+              }
             }
           }
         ]
@@ -122,9 +130,9 @@
   },
   "active": "3d8dfc1ab4c076ca",
   "lastOpenFiles": [
+    "GoodData/GoodData.UI.md",
     "GoodData/GoodData.CN.md",
     "README.md",
-    "GoodData/GoodData.UI.md",
     "SAP/ASE/SAP ASE.md",
     "SAP/ASE/Scripts/commands.md",
     "SAP/ASE/Dumping.md",

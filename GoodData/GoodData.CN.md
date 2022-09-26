@@ -17,9 +17,55 @@ Built to scale with microservices. Deployed in containers next to your data. Ana
 
 Docker way
 [gooddata/gooddata-cn-ce - Docker Image | Docker Hub](https://hub.docker.com/r/gooddata/gooddata-cn-ce/)
-
+``` 
 docker pull gooddata/gooddata-cn-ce  
 docker run -i -t -p 3000:3000 -p 5432:5432 -v gd-volume:/data gooddata/gooddata-cn-ce:latest
+```
+
 
 ## Model Building
 Scan physical model and build a semantic layer on top of the data.
+
+```
+{  
+  "data": {  
+    "attributes": {  
+      "name": "prod-db",  
+      "url": "jdbc:postgresql://localhost:5432/prod",  
+      "schema": "public",  
+      "type": "POSTGRESQL"  
+    },  
+    "id": "prod-ds",  
+    "type": "data-source"  
+  }  
+}
+```
+
+# Data Analysis
+Choose the right visualization for your metric calculation and execute your first analytics insight.
+
+- Calculation way:
+```
+-- Active Users:  
+SELECT COUNT(User) WHERE User Status = "Active"  
+-- Montly Active Users:  
+SELECT Active Users BY Month  
+-- Average MAU:  
+SELECT AVG(Monthly Active Users)
+```
+- Visualization way (through the visual interface)
+- React code way:
+```
+import "@gooddata/sdk-ui-charts/styles/css/main.css";  
+import { ColumnChart } from "@gooddata/sdk-ui-charts";  
+import { Ldm } from "./ldm";  
+  
+const style = { height: 300 };  
+  
+<div style={style}>  
+    <ColumnChart  
+        measures={[Ldm.$AverageMAU]}  
+        viewBy={Ldm.DateYear}  
+    />  
+</div>
+```
