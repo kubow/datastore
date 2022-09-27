@@ -1,0 +1,16 @@
+Db=tst1
+#Log=appuser
+Proc=proc4login
+
+for Log in `pg ${0}.lst | awk '{ print $1 }'`
+ do
+  echo "Login : $Log"
+  isql -U sa -S sybsol16_ds <<-EOF
+
+	use $Db
+	go
+	sp_modifylogin "$Log", "login script", "$Proc"
+	go
+	exit
+	EOF
+ done

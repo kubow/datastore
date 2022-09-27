@@ -1,0 +1,21 @@
+set +u
+Db=tst1
+#Log=appuser
+Proc=proc4login
+AsePswd=
+
+if [ "X${1}" != "X+" ]
+ then
+  WhCl="where procid is not NULL"
+ else
+  WhCl="where procid is NULL AND name not in ( \"sa\", \"probe\" )"
+ fi
+
+  isql -U sa -S sybsol16_ds <<-EOF | grep "#" | tr -d " " #| cut -f2 -d"#"
+	$AsePswd
+	select "#"+name+"#"+dbname+"#" from master..syslogins
+	  ${WhCl}
+	go
+	exit
+	EOF
+echo

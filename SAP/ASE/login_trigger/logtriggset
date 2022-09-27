@@ -1,0 +1,33 @@
+set +u
+Db=tst1
+#Log=appuser
+Proc=proc4login
+AsePswd=
+
+read LN
+while [ "X$LN" != "X" ]
+ do
+  echo "$LN" | tr "#" " " | read Log Db oth
+  echo "+ $Log $Db"
+  if [ "X${1}" != "X+" ]
+   then
+    isql -U sa -S sybsol16_ds <<-EOF
+	$AsePswd
+	--use $Db
+	go
+	alter login "$Log" drop login script
+	go
+	exit
+	EOF
+   else
+    isql -U sa -S sybsol16_ds <<-EOF
+	$AsePswd
+	use $Db
+	go
+	sp_modifylogin "$Log", "login script", "$Proc"
+	go
+	exit
+	EOF
+   fi
+  read LN
+ done

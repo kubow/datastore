@@ -1,0 +1,33 @@
+set +u
+Db=tst1
+#Log=appuser
+Proc=proc4login
+AsePswd=
+
+isql -U sa -S sybsol16_ds <<-EOF
+	$AsePswd
+	use sybsystemprocs
+	go
+	`pg logtriggprocS.sql`
+	go
+	exit
+	EOF
+for Db in `isql -U sa -S sybsol16_ds <<-EOF | grep "#" | cut -f2 -d"#"
+		$AsePswd
+		select distinct "#"+dbname+"#" from master..syslogins
+		  where name not in ( "sa", "probe" )
+		go
+		exit
+		EOF
+		`
+ do
+  echo "Proc -> $Db"
+  isql -U sa -S sybsol16_ds <<-EOF
+	$AsePswd
+	use $Db
+	go
+	`pg logtriggproc.sql`
+	go
+	exit
+	EOF
+ done
