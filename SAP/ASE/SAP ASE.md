@@ -9,7 +9,7 @@
 
 Separate for now
 [[asemon_setup]]
-
+[[Nagios check ASE]]
 [[commands]]
 
 [[Dumping]]

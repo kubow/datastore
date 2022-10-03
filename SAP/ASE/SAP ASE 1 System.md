@@ -4,12 +4,16 @@
 [SAP Sybase ASE “Magic Numbers” and Hardcoded Behaviour | just dave info (wordpress.com)](https://justdaveinfo.wordpress.com/2015/05/19/sap-sybase-ase-magic-numbers-and-hardcoded-behaviour/)
 
 
+![[ASE_DirStructure.png]]
+
 # Layers
 
 - Database > Segment > Device (Physical - Raw Device or Data File)
 - Allocation Unit
 - Extent
-- ASE Page (OS Block for Data Files / Raw Partitions special - do not have this concept)
+- ASE Page (OS Block for Data Files / Raw Partitions partitioned)
+
+![[ASE_databases.png]]
 
 ## **Database objects**
 
@@ -20,9 +24,7 @@
 - **Rules** - restrict type of data that can be inserted into tables
 - **Stored procedures / Triggers** - stored batches of SQL statements (help maintain data)
 
-- Disk / Device
-- Segments
+
 - Allcations
 - Cache
-- Tables / Views
 - Users
