@@ -20,7 +20,7 @@
 - Oracle (just basic stuff)
 - PostgreSQL
 - QLIK (mostly Data Integration)
-- SAP (*ASA, [[SAP ASE|ASE]], [[SAP IQ|IQ]], HANA, iRPA)
+- SAP (*[[SQL Anyhere|ASA]], [[SAP ASE|ASE]], [[SAP IQ|IQ]], HANA, iRPA, [[SAP BTP|BTP [SAC, DWC, ...]]]*)
 - [[SQLite|SQLite 3]]
 - [[Teradata]]
 - XML (*both standalone and XML native database)
@@ -31,14 +31,20 @@
 
 ### Model structure for any product ###
 
-- System
+- **System**
 	- Architecture
 	- Product fundamentals
-- Install
-	- Versions / Products
-- Maintenance
-	- Administration
-	- Buckup / Recovery
+- **Install**
+	- Preparation, installation
+	- Editions
+	- Licensing
+	- Versions
+	- Upgrading
+- **Maintenance**
+	- Operational Management 
+	- Monitoring
+	- Security
+	- Backup / Recovery
 
 
 ### engines overview database description (sqlite3) ###
