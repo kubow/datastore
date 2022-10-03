@@ -10,7 +10,7 @@
 ***Data storage engine** is referred here as a [Database engine (source: Wikipedia)](https://en.wikipedia.org/wiki/Database_engine) (interchangeable with terms "Database server" or "DBMS")
 
 
-- [[Apache]](Mostly Arrow, Derby, Parquet, [[Kafka]] and Hadoop)
+- [[Apache]](Mostly Arrow, Derby, Parquet, [[Apache Kafka]] and Hadoop)
 - GoodData ([[GoodData.CN|CN]], [[GoodData.UI|UI]])
 - Incorta
 - JSON
