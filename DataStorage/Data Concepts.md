@@ -1,8 +1,8 @@
 # Technological concepts
 ## Data Architecture
-![DataArchitecture](../DataArchitecture.png)
+![DataArchitecture](DataArchitecture.png)
 ## Data Process
-![DataProcess](../DataProcessStore.jpg)
+![DataProcess](DataProcessStore.jpg)
 ### Data Warehouse (DW, DWH, EDW)
 System used for reporting and data analysis, considered as core component of business intelligence.  DW is central repository of integrated data from one or more disparate sources. Stores data (current and historical) used for analytical reports.
 
