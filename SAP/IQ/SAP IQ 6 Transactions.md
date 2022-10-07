@@ -1,10 +1,10 @@
-# Den 5. Správa transakcí v SAP IQ
+# SAP IQ Transactions
 
 [SAP IQ Snapshot Versioning Explained - SAP IQ - Support Wiki](https://wiki.scn.sap.com/wiki/display/SYBIQ/SAP+IQ+Snapshot+Versioning+Explained)
 
 [SAP IQ_TPO_WeeklyHealthCheck_Report_Template - SAP IQ - Support Wiki](https://wiki.scn.sap.com/wiki/display/SYBIQ/SAP+IQ_TPO_WeeklyHealthCheck_Report_Template?preview=%2F481248682%2F481248825%2FSAP+IQ_TPO_WeeklyHealthCheck_Report_Template_V12.0.pdf)
 
-## Typy transakcí
+## Transaction types
 
 [IQ transaction log | SAP Community](https://answers.sap.com/questions/11504103/iq-transaction-log.html)
 
@@ -16,7 +16,7 @@
 
 
 
-## Spravování běhu
+## Transaction maintain
 
 
 [SAP IQ: Truncate the Transaction Log | SAP Blogs](https://blogs.sap.com/2014/07/18/sap-iq-truncate-the-transaction-log/)

@@ -1,4 +1,4 @@
-# Den 1. Systémové prvky v SAP IQ
+# SAP IQ System parts
 
 [![](https://mermaid.ink/img/pako:eNp1kkFvwjAMhf-KlRNMlInuVqFJQC-TQNoo2qXl4DYGojVpSdINBPz3pbTbgG29xHLep_fi-sCyghML2CovPrINagvTeaIATJWuNZYbiOavcTR6hqcXiEi_k17W1wBcaMqsKBQsxk3nGxkP4hAtpmgIViIn0yLX2Hjx0w0HcSdhzmKGQkFkC03DVD927vpi201Ydwl970Ltt-pobyzJ-4kzy4v1FcdT8GAUjf6gH1p6QbIsNOr9jaGV5ZlqEFL89nl-PHVu_7_sayD1N42bqYELuISd5-0u7gZxE0SjMtiwTtYGcZWL8YvxG2ZGxuCaLvRiK82ZuMrdHqHveY_OsK4nuSBlDQy9vusdNW0rMtYc618NiWI9JklLFNytxaEGEmY3JClhgSs56reEJerkdFjZItqrjAVWV9RjVcnRUijQDUqyYIW5cV3iws131uzZed1On4Okv-k)](https://mermaid.live/edit#pako:eNp1kkFvwjAMhf-KlRNMlInuVqFJQC-TQNoo2qXl4DYGojVpSdINBPz3pbTbgG29xHLep_fi-sCyghML2CovPrINagvTeaIATJWuNZYbiOavcTR6hqcXiEi_k17W1wBcaMqsKBQsxk3nGxkP4hAtpmgIViIn0yLX2Hjx0w0HcSdhzmKGQkFkC03DVD927vpi201Ydwl970Ltt-pobyzJ-4kzy4v1FcdT8GAUjf6gH1p6QbIsNOr9jaGV5ZlqEFL89nl-PHVu_7_sayD1N42bqYELuISd5-0u7gZxE0SjMtiwTtYGcZWL8YvxG2ZGxuCaLvRiK82ZuMrdHqHveY_OsK4nuSBlDQy9vusdNW0rMtYc618NiWI9JklLFNytxaEGEmY3JClhgSs56reEJerkdFjZItqrjAVWV9RjVcnRUijQDUqyYIW5cV3iws131uzZed1On4Okv-k)
 **Dbspace**: logical name for a container of files or raw partitions called dbfiles (temporary store has exactly 1 dbspace, other more with IQ_VLDBMGMT option purchased).
@@ -47,7 +47,7 @@ Součásti produktu:
 	- SAP jConnect for JDBC
 
 
-## Databáze
+## Database
 [Before you create a database](https://help.sap.com/docs/SAP_IQ/a8937bea84f21015a80bc776cf758d50/a6fc27ef84f21015bb99a329a7118b34.html?version=16.1.1.0)
 
 Možnosti vytvoření databáze:
@@ -58,13 +58,13 @@ Možnosti vytvoření databáze:
 [IQ database Options - SAP IQ - Support Wiki](https://wiki.scn.sap.com/wiki/display/SYBIQ/IQ+database+Options)
 
 
-## Tabulky
+## Tables
 
 
-## Pohledy
+## Views
 
 
-## Procedury
+## Procedures
 
 
 

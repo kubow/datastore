@@ -1,4 +1,4 @@
-# Den 3. Programovací jazyky v SAP IQ
+# SAP IQ programming languages
 
 [Supported connection interfaces | SAP Help Portal](https://help.sap.com/docs/SAP_IQ/a8937bea84f21015a80bc776cf758d50/a6bd183784f2101588d683306f03b5ee.html):
 
