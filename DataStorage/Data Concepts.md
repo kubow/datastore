@@ -12,12 +12,13 @@ Two main approaches creating warehouses:
 
 Data Mart = layer of Data Warehouse
 ## Data Cardinality (czech transl. "Mohutnost dat")
-| left | right | relation name  | example
-|------|-------|----------------|---------
-| 1 | 1 | one-to-one | person ←→ id card
-| 0..1 | 1 | optional on one side one-to-one | driving license id ←→ person
-| 0..* or * | 0..* or * | optional on both sides many-to-many | person ←→ book
-| 1..* | 1 | many-to-one | person ←→ birth place
+
+| left | right | relation name  | example|
+|------|-------|----------------|---------|
+| 1 | 1 | one-to-one | person ←→ id card|
+| 0..1 | 1 | optional on one side one-to-one | driving license id ←→ person|
+| 0..* or * | 0..* or * | optional on both sides many-to-many | person ←→ book|
+| 1..* | 1 | many-to-one | person ←→ birth place |
 
 ## SQL Structure
 - DDL (Data Definition Language) [Wiki](https://en.wikipedia.org/wiki/Data_definition_language)
