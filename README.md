@@ -5,12 +5,15 @@
 - SQL / NoSQL ![sql_vs_nosql](sql_vs_nosql.jpg)
 - On-Premise / Cloud / Hybrid
 - Higher architecture and cocepts
+- Database types
+  ![[DataStoreTypes.jpg]]
 
 ## Covered data storage engines*
 ***Data storage engine** is referred here as a [Database engine (source: Wikipedia)](https://en.wikipedia.org/wiki/Database_engine) (interchangeable with terms "Database server" or "DBMS")
 
 
 - Apache ([[Apache Arrow|Arrow]], [[Apache Derby|Derby]], [[Apache Parquet|Parquet]], [[Apache Kafka|Kafka]], Hadoop)
+- [[dbt]]
 - GoodData ([[GoodData.CN|CN]], [[GoodData.UI|UI]])
 - Incorta
 - JSON
@@ -19,7 +22,7 @@
 - [[MySQL]]
 - Oracle (just basic stuff)
 - [[PSQL|PostgreSQL]]
-- QLIK (mostly Data Integration)
+- QLIK ([[QLIK Data Integration Platform]])
 - SAP (*[[SQL Anyhere|ASA]], [[SAP ASE|ASE]], [[SAP IQ|IQ]], HANA, iRPA, [[SAP BTP|BTP [SAC, DWC, ...]]]*)
 - [[SQLite|SQLite 3]]
 - [[Teradata]]
