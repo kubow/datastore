@@ -10,7 +10,7 @@ Built to scale with microservices. Deployed in containers next to your data. Ana
 - Drag&Drop Tools
 - Advanced Embedding
 
-[GoodData Cloud Native](https://www.gooddata.com/developers/cloud-native/doc/)
+[Documentation | GoodData Cloud Native](https://www.gooddata.com/developers/cloud-native/doc/cloud/#connect)
 
 ## Installation
 [Deploy & Install | GoodData Cloud Native](https://www.gooddata.com/developers/cloud-native/doc/cloud/deploy-and-install/)
@@ -69,3 +69,4 @@ const style = { height: 300 };
     />  
 </div>
 ```
+
