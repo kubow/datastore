@@ -1,3 +1,8 @@
+[http://logicalread.solarwinds.com/sybase-backup-database-creation-statements-se01/](http://logicalread.solarwinds.com/sybase-backup-database-creation-statements-se01/)
+
+
+
+
 # Automation of the 'DUMP DATABASE' and 'DUMP TRANSACTION' processes on Sybase ASE
 
 You want to automate the 'DUMP DATABASE' and 'DUMP TRANSACTION' processes on Sybase ASE. For this you want to use a local file system for intermediate storage.
