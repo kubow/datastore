@@ -1,4 +1,4 @@
-
+ 
 [SQLite Tutorial - An Easy Way to Master SQLite Fast](https://www.sqlitetutorial.net/)
 
 [Pragma statements supported by SQLite](https://www.sqlite.org/pragma.html#pragma_integrity_check)
