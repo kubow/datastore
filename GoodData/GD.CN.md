@@ -24,7 +24,11 @@ docker run -i -t -p 3000:3000 -p 5432:5432 -v gd-volume:/data gooddata/gooddata-
 
 
 ## Model Building
+
 Scan physical model and build a semantic layer on top of the data.
+
+![[GD_CloudNative_ModelData.png]]
+[Model Data](https://www.gooddata.com/developers/cloud-native/doc/2.1/model-data/)
 
 ```
 {  
