@@ -8,39 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "eb4b9a29fecaa7d4",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
-          },
-          {
-            "id": "e74289d3bd6d15f5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "dbt.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "5b96e53ab816e244",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Google/BigQuery.md",
+                "file": "SAP/Anywhere/SQL Anyhere.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Google/BigQuery.md",
+                "file": "SAP/Anywhere/SQL Anyhere.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Google/BigQuery.md",
+                "file": "SAP/Anywhere/SQL Anyhere.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Google/BigQuery.md"
+                "file": "SAP/Anywhere/SQL Anyhere.md"
               }
             }
           }
@@ -157,20 +136,17 @@
     "direction": "horizontal",
     "width": 200
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "85bd82c41dd42e18",
+  "active": "5b96e53ab816e244",
   "lastOpenFiles": [
-    "dbt.md",
-    "README.md",
-    "SAP/BTP/SAP Analytics.md",
-    "SAP/HANA/SAP HANA.md",
-    "SQLite/SQLite Maintain.md",
-    "SQLite/SQLite Install.md",
-    "SQLite/SQLite.md",
-    "Apache/Apache Derby.md",
-    "Qlik/QLIK Data Integration Platform.md",
-    "SAP/ASE/SAP ASE 3 Maintenance.md"
+    "SAP/Anywhere/ASA_history.jpg",
+    "SAP/Anywhere/SQL Anyhere.md",
+    "SAP/ASE/SAP ASE 2 Install.md",
+    "SAP/ASE/SAP ASE 1 System.md",
+    "SAP/ASE/SAP ASE.md",
+    "GoodData/GoodData.md",
+    "GoodData/GD.CN.md",
+    "GoodData/GD.UI.md",
+    "GoodData/GD_CloudNative_ModelData.png",
+    "GoodData/GD_deployment_types.png"
   ]
 }
