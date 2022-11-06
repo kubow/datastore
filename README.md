@@ -14,7 +14,7 @@
 
 - Apache ([[Apache Arrow|Arrow]], [[Apache Derby|Derby]], [[Apache Parquet|Parquet]], [[Apache Kafka|Kafka]], Hadoop)
 - [[dbt]]
-- GoodData ([[GoodData.CN|CN]], [[GoodData.UI|UI]])
+- [[GoodData]]
 - Incorta
 - JSON
 - [[MariaDB]]
@@ -23,7 +23,7 @@
 - Oracle (just basic stuff)
 - [[PSQL|PostgreSQL]]
 - QLIK ([[QLIK Data Integration Platform]])
-- SAP (*[[SQL Anyhere|ASA]], [[SAP ASE|ASE]], [[SAP IQ|IQ]], HANA, iRPA, [[SAP BTP|BTP [SAC, DWC, ...]]]*)
+- SAP (*[[SQL Anyhere|ASA]], [[SAP ASE|ASE]], [[SAP IQ|IQ]], [[SAP HANA|HANA]], iRPA, [[SAP BTP|BTP [SAC, DWC, ...]]]*)
 - [[SQLite|SQLite 3]]
 - [[Teradata]]
 - [[XML]] (*both standalone and XML native database)
@@ -54,10 +54,11 @@
 
 view "engine_overview" with columns for
 - engine name
-- developer
-- free version available
-- sourcing model (open-source?)
-- engine category
-- supported operating systems (server / client)
+- developer (language used + website)
+- engine category (and storage type)
+	- basic categories (SQL, NoSQL, graph, key-value, document, time series)
+	- storage types (trasnactional, analytical, integration, data warehousing)
+- supported operating systems (win, unix, linux, mac)
 - security rating
 - deployment model
+- sourcing model (open-source?, free version available?)
