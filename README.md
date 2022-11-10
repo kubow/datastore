@@ -9,21 +9,25 @@
   ![[DataStoreTypes.jpg]]
 
 ## Covered data storage engines*
+
 ***Data storage engine** is referred here as a [Database engine (source: Wikipedia)](https://en.wikipedia.org/wiki/Database_engine) (interchangeable with terms "Database server" or "DBMS")
 
 
-- Apache ([[Apache Arrow|Arrow]], [[Apache Derby|Derby]], [[Apache Parquet|Parquet]], [[Apache Kafka|Kafka]], Hadoop)
+- [[Apache]]
 - [[dbt]]
+- [[Elasticsearch]]
 - [[GoodData]]
-- Incorta
+- [[Google]]
+- [[Incorta]]
 - JSON
 - [[MariaDB]]
-- MS (*[[MS Access|Access]], [[MS Excel|Excel]], [[PowerBI]], [[MSSQL|SQL Server]]*)
+- [[Microsoft]]
 - [[MySQL]]
 - Oracle (just basic stuff)
 - [[PSQL|PostgreSQL]]
-- QLIK ([[QLIK Data Integration Platform]])
-- SAP (*[[SQL Anyhere|ASA]], [[SAP ASE|ASE]], [[SAP IQ|IQ]], [[SAP HANA|HANA]], iRPA, [[SAP BTP|BTP [SAC, DWC, ...]]]*)
+- [[Qlik]]
+- [[SAP]] (ASE, IQ, HANA, SQL Anywhere, SAP BTP, ...)
+- [[Snowflake]]
 - [[SQLite|SQLite 3]]
 - [[Teradata]]
 - [[XML]] (*both standalone and XML native database)
