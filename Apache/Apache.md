@@ -7,6 +7,7 @@
 - [[Apache Cassandra]] - scalable NoSQL database
 - [[Apache Derby]] - relational database
 - [[Apache Drill]] - SQL query engine
+- [[Apache Druid]] - real-time column database
 - [[Apache Hadoop]] - distributed processing of large data sets
 - [[Apache Kafka]] - event streaming platform
 - [[Apache Parquet]] - column oriented data file format
