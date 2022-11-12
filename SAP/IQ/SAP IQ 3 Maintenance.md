@@ -22,6 +22,8 @@ https://help.sap.com/docs/SAP_IQ#discover_task-configuration
 	- vmstat (memory, CPU, disk)
 	- [Collecting diagnostic data]([Collecting Diagnostic Data | SAP Help Portal](https://help.sap.com/docs/SAP_IQ/6754c6c35da941ba96ae9cfd3485176b/8bcfb6fac62b49dd8b51ae00b352468c.html))
 
+https://www.slideshare.net/dcbriz/tips-and-tricks-for-sap-sybase-iqi
+
 
 ## Index Management (Správa indexů)
 
