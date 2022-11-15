@@ -13,6 +13,7 @@
 ***Data storage engine** is referred here as a [Database engine (source: Wikipedia)](https://en.wikipedia.org/wiki/Database_engine) (interchangeable with terms "Database server" or "DBMS")
 
 
+- [[AWS|Amazon Web Services]]
 - [[Apache]]
 - [[ClickHouse]]
 - [[dbt]]
