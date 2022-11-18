@@ -1,3 +1,23 @@
+React-based JavaScript library (public cloud / on-premises) that works with:
+- hosted GoodData platform
+- cloud-native analytics platform
+
+Two main components:
+- [InsightView](https://sdk.gooddata.com/gooddata-ui/docs/8.3.0/visualization_component.html)
+- [DashboardView](https://sdk.gooddata.com/gooddata-ui/docs/8.3.0/dashboard_view_component.html)
+
+[Accelerator toolkit](https://sdk.gooddata.com/gooddata-ui/docs/create_new_application.html) offers a pre-built [npm package](https://www.npmjs.com/package/@gooddata/create-gooddata-react-app) with this workflow:
+
+
+```shell
+npx @gooddata/create-gooddata-react-app my-app  #hosted GD platform
+npx @gooddata/create-gooddata-react-app --backend tiger  #GD.CN on localhost
+? What is your hostname? <Use your domain URL> / <GD.CN endpoint incl. protocol, typically http://localhost:3000/>
+? What is your application's desired flavor? JavaScript
+cd my-app
+yarn start
+```
+
 
 ## Modelling
 
@@ -5,3 +25,14 @@
 
 [MAQL: Powerful Analytical Querying Made Simple | GoodData](https://www.gooddata.com/blog/maql-powerful-analytical-querying-made-simple/)
 
+
+### Embedding
+
+- You can embed your dashboards via [React SDK](https://sdk.gooddata.com/gooddata-ui/docs/about_gooddataui.html).
+- You can embed via iframe (top right - embed - iframe - copy)
+	- Hide navigation panel: ?showNavigation=false
+	- Hide filter bar: ?hideControl=[filterBar]
+	- Hide list of visualizations: ?hideControl=[widgetsCatalogue]
+	- Hide top bar: ?hideControl=[widgetsCatalogue]
+
+Basic address: https://<your-domain>.com/dashboards/embedded/#/workspace/<workspace-id>/dashboard/<dashboard-id>

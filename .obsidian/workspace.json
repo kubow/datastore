@@ -4,17 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "e4f2218f9827a1c2",
+        "id": "151b15a7e58e52b2",
         "type": "tabs",
         "children": [
           {
-            "id": "5b96e53ab816e244",
+            "id": "eecfe8c03ec2f168",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SAP/Anywhere/SQL Anyhere.md",
+                "file": "PostgreSQL/PSQL.md",
                 "mode": "source",
+                "backlinks": true,
                 "source": false
               }
             }
@@ -85,11 +86,11 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SAP/Anywhere/SQL Anyhere.md",
+                "file": "PostgreSQL/PSQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
@@ -102,8 +103,8 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SAP/Anywhere/SQL Anyhere.md",
-                "linksCollapsed": false,
+                "file": "PostgreSQL/PSQL.md",
+                "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
             }
@@ -125,28 +126,28 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SAP/Anywhere/SQL Anyhere.md"
+                "file": "PostgreSQL/PSQL.md"
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 200
   },
-  "active": "5b96e53ab816e244",
+  "active": "eecfe8c03ec2f168",
   "lastOpenFiles": [
-    "SAP/Anywhere/ASA_history.jpg",
-    "SAP/Anywhere/SQL Anyhere.md",
-    "SAP/ASE/SAP ASE 2 Install.md",
-    "SAP/ASE/SAP ASE 1 System.md",
-    "SAP/ASE/SAP ASE.md",
-    "GoodData/GoodData.md",
-    "GoodData/GD.CN.md",
-    "GoodData/GD.UI.md",
-    "GoodData/GD_CloudNative_ModelData.png",
-    "GoodData/GD_deployment_types.png"
+    "README.md",
+    "Data_visualized.jpg",
+    "QueryResponseTimeVisual.jpg",
+    "DataStorage/DataStoreTypes.jpg",
+    "DataStorage/SQL_join_types.jpg",
+    "DataStorage/Performance_bottleneck.png",
+    "SQLite/SQLite Maintain.md",
+    "DataStorage/DataStorage Comparison.md",
+    "DataStorage/Data Concepts.md",
+    "MS/SQLServ/MSSQL.md"
   ]
 }

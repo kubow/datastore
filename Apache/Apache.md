@@ -5,6 +5,7 @@
 - [[Apache Avro]] - data serialization system
 - [[Apache Calcite]] - high-performance database foundation
 - [[Apache Cassandra]] - scalable NoSQL database
+- [[Apache CouchDB]] - JSON database
 - [[Apache Derby]] - relational database
 - [[Apache Drill]] - SQL query engine
 - [[Apache Druid]] - real-time column database

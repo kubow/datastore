@@ -1,16 +1,13 @@
-# Technological concepts
+- [[Data Warehouse]]
+- [[DataStorage Comparison]]
+
+
 ## Data Architecture
 ![DataArchitecture](DataArchitecture.png)
 ## Data Process
 ![DataProcess](DataProcessStore.jpg)
-### Data Warehouse (DW, DWH, EDW)
-System used for reporting and data analysis, considered as core component of business intelligence.  DW is central repository of integrated data from one or more disparate sources. Stores data (current and historical) used for analytical reports.
 
-Two main approaches creating warehouses:
-- **Bill Inmon approach** - star schema mapping, not deployed until concept invented
-- **Ralph Kimball approach** - to keep customers happy, deploy warehouses as modules
 
-Data Mart = layer of Data Warehouse
 ## Data Cardinality (czech transl. "Mohutnost dat")
 
 | left | right | relation name  | example|
@@ -37,3 +34,12 @@ Data Mart = layer of Data Warehouse
 
 
 
+## Time Series
+
+Processing time series data: What are the options? [https://www.zdnet.com/article/processing-time-series-data-what-are-the-options/#ftag=RSSbaffb68](https://www.zdnet.com/article/processing-time-series-data-what-are-the-options/#ftag=RSSbaffb68)  
+  
+Time Series Analysis and forecasting - Tutorial [http://www.datasciencecentral.com/xn/detail/6448529:BlogPost:746271](http://www.datasciencecentral.com/xn/detail/6448529:BlogPost:746271)  
+  
+Time-series data mining & applications [http://www.datasciencecentral.com/xn/detail/6448529:BlogPost:724697](http://www.datasciencecentral.com/xn/detail/6448529:BlogPost:724697)  
+  
+Dataquest: Data Retrieval and Cleaning: Tracking Migratory Patterns [https://www.dataquest.io/blog/data-retrieval-and-cleaning/](https://www.dataquest.io/blog/data-retrieval-and-cleaning/)

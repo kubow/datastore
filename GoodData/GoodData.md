@@ -9,7 +9,15 @@
 	- above data layer
 - GD Cloud (PANTER)
 	- hosted in the cloud
+	- tiger-as-a-service
 
+### Architecture
+
+- Home UI
+- LDM Modeller
+- Metric Editor
+- Analytical Designer
+- KPI Dashboards
 
 
 ## General processing
@@ -57,7 +65,21 @@ Before connecting and working with data, there needs to be done a [data preparat
 ```sql
 SELECT aggregation_function(fact1*fact2)
 WHERE condition_column=condition
+
+
+SELECT SUM(SELECT AVG(ammount) BY user)  -- BY detail level
+SELECT SUM(SELECT AVG(ammount) BY user, ALL country)  -- ALL do not group by
+SELECT SUM(SELECT AVG(ammount) BY user, ALL OTHER)  -- OTHER  forget about the rest
+SELECT SUM(SELECT AVG(ammount) BY user, ALL OTHER WITHOUT PF)  -- do not apply any filter (even not primry dashboard filter)
+
+SELECT (SELECT SUM(a)) / (SELECT SUM(a) BY ALL country) -- % % % % percentage
+
+SELECT SUM(ammount) WHERE
+(SELECT COUNT(user) BY user, ALL OTHER WHERE product=x) > 0 -- greater than
+
 ```
 
 
 [Access GD workspace from Apache Zeppelin](https://medium.com/gooddata-developers/accessing-gooddata-workspace-from-apache-zeppelin-notebook-a057856030e6)
+
+
