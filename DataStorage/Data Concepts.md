@@ -1,14 +1,22 @@
 - [[Data Warehouse]]
-- [[DataStorage Comparison]]
+- [[Data Storage Comparison]]
+- [[Data Storage Modelling]]
+- [[Machine Learning]]
+- [[Natural Language]]
+
+
+- **Data**: apply meaning
+- **Information**: apply context
+- **Knwoledge**: apply insight
+- **Wisdom**: apply purpose
+- **Decission**
+
 
 
 ## Data Architecture
 ![DataArchitecture](DataArchitecture.png)
-## Data Process
-![DataProcess](DataProcessStore.jpg)
 
-
-## Data Cardinality (czech transl. "Mohutnost dat")
+### Data Cardinality (czech transl. "Mohutnost dat")
 
 | left | right | relation name  | example|
 |------|-------|----------------|---------|
@@ -17,7 +25,14 @@
 | 0..* or * | 0..* or * | optional on both sides many-to-many | person ←→ book|
 | 1..* | 1 | many-to-one | person ←→ birth place |
 
+
+## Data Process
+
+![DataProcess](DataProcessStore.jpg)
+
+
 ## SQL Structure
+
 - DDL (Data Definition Language) [Wiki](https://en.wikipedia.org/wiki/Data_definition_language)
     - create
     - drop
