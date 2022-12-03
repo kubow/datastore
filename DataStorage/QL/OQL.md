@@ -1,0 +1,2 @@
+
+Advanced DB Systems OQL [http://www.cse.msu.edu/~pramanik/teaching/courses/cse880/14f/lectures/2.objdb/oql/lec.pdf](http://www.cse.msu.edu/~pramanik/teaching/courses/cse880/14f/lectures/2.objdb/oql/lec.pdf)
