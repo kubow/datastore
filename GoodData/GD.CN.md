@@ -45,7 +45,7 @@ In future replaces Redis with Quiver (internal developped based on Apache Arrow)
 https://www.gooddata.com/developers/cloud-native/doc/cloud/
 
 pythonSDK
-UI.SDK (Javascript) - common from BEAR and TIGER
+UI.SDK (Javascript) - common for BEAR and TIGER
 
 
 ## Installation
@@ -64,7 +64,7 @@ Under the hood:
 	- Auth Service :: HTTP port = 9050/9051
 	- Result Cache :: HTTP port = 9040/9041
 	- Metadata :: HTTP port = 9007/9008
-	- Calcique :: HTTP port = 9011/9012 (Apache Calcite clone)
+	- Calcique :: HTTP port = 9011/9012 ([[Apache Calcite]] clone)
 	- SQL executor :: HTTP port = 9100/9101
 	- AFM Exec API :: HTTP port = 9000/9001
 	- Scan Model :: HTTP port = 9060/9061

@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "151b15a7e58e52b2",
+        "id": "4ea9fe6bdb65961c",
         "type": "tabs",
         "children": [
           {
-            "id": "eecfe8c03ec2f168",
+            "id": "ce6f8d667ed0af67",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PostgreSQL/PSQL.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PostgreSQL/PSQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,8 +97,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PostgreSQL/PSQL.md",
-                "linksCollapsed": true,
+                "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
@@ -125,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "PostgreSQL/PSQL.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -135,19 +126,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
-  "active": "eecfe8c03ec2f168",
+  "active": "ce6f8d667ed0af67",
   "lastOpenFiles": [
     "README.md",
-    "Data_visualized.jpg",
-    "QueryResponseTimeVisual.jpg",
-    "DataStorage/DataStoreTypes.jpg",
-    "DataStorage/SQL_join_types.jpg",
-    "DataStorage/Performance_bottleneck.png",
-    "SQLite/SQLite Maintain.md",
-    "DataStorage/DataStorage Comparison.md",
-    "DataStorage/Data Concepts.md",
-    "MS/SQLServ/MSSQL.md"
+    "Oracle/oracle.gif",
+    "DataStorage/NL/Natural Language Processing.md",
+    "DataStorage/ExtractTransformLoad.md",
+    "DataStorage/DataVisualization.md",
+    "DataStorage/QL/StructuralQueryLanguage.md",
+    "DataStorage/QL/DDL.md",
+    "DataStorage/QL/DML.md",
+    "DataStorage/QL/DCL.md",
+    "DataStorage/Data Storage Comparison.md"
   ]
 }

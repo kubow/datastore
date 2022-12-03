@@ -37,8 +37,8 @@ https://en.wikipedia.org/wiki/Natural_language_processing
 	- Text-to-video
 
 [Guide to Natural Language Processing](https://www.datasciencecentral.com/your-guide-to-natural-language-processing-nlp/)
-
-
+[19 Great articles about NLP](https://www.datasciencecentral.com/11-great-articles-about-natural-language-processing-nlp/)
+[Comparison of Top 6 Python NLP Libraries](https://www.datasciencecentral.com/comparison-of-top-6-python-nlp-libraries/)
 
 ## NLP Frameworks
 
