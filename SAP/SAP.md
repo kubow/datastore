@@ -4,3 +4,8 @@
 - [[SAP HANA]]
 - iRPA
 - [[SAP BTP]]
+
+
+Reporting
+- SAP Business objects
+- SAP Lumira
