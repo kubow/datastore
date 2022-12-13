@@ -11,9 +11,8 @@ Two main components:
 
 ```shell
 npx @gooddata/create-gooddata-react-app my-app  #hosted GD platform
-npx @gooddata/create-gooddata-react-app --backend tiger  #GD.CN on localhost
-? What is your hostname? <Use your domain URL> / <GD.CN endpoint incl. protocol, typically http://localhost:3000/>
-? What is your application's desired flavor? JavaScript
+#? What is your hostname? <Use your domain URL> / <GD.CN endpoint incl. protocol, typically http://localhost:3000/>
+#? What is your application's desired flavor? JavaScript
 cd my-app
 yarn start
 ```

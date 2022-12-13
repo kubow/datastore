@@ -38,11 +38,13 @@
 - [[Oracle]] (just basic stuff)
 - [[Pentaho]]
 - [[PSQL|PostgreSQL]]
+- [[Redis]]
 - [[Qlik]]
 - [[SAP]] (ASE, IQ, HANA, SQL Anywhere, SAP BTP, ...)
 - [[Snowflake]]
 - [[SQLite|SQLite 3]]
 - [[Teradata]]
+- [[Vertica]]
 - [[XML]] (*both standalone and XML native database)
 
 

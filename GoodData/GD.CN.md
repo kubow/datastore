@@ -1,29 +1,31 @@
 # GoodData Cloud Native (TIGER)
 
-The cloud-native analytics platform with a powerful engine, elegant interactive visualizations, and self-service tools.
+The cloud-native analytics platform with a powerful engine, elegant interactive visualizations, and self-service tools. Built to scale with microservices. Deployed in containers next to your data. Analytics calculations decoupled from user interactions. GoodData is the platform developers love.
 [GoodData.CN - cloud native analytics platform | GoodData](https://www.gooddata.com/developers/cloud-native/)
 
-Built to scale with microservices. Deployed in containers next to your data. Analytics calculations decoupled from user interactions. GoodData is the platform developers love. Because architecture matters.
 
-- Auto-generated SQL
-- Semantic Abstractions
-- Built-in Multitenancy
-- Drag&Drop Tools
-- Advanced Embedding
+
+### Features
+
+| **Main** | **Versioning systems** | **Authentification** |
+| -- | -- | -- |
+| Auto-generated SQL | GitHub | Auth0 |
+| Semantic Abstractions | GitLab | Google |
+| Built-in Multitenancy | | Okta |
+| Drag&Drop Tools | | |
+| Advanced Embedding [>](https://www.gooddata.com/developers/cloud-native/doc/1.7/integration/) | | |
 
 [Documentation | GoodData Cloud Native](https://www.gooddata.com/developers/cloud-native/doc/cloud/#connect)
 
 GD.CN parts:
-- Analytics Engine (MAQL)
-- Metadata layer (LDM + calculations)
-- Declarative APIs
-- UI apps (self-service analytics)
-Versioning system:
-- Github
-- Gitlab
-
-- REST API (OpenAPI 3.0 specification)
-	- Entities - CRUDon each metadata entity
+- **Analytics Engine** (MAQL)
+	- gRPC (inter process communication), Apache Pulsar for messaging
+	- JDBC for integration with internal metadata database + customer databases
+	- Platform implementation: Kotlin laguage (JVM) + SpringBoot & Gradle to build microservices
+- **Metadata layer** (LDM + calculations)
+	- In future Quiver replaces Redis (internal developped based on Apache Arrow)
+- **Declarative API** (REST API - OpenAPI 3.0 specification)
+	- Entities - CRUD on each metadata entity
 		- /api/vX/entites
 		- JSON:API standard, slightly customized
 		- in-house built metadata-lib, endpoints generated
@@ -31,22 +33,9 @@ Versioning system:
 		- /api/vX/layout
 	- Actions - RPC calls (scan data source, execute report)
 		- /api/vX/actions
-- gRPC (inter process communication), Apache Pulsar for messaging
-- JDBC for integration with internal metadata database + customer databases
-
-Platform microservices implemented with:
-- Kotlin laguage (JVM) + SpringBoot
-- Gradle used to build microservices
-
-In future replaces Redis with Quiver (internal developped based on Apache Arrow)
-
-#### SDK
-
-https://www.gooddata.com/developers/cloud-native/doc/cloud/
-
-pythonSDK
-UI.SDK (Javascript) - common for BEAR and TIGER
-
+- **UI apps** (self-service analytics)
+	- extendable via UI.SDK (React.js) - common for BEAR and TIGER
+	- pythonSDK
 
 ## Installation
 
@@ -56,7 +45,7 @@ UI.SDK (Javascript) - common for BEAR and TIGER
 	- [HELM](https://helm.sh/) (Kubernetes packagemanager) 
 - Docker (community) [GD.CN Image @ Docker Hub](https://hub.docker.com/r/gooddata/gooddata-cn-ce/), [Install GD.CN](https://www.gooddata.com/developers/cloud-native/doc/cloud/deploy-and-install/community-edition/)
 
-Under the hood:
+Under the hood :
 - Nginx
 - Redis 6.0.16 (00000000/0) 64 bit
 - PostgreSQL 13.8 (Debian 13.8-0+deb11u1) on x86_64-pc-linux-gnu
@@ -70,6 +59,9 @@ Under the hood:
 	- Scan Model :: HTTP port = 9060/9061
 
 
+### Installing pre-bult image
+
+Links found in [[#Installation]] under Docker point.
 
 ```bash
 # kubernetes way
@@ -80,14 +72,22 @@ docker run -i -t -p 3000:3000 -p 5300:5300 -v gd-volume:/data gooddata/gooddata-
 docker images --digests
 ```
 
+### Installing UI.SDK (React.js) application
 
-### Security
+https://github.com/gooddata/gooddata-create-gooddata-react-app
 
-Authentifications:
-- Auth0
-- Google
-- Okta
+```bash
+npx @gooddata/create-gooddata-react-app my-app --backend tiger  #GD.CN on localhost
+#? What is your hostname? <Use your domain URL> / <GD.CN endpoint incl. protocol, typically http://localhost:3000/>
+#? What is your application's desired flavor? JavaScript / Typescript
+cd my-app
+# install packages (yarn automatically) # yarn start # not at this point - we need first
+export TIGER_API_TOKEN="" # a value obtained from /settings/personal access token
+yarn refresh-md
+yarn start # npm start
+```
 
+For common React.js modifications follow [[GD-react|this link]].
 
 ## Model Building
 
