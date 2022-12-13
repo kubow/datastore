@@ -16,5 +16,6 @@
 - [[Apache Pulsar]] - distributed messaging and streaming
 - [[Apache Spark]] - engine for large-scale data analytics
 - [[Apache Submarine]] - machine learning platform
+- [[Apache Zeppelin]] - embedded notebook
 - [[Apache Zookeeper]] - coordination service
 
