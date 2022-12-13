@@ -4,6 +4,11 @@ System used for reporting and data analysis, considered as core component of bus
 
 Data Mart = layer of Data Warehouse
 
+- [[Data Warehouse Design]]
+- 
+
+
+
 ![[Data_warehouse_overview.jpg]]
 
 ![[DW_schema.png]]
@@ -44,3 +49,6 @@ SET NULL in foreign key constraint [https://dba.stackexchange.com/questions/5176
 Storing vs calculating aggregate values [https://dba.stackexchange.com/questions/239/storing-vs-calculating-aggregate-values](https://dba.stackexchange.com/questions/239/storing-vs-calculating-aggregate-values)  
   
 Codementor: Everything you need to know about tree data structures [https://www.codementor.io/leandrotk100/everything-you-need-to-know-about-tree-data-structures-pynnlkyud](https://www.codementor.io/leandrotk100/everything-you-need-to-know-about-tree-data-structures-pynnlkyud)
+
+
+

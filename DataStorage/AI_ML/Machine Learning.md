@@ -22,7 +22,7 @@ Machine learning tasks can be classified into:
 Other detailed sections:
 
 - [[Machine Learning Algorithms]]
-- [[scikit-learn]]
+- [[python-frameworks]]
 
 
 [machine learning cheatsheet at DuckDuckGo](https://duckduckgo.com/?q=machine+learning+cheatsheet&ia=cheatsheet&iax=cheatsheet)  
@@ -39,6 +39,10 @@ Other detailed sections:
 [Cross Validation and Grid Search for Model Selection in Python (stackabuse.com)](https://stackabuse.com/cross-validation-and-grid-search-for-model-selection-in-python/)  
   
 [General Myths to avoid in Data Science and Machine Learning - Data Science Central](https://www.datasciencecentral.com/profiles/blogs/general-myths-to-avoid-in-data-science-and-machine-learning)  
+
+
+[Choose best ML technique](https://www.datasciencecentral.com/how-to-choose-the-best-machine-learning-technique-comparison-table/)
+
 
 ## Monitoring
 

@@ -12,6 +12,12 @@ Open Source ETL: Apache NiFi vs Streamsets [http://www.datasciencecentral.com/xn
 
 ETL best Practices [https://www.timmitchell.net/etl-best-practices/](https://www.timmitchell.net/etl-best-practices/)
 
+## Whole Process
+
+![DataProcess](DataProcessStore.jpg)
+
+
+
 Informatica (leader) [https://www.informatica.com](https://www.informatica.com)
 Talend Open Source Data Integrator [https://sourceforge.net/projects/talend-studio/](https://sourceforge.net/projects/talend-studio/)
 Pentaho Data Integrator - Kettle [http://community.pentaho.com/projects/data-integration/](http://community.pentaho.com/projects/data-integration/)
