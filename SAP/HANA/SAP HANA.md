@@ -4,6 +4,12 @@
 [Comparison between SAP HANA with SAP Sybase IQ – first impressions | SAP Blogs](https://blogs.sap.com/2013/09/25/comparison-between-sap-hana-with-sap-sybase-iq-first-impressions/)
 [Comparing SAP HANA and Sybase IQ – real world performance tests | SAP Blogs](https://blogs.sap.com/2013/11/25/comparing-sap-hana-and-sybase-iq-real-world-performance-tests/)
 
+A Look Inside the SAP HANA Data Management Suite https://blogs.saphana.com/2018/06/05/a-look-inside-the-sap-hana-data-management-suite/
+Continuous and Customer-Driven Innovation with SAP HANA https://blogs.saphana.com/2018/06/05/continuous-and-customer-driven-innovation-with-sap-hana/
+Transforming Our World for the Better with Data https://blogs.saphana.com/2018/05/30/transforming-our-world-for-the-better-with-data/
+Intelligent Container – powered by SAP HANA https://blogs.saphana.com/2018/09/27/intelligent-container-powered-sap-hana/
+https://blogs.sap.com/2019/11/12/introduction-to-the-relational-data-lake-service-dat106-sapteched-recap/
+
 
 
 # System
@@ -58,6 +64,10 @@ sudo ./hdblcm --configfile=/home/user/hana_log/hdblcm.cfg --install_execution_mo
 ```
 
 
+### Versions
+
+What’s New in SAP HANA Cockpit SP 07 + Webcast https://blogs.saphana.com/2018/08/09/whats-new-sap-hana-cockpit-sp-07-webcast/
+
 
 # Maintain
 
@@ -65,6 +75,8 @@ sudo ./hdblcm --configfile=/home/user/hana_log/hdblcm.cfg --install_execution_mo
 
 [SAP HANA System Down, HANA not starting - SAP HANA - Support Wiki](https://wiki.scn.sap.com/wiki/display/SAPHANA/SAP+HANA+System+Down%2C+HANA+not+starting)
 
+SAP HANA Expert Webinar Series – September/October 2018 https://blogs.saphana.com/2018/08/22/sap-hana-expert-webinar-series-september-october-2018/
+SAP HANA iFG Expert Webinar Series – November/December 2018 https://blogs.saphana.com/2018/10/29/draft-sap-hana-expert-webinar-series-november-december-2018/
 
 ```sh
 HDB info #show running services  
