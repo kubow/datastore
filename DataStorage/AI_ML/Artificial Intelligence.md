@@ -32,3 +32,5 @@ Standalone AI Development frameworks:
 
 [AI Developmentr: A simple guide](https://www.ai4beginners.com/artificial-intelligence-development/)
 
+Explainable AI: A guide for making black box machine learning models explainable [https://www.zdnet.com/article/explainable-ai-artificial-intelligence-a-guide-for-making-black-box-machine-learning-models-explainable/#ftag=RSSbaffb68](https://www.zdnet.com/article/explainable-ai-artificial-intelligence-a-guide-for-making-black-box-machine-learning-models-explainable/#ftag=RSSbaffb68)
+

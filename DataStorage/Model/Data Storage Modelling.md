@@ -40,3 +40,8 @@ A step-by-step guide to build a data catalog [http://www.datasciencecentral.com/
 Using Design to Drive Business Outcomes, or Uncovering What You Don’t Know That You Already Know [http://www.datasciencecentral.com/xn/detail/6448529:BlogPost:746873](http://www.datasciencecentral.com/xn/detail/6448529:BlogPost:746873)
   
 Visual database design tool (dbdesigner) [https://gadgetxplore.com/dev-tools/dbdesigner-visual-database-design-tool/](https://gadgetxplore.com/dev-tools/dbdesigner-visual-database-design-tool/)
+
+
+## Topic Modelling
+
+How to easily do Topic Modeling with LSA, PSLA, LDA & lda2Vec [https://medium.com/nanonets/topic-modeling-with-lsa-psla-lda-and-lda2vec-555ff65b0b05](https://medium.com/nanonets/topic-modeling-with-lsa-psla-lda-and-lda2vec-555ff65b0b05)

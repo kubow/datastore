@@ -4,91 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "4f973fd2209fc311",
+        "id": "85d9015cb8954d63",
         "type": "tabs",
         "children": [
           {
-            "id": "7da4bbcb70cd85ce",
+            "id": "5680c57209e655c2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DataStorage/Model/Data Storage Modelling.md",
+                "file": "SAP/SAP.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "cf86f1e7ed356427",
+            "id": "7efb2cd26aef3e1c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MS/SQLServ/MSSQL.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "dec2b94145eff433",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MS/SQLServ/MSSQL 1 System.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7f49f194ccf1c330",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MS/SQLServ/MSSQL.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "43143f899edde563",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MS/Access/MS Access.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "725120cf5a66aecc",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {}
-            }
-          },
-          {
-            "id": "ab8f7328bc5366f0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DataStorage/Data Visualization.md",
-                "mode": "source",
-                "source": false
-              }
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -117,7 +57,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "SAP Analytics ",
+                "query": "cockroach",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -157,7 +97,7 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
-                "showSearch": true,
+                "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
@@ -194,24 +134,34 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
-  "active": "725120cf5a66aecc",
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "85bd82c41dd42e18",
   "lastOpenFiles": [
-    "MS/SQLServ/MSSQL.md",
-    "MS/Access/MS Access.md",
-    "MS/Access/MS Access VBA.md",
-    "MS/SQLServ/MSSQL 1 System.md",
-    "MS/SQLServ/MSSQL 3 Maintenance.md",
-    "MS/SQLServ/MSSQL 2 Install.md",
-    "SAP/ASE/SAP ASE.md",
-    "ClickHouse/ClickHouse.md",
-    "Incorta/Incorta.md",
-    "JSON/JSON.md"
+    "SAP/ASE/SAP ASE 3 Maintenance.md",
+    "SAP/ASE/SAP ASE 1 System.md",
+    "SAP/ASE/SAP ASE 2 Install.md",
+    "SAP/Anywhere/SQL Anyhere.md",
+    "Untitled.canvas",
+    "SAP/SAP.md",
+    "SAP/BTP/SAP BTP.md",
+    "SAP/iRPA/SAP iRPA.md",
+    "SAP/SAP PowerDesigner.md",
+    "SAP/RS/SAP Replication Server.md"
   ]
 }

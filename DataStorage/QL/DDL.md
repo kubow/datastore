@@ -4,3 +4,5 @@
 **alter**  
 **rename**
 
+SQL DDL transactional [https://julien.danjou.info/why-you-should-care-that-your-sql-ddl-is-transactional/](https://julien.danjou.info/why-you-should-care-that-your-sql-ddl-is-transactional/)
+
