@@ -13,3 +13,4 @@
 
 
 
+[Microsoft SQL Server reading list](https://justdaveinfo.wordpress.com/category/general-dba-skills/)

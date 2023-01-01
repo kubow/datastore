@@ -1,4 +1,5 @@
 
 - [[BigQuery]]
+- [[Cloud Spanner]]
 - [[OpenRefine]]
 
