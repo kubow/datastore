@@ -3,8 +3,13 @@
 
 [SAP Sybase ASE “Magic Numbers” and Hardcoded Behaviour | just dave info (wordpress.com)](https://justdaveinfo.wordpress.com/2015/05/19/sap-sybase-ase-magic-numbers-and-hardcoded-behaviour/)
 
+# Main features
 
-![[ASE_DirStructure.png]]
+- Compression
+- In-row LOBs
+- Data partititoning
+- Task scheduler
+- Resource configuration limits
 
 # Layers
 

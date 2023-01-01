@@ -16,11 +16,11 @@
 	- Performance: increase deafult value for shared memory (kernel.shmmax=4294967296)
 - Installing additional libraries:
 	- JVM (version 8 + [prerequisities](https://launchpad.support.sap.com/#/notes/1367498)) must be installed in order to run GUI installation.
-		- Windows additionally reuires:
+		- Windows reuires:
 			- Microsoft Visual C++ 2010 Service Pack 1 Redistributable Package ([source 32/64bit](https://www.microsoft.com/en-us/download/details.aspx?id=26999))
 			- Microsoft Visual C++ 2013 Redistributable Package ([source 32/64bit](https://www.microsoft.com/en-us/download/details.aspx?id=40784))
 			- Microsoft Visual C++ 2015 Redistributable Package (for latest versions SP04)
-		- Linux additionally requires ([Certification information](https://launchpad.support.sap.com/#/notes/1941500)):
+		- Linux requires ([Certification information](https://launchpad.support.sap.com/#/notes/1941500)):
 			- libncurses5
 			- ksh can be switched to sh
 			- csh (for running installation scripts)
@@ -28,6 +28,9 @@
 			- install libaio1 libaio1-dev (OpenSUSE) 
 - Create Raw devices from operating system defined partitions
 	- change ownership of these devices
+
+https://dreamsbythelake.com/articles/AWS_EC2_setup_for_Sybase_ASE.html
+
 
 ## Installation
 
@@ -37,6 +40,19 @@ su - sybase
 
 
 ```
+
+Installation variables
+
+| Purpose | Unix / Linux | Windows |
+| --- | --- | --- |
+| ASE release directory | $SYBASE | %SYBASE% |
+| ASE binaries | $SYBASE_ASE | %SYBASE_ASE% |
+| ASE libraries | $SYBASE_OCS | %SYBASE_OCS% |
+| ASE specialized libraries | $LD_LIBRARY_PATH | %CLASSPATH% |
+| Server name | $DSLISTEN <br/> $DSQUERY | %DSLISTEN% <br/> %DSQUERY% |
+
+![[ASE_DirStructure.png]]
+
 
 
 ## Post-installation
@@ -108,6 +124,8 @@ Options
 [Targeted ASE 15.x Release Schedule and CR list Information - SAP ASE - Support Wiki](https://wiki.scn.sap.com/wiki/display/SYBASE/Targeted+ASE+15.x+Release+Schedule+and+CR+list+Information)
 [Targeted ASE 16.0 Release Schedule and CR list Information - SAP ASE - Support Wiki](https://wiki.scn.sap.com/wiki/display/SYBASE/Targeted+ASE+16.0+Release+Schedule+and+CR+list+Information)
 
+[ASE 16.0 New Features](http://smooth1.co.uk/ase/ase16.html)
 
 ## Upgrading
+
 [1590719 - SYB: Updates for SAP Adaptive Server Enterprise (SAP ASE) - SAP ONE Support Launchpad](https://launchpad.support.sap.com/#/notes/0001590719)

@@ -1,9 +1,9 @@
-# SAP ASE Overview note
+# SAP Adaptive Server Enterprise
 
 1. [[SAP ASE 1 System|Přehled SAP ASE]]
 2. [[SAP ASE 2 Install|Instalace a licencování SAP ASE]]
 3. [[SAP ASE 3 Maintenance|Údržba SAP ASE]]
-	- [[Backup|Backup/Restore]]  
+	- [[backup|Backup/Restore]]  
 
 
 
@@ -13,4 +13,4 @@ Separate for now
 [[sybcron]]
 
 
-
+[http://selectetoile.net/index.php/sybase](http://selectetoile.net/index.php/sybase) - waiting to start work

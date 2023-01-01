@@ -1,9 +1,15 @@
 [http://logicalread.solarwinds.com/sybase-backup-database-creation-statements-se01/](http://logicalread.solarwinds.com/sybase-backup-database-creation-statements-se01/)
 
+Amazon backups - [http://d0.awsstatic.com/enterprise-marketing/SAP/sap-on-aws-backup-and-recovery-guide-v2-2.pdf](http://d0.awsstatic.com/enterprise-marketing/SAP/sap-on-aws-backup-and-recovery-guide-v2-2.pdf)
+
+![[dump_load.png]]
+
+## Traceflags on Backup Server
 
 
 
-# Automation of the 'DUMP DATABASE' and 'DUMP TRANSACTION' processes on Sybase ASE
+
+## Automation of the 'DUMP DATABASE' and 'DUMP TRANSACTION' processes on Sybase ASE
 
 You want to automate the 'DUMP DATABASE' and 'DUMP TRANSACTION' processes on Sybase ASE. For this you want to use a local file system for intermediate storage.
 Using a local file system as an intermediate storage method for database and transaction log dumps is convenient since it is easy to set up and does not require additional hardware such as tape devices. Also, local file systems are always available to store a dump. Scheduled database or transaction log dumps will not fail due to inaccessible dump devices.
@@ -19,12 +25,13 @@ To automate the dump process
 - create a job and a schedule for each database you want to back up
 - setup a threshold action to dump the transaction log when a threshold for the fill level has been reached.
 
-## Create a file system to store the dumps
+### Create a file system to store the dumps
 If you use a local file system to dump databases and transaction logs, it is recommended that you create a separate file sytem for the dumps that is located on a separate storage. This reduces the danger of both the database devices and the dump devices becoming unusable in the case of an error.
-On UNIX/LINUX systems you might want to mount the new file systems below the /sybase/<SAPSID> directory. For example, create a directory /sybase/<SAPSID>/backups and a directory /sybase/<SAPSID>/log_archives.
+On UNIX/LINUX systems you mount the new file systems below the `/sybase/<SAPSID>` directory. 
 Then use these directories as mount points for the file system(s) that will take up the dumps of the transaction log and the database dumps. This is not a requirement, but may be convenient.
 
-## Create a stored procedure to call the dump command
+
+### Create a stored procedure to call the dump command
 Attached to this note you will find an tgz archive which contains SQL text for a Sybase ASE stored procedure 'sp_dumptrans' and a stored procedure 'sp_dumpdb'.
 The stored procedure 'sp_dumptrans' generates a unique, timestamp-based name for a dump device file name. It then calls the 'dump transaction' command using this device name.
 The stored procedure 'sp_dumpdb' generates a unique, timestamp based dump device file and calls the 'dump database' command using this device name.
