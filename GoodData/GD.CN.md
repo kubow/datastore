@@ -1,6 +1,6 @@
-# GoodData Cloud Native (TIGER)
+# GoodData Cloud (Panther) / Cloud Native (TIGER)
 
-The cloud-native analytics platform with a powerful engine, elegant interactive visualizations, and self-service tools. Built to scale with microservices. Deployed in containers next to your data. Analytics calculations decoupled from user interactions. GoodData is the platform developers love.
+The analytics platform with a powerful engine, elegant interactive visualizations, and self-service tools. Built to scale with microservices. Deployed in containers next to your data. Analytics calculations decoupled from user interactions. GoodData is the platform developers love.
 [GoodData.CN - cloud native analytics platform | GoodData](https://www.gooddata.com/developers/cloud-native/)
 
 
@@ -87,7 +87,7 @@ yarn refresh-md
 yarn start # npm start
 ```
 
-For common React.js modifications follow [[GD-react|this link]].
+For common React.js modifications follow [[GD.UI|this link]].
 
 ## Model Building
 

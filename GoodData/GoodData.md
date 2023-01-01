@@ -1,9 +1,11 @@
 ![[GoodData_Layers.jpg]]
 [Plaform overview](https://help.gooddata.com/doc/free/en/expand-your-gooddata-platform/gooddata-platform-overview)
 
+
 # System 
 
-- [[GD.UI|GD platform]] (BEAR)
+- GD Platform (BEAR)
+	- [Request a demo (BEAR)](https://www.gooddata.com/request-a-demo/)
 - [[GD.CN|GD Cloud Native]] (TIGER)
 	- no data storage
 	- above data layer
@@ -60,7 +62,14 @@ Before connecting and working with data, there needs to be done a [data preparat
 	- Manage --> Workspaces & Users --> Invite user ([User roles](https://help.gooddata.com/doc/enterprise/en/workspace-and-user-administration/managing-users-in-workspaces/user-roles))
 
 
-### MAQL Strucutre
+## Modelling
+
+[Data Modelling in GD Enterprise](https://help.gooddata.com/doc/enterprise/en/data-integration/data-modeling-in-gooddata)
+
+### MAQL
+
+[MAQL: Powerful Analytical Querying Made Simple | GoodData](https://www.gooddata.com/blog/maql-powerful-analytical-querying-made-simple/)
+
 
 ```sql
 SELECT aggregation_function(fact1*fact2)
@@ -79,7 +88,11 @@ SELECT SUM(ammount) WHERE
 
 ```
 
+## Development
 
 [Access GD workspace from Apache Zeppelin](https://medium.com/gooddata-developers/accessing-gooddata-workspace-from-apache-zeppelin-notebook-a057856030e6)
 
 
+
+
+[Gooddata blog](https://padak.posthaven.com/tag/gooddata)
