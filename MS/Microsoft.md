@@ -1,4 +1,4 @@
-- [[MSSQL]]
+- [[Microsoft SQL Server]]
 - MS Azure
 	- [[Microsoft Azure SQL]] - Cloud relational database
 	- [[Microsoft Azure Synapse]] - Cloud analytics
