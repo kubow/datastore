@@ -3,13 +3,17 @@
 
 [SAP Sybase ASE “Magic Numbers” and Hardcoded Behaviour | just dave info (wordpress.com)](https://justdaveinfo.wordpress.com/2015/05/19/sap-sybase-ase-magic-numbers-and-hardcoded-behaviour/)
 
+SAP claims to have 10k+ customers onASE with over 600+ apps on ASE in production
+
 # Main features
 
-- Compression
-- In-row LOBs
-- Data partititoning
-- Task scheduler
-- Resource configuration limits
+| Main Features | Improvement areas | Common abbreviations |
+| --- | --- | --- |
+| <ul><li> Compression </li><li> In-row LOBs </li><li> Data partititoning </li><li> Task scheduler </li><li> Resource configuration limits </li></ul> | <ul><li> Scalability & Performance </li><li> Workload optimization </li><li> Security </li><li> Real-time data distribution </li><li> Cloud ready & flexible deployment </li></ul> | <ul><li> **XOLTP** (Extreme OLTP) </li><li> **IMRS** (In-memory row storage) </li><li> **MVCC** (Multi version concurency control) </li><li> **HCB** (Hash cached B-trees) </li><li> **CCL** (Common crypto library) </li></ul> |
+
+
+
+
 
 # Layers
 

@@ -1,0 +1,254 @@
+kubow@SCZ-J-VAJDA /mnt/c/Users/j.vajda/Downloads/ebf29740 $ ./setup.bin
+Preparing to install...
+Extracting the JRE from the installer archive...
+Unpacking the JRE...
+Extracting the installation resources from the installer archive...
+Configuring the installer for this system's environment...
+
+Launching installer...
+
+
+Graphical installers are not supported by the VM. The console mode will be used instead...
+
+===============================================================================
+SAP IQ Server Suite                              (created with InstallAnywhere)
+-------------------------------------------------------------------------------
+
+Preparing CONSOLE Mode Installation...
+
+
+
+
+===============================================================================
+Title
+-----
+
+CONSOLE
+
+PRESS <ENTER> TO CONTINUE:
+
+
+
+===============================================================================
+Introduction
+------------
+
+InstallAnywhere will guide you through the installation of SAP IQ Server Suite
+16.0 sp11.28 (64-bit) .
+
+It is strongly recommended that you quit all programs before continuing with
+this installation.
+
+Respond to each prompt to proceed to the next step in the installation.  If you
+want to change something on a previous step, type 'back'.
+
+You may cancel this installation at any time by typing 'quit'.
+
+PRESS <ENTER> TO CONTINUE:
+
+
+
+===============================================================================
+Choose Install Folder
+---------------------
+
+Where would you like to install?
+
+  Default Install Folder:
+
+ENTER AN ABSOLUTE PATH, OR PRESS <ENTER> TO ACCEPT THE DEFAULT
+      : /opt/sap/iq160
+
+INSTALL FOLDER IS: /opt/sap/iq160
+   IS THIS CORRECT? (Y/N): y
+The directory /opt/sap/iq160 does not exist. Do you want to create it?
+    (Y/N): Y
+
+
+
+===============================================================================
+Choose Install Set
+------------------
+
+Please choose the Install Set to be installed by this installer.
+
+  ->1- Typical
+
+    2- Customize...
+
+ENTER THE NUMBER FOR THE INSTALL SET, OR PRESS <ENTER> TO ACCEPT THE DEFAULT
+   : 1
+
+
+
+===============================================================================
+Software License Type Selection
+-------------------------------
+
+What would you like to do?
+
+    1- Install licensed copy of SAP IQ Server Suite 16.0 sp11.28 (64-bit)
+
+  ->2- Evaluate SAP IQ Server Suite 16.0 sp11.28 (64-bit)
+
+
+Enter one of the options above: 2
+
+
+
+===============================================================================
+End-user License Agreement
+--------------------------
+
+1)  All regions
+
+Please enter the number of the location you are installing. (1-1) (Default:
+   1): 1
+
+
+
+SOFTWARE TRIAL LICENSE AGREEMENT
+SAP(r) IQ
+VERSION 16.0.x
+
+Scroll down and read this 30-Day Trial License Agreement
+(this "Agreement") carefully.  This is a legally binding
+Agreement between you (or your employer or company, as
+applicable) ("Licensee" or "You") and the SAP entity
+authorized to distribute the Trial Software (as defined
+below) in the country in which you are located ("SAP").
+By clicking "Accept" or "Agree," You agree to all of the
+terms and conditions stated in this Agreement.   If You do
+not agree to these terms, do not click "Accept" or "Agree."
+If You are entering into this Agreement on behalf of your
+employer or company, You represent and warrant that You have
+the authority to bind your employer or company to the terms
+of this Agreement.
+The following terms and conditions apply exclusively to Your
+
+Press ENTER to read the text [Type 'back' and press ENTER to skip the text]
+   : back
+
+I agree to the terms of the SAP license for the install location specified.
+   (Y/N): Y
+
+
+
+===============================================================================
+Pre-Installation Summary
+------------------------
+
+Please Review the Following Before Continuing:
+
+Product Name:
+    SAP IQ Server Suite 16.0 sp11.28 (64-bit)
+
+Install Folder:
+    /opt/sap/iq160
+
+Product Features:
+    jConnect 7.0 for JDBC,
+    SAP IQ Client,
+    SAP IQ ODBC Driver,
+    SAP IQ Server,
+    Additional Connectivity Language Modules,
+    SAP IQ,
+    SAP IQ Web Drivers,
+    Cockpit Framework,
+    SAP IQ Cockpit,
+    SySAM License Utilities,
+    Remote Command and Control Agent for SAP IQ
+
+Disk Space Information (for Installation Target):
+    Required:  1,193,670,285 Bytes
+    Available: 236,502,609,920 Bytes
+
+PRESS <ENTER> TO CONTINUE:
+
+
+
+===============================================================================
+Ready To Install
+----------------
+
+InstallAnywhere is now ready to install SAP IQ Server Suite 16.0 sp11.28
+(64-bit)  onto your system at the following location:
+
+   /opt/sap/iq160
+
+PRESS <ENTER> TO INSTALL:
+
+
+
+===============================================================================
+Installing...
+-------------
+
+ [==================|==================|==================|==================]
+ [------------------|------------------|------------------|------------------]
+
+
+
+===============================================================================
+Cockpit - Configure HTTP/HTTPS Ports
+------------------------------------
+
+Cockpit needs HTTP/HTTPS ports that do not conflict with ports used by other
+applications and services on this system. Accept the default ports or specify
+other, unused ports.
+
+HTTP Port: [integer (1025-65535)] (Default: 4282):
+HTTPS Port: [integer (1025-65535)] (Default: 4283):
+
+
+
+===============================================================================
+Cockpit - Configure RMI Port
+----------------------------
+
+The RMI service needs to use a port that is not used by other applications or
+services on this system. Accept the default port or specify an unused port.
+
+RMI Port: [integer (1025-65535)] (Default: 4992):
+
+
+
+===============================================================================
+Cockpit - Configure TDS Port
+----------------------------
+
+The TDS service needs to use a port that is not used by other applications or
+services on this system. Accept the default port or specify an unused port.
+
+TDS Port: [integer (1025-65535)] (Default: 4998):
+
+
+
+===============================================================================
+Start Cockpit
+-------------
+
+
+Do you want to start Cockpit Server?
+
+  ->1- Yes
+    2- No
+
+Enter one of the options above: 2
+
+
+
+===============================================================================
+Install Complete
+----------------
+
+The installation was successful. SAP IQ Server Suite 16.0 sp11.28 (64-bit)  has
+been installed to:
+
+/opt/sap/iq160
+
+This evaluation license will expire in 30 days after first usage. Please
+contact your SAP representative for information about purchasing a license or
+extending the evaluation.
+
+Would you like to launch the SAP Product Download Center website? (Y/N): N

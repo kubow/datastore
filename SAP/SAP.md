@@ -21,6 +21,14 @@ Reporting:
 
 https://open.sap.com/courses
 
+## General SAP places
+
+[SAP Community Home](https://community.sap.com/)
+[SAP Support Portal Home](https://support.sap.com/en/index.html)
+
+[SAP License Keys for Preview, Evaluation and Developer Versions](https://go.support.sap.com/minisap/#/minisap)
+
+
 https://configit.com/insights/sap-configuration-cheat-sheet/
 http://www.system-overload.org/sap/modules.html
 https://doyanet.wordpress.com/2013/01/24/how-to-read-data-cluster-from-sap-transparent-table/
@@ -31,6 +39,6 @@ SAP Q3 2020: Software license revenue plummets, demand weakens as COVID-19 stren
 
 ## Sybase general
 
-Background talk [http://timoelliott.com/blog/2013/01/oltp-meets-olap-bi-conferences-sybase-who-and-other-news.html](http://timoelliott.com/blog/2013/01/oltp-meets-olap-bi-conferences-sybase-who-and-other-news.html)
+[OLTP meets OLAP, BI Conferences, Sybase Who? And Other News – Innovation Evangelism](https://timoelliott.com/blog/2013/01/oltp-meets-olap-bi-conferences-sybase-who-and-other-news.html)
 
-
+[FLEXnet Licensing Error Codes](http://media.3ds.com/support/simulia/public/flexlm108/EndUser/chap13.htm)

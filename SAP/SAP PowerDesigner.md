@@ -1,9 +1,8 @@
 
 creating a connection in PD 16.6 64bit [https://archive.sap.com/discussions/thread/3737799](https://archive.sap.com/discussions/thread/3737799)
 
-[http://powerdesigner.de/en/](http://powerdesigner.de/en/)  
   
-Comparison of Data Modelling Tools [https://en.wikipedia.org/wiki/Comparison_of_data_modeling_tools](https://en.wikipedia.org/wiki/Comparison_of_data_modeling_tools)  
+[Comparison of data modeling tools - Wikipedia](https://en.wikipedia.org/wiki/Comparison_of_data_modeling_tools)
   
 Core Features [http://infocenter.sybase.com/help/topic/com.sybase.infocenter.dc38093.1610/doc/pdf/core_features.pdf](http://infocenter.sybase.com/help/topic/com.sybase.infocenter.dc38093.1610/doc/pdf/core_features.pdf)  
   
@@ -20,15 +19,12 @@ SAP PD Core features guide [https://help.sap.com/doc/c7bca6c26e1b101490ead272b2b
 
 ## Install
 
-Floating  
-• Označení CS, CSBL  
-• Napojování na licenční server  
+Licnse types:
+
+- Floating CS/CSBL (Concurent Session) - licesnse server
+- Standalone NU (Named User) - can be server bt usally not 
   
-Standalone  
-• Označení NU (Named User)  
-• Může být i served, ale vzácně  
-  
-SYSAM = licenční software  
+SYSAM = license software  
 ```C:\SYBASE\SYSAM\bin\lmtools.exe```
 Server status - Perform status & enquiry
 

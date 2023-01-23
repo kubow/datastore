@@ -14,7 +14,7 @@ transaction - who is holding
 transaction log https://benohead.com/sybase-transaction-log-dump-non-logged-operations/
 
 [Cascade Delete in ASE](https://stackoverflow.com/questions/30437304/get-info-about-foreign-key-on-delete-action)
-
+[Sybase ASE Performance and Tuning](http://aseperformance.blogspot.com/)
 https://stackoverflow.com/questions/3313421/how-to-determine-how-much-disc-space-a-table-is-using-in-ase
 
 ### ASE Client Utilities
@@ -105,3 +105,9 @@ device settings (directio, dsync)
 - How to recover from several distinct master device failure scenarios 
 - Disk reinit and disk refit commands
 
+
+### Transactions
+
+[Ease Sybase Database Recovery](https://logicalread.com/sybase-backup-database-creation-statements-se01/#.Y7RIHdLMLmE)
+
+[Why and When to Use Sybase ASE Transaction Dumps](https://logicalread.com/sybase-ase-transaction-dumps-se01/#.Y7RH4NLMLmE)

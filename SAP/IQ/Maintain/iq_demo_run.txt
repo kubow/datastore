@@ -1,0 +1,105 @@
+kubow@SCZ-J-VAJDA /opt/sap/iq160/IQ-16_0/demo $ ./mkiqdemo.sh
+
+This script will create the iqdemo database in the current
+directory.  An existing iqdemo database in this directory
+will need to be shutdown and over-written.
+
+Continue <Y/N>? Y
+
+Checking system ...
+
+The following 1 server(s) are owned by 'kubow'
+
+## Owner          PID   Started  CPU Time  Additional Information
+-- ---------  -------  --------  --------  ------------------------------------
+1: kubow        10815     18:36  00:00:00  SVR:bld_demo_9772 DB:none PORT:9772
+              /opt/sap/iq160/IQ-16_0/bin64/iqsrv16 @bld_demo_9772.cfg -gc 20 -gl all -ti 4400 -gn 25 -o /opt/sap/iq160/IQ-16_0/logfiles/bld_demo_9772.0001.srvlog -
+--
+
+ Please note that 'stop_iq' will shut down a server completely
+ without regard for users, connections, or load process status.
+ For more control, use the 'dbstop' utility, which has options
+ that control stopping servers based on active connections.
+
+Do you want to stop the server displayed above <Y/N>? Y
+
+Shutting down server (10815) ...
+Checkpointing server (10815) ...
+Server shutdown.
+
+
+Starting Server ...
+
+
+Starting server bld_demo_9494 on SCZ-J-VAJDA at port 9494 (09/15 18:40:54)
+
+Run Directory       : /opt/sap/iq160/IQ-16_0/demo
+Server Executable   : /opt/sap/iq160/IQ-16_0/bin64/iqsrv16
+Server Output Log   : /opt/sap/iq160/IQ-16_0/logfiles/bld_demo_9494.0001.srvlog
+Server Version      : 16.0.110.3569/sp11.28
+Open Client Version : 15.7
+User Parameters     : '@bld_demo_9494.cfg'
+Default Parameters  : -gc 20 -gl all -ti 4400 -gn 25
+
+limit: No such limit.
+I. 09/15 18:40:58. SAP IQ
+I. 09/15 18:40:58. Version 16.0
+I. 09/15 18:40:58. (64bit mode)
+I. 09/15 18:40:58. Copyright 1992-2020 by SAP AG or an SAP affiliate company. All rights reserved
+I. 09/15 18:40:58. Copyright (c) 2020 SAP AG or an SAP affiliate company.
+I. 09/15 18:40:58. All rights reserved.
+I. 09/15 18:40:58. Use of this software is governed by the SAP Software Use Rights Agreement.
+I. 09/15 18:40:58. Refer to http://www.sap.com/about/agreements.html.
+I. 09/15 18:40:58.
+I. 09/15 18:40:58. Processors detected: 1 (containing 4 logical processors)
+I. 09/15 18:40:58. Maximum number of processors the server will use: 1 physical processor(s), 2 core(s)
+I. 09/15 18:40:58. Running Linux 4.4.0-19041-Microsoft #1237-Microsoft Sat Sep 11 14:32:00 PST 2021 on X86_64
+I. 09/15 18:40:58. Server built for X86_64 processor architecture
+I. 09/15 18:40:58. 49152K of memory used for caching
+I. 09/15 18:40:58. Minimum cache size: 49152K, maximum cache size: 262144K
+I. 09/15 18:40:58. Using a maximum page size of 4096 bytes
+I. 09/15 18:40:58. Multiprogramming level: 25
+I. 09/15 18:40:58. Automatic tuning of multiprogramming level is disabled
+
+
+=============================================================
+IQ server starting with:
+     10 connections         (       -gm )
+     18 cmd resources       ( -iqgovern )
+    259 threads             (     -iqmt )
+    512 Kb thread stack size   (   -iqtss  )
+  132608 Kb thread memory size ( -iqmt * -iqtss )
+      4 IQ number of cpus  ( -iqnumbercpus )
+      0 MB maximum size of IQMSG file ( -iqmsgsz )
+      0 copies of IQMSG file archives ( -iqmsgnum )
+I. 09/15 18:40:59. Database server started at Thu Sep 15 2022 18:40
+I. 09/15 18:40:59. Trying to start SharedMemory link ...
+I. 09/15 18:40:59.     SharedMemory link started successfully
+I. 09/15 18:40:59. Trying to start TCPIP link ...
+I. 09/15 18:40:59. Starting on port 9494
+I. 09/15 18:41:22.     TCPIP link started successfully
+I. 09/15 18:41:22. Now accepting requests
+New process id is 11466
+
+Server started successfully
+
+Started.
+Connecting to server via TCPIP ...
+Using: uid=DBA;pwd=sql;eng=bld_demo_9494;dbn=utility_db;links=tcpip{host=SCZ-J-VAJDA;port=9494}
+
+Creating database ...
+Demo database created.
+
+Shutting down server ...
+SQL Anywhere Stop Server Utility Version 16.0.0.3569
+
+-rw-r--r-- 1 kubow kubow       543 Sep 15 18:41 iqdemo.cfg
+-r--r--r-- 1 kubow kubow   4308992 Sep 15 18:41 iqdemo.db
+-rw-r--r-- 1 kubow kubow 104857600 Sep 15 18:41 iqdemo.iq
+-rw-r--r-- 1 kubow kubow     54127 Sep 15 18:41 iqdemo.iqmsg
+-rw-r--r-- 1 kubow kubow  26214400 Sep 15 18:41 iqdemo.iqtmp
+-rw-r--r-- 1 kubow kubow       437 Sep 15 18:41 iqdemo.lmp
+-r-------- 1 kubow kubow    327680 Sep 15 18:41 iqdemo.log
+-rw-r--r-- 1 kubow kubow 104857600 Sep 15 18:41 iqdemo_main.iq
+
+Demo database created successfully
