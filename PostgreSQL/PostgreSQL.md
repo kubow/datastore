@@ -1,6 +1,10 @@
 [[PSQL System]]
 
 
+[Sample Databases - PostgreSQL wiki](https://wiki.postgresql.org/wiki/Sample_Databases)
+
+
+
 ## Install
 
 [Install on Ubuntu 22](https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-22-04-quickstart)
@@ -24,6 +28,10 @@ sudo /etc/init.d/postgresql restart
 Inside the psql console
 - [Find the hostname and port](https://stackoverflow.com/questions/5598517/find-the-host-name-and-port-using-psql-commands)
 - 
+
+### Clients
+
+[Most popular PostgreSQL GUIs in 2022: the (almost) scientific list](https://blog.forestadmin.com/best-postgres-gui/)
 
 
 ## Maintain
