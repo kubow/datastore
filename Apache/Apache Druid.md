@@ -4,7 +4,7 @@ https://druid.apache.org/
 https://en.wikipedia.org/wiki/Apache_Druid
 
 Source code
-https://github.com/apache/druid/
+[GitHub - apache/druid: Apache Druid: a high performance real-time analytics database.](https://github.com/apache/druid)
 Code [https://github.com/druid-io/druid](https://github.com/druid-io/druid)  
 
 Documentation
