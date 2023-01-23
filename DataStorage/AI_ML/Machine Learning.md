@@ -33,6 +33,7 @@ Other detailed sections:
 [How to Choose a Machine Learning Model – Some Guidelines - Data Science Central](https://www.datasciencecentral.com/profiles/blogs/how-to-choose-a-machine-learning-model-some-guidelines)  
 
 [Data Science and Machine Learning: Great List of Resources - Data Science Central](https://www.datasciencecentral.com/profiles/blogs/data-science-and-machine-learning-great-list-of-resources)
+[List of Free Must-Read Machine Learning Books - DataScienceCentral.com](https://www.datasciencecentral.com/list-of-free-must-read-machine-learning-books/)
 
 [Machine Learning with Koalas and Spark | by MA Raza, Ph.D. | Towards Data Science](https://towardsdatascience.com/koalas-ml-4807f2c56e98)  
 

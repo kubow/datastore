@@ -10,7 +10,7 @@ Relational algebra
 - [[Fact Tables]]
 - [[Keys-Indexes]]
 
-
+[Comparison of data modeling tools - Wikipedia](https://en.wikipedia.org/wiki/Comparison_of_data_modeling_tools)
 [79 Data Modeling Tools Compared - Database Star](https://www.databasestar.com/data-modeling-tools/)
 [Data Modeling Tools | 9 Best Tools to Become Successful In Data Modeling (educba.com)](https://www.educba.com/9-best-data-modeling-tools/)
 [Automatické vytvoření dokumentace k databázi s využitím nástroje SchemaSpy - Root.cz](https://www.root.cz/clanky/automaticke-vytvoreni-dokumentace-k-databazi-s-vyuzitim-nastroje-schemaspy/?utm_source=rss&utm_medium=text&utm_campaign=rss)

@@ -19,7 +19,7 @@
 - **Decission**
 
 
-
+[40 Key Computer Science Concepts Explained In Layman’s Terms](https://carlcheo.com/compsci)
 
 
 ## Time Series
