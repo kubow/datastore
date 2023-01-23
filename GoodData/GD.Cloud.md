@@ -3,7 +3,7 @@
 The analytics platform with a powerful engine, elegant interactive visualizations, and self-service tools. Built to scale with microservices. Deployed in containers next to your data. Analytics calculations decoupled from user interactions. GoodData is the platform developers love.
 [GoodData.CN - cloud native analytics platform | GoodData](https://www.gooddata.com/developers/cloud-native/)
 
-
+Cloud Native is Cloud with different hosting option
 
 ### Features
 
@@ -13,7 +13,7 @@ The analytics platform with a powerful engine, elegant interactive visualization
 | Semantic Abstractions | GitLab | Google |
 | Built-in Multitenancy | | Okta |
 | Drag&Drop Tools | | |
-| Advanced Embedding [>](https://www.gooddata.com/developers/cloud-native/doc/1.7/integration/) | | |
+| Advanced Embedding [>](https://www.gooddata.com/developers/cloud-native/doc/cloud/embed-visualizations/) | | \* anything that is SAML compatible |
 
 [Documentation | GoodData Cloud Native](https://www.gooddata.com/developers/cloud-native/doc/cloud/#connect)
 
@@ -24,7 +24,7 @@ GD.CN parts:
 	- Platform implementation: Kotlin laguage (JVM) + SpringBoot & Gradle to build microservices
 - **Metadata layer** (LDM + calculations)
 	- In future Quiver replaces Redis (internal developped based on Apache Arrow)
-- **Declarative API** (REST API - OpenAPI 3.0 specification)
+- **Declarative API** (REST API - [OpenAPI Specification - Version 3.0.3 | Swagger](https://swagger.io/specification/#))
 	- Entities - CRUD on each metadata entity
 		- /api/vX/entites
 		- JSON:API standard, slightly customized
@@ -77,7 +77,7 @@ docker images --digests
 https://github.com/gooddata/gooddata-create-gooddata-react-app
 
 ```bash
-npx @gooddata/create-gooddata-react-app my-app --backend tiger  #GD.CN on localhost
+npx @gooddata/create-gooddata-react-app my-app --backend tiger  #GD.Cloud / GD.CN on localhost
 #? What is your hostname? <Use your domain URL> / <GD.CN endpoint incl. protocol, typically http://localhost:3000/>
 #? What is your application's desired flavor? JavaScript / Typescript
 cd my-app
@@ -144,3 +144,27 @@ const style = { height: 300 };
 
 [GoodData Python SDK](https://www.gooddata.com/developers/cloud-native/doc/cloud/api-and-sdk/python-sdk/)
 [GoodData Python SDK Documentation](https://gooddata-sdk.readthedocs.io/en/latest/)
+
+
+## Caching
+
+Cache = stored results (precompted, compressed, .... point in time) = staorage costs ... only around 2-3% size of raw data
+The more real-time you got the less caching happens
+
+- Report executed for the first time:
+	- request executed ? is in cache
+	- request processed 
+	- result is cached
+	- result sent to client
+- The same report is executed again:
+	- request executed ? is in cache
+	- result sent to client
+
+[Cache Management | GoodData Cloud Native](https://www.gooddata.com/developers/cloud-native/doc/cloud/connect-data/cache-management/)
+
+Beta: [Enable Pre-aggregation Caching | GoodData Cloud Native](https://www.gooddata.com/developers/cloud-native/doc/cloud/connect-data/cache-management/enable-pre-aggregation-caching/)
+Dremio: Bug with caching? still there
+
+Preaggregation Tables - inside datasource maintained by SQL query (optional - by default turned off)
+Raw Results - without sorting
+Final Results - with sorting

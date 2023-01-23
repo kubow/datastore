@@ -26,6 +26,8 @@ yarn refresh-md
 import * as Md from "../md/full"
 // can be further used
 {Md.Dashboards.Name}
+// alternatively
+import Dashboards from "../md/full"
 ```
 
 

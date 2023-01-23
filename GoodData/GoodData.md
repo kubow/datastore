@@ -1,12 +1,12 @@
-![[GoodData_Layers.jpg]]
-[Plaform overview](https://help.gooddata.com/doc/free/en/expand-your-gooddata-platform/gooddata-platform-overview)
-
+Flexible Deployment
+- who is hosting GD itself?
+- where does the data live?
 
 # System 
 
-- GD Platform (BEAR)
-	- [Request a demo (BEAR)](https://www.gooddata.com/request-a-demo/)
-- [[GD.CN|GD Cloud Native]] (TIGER)
+- [[GD.Platform]]GD Platform (BEAR)
+	- own / hosted data storage
+- [[GD.Cloud|GD Cloud Native]] (TIGER)
 	- no data storage
 	- above data layer
 - GD Cloud (PANTER)
@@ -21,14 +21,10 @@
 - Analytical Designer
 - KPI Dashboards
 
-
 ## General processing
 
-Before connecting and working with data, there needs to be done a [data preparation/transformation](https://help.gooddata.com/doc/growth/en/data-integration/data-preparation-and-distribution/data-preparation-and-distribution-pipeline).
-
 1. **Data**
-	- Connect to data sources ([full list](https://help.gooddata.com/doc/growth/en/data-integration/data-preparation-and-distribution/direct-data-distribution-from-data-warehouses-and-object-storage-services#DirectDataDistributionfromDataWarehousesandObjectStorageServices-SupportedDataWarehousesandObjectStorageServices))
-		- Flat Files (CSV + parquet) 
+	- Connect to data sources ([[GD.DataSources]])
 		- Object Storage (Amazon S3 + MS Azure Blob)
 		- [Snowflake](https://help.gooddata.com/doc/free/en/data-integration/data-preparation-and-distribution/direct-data-distribution-from-data-warehouses-and-object-storage-services/gooddata-snowflake-integration-details) (needs username/password and database/warehouse/schema)
 		- [BigQuery](https://help.gooddata.com/doc/free/en/data-integration/data-preparation-and-distribution/direct-data-distribution-from-data-warehouses-and-object-storage-services/gooddata-bigquery-integration-details) (needs project/dataset and Service Account key in JSON format)
@@ -52,7 +48,7 @@ Before connecting and working with data, there needs to be done a [data preparat
 	- Load data
 		- Manual upload from physical files ([Data Loading](https://help.gooddata.com/doc/enterprise/en/how-to-get-started-with-gooddata/load-data))
 		- Automated Data Loads using ADD ([Automated Data Distribution](https://community.gooddata.com/data-sources-kb-articles-47/add-distributing-data-to-multiple-workspaces-197), [Incremental Data Loading](https://community.gooddata.com/data-sources-kb-articles-47/add-incremental-data-loading-198), [ADD Load Modes](https://help.gooddata.com/doc/free/en/data-integration/data-preparation-and-distribution/direct-data-distribution-from-data-warehouses-and-object-storage-services/automated-data-distribution-v2-for-data-warehouses/load-modes-in-automated-data-distribution-v2-for-data-warehouses))
-		- Custom Data Pipeline with ADS (Agile Data Warehousing Service)
+		- Custom Data Pipeline with **ADS** (Agile Data Warehousing Service)
 		- Data Loads over REST APIs ([API Documentation](https://help.gooddata.com/doc/growth/en/expand-your-gooddata-platform/api-reference#/reference/data-integration/manage-executions-for-a-process/execute-a-process), [Load Data via API](https://help.gooddata.com/doc/free/en/data-integration/data-preparation-and-distribution/additional-data-load-reference/loading-data-via-rest-api))
 2. **Analyze** ([Analytical Designer](https://help.gooddata.com/doc/enterprise/en/how-to-get-started-with-gooddata/add-insights-and-dashboards/create-an-insight?pageId=81961834))
 	- Create Insights (reusable components)
@@ -60,11 +56,11 @@ Before connecting and working with data, there needs to be done a [data preparat
 	- Create presentation layer (consists of Insights)
 	- [Geo charts](https://help.gooddata.com/doc/enterprise/en/dashboards-and-insights/analytical-designer/visualize-your-data/insight-types/geo-charts-pushpins) ([Using Geo Charts](https://www.gooddata.com/blog/using-geo-charts-gooddata-technical-overview/))
 	- Manage --> Workspaces & Users --> Invite user ([User roles](https://help.gooddata.com/doc/enterprise/en/workspace-and-user-administration/managing-users-in-workspaces/user-roles))
+4. Embed
+	- 
+5. Operate 
 
 
-## Modelling
-
-[Data Modelling in GD Enterprise](https://help.gooddata.com/doc/enterprise/en/data-integration/data-modeling-in-gooddata)
 
 ### MAQL
 
@@ -89,6 +85,11 @@ SELECT SUM(ammount) WHERE
 ```
 
 ## Development
+
+- Analytics as a code, CI/CD
+- Using Python SDk for statistical analysis
+- Integration with MindsDB for ML
+- Integrating GoodData with [[dbt]]
 
 [Access GD workspace from Apache Zeppelin](https://medium.com/gooddata-developers/accessing-gooddata-workspace-from-apache-zeppelin-notebook-a057856030e6)
 
