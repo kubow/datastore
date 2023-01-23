@@ -1,5 +1,6 @@
 Column oriented DBMS for OLAP (new [[Clickhouse Cloud]])
 
+Vznikla když Yandex dělal GA.
 
 https://clickhouse.com/
 

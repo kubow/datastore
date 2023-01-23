@@ -4,27 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "85d9015cb8954d63",
+        "id": "d14c6fb4ad2ddd63",
         "type": "tabs",
         "children": [
           {
-            "id": "5680c57209e655c2",
+            "id": "7d93fec645a812ba",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SAP/SAP.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "7efb2cd26aef3e1c",
+            "id": "49de7bff2f9210ad",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "DataStorage/Data Concepts.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ],
@@ -57,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "cockroach",
+                "query": "ADS",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 286.5
+    "width": 295.5
   },
   "right": {
     "id": "85af57e354327318",
@@ -94,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "DataStorage/Data Concepts.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "DataStorage/Data Concepts.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "DataStorage/Data Concepts.md"
+              }
             }
           }
         ]
@@ -151,17 +159,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "85bd82c41dd42e18",
+  "active": "49de7bff2f9210ad",
   "lastOpenFiles": [
-    "SAP/ASE/SAP ASE 3 Maintenance.md",
-    "SAP/ASE/SAP ASE 1 System.md",
-    "SAP/ASE/SAP ASE 2 Install.md",
-    "SAP/Anywhere/SQL Anyhere.md",
-    "Untitled.canvas",
-    "SAP/SAP.md",
-    "SAP/BTP/SAP BTP.md",
-    "SAP/iRPA/SAP iRPA.md",
-    "SAP/SAP PowerDesigner.md",
-    "SAP/RS/SAP Replication Server.md"
+    "DataStorage/AI_ML/Machine Learning.md",
+    "GoodData/GD.MAQL.md",
+    "GoodData/GD.LDM.md",
+    "README.md",
+    "Oracle/MySQL.Storage engines.md",
+    "Oracle/MySQL.md",
+    "GoodData/GD.DataSources.md",
+    "Oracle/Oracle.md",
+    "GoodData/GD.Workspaces.md",
+    "GoodData/GD.Cloud.md"
   ]
 }
