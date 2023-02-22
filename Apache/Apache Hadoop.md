@@ -1,4 +1,5 @@
+The Apache™ Hadoop® project develops open-source software for reliable, scalable, distributed computing.
 https://hadoop.apache.org/
 
-The Apache™ Hadoop® project develops open-source software for reliable, scalable, distributed computing.
+[Apache Hadoop Admin Tips and Tricks - DataScienceCentral.com](https://www.datasciencecentral.com/apache-hadoop-admin-tips-and-tricks/)
 
