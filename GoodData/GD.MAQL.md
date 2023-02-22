@@ -1,4 +1,4 @@
-**M**ultidimensional **A**nalytical **Q**uery **L**anguage - used to define calulation logic for different measures. 
+[Multidimensional Analytical Query Language](https://help.gooddata.com/doc/enterprise/en/dashboards-and-insights/maql-analytical-query-language) - used to define calulation logic for different measures. 
 
 [Getting Started with MAQL in GoodData.CN](https://university.gooddata.com/)
 
@@ -47,4 +47,4 @@ curl http://localhost:3000/api/entities/workspaces/demo/metrics \
 
 
 
-Metrika nadefi
+

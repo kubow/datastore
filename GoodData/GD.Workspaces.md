@@ -37,5 +37,6 @@ curl $HOST_URL/api/v1/entities/workspaces \
           "id": "demo",
           "type": "workspace"
       }
-  }' | jq .
+  }' | jq .  # parse response as json if you have jq
 ```
+

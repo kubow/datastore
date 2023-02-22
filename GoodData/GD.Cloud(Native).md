@@ -59,7 +59,7 @@ Under the hood :
 	- Scan Model :: HTTP port = 9060/9061
 
 
-### Installing pre-bult image
+### Installing pre-built image
 
 Links found in [[#Installation]] under Docker point.
 

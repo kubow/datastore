@@ -2,11 +2,16 @@ Flexible Deployment
 - who is hosting GD itself?
 - where does the data live?
 
+
+[Headless BI x Data Lakehouse | GoodData](https://www.gooddata.com/blog/headless-bi-data-lakehouse/)
+[Headless BI: Achieve Consistent Analytics Results | GoodData](https://www.gooddata.com/blog/headless-bi-achieve-consistent-analytics-results/)
+
+
 # System 
 
 - [[GD.Platform]]GD Platform (BEAR)
 	- own / hosted data storage
-- [[GD.Cloud|GD Cloud Native]] (TIGER)
+- [[GD.Cloud(Native)|GD Cloud Native]] (TIGER)
 	- no data storage
 	- above data layer
 - GD Cloud (PANTER)
@@ -16,21 +21,18 @@ Flexible Deployment
 ### Architecture
 
 - Home UI
-- LDM Modeller
+- Workspaces
+- LDM
 - Metric Editor
-- Analytical Designer
-- KPI Dashboards
+- Analytical Designer (AD)
+- KPI Dashboards (KD)
 
 ## General processing
 
 1. **Data**
 	- Connect to data sources ([[GD.DataSources]])
-		- Object Storage (Amazon S3 + MS Azure Blob)
-		- [Snowflake](https://help.gooddata.com/doc/free/en/data-integration/data-preparation-and-distribution/direct-data-distribution-from-data-warehouses-and-object-storage-services/gooddata-snowflake-integration-details) (needs username/password and database/warehouse/schema)
-		- [BigQuery](https://help.gooddata.com/doc/free/en/data-integration/data-preparation-and-distribution/direct-data-distribution-from-data-warehouses-and-object-storage-services/gooddata-bigquery-integration-details) (needs project/dataset and Service Account key in JSON format)
-		- [Redshift](https://help.gooddata.com/doc/free/en/data-integration/data-preparation-and-distribution/direct-data-distribution-from-data-warehouses-and-object-storage-services/gooddata-redshift-integration-details) (needs username/password and database/schema)
-		- [PostgreSQL](https://help.gooddata.com/doc/free/en/data-integration/data-preparation-and-distribution/direct-data-distribution-from-data-warehouses-and-object-storage-services/gooddata-postgresql-integration-details) (needs username/password and database/schema)
-	- Build LDM (Semantic layer) 1 workspace = 1 LDM (abstract physical data structure)
+	- Create a [[GD.Workspaces|Workspace]]
+	- Build [[GD.LDM|LDM]] (Semantic layer) 1 workspace = 1 LDM (abstract physical data structure)
 		- [Mapping Data Sources](https://community.gooddata.com/data-sources-kb-articles-47/mapping-your-source-data-to-a-workspace-199)
 		- [Data Modelling](https://help.gooddata.com/doc/enterprise/en/data-integration/data-modeling-in-gooddata) ([Data Models Community Discussion](https://community.gooddata.com/data-models-58))
 			- **Dataset** ~ a database table
@@ -40,7 +42,7 @@ Flexible Deployment
 			- Primary key / Referrence (composite key)
 			- Date dimension ([Dates and Times](https://help.gooddata.com/doc/enterprise/en/dashboards-and-insights/dates-and-times))
 			- **Calculated Measure/Metric** ([Metric Editor](https://help.gooddata.com/doc/enterprise/en/how-to-get-started-with-gooddata/create-metrics/create-and-save-a-metric?pageId=81961865)) = calculation on top of LDM
-		- Using MAQL ([Multidimensional Analytical Query Language](https://help.gooddata.com/doc/enterprise/en/dashboards-and-insights/maql-analytical-query-language)) for advanced querries
+		- Using [[GD.MAQL]] for advanced querries
 			- [Aggregation Functions](https://help.gooddata.com/doc/enterprise/en/dashboards-and-insights/maql-analytical-query-language/maql-expression-reference/aggregation-functions)
 			- [Arithmetic Operations](https://help.gooddata.com/doc/enterprise/en/dashboards-and-insights/maql-analytical-query-language/maql-expression-reference/numeric-functions/arithmetic-operations)
 			- [Filtering with WHERE condition](https://help.gooddata.com/doc/enterprise/en/dashboards-and-insights/maql-analytical-query-language/maql-expression-reference/filter-expressions/filtering-with-the-where-clause)
