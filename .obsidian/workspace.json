@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "d14c6fb4ad2ddd63",
+        "id": "2e817635683a2646",
         "type": "tabs",
         "children": [
           {
-            "id": "7d93fec645a812ba",
+            "id": "ebd4d84e44d36dc2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "49de7bff2f9210ad",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DataStorage/Data Concepts.md",
+                "file": "ClickHouse/ClickHouse.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DataStorage/Data Concepts.md",
+                "file": "ClickHouse/ClickHouse.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DataStorage/Data Concepts.md",
+                "file": "ClickHouse/ClickHouse.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DataStorage/Data Concepts.md"
+                "file": "ClickHouse/ClickHouse.md"
               }
             }
           }
@@ -159,17 +146,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "49de7bff2f9210ad",
+  "active": "ebd4d84e44d36dc2",
   "lastOpenFiles": [
-    "DataStorage/AI_ML/Machine Learning.md",
-    "GoodData/GD.MAQL.md",
-    "GoodData/GD.LDM.md",
-    "README.md",
-    "Oracle/MySQL.Storage engines.md",
-    "Oracle/MySQL.md",
+    "GoodData/GD.Cloud(Native).md",
+    "Apache/Apache Calcite.md",
+    "GoodData/GD.Platform.md",
     "GoodData/GD.DataSources.md",
-    "Oracle/Oracle.md",
-    "GoodData/GD.Workspaces.md",
-    "GoodData/GD.Cloud.md"
+    "Data/NL/Natural Language Processing.md",
+    "Data/NL/Natural Language.md",
+    "SAP/SAP.md",
+    "SAP/HANA/SAP HANA.md",
+    "README.md",
+    "SAP/HANA/HANA_Workshop_2_Technologie.pdf"
   ]
 }

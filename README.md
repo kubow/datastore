@@ -1,6 +1,6 @@
 # General repository about data related technologies
 
-## Covered [[Data Concepts|data storing]] concepts
+## Covered [[Concepts|data storing]] concepts
 
 - Higher architecture and cocepts
 - SQL

@@ -1,4 +1,17 @@
 
-- [QlikSense](https://www.qlik.com/us/products/qlik-sense)
-- [QlikView](https://www.qlik.com/us/products/qlikview)
-- [QlikAutoML](https://www.qlik.com/us/products/qlik-automl)
+- [[#QlikSense]]
+- [[#QlikView]]
+- [[#QlikAutoML]]
+
+## QlikSense
+
+[Qlik Sense | Modern Cloud Analytics](https://www.qlik.com/us/products/qlik-sense)
+
+## QlikView
+
+[QlikView – Powerful Interactive Analytics & Dashboards | Qlik](https://www.qlik.com/us/products/qlikview)
+
+## QlikAutoML
+
+[Qlik AutoML | Automated Machine Learning for Analytics Teams](https://www.qlik.com/us/products/qlik-automl)
+

@@ -1,10 +1,6 @@
-Column oriented DBMS for OLAP (new [[Clickhouse Cloud]])
-
-Vznikla když Yandex dělal GA.
-
-https://clickhouse.com/
-
-
+Column oriented DBMS for OLAP created originally by Yandex
+- https://clickhouse.com/
+- [[Clickhouse Cloud]]
 
 Each table must specify a **[table engine](https://clickhouse.com/docs/en/engines/table-engines/)**:
 
@@ -23,9 +19,37 @@ Each table must specify a **[table engine](https://clickhouse.com/docs/en/engine
 	- https://clickhouse.com/docs/en/guides/improving-query-performance/sparse-primary-indexes/sparse-primary-indexes-cardinality/
 	- 
 
-## Modelling data
+
+## Install
+
+[ClickHouse Quick Start | ClickHouse Docs](https://clickhouse.com/docs/en/getting-started/quick-start)
+
+```shell
+curl https://clickhouse.com/ | sh
+sudo ./clickhouse install
+cd /etc/clickhouse-server # config files
+sudo clickhouse start  # start clickhouse server
+clickhouse-client
+cat /var/log/clickhouse-server/clickhouse-server.err.log  # browse errorlog
+```
+
+### Connect
+
+[Command-Line Client | ClickHouse Docs](https://clickhouse.com/docs/en/interfaces/cli/)
+[python clickhouse-driver 0.2.5 documentation](https://clickhouse-driver.readthedocs.io/en/latest/index.html)
+Interfaces:
+- [MySQL Interface | ClickHouse Docs](https://clickhouse.com/docs/en/interfaces/mysql)
+- [PostgreSQL Interface | ClickHouse Docs](https://clickhouse.com/docs/en/interfaces/postgresql)
 
 
+
+## Work with data
+
+### Data types
+
+https://clickhouse.com/docs/en/sql-reference/data-types/
+
+Every table needs to have engine defined
 
 ```SQL
 SHOW DATABASES
@@ -37,13 +61,12 @@ SELECT * FROM my_table
 ```
 
 
-### Data types
 
-https://clickhouse.com/docs/en/sql-reference/data-types/
-
-Dat ingestion
+Data ingestion
 [Data Formats supported](https://clickhouse.com/docs/en/sql-reference/formats/)
 
+Settings
+[Settings Overview | ClickHouse Docs](https://clickhouse.com/docs/en/operations/settings/)
 
 ### Primary keys
 https://clickhouse.com/docs/en/guides/improving-query-performance/sparse-primary-indexes/sparse-primary-indexes-intro

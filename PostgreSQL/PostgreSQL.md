@@ -22,7 +22,7 @@ sudo -u postgres psql template1
 ALTER USER postgres with encrypted password 'xxxxxxx';
 # restart the service
 sudo /etc/init.d/postgresql restart
-
+psql -U postgres -c 'SHOW config_file'  # get location of your config files
 ```
 
 Inside the psql console
