@@ -1,14 +1,14 @@
-## ETL
+## ExtractTransforLoad
 
-  
-• Extract data from homogeneous or heterogeneous data sources  
-• Transform the data for storing it in proper format or structure for querying and analysis purpose  
-• Load it into the final target (database, more specifically, operational data store, data mart, or data warehouse)  
-  
-10 Open Source ETL [http://www.datasciencecentral.com/profiles/blogs/10-open-source-etl-tools](http://www.datasciencecentral.com/profiles/blogs/10-open-source-etl-tools)
-15 Best ETL in 2020 [https://www.softwaretestinghelp.com/best-etl-tools/](https://www.softwaretestinghelp.com/best-etl-tools/)
-Top 35 ETL Software [https://www.predictiveanalyticstoday.com/top-free-extract-transform-load-etl-software/](https://www.predictiveanalyticstoday.com/top-free-extract-transform-load-etl-software/)
-Open Source ETL: Apache NiFi vs Streamsets [http://www.datasciencecentral.com/xn/detail/6448529:BlogPost:715496](http://www.datasciencecentral.com/xn/detail/6448529:BlogPost:715496)
+• **Extract** data from homogeneous or heterogeneous data sources  
+• **Transform** the data and store in proper format/structure to query and analyze  
+• **Load** it into the database/operational data store/data mart/data warehouse
+
+[ETL vs Data Preparation: What does your business need? - DataScienceCentral.com](https://www.datasciencecentral.com/etl-vs-data-preparation-what-does-your-business-need/)
+[15+ Best ETL Tools Available in the Market in 2023](https://www.softwaretestinghelp.com/best-etl-tools/)
+[Top 56 ETL Tools for Data Integration in 2022 - Reviews, Features, Pricing, Comparison - PAT RESEARCH: B2B Reviews, Buying Guides & Best Practices](https://www.predictiveanalyticstoday.com/top-free-extract-transform-load-etl-software/)
+
+[Open Source ETL: Apache NiFi vs Streamsets - DataScienceCentral.com](https://www.datasciencecentral.com/open-source-etl-apache-nifi-vs-streamsets/)
 
 ETL best Practices [https://www.timmitchell.net/etl-best-practices/](https://www.timmitchell.net/etl-best-practices/)
 
@@ -17,6 +17,7 @@ ETL best Practices [https://www.timmitchell.net/etl-best-practices/](https://www
 ![DataProcess](DataProcessStore.jpg)
 
 
+## ETL Tools
 
 Informatica (leader) [https://www.informatica.com](https://www.informatica.com)
 Talend Open Source Data Integrator [https://sourceforge.net/projects/talend-studio/](https://sourceforge.net/projects/talend-studio/)

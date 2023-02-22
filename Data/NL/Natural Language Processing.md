@@ -1,4 +1,7 @@
 https://en.wikipedia.org/wiki/Natural_language_processing
+[Natural Language Processing Demystified](https://www.nlpdemystified.org/)
+[Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/)
+
 
 - [[#NLP Frameworks]]
 

@@ -1,25 +1,6 @@
-- [[Data Warehouse]]
-- [[LakeHouse|Data Lake(house)]]
-- [[Data Storage Comparison]]
-- [[Data Storage Modelling]]
-- [[StructuralQueryLanguage|Data Query Language]]
-- Data Processing
-	- [[ExtractTransformLoad]]
-- [[Data Visualization]]
-- [[Business Intelligence]]
-- [[Data Science]]
-- [[Machine Learning]] / [[Artificial Intelligence]]
-- [[Natural Language]]
 
+- [[#Time Series]]
 
-- **Data**: apply meaning
-- **Information**: apply context
-- **Knwoledge**: apply insight
-- **Wisdom**: apply purpose
-- **Decission**
-
-
-[40 Key Computer Science Concepts Explained In Layman’s Terms](https://carlcheo.com/compsci)
 
 
 ## Time Series
@@ -30,4 +11,3 @@ Time-series data mining & applications [http://www.datasciencecentral.com/xn/det
 Dataquest: Data Retrieval and Cleaning: Tracking Migratory Patterns [https://www.dataquest.io/blog/data-retrieval-and-cleaning/](https://www.dataquest.io/blog/data-retrieval-and-cleaning/)
 
 [Long-range correlation in time series](https://www.datasciencecentral.com/long-range-correlation-in-time-series-tutorial-and-case-study/)
-
