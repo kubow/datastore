@@ -7,6 +7,7 @@
 	- S/4
 - [[SAP IQ]]
 - [[SAP HANA]]
+	- SAP HANA VORA
 - [[SAP iRPA]]
 - [[SAP PowerDesigner]]
 - [[SAP Replication Server]]
@@ -18,6 +19,8 @@ Reporting:
 - SAP Business objects
 - SAP Lumira
 
+[SAP Business One HANA - pokročilý ERP systém pro malé a střední firmy na revoluční platformě SAP HANA | TryHana](https://www.tryhana.cz/)
+
 
 https://open.sap.com/courses
 
@@ -26,7 +29,17 @@ https://open.sap.com/courses
 [SAP Community Home](https://community.sap.com/)
 [SAP Support Portal Home](https://support.sap.com/en/index.html)
 
+[SAP Product and Solution Road Maps](https://www.sap.com/products/roadmaps.html)
 [SAP License Keys for Preview, Evaluation and Developer Versions](https://go.support.sap.com/minisap/#/minisap)
+[Developer Trials and Downloads | SAP Developer](https://developers.sap.com/trials-downloads.html)
+
+[SAP Developer Center | Official Resources for SAP Developers](https://developers.sap.com/)
+[Product and Topic Pages | SAP Developers](https://developers.sap.com/topics.html)
+[SAP Development Tools](https://tools.hana.ondemand.com/)
+[SAP Tutorial Navigator | Tutorials for SAP Developers](https://developers.sap.com/tutorial-navigator.html)
+
+[Free SAP Training | openSAP](https://open.sap.com/)
+
 
 
 https://configit.com/insights/sap-configuration-cheat-sheet/

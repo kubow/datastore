@@ -1,5 +1,6 @@
 [SAP HANA Cloud](https://www.sap.com/products/technology-platform/hana.html)
 [SAP HANA Platform | SAP Help Portal](https://help.sap.com/docs/SAP_HANA_PLATFORM)
+[SAP HANA on-premises and cloud databases | SAP Community](https://community.sap.com/topics/hana)
 
 [Comparison between SAP HANA with SAP Sybase IQ – first impressions | SAP Blogs](https://blogs.sap.com/2013/09/25/comparison-between-sap-hana-with-sap-sybase-iq-first-impressions/)
 [Comparing SAP HANA and Sybase IQ – real world performance tests | SAP Blogs](https://blogs.sap.com/2013/11/25/comparing-sap-hana-and-sybase-iq-real-world-performance-tests/)
@@ -26,6 +27,11 @@ MDC - Multitenant Database Container (since HANA 2.0 SP01 the only option)
 
 [SAP HANA Tutorials, Tcodes, Tables (testingbrain.com)](https://www.testingbrain.com/sap/help/sap-hana-tutorial.html)
 [SAP HANA platform lifecycle management – by the SAP HANA Academy | SAP Blogs](https://blogs.sap.com/2018/01/30/sap-hana-platform-lifecycle-management-by-the-sap-hana-academy/)
+
+HANA supports replication:
+-   SLT trigger based 
+-   SAP RepSrv log based 
+-   SAP HANA remote data sync session based
 
 
 # Installation
