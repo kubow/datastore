@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ClickHouse/ClickHouse.md",
+                "file": "Apache/Apache Hadoop.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ADS",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ClickHouse/ClickHouse.md",
+                "file": "Apache/Apache Hadoop.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ClickHouse/ClickHouse.md",
+                "file": "Apache/Apache Hadoop.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ClickHouse/ClickHouse.md"
+                "file": "Apache/Apache Hadoop.md"
               }
             }
           }
@@ -148,15 +148,20 @@
   },
   "active": "ebd4d84e44d36dc2",
   "lastOpenFiles": [
+    "Apache/Apache Cassandra.md",
+    "Apache/Apache Kafka.md",
+    "Apache/Apache Hadoop.md",
+    "Apache/Apache Spark.md",
+    "Amazon/AWS RedShift.md",
+    "Data/Model/Modelling.md",
+    "Data/Visualization.md",
+    "Data/Data Science.md",
+    "Data/Concepts.md",
+    "ClickHouse/ClickHouse.md",
     "GoodData/GD.Cloud(Native).md",
     "Apache/Apache Calcite.md",
     "GoodData/GD.Platform.md",
     "GoodData/GD.DataSources.md",
-    "Data/NL/Natural Language Processing.md",
-    "Data/NL/Natural Language.md",
-    "SAP/SAP.md",
-    "SAP/HANA/SAP HANA.md",
-    "README.md",
-    "SAP/HANA/HANA_Workshop_2_Technologie.pdf"
+    "Data/NL/Natural Language Processing.md"
   ]
 }
