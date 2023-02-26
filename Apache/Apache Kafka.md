@@ -1,6 +1,8 @@
+Apache Kafka is a distributed publish-subscribe messaging system that can handle a high volume of data and enables you to pass messages from one end-point to another. Kafka is suitable for both offline and online message consumption. Kafka messages are persisted on the disk and replicated within the cluster to prevent data loss. Kafka is built on top of the ZooKeeper synchronization service. It integrates very well with Apache Storm and Sparks for real-time streaming.
+
 https://kafka.apache.org/
 
-Apache Kafka is a distributed publish-subscribe messaging system that can handle a high volume of data and enables you to pass messages from one end-point to another. Kafka is suitable for both offline and online message consumption. Kafka messages are persisted on the disk and replicated within the cluster to prevent data loss. Kafka is built on top of the ZooKeeper synchronization service. It integrates very well with Apache Storm and Sparks for real-time streaming.
+[Kafka Python Tutorial for Fast Data Architecture — AdminTome Blog | by Bill Ward | AdminTome | Medium](https://medium.com/admintome/kafka-python-tutorial-for-fast-data-architecture-admintome-blog-430097e5af2e)
 
 Kafka has better throughput, built-in partitioning, replication, and inherent fault-tolerance, which makes it a good fit for large-scale message processing applications.
 
@@ -63,18 +65,21 @@ The broker, topic, and partition information are maintained in Zookeeper. In par
 
 Here are some helpful commands if you want to start experiementing:
 
--   Start Kafka  
-	    $KAFKA_HOME/bin/kafka-server-start.sh config/server.properties
--   Stop Kafka  
-	    $KAFKA_HOME/bin/kafka-server-start.sh --zookeeper 192.168.128.252:2181
--   Create a topic  
-	    $KAFKA_HOME/bin/kafka-topics.sh --create -zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
--   List created topics  
-	    $KAFKA_HOME/bin/kafka-topics.sh --list --zookeeper localhost:2181
--   Produce messages  
-	    $KAFKA_HOME/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test < myMessage.json
--   Consume messages in a topic  
-	    $KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic test
--   Reset topic  
-	    $KAFKA_HOME/bin/kafka-configs.sh --zookeeper localhost:2181 --alter --entity-type topics --entity-name test --add-config retention.ms=1000 sleep 3  
-	    $KAFKA_HOME/bin/kafka-configs.sh --zookeeper localhost:2181 --alter --entity-type topics --entity-name test --delete-config retention.ms
+```shell
+# Start Kafka  
+$KAFKA_HOME/bin/kafka-server-start.sh config/server.properties
+# Stop Kafka  
+$KAFKA_HOME/bin/kafka-server-start.sh --zookeeper 192.168.128.252:2181
+# Create a topic  
+$KAFKA_HOME/bin/kafka-topics.sh --create -zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+# List created topics  
+$KAFKA_HOME/bin/kafka-topics.sh --list --zookeeper localhost:2181
+# Produce messages  
+$KAFKA_HOME/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test < myMessage.json
+# Consume messages in a topic  
+$KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic test
+# Reset topic  
+$KAFKA_HOME/bin/kafka-configs.sh --zookeeper localhost:2181 --alter --entity-type topics --entity-name test --add-config retention.ms=1000 sleep 3  
+$KAFKA_HOME/bin/kafka-configs.sh --zookeeper localhost:2181 --alter --entity-type topics --entity-name test --delete-config retention.ms
+```
+
