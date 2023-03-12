@@ -41,9 +41,16 @@ ps -eaf | grep dataserver
 
 ```
 
+[Performance Tuning and Time Invested](https://logicalread.com/performance-tuning-and-time-invested-tl01/#.ZAj41-vMJ2Q)
 
+Principles of performance: 
+
+- Tuning levels
+- Non-procedural SQL
 
 ## ASE Settings and Configuration
+
+[Configuring an ASE Server](https://tldp.org/HOWTO/Sybase-ASE-HOWTO/config.html)
 
 - Using Engines and CPUs 
 - Background concepts 
@@ -111,3 +118,31 @@ device settings (directio, dsync)
 [Ease Sybase Database Recovery](https://logicalread.com/sybase-backup-database-creation-statements-se01/#.Y7RIHdLMLmE)
 
 [Why and When to Use Sybase ASE Transaction Dumps](https://logicalread.com/sybase-ase-transaction-dumps-se01/#.Y7RH4NLMLmE)
+
+[SybaseFacts: Monitor Sybase error log](http://sybase1500.blogspot.com/2012/10/monitor-sybase-error-log.html)
+
+[2009194 - SYB: How to Capture Tabular Data Stream Protocol Traffic in SAP Netweaver Context | SAP Knowledge Base Article](https://userapps.support.sap.com/sap/support/knowledge/en/2009194)
+
+
+### Locking and Concurrency Control 
+
+- Introduction tow Locking 
+- Locking Configuration and Tuning 
+- Locking Reports 
+- Using Locking Commands 
+- Indexes 
+- Indexing for Concurrency Control 
+
+### Understanding Sysmon 
+
+- Introduction to sp_sysmon 
+- Monitoring Performance with sp_sysmon   
+
+### Multiple temporary Databases, Partitioning in ASE 15, tempdb performance issue. 
+
+- Creating multiple temporary Databases  
+- Partitioning in ASE 15 
+- tempdb performance issue 
+- Resource Governor   
+
+### Maintenance Activities & troubleshooting: reorg, update stats, index stats, optdiag

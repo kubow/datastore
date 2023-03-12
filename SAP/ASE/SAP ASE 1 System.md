@@ -34,6 +34,10 @@ SAP claims to have 10k+ customers onASE with over 600+ apps on ASE in production
 - **Stored procedures / Triggers** - stored batches of SQL statements (help maintain data)
 
 
+HASH MARK TABLE = temporary table
+
+
 - Allcations
 - Cache
 - Users
+

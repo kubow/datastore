@@ -25,3 +25,5 @@ Separate for now
 
 
 [http://selectetoile.net/index.php/sybase](http://selectetoile.net/index.php/sybase) - waiting to start work
+
+ASE in the Cloud - around 50 cents per core, per hour...
