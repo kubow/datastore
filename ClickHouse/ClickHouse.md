@@ -83,7 +83,10 @@ DELETE FROM random WHERE y != "hello"
 ```
 
 
-
+Performance: 
+	- designed to handle large volumes of data at high speed. 
+	- uses columnar storage and data compression techniques to optimize query performance
+	- distributed architecture that allows it to scale horizontally, making it well-suited for big data applications.
 
 
 ## Bonus
