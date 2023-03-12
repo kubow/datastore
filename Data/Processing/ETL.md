@@ -1,4 +1,3 @@
-## ExtractTransforLoad
 
 • **Extract** data from homogeneous or heterogeneous data sources  
 • **Transform** the data and store in proper format/structure to query and analyze  
