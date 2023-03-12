@@ -1,19 +1,19 @@
-React-based JavaScript library (public cloud / on-premises) that works with:
-- hosted GoodData platform
-- cloud-native analytics platform
+
+## React SDK
+
+React-based JavaScript library that works with:
+- [GoodData Platform Introduction · GoodData.UI](https://sdk.gooddata.com/gooddata-ui/docs/platform_intro.html)
+- [GoodData Cloud integration introduction](https://sdk.gooddata.com/gooddata-ui/docs/cloud_introduction.html)
+- [GoodData Cloud Native integration introduction](https://sdk.gooddata.com/gooddata-ui/docs/cloudnative_introduction.html)
 
 Start points:
 
 - Clear
 	- [Getting started](https://sdk.gooddata.com/gooddata-ui/docs/quickstart.html)
+	- [Main point for UI.SDK (github.com)](https://github.com/gooddata/gooddata-ui-sdk)
 	- https://github.com/gooddata/gooddata-create-gooddata-react-app
 - Prebuilt
 	- https://github.com/gooddata/gooddata-plugin-examples
-- Introduction
-	- [GD Cloud integration introduction](https://sdk.gooddata.com/gooddata-ui/docs/cloud_introduction.html)
-	- [GD.CN integration introduction](https://sdk.gooddata.com/gooddata-ui/docs/cloudnative_introduction.html)
-
-[Main point for UI.SDK (github.com)](https://github.com/gooddata/gooddata-ui-sdk)
 
 
 
@@ -31,7 +31,7 @@ import Dashboards from "../md/full"
 ```
 
 
-## Examples
+### Examples
 
 - [UI.SDK Examples Gallery](https://gdui-examples.herokuapp.com/)
 	- [InsightView](https://gdui-examples.herokuapp.com/insightView/insightView-by-identifier)
@@ -56,14 +56,43 @@ yarn start
 ```
 
 
+## Web Components
 
-### Embedding
+```html
+<head> <!-- load the library -->
+	<script type="module" src="https://{your-gd-server-url}/components/{workspace-id}.js?auth=sso"></script>
+	<!-- for example -->
+	<script type="module" src="https://example.gooddata.com/components/my-workspace.js?auth=sso"></script>
+<head>
+<gd-dashboard dashboard="my-dashboard-id"></gd-dashboard>
+<gd-insight insight="my-insight-id"></gd-insight>
+```
+
+[Web Components authentication · GoodData.UI](https://sdk.gooddata.com/gooddata-ui/docs/webcomponents_authentication.html)
+
+```html
+<script type="module">
+	import { setContext } from "https://example.gooddata.com/components/my-workspace.js"; 
+	import factory, { ContextDeferredAuthProvider, redirectToTigerAuthentication } from "https://example.gooddata.com/components/tigerBackend.js"; 
+	setContext({ 
+		backend: factory() 
+			.onHostname("https://example.gooddata.com") 
+			.withAuthentication(new ContextDeferredAuthProvider(redirectToTigerAuthentication)), 
+		workspaceId: "my-workspace", 
+	}); 
+</script>
+```
+
+## Embedding
 
 - You can embed your dashboards via [React SDK](https://sdk.gooddata.com/gooddata-ui/docs/about_gooddataui.html).
 - You can embed via iframe (top right - embed - iframe - copy)
-	- Hide navigation panel: ?showNavigation=false
-	- Hide filter bar: ?hideControl=[filterBar]
-	- Hide list of visualizations: ?hideControl=[widgetsCatalogue]
-	- Hide top bar: ?hideControl=[widgetsCatalogue]
+	- Hide navigation panel: `?showNavigation=false`
+	- Hide filter bar: `?hideControl=[filterBar]`
+	- Hide list of visualizations: `?hideControl=[widgetsCatalogue]`
+	- Hide top bar: `?hideControl=[widgetsCatalogue]`
 
-Basic address: https://<your-domain>.com/dashboards/embedded/#/workspace/<workspace-id>/dashboard/<dashboard-id>
+Basic address: `https://<your-domain>.com/dashboards/embedded/#/workspace/<workspace-id>/dashboard/<dashboard-id>`
+
+
+

@@ -1,8 +1,10 @@
 is an environment (endpoint, bucket or previously called project) where you build analytics (organize, analyze and present data).
 
-[Workspace | GoodData Cloud Native](https://www.gooddata.com/developers/cloud-native/doc/cloud/manage-deployment/concepts/workspace/)
-[Workspace and User Administration - Gooddata Enterprise](https://help.gooddata.com/doc/enterprise/en/workspace-and-user-administration)
-
+- Cloud (Native)
+	- [Workspace | GoodData Cloud Native](https://www.gooddata.com/developers/cloud-native/doc/cloud/manage-deployment/concepts/workspace/)
+- Platform
+	- [Workspace and User Administration - Gooddata Enterprise](https://help.gooddata.com/doc/enterprise/en/workspace-and-user-administration)
+- [[GD.WDF]]
 
 can be created via UI:
 [Create a Workspace | GoodData Cloud Native](https://www.gooddata.com/developers/cloud-native/doc/cloud/getting-started/create-workspace/)
