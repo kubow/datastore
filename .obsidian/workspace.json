@@ -13,13 +13,74 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Apache/Apache Hadoop.md",
+                "file": "GoodData/GoodData.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c96d8210e8ccc505",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ClickHouse/ClickHouse.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1e9d21067b038b2e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PostgreSQL/PostgreSQL.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8fdcde90b0397f23",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PostgreSQL/PostgreSQL.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a0f233ee70f034a8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PostgreSQL/GreenPlum.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "39512d02a08aac59",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SAP/BTP/SAP BTP.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -85,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Apache/Apache Hadoop.md",
+                "file": "PostgreSQL/GreenPlum.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Apache/Apache Hadoop.md",
+                "file": "PostgreSQL/GreenPlum.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +186,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Apache/Apache Hadoop.md"
+                "file": "PostgreSQL/GreenPlum.md"
               }
             }
           }
@@ -146,22 +207,33 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ebd4d84e44d36dc2",
+  "active": "a0f233ee70f034a8",
   "lastOpenFiles": [
+    "PostgreSQL/PostgreSQL.md",
+    "PostgreSQL/GreenPlum.md",
+    "PostgreSQL/PSQL Install.md",
+    "PostgreSQL/PSQL Maintain.md",
+    "GoodData/GD.UI.md",
+    "GoodData/GD.Workspaces.md",
+    "GoodData/GD.WDF.md",
+    "SAP/ASE/SAP ASE 3 Maintenance.md",
+    "SAP/ASE/SAP ASE.md",
+    "SAP/ASE/SAP ASE 1 System.md",
+    "SAP/ASE/SAP ASE 2 Install.md",
+    "SAP/SAP.md",
+    "SAP/BTP/SAP BTP.md",
+    "ClickHouse/ClickHouse.SQL.md",
+    "ClickHouse/ClickHouse.md",
+    "Data/NL/Natural Language Processing.md",
+    "Data/NL/Natural Language.md",
+    "Data/NL/Natural Language Generation.md",
+    "Data/Processing/ETL.md",
+    "GoodData/GoodData.md",
+    "Apache/Apache Iceberg.md",
+    "Apache/Apache Hadoop.md",
     "Apache/Apache Cassandra.md",
     "Apache/Apache Kafka.md",
-    "Apache/Apache Hadoop.md",
     "Apache/Apache Spark.md",
-    "Amazon/AWS RedShift.md",
-    "Data/Model/Modelling.md",
-    "Data/Visualization.md",
-    "Data/Data Science.md",
-    "Data/Concepts.md",
-    "ClickHouse/ClickHouse.md",
-    "GoodData/GD.Cloud(Native).md",
-    "Apache/Apache Calcite.md",
-    "GoodData/GD.Platform.md",
-    "GoodData/GD.DataSources.md",
-    "Data/NL/Natural Language Processing.md"
+    "Amazon/AWS RedShift.md"
   ]
 }
