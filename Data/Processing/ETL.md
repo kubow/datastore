@@ -18,6 +18,26 @@ ETL best Practices [https://www.timmitchell.net/etl-best-practices/](https://www
 
 ## ETL Tools
 
+  
+
+[Fivetan vs. Stitch vs. Singer vs. Airbyte vs. Meltano : dataengineering](https://www.reddit.com/r/dataengineering/comments/o744oi/fivetan_vs_stitch_vs_singer_vs_airbyte_vs_meltano/)
+[Bringing Data Sources Together with PipelineWise | by Peter Kosztolanyi | Wise Engineering | Medium](https://medium.com/wise-engineering/bringing-data-sources-together-with-pipelinewise-e558c0537dc0)
+
+[Documentation — PipelineWise documentation](https://transferwise.github.io/pipelinewise/)
+
+[Meltano vs Airbyte vs Estuary - A 2022 Decision Guide](https://www.estuary.dev/meltano-vs-airbyte-vs-estuary/)
+
+[Decision Guide to Choosing a Data Integration Tool](https://www.metaplane.dev/blog/decision-guide-to-choosing-a-data-integration-tool)
+
+- Airbyte
+- FiveTran
+- Meltano
+- Stitch
+- PipeLineWise
+- [Hevo Data | The End-to-End Data Pipeline Platform](https://hevodata.com/)
+
+-
+
 Informatica (leader) [https://www.informatica.com](https://www.informatica.com)
 Talend Open Source Data Integrator [https://sourceforge.net/projects/talend-studio/](https://sourceforge.net/projects/talend-studio/)
 Pentaho Data Integrator - Kettle [http://community.pentaho.com/projects/data-integration/](http://community.pentaho.com/projects/data-integration/)
