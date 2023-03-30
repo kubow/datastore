@@ -1,4 +1,4 @@
-![[GoodData_Layers.jpg]]
+![[GD_Platform_Layers.jpg]]
 [Plaform overview](https://help.gooddata.com/doc/free/en/expand-your-gooddata-platform/gooddata-platform-overview)
 
 [GoodData Glossary - Gooddata Enterprise](https://help.gooddata.com/doc/enterprise/en/gooddata-glossary)

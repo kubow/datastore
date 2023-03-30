@@ -1,3 +1,13 @@
+## Embedding
+
+- Basic address: `https://<your-domain>.com/dashboards/embedded/#/workspace/<workspace-id>/dashboard/<dashboard-id>`
+- You can embed your dashboards via [React SDK](https://sdk.gooddata.com/gooddata-ui/docs/about_gooddataui.html).
+- You can embed via iframe (top right - embed - iframe - copy)
+	- Hide navigation panel: `?showNavigation=false`
+	- Hide filter bar: `?hideControl=[filterBar]`
+	- Hide list of visualizations: `?hideControl=[widgetsCatalogue]`
+	- Hide top bar: `?hideControl=[widgetsCatalogue]`
+
 
 ## React SDK
 
@@ -82,17 +92,4 @@ yarn start
 	}); 
 </script>
 ```
-
-## Embedding
-
-- You can embed your dashboards via [React SDK](https://sdk.gooddata.com/gooddata-ui/docs/about_gooddataui.html).
-- You can embed via iframe (top right - embed - iframe - copy)
-	- Hide navigation panel: `?showNavigation=false`
-	- Hide filter bar: `?hideControl=[filterBar]`
-	- Hide list of visualizations: `?hideControl=[widgetsCatalogue]`
-	- Hide top bar: `?hideControl=[widgetsCatalogue]`
-
-Basic address: `https://<your-domain>.com/dashboards/embedded/#/workspace/<workspace-id>/dashboard/<dashboard-id>`
-
-
 

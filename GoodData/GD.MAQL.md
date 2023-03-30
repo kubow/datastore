@@ -15,13 +15,23 @@ SELECT aggregation_function({fact/dataset/fact_column})
 [Aggregation Functions | GoodData Cloud Native](https://www.gooddata.com/developers/cloud-native/doc/cloud/create-metrics/maql/aggregation/)
 
 - [AVG](https://www.gooddata.com/developers/cloud-native/doc/cloud/create-metrics/maql/aggregation/avg/)
-- [APPROXIMATE_COUNT (Verica only)](https://www.gooddata.com/developers/cloud-native/doc/cloud/create-metrics/maql/aggregation/approximate_count/) / [COUNT](https://www.gooddata.com/developers/cloud-native/doc/cloud/create-metrics/maql/aggregation/count/)
+- [APPROXIMATE_COUNT (Vertica only)](https://www.gooddata.com/developers/cloud-native/doc/cloud/create-metrics/maql/aggregation/approximate_count/) / [COUNT](https://www.gooddata.com/developers/cloud-native/doc/cloud/create-metrics/maql/aggregation/count/)
 - [FIRST_VALUE](https://www.gooddata.com/developers/cloud-native/doc/cloud/create-metrics/maql/aggregation/first/) / [LAST_VALUE](https://www.gooddata.com/developers/cloud-native/doc/cloud/create-metrics/maql/aggregation/last/)
 - [MIN](https://www.gooddata.com/developers/cloud-native/doc/cloud/create-metrics/maql/aggregation/min/) / [MAX](https://www.gooddata.com/developers/cloud-native/doc/cloud/create-metrics/maql/aggregation/max/)
 - [MEDIAN](https://www.gooddata.com/developers/cloud-native/doc/cloud/create-metrics/maql/aggregation/median/)
 - [SUM](https://www.gooddata.com/developers/cloud-native/doc/cloud/create-metrics/maql/aggregation/sum/)
 
-## Using an API
+
+#### Date time analysis
+
+
+- [DATETIME_ADD](https://www.gooddata.com/developers/cloud-native/doc/cloud/create-metrics/maql/time-arithmetics/datetime-add/)
+- [DATETIME_DIFF](https://www.gooddata.com/developers/cloud-native/doc/cloud/create-metrics/maql/time-arithmetics/datetime-diff/)
+
+
+
+
+## Using an API to create a metric
 
 ```bash
 curl http://localhost:3000/api/entities/workspaces/demo/metrics \
