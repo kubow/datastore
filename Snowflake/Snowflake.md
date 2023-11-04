@@ -2,6 +2,8 @@ https://www.snowflake.com/en/
 
 Cloud-based data storage and analytics service (data-as-a-service)
 
+[Reference | Snowflake Documentation](https://docs.snowflake.com/en/reference)
+
 ### Data Unloading
 
 [Overview of data unloading](https://docs.snowflake.com/en/user-guide/data-unload-overview.html)
