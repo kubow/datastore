@@ -1,14 +1,23 @@
-[Multidimensional Analytical Query Language](https://help.gooddata.com/doc/enterprise/en/dashboards-and-insights/maql-analytical-query-language) - used to define calulation logic for different measures. 
+- Calculation made on top of the underlying data. 
+- Allows to create standartizes set of calculations that build on top of each other.
+- Aim is to make it available even without neccesity of knowing SQL.
+- [Multidimensional Analytical Query Language](https://help.gooddata.com/doc/enterprise/en/dashboards-and-insights/maql-analytical-query-language) - porprietary GoodData language. 
 
 [Getting Started with MAQL in GoodData.CN](https://university.gooddata.com/)
+[MAQL: Powerful Analytical Querying M[[GoodData]]ade Simple | GoodData](https://www.gooddata.com/blog/maql-powerful-analytical-querying-made-simple/)
+
 
 SQL-like syntax over Logical Data Model
 - no joins
 
-
 ```sql
 SELECT aggregation_function({fact/dataset/fact_column})
 ```
+
+- [[#Aggregation functions]]
+- [[#Details]]
+- [[#Using an API to create a metric]]
+
 
 ## Aggregation functions
 
@@ -28,6 +37,27 @@ SELECT aggregation_function({fact/dataset/fact_column})
 - [DATETIME_ADD](https://www.gooddata.com/developers/cloud-native/doc/cloud/create-metrics/maql/time-arithmetics/datetime-add/)
 - [DATETIME_DIFF](https://www.gooddata.com/developers/cloud-native/doc/cloud/create-metrics/maql/time-arithmetics/datetime-diff/)
 
+## Details
+
+[📢 Introducing Enhanced Metrics: Outer Joins and Advanced Date Arithmetic in MAQL | by Patrik Braborec | GoodData Developers | Mar, 2023 | Medium](https://medium.com/gooddata-developers/introducing-enhanced-metrics-outer-joins-and-advanced-date-arithmetic-in-maql-6f02bd6436ee)
+
+
+```sql
+SELECT aggregation_function(fact1*fact2)
+WHERE condition_column=condition
+
+
+SELECT SUM(SELECT AVG(ammount) BY user)  -- BY detail level
+SELECT SUM(SELECT AVG(ammount) BY user, ALL country)  -- ALL do not group by
+SELECT SUM(SELECT AVG(ammount) BY user, ALL OTHER)  -- OTHER  forget about the rest
+SELECT SUM(SELECT AVG(ammount) BY user, ALL OTHER WITHOUT PF)  -- do not apply any filter (even not primry dashboard filter)
+
+SELECT (SELECT SUM(a)) / (SELECT SUM(a) BY ALL country) -- % % % % percentage
+
+SELECT SUM(ammount) WHERE
+(SELECT COUNT(user) BY user, ALL OTHER WHERE product=x) > 0 -- greater than
+
+```
 
 
 

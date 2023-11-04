@@ -1,15 +1,16 @@
+Analytic solution focused on embedding and serving to multiple groups of consumers.
 Flexible Deployment
 - who is hosting GD itself?
 - where does the data live?
 
-
 [Headless BI x Data Lakehouse | GoodData](https://www.gooddata.com/blog/headless-bi-data-lakehouse/)
 [Headless BI: Achieve Consistent Analytics Results | GoodData](https://www.gooddata.com/blog/headless-bi-achieve-consistent-analytics-results/)
 
+[What Is Multitenancy? | GoodData](https://www.gooddata.com/blog/what-multitenancy/)
 
 # System 
 
-- [[GD.Platform]]GD Platform (BEAR)
+- [[GD.Platform]] (BEAR)
 	- own / hosted data storage
 - [[GD.Cloud(Native)|GD Cloud Native]] (TIGER)
 	- no data storage
@@ -42,7 +43,7 @@ Flexible Deployment
 			- Primary key / Referrence (composite key)
 			- Date dimension ([Dates and Times](https://help.gooddata.com/doc/enterprise/en/dashboards-and-insights/dates-and-times))
 			- **Calculated Measure/Metric** ([Metric Editor](https://help.gooddata.com/doc/enterprise/en/how-to-get-started-with-gooddata/create-metrics/create-and-save-a-metric?pageId=81961865)) = calculation on top of LDM
-		- Using [[GD.MAQL]] for advanced querries
+		- Using [[GD.Metrics]] for advanced querries
 			- [Aggregation Functions](https://help.gooddata.com/doc/enterprise/en/dashboards-and-insights/maql-analytical-query-language/maql-expression-reference/aggregation-functions)
 			- [Arithmetic Operations](https://help.gooddata.com/doc/enterprise/en/dashboards-and-insights/maql-analytical-query-language/maql-expression-reference/numeric-functions/arithmetic-operations)
 			- [Filtering with WHERE condition](https://help.gooddata.com/doc/enterprise/en/dashboards-and-insights/maql-analytical-query-language/maql-expression-reference/filter-expressions/filtering-with-the-where-clause)
@@ -62,30 +63,6 @@ Flexible Deployment
 	- 
 5. Operate 
 
-
-
-### MAQL
-
-[MAQL: Powerful Analytical Querying Made Simple | GoodData](https://www.gooddata.com/blog/maql-powerful-analytical-querying-made-simple/)
-
-
-```sql
-SELECT aggregation_function(fact1*fact2)
-WHERE condition_column=condition
-
-
-SELECT SUM(SELECT AVG(ammount) BY user)  -- BY detail level
-SELECT SUM(SELECT AVG(ammount) BY user, ALL country)  -- ALL do not group by
-SELECT SUM(SELECT AVG(ammount) BY user, ALL OTHER)  -- OTHER  forget about the rest
-SELECT SUM(SELECT AVG(ammount) BY user, ALL OTHER WITHOUT PF)  -- do not apply any filter (even not primry dashboard filter)
-
-SELECT (SELECT SUM(a)) / (SELECT SUM(a) BY ALL country) -- % % % % percentage
-
-SELECT SUM(ammount) WHERE
-(SELECT COUNT(user) BY user, ALL OTHER WHERE product=x) > 0 -- greater than
-
-```
-
 ## Development
 
 - Analytics as a code, CI/CD
@@ -94,8 +71,5 @@ SELECT SUM(ammount) WHERE
 - Integrating GoodData with [[dbt]]
 
 [Access GD workspace from Apache Zeppelin](https://medium.com/gooddata-developers/accessing-gooddata-workspace-from-apache-zeppelin-notebook-a057856030e6)
-
-
-
 
 [Gooddata blog](https://padak.posthaven.com/tag/gooddata)
