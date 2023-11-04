@@ -4,83 +4,29 @@
     "type": "split",
     "children": [
       {
-        "id": "2e817635683a2646",
+        "id": "96a378936846ff40",
         "type": "tabs",
         "children": [
           {
-            "id": "ebd4d84e44d36dc2",
+            "id": "fe8996899e9cb91e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "GoodData/GoodData.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
-            "id": "c96d8210e8ccc505",
+            "id": "ac6dc9f1cf194fba",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "release-notes",
               "state": {
-                "file": "ClickHouse/ClickHouse.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1e9d21067b038b2e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PostgreSQL/PostgreSQL.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8fdcde90b0397f23",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PostgreSQL/PostgreSQL.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a0f233ee70f034a8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PostgreSQL/GreenPlum.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "39512d02a08aac59",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SAP/BTP/SAP BTP.md",
-                "mode": "source",
-                "source": false
+                "currentVersion": "1.4.14"
               }
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -109,10 +55,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "NL",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
@@ -123,6 +69,14 @@
             "type": "leaf",
             "state": {
               "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "c1600b045402637f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
               "state": {}
             }
           }
@@ -146,7 +100,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PostgreSQL/GreenPlum.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +116,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PostgreSQL/GreenPlum.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -185,9 +137,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "PostgreSQL/GreenPlum.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -207,33 +157,45 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a0f233ee70f034a8",
+  "active": "ac6dc9f1cf194fba",
   "lastOpenFiles": [
-    "PostgreSQL/PostgreSQL.md",
-    "PostgreSQL/GreenPlum.md",
-    "PostgreSQL/PSQL Install.md",
-    "PostgreSQL/PSQL Maintain.md",
-    "GoodData/GD.UI.md",
+    "Amazon/AWS.md",
+    "Data/NL/Natural Language.md",
+    "Oracle/Oracle.md",
+    "Apache/Apache Superset.md",
+    "Apache/Apache.md",
+    "Apache/Apache Spark.md",
+    "Data/NL/Natural Language Processing.md",
+    "Data/NL/Natural Language Query.md",
+    "Data/NL/Natural Language Generation.md",
+    "Data/Data Science.md",
+    "Data/Concepts.md",
+    "Apache/Apache Airflow.md",
+    "Apache/Apache Presto.md",
     "GoodData/GD.Workspaces.md",
     "GoodData/GD.WDF.md",
-    "SAP/ASE/SAP ASE 3 Maintenance.md",
-    "SAP/ASE/SAP ASE.md",
-    "SAP/ASE/SAP ASE 1 System.md",
-    "SAP/ASE/SAP ASE 2 Install.md",
-    "SAP/SAP.md",
-    "SAP/BTP/SAP BTP.md",
-    "ClickHouse/ClickHouse.SQL.md",
-    "ClickHouse/ClickHouse.md",
-    "Data/NL/Natural Language Processing.md",
-    "Data/NL/Natural Language.md",
-    "Data/NL/Natural Language Generation.md",
-    "Data/Processing/ETL.md",
     "GoodData/GoodData.md",
-    "Apache/Apache Iceberg.md",
-    "Apache/Apache Hadoop.md",
-    "Apache/Apache Cassandra.md",
-    "Apache/Apache Kafka.md",
-    "Apache/Apache Spark.md",
-    "Amazon/AWS RedShift.md"
+    "DuckDB.md",
+    "SAP/BTP/SAP BTP.md",
+    "SAP/SAP.md",
+    "Salesforce/Tableau.md",
+    "Snowflake/Snowflake.md",
+    "PostgreSQL/PostgreSQL.md",
+    "Apache/Apache Drill.md",
+    "Data/Visualize/Visualization.md",
+    "Oracle/MySQL.md",
+    "README.md",
+    "Qlik/QDI/statement-of-direction-qlik-data-integration-platform.pdf",
+    "Qlik/QDI/prop_use_case_QLIK_Catalog.png",
+    "Qlik/QLIK_Data_Architecture_Evolution.png",
+    "Qlik/infographic2x.png",
+    "Salesforce",
+    "SAP/BTP/SAP_BTP.png",
+    "Data/Visualize/DataVisualization1.PNG",
+    "Data/Visualize/DataVisualization2.PNG",
+    "Data/Types/DataStoreTypes.jpg",
+    "Data/Types/sql_vs_nosql.jpg",
+    "Data/Storage/DW_vs_BI.jpg",
+    "Data/Processing/ETL_scheme.png"
   ]
 }

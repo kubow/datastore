@@ -23,7 +23,7 @@
 
 ---
 | Data Storing Engines |   Specific Data Tools |
-| --- |  --- |
+| --- |  --- | --- |
 | <ul> <li>[[AWS]]</li> <li> [[Apache]]</li> <li> [[ClickHouse]]</li> <li> [[CockroachDB]]</li> <li> [[CrateDB]]</li> <li> [[DataWatch]]</li> <li> [[dbt]]</li> <li> [[Elasticsearch]]</li> <li> [[GoodData]]</li> <li> [[Google]]</li> <li> [[IBM]]</li> <li> [[Incorta]]</li> <li> [[JSON]] (*standalone / JSON native db*)</li> <li> [[MariaDB]]</li> <li> [[MongoDB]]</li> <li> [[Microsoft]] </li> <li> [[MySQL]]</li> <li> [[Oracle]] </li> <li> [[Pentaho]]</li> <li> [[PostgreSQL]]</li> <li> [[Redis]]</li> <li> [[Qlik]]</li> <li> [[SAP]] </li> <li> [[Snowflake]]</li> <li> [[SQLite]]</li> <li> [[Teradata]]</li> <li> [[Vertica]]</li> <li> [[XML]] (*standalone / XML native db*)</li></ul> | <ul><li>Data Discovery</li><ul><li>[SchemaCrawler](https://www.schemacrawler.com/) (DB schema discovery & comprehension tool - [github](http://sualeh.github.io/SchemaCrawler/))</li> <li>[SodaSQL](https://github.com/sodadata/soda-sql) (data testing and monitoring - [documentation](https://docs.soda.io/))</li></ul><li>Data Cleaning</li><ul><li>Talend DataCleaner (Profiling & Cleansing) [https://sourceforge.net/projects/datacleaner/](https://sourceforge.net/projects/datacleaner/)</li> <li>[[OpenRefine]]</li></ul><li>Data Monitoring</li><ul><li>HP OpenView (Rep Agent compatible)</li> <li>IBM Tivoli</li> <li>Ignite</li> <li>BMC</li> <li>Bradmark [http://www.bradmark.com/](http://www.bradmark.com/)</li></ul><li>Reporting & Visualizaion</li><ul><li>Microsoft reporting services</li> <li>IBM Cognos  </li> <li>ADASTRA  </li> <li>ERP  </li> <li>XL Cube</li></ul></ul> |
 
 
@@ -67,8 +67,10 @@ view "engine_overview" with columns for
 
 [Principles of Database Management: The Practical Guide to Storing, Managing and Analyzing Big and Small Data](https://www.amazon.com/Principles-Database-Management-Practical-Analyzing/dp/1107186129/)
 [Database in Depth: Relational Theory for Practitioners](https://www.amazon.com/Database-Depth-Relational-Theory-Practitioners/dp/0596100124)
+[What is High Availability? The Ultimate Guide | Percona](https://www.percona.com/blog/the-ultimate-guide-to-database-high-availability/)
 
 [Seven Databases in Seven Weeks](https://www.oreilly.com/library/view/seven-databases-in/9781680505962/)
+[Segmentation Fault - A DBA Perspective](https://www.percona.com/blog/segmentation-fault-a-dba-perspective/)
 
 ## Free sources
 

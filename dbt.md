@@ -5,6 +5,11 @@ dbt is a transformation workflow that compiles and runs your analytics code agai
 - collaborate on data models
 
 
+### dbt in pipeline
+
+- each run collect 3 files (manifest.json, ..)
+- parse it
+- store
 
 
 [dbt Cloud (getdbt.com)](https://cloud.getdbt.com/login/)
