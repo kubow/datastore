@@ -1,0 +1,98 @@
+set +u
+############## setup begin #####################################
+Ase=sybsol_ds
+AseLog=sa
+AsePswd=
+############## setup end #####################################
+AseDbL=$1
+Tab=sysquerymetrics
+TabV=qmV
+DirSf=out
+#FTerm="`:;`~~XX::!!"
+FTerm="~~XX::!!"
+#RTerm="`:1\n;`~1~X1X\n::1!1!\n\n\n"
+RTerm=":1\n;~1~X1X\n::1!1!\n\n\n"
+
+if [ ! -d ${0}_${DirSf} ]
+ then
+  mkdir ${0}_${DirSf}
+ fi
+if [ ! -f ${0}.cnt ]
+ then
+  GrpNo=1
+  echo "GRP:1" > ${0}.cnt
+ else
+  GrpNoF=`grep "GRP:" ${0}.cnt | cut -f2 -d:`
+  GrpNo=`expr ${GrpNoF} + 1`
+  vi ${0}.cnt <<-EOF > /dev/null 2>&1
+	:g/GRP:/s/GRP:${GrpNoF}/GRP:${GrpNo}/g
+	:w!
+	:q!
+	EOF
+ fi
+
+for Db in $AseDbL
+ do
+  isql -U ${AseLog} -S ${Ase} <<-EOF > grep "return status"
+	$AsePswd
+	use $Db
+	go
+	sp_metrics 'drop', '1'
+	go
+	sp_metrics 'drop', '2'
+	go
+	exit
+	EOF
+ done
+isql -U ${AseLog} -S ${Ase} <<-EOF > grep "return status"
+	$AsePswd
+	sp_configure "enable metrics capture", 1
+	go
+	exit
+	EOF
+echo "Running, press Enter to stop."
+read AAA
+TS=`date +"%m%d%H%M%S"`
+	
+isql -U ${AseLog} -S ${Ase} <<-EOF > grep "return status"
+	$AsePswd
+	sp_configure "enable metrics capture", 0
+	go
+	exit
+	EOF
+for Db in $AseDbL
+ do
+  echo $Db
+  isql -U ${AseLog} -S ${Ase} <<-EOF > grep "return status"
+	$AsePswd
+	use $Db
+	go
+	sp_metrics 'backup', '2'
+	go
+	sp_metrics 'flush'
+	go
+	create view ${TabV}
+	 as
+	 select ${TS} tmstmp1, ${GrpNo} grpno1, "$Db" db_name_1, * from ${Tab}
+	go
+	exit
+	EOF
+  bcp ${Db}..${TabV} out ${0}_${DirSf}/${Db}_${TS}.bcp -U ${AseLog} -S ${Ase} \
+      -c -t ${FTerm} -r ${RTerm} <<-EOF | grep " copied."
+	$Pswd
+	EOF
+  isql -U ${AseLog} -S ${Ase} <<-EOF > grep "return status"
+	$AsePswd
+	use $Db
+	go
+	sp_metrics 'drop', '1'
+	go
+	sp_metrics 'drop', '2'
+	go
+	drop view ${TabV}
+	go
+	exit
+	EOF
+ done
+echo "Finished run for ${GrpNo}, ${TS} ."
+

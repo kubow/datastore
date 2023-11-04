@@ -1,4 +1,6 @@
 # SAP Adaptive Server Enterprise
+SAP claims to have 10k+ customers onASE with over 600+ apps on ASE in production
+
 
 1. [[SAP ASE 1 System|Přehled SAP ASE]]
 2. [[SAP ASE 2 Install|Instalace a licencování SAP ASE]]

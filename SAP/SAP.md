@@ -19,6 +19,7 @@
 Reporting:
 - SAP Afaria
 - SAP Business objects
+- SAP Crystal Reports
 - SAP Lumira
 
 Message processing for IoT:

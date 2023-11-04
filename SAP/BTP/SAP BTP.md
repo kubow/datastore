@@ -10,10 +10,12 @@
 	- ...
 - Analytics
 	- SAP Analytics Cloud ([[SAP Analytics|SAC]])
+	- [SAP Crystal Solutions](https://www.sap.com/cz/products/technology-platform/crystal-bi.html)
 	- ...
 - Application Development & Integration
 	- SAP Business Application Studio (BAS)
 	- SAP Integration Suite
+		- [SAP Integration Suite Pricing model](https://discovery-center.cloud.sap/serviceCatalog/integration-suite?region=all&tab=service_plan)
 	- [SAP BTP Cockpit - SAP Business Technology Platform ondemand.com https://account.hana.ondemand.com](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjZ4dvr_cz9AhWQg_0HHdI3BkgQFnoECAwQAQ&url=https%3A%2F%2Faccount.hana.ondemand.com%2F&usg=AOvVaw1TIeE9WR7hH4U0nTsi0447)
 	- ...
 - Intelligent Technologies
