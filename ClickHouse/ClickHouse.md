@@ -19,6 +19,24 @@ Each table must specify a **[table engine](https://clickhouse.com/docs/en/engine
 	- https://clickhouse.com/docs/en/guides/improving-query-performance/sparse-primary-indexes/sparse-primary-indexes-cardinality/
 	- 
 
+## System
+
+
+
+
+### Data types
+
+[Data Types | ClickHouse Docs](https://clickhouse.com/docs/en/sql-reference/data-types)
+
+- Dates
+	- [Support Dates and DateTimes outside of 1970-2105 range. · Issue #7316 · ClickHouse/ClickHouse](https://github.com/ClickHouse/ClickHouse/issues/7316)
+
+
+[System Tables and a Window into the Internals of ClickHouse](https://clickhouse.com/blog/clickhouse-debugging-issues-with-system-tables)
+System tables:
+- [time_zones | ClickHouse Docs](https://clickhouse.com/docs/en/operations/system-tables/time_zones)
+
+
 
 ## Install
 
@@ -59,6 +77,10 @@ CREATE TABLE my_table ( col1 UInt32, col2 String, col3 DateTime ) ENGINE = Merge
 SELECT * FROM my_table
 
 ```
+
+
+[Working with Time Series Data in ClickHouse](https://clickhouse.com/blog/working-with-time-series-data-and-functions-ClickHouse)
+
 
 
 
