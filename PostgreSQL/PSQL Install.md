@@ -2,6 +2,8 @@
 
 [PostgreSQL: Downloads](https://www.postgresql.org/download/)
 
+[PostgreSQL 16: hodně malých vylepšení a optimalizací - Root.cz](https://www.root.cz/clanky/postgresql-16-hodne-malych-vylepseni-a-optimalizaci/?utm_source=rss&utm_medium=text&utm_campaign=rss)
+
 [Install on Ubuntu 22](https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-22-04-quickstart)
 [How to download and install PostgreSQL (Windows)](https://commandprompt.com/education/how-to-download-and-install-postgresql/)
 
@@ -25,6 +27,12 @@ psql -U postgres -c 'SHOW config_file'  # get location of your config files
 Inside the psql console
 - [Find the hostname and port](https://stackoverflow.com/questions/5598517/find-the-host-name-and-port-using-psql-commands)
 - 
+
+
+### Upgrade
+
+[Public Schema Security Upgrade in PostgreSQL 15](https://www.percona.com/blog/public-schema-security-upgrade-in-postgresql-15/)
+
 
 ### Clients
 
