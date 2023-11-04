@@ -3,3 +3,4 @@
 - [[Qlik Analytics]]
 - 
 
+![[infographic2x.png]]

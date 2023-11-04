@@ -6,6 +6,7 @@
 ## QlikSense
 
 [Qlik Sense | Modern Cloud Analytics](https://www.qlik.com/us/products/qlik-sense)
+Positioned as an alternative to EMARK
 
 ## QlikView
 
