@@ -32,3 +32,9 @@ Integrations:
 -   Data integration: Confluent, [Fivetran](https://en.wikipedia.org/wiki/Fivetran "Fivetran"), [Informatica](https://en.wikipedia.org/wiki/Informatica "Informatica"), [SnapLogic](https://en.wikipedia.org/wiki/SnapLogic "SnapLogic"), [Qlik](https://en.wikipedia.org/wiki/Qlik "Qlik"), [Trifacta](https://en.wikipedia.org/wiki/Trifacta "Trifacta"), Talend, Striim and others
 -   BI and data visualization: [Tableau](https://en.wikipedia.org/wiki/Tableau "Tableau"), [Microstrategy](https://en.wikipedia.org/wiki/Microstrategy "Microstrategy"), [ThoughtSpot](https://en.wikipedia.org/wiki/ThoughtSpot "ThoughtSpot"), [SaS](https://en.wikipedia.org/wiki/SaS "SaS") and [Qlik](https://en.wikipedia.org/wiki/Qlik "Qlik")
 -   Connectors and developer tools: CData, Progress, Magnitude, KingswaySoft, ZapppySys
+
+[What is BigQuery ML?  |  Google Cloud](https://cloud.google.com/bigquery)
+- The Google Cloud console
+- bq command line tool
+- BigQuery RestAPI
+- external tool
