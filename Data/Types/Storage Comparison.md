@@ -7,8 +7,11 @@
 	- Nominal data (labelling variables, names of items)
 	- Ordinal data (sequence that can be ordered)
 
+[[Types]]
 
+### Database differences
 
+[mysql - Relationship between catalog, schema, user, and database instance - Stack Overflow](https://stackoverflow.com/questions/7942520/relationship-between-catalog-schema-user-and-database-instance)
 
 
 ![sql_vs_nosql](sql_vs_nosql.jpg)
@@ -26,19 +29,3 @@
 
 [CSV vs Parquet vs Avro: Choosing the Right Tool for the Right Job | by Mikhail Levkovsky | SSENSE-TECH | Medium](https://medium.com/ssense-tech/csv-vs-parquet-vs-avro-choosing-the-right-tool-for-the-right-job-79c9f56914a8)
 
-
-[The 13 Types Of Data (forbes.com)](https://www.forbes.com/sites/adrianbridgwater/2018/07/05/the-13-types-of-data/?sh=109c83cf3362)  
-  
-1. Big Data  
-2. Structured, unstructured, semi-structured data  
-3. Time-stamped data  
-4. Machine data  
-5. Spatiotemporal data  
-6. Open data  
-7. Dark data  
-8. Real time data  
-9. Genomics data  
-10. Operational data  
-11. High-dimensional data  
-12. Unverified outdated data  
-13. Translytics data

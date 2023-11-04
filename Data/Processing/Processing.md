@@ -21,6 +21,10 @@
 
 [What is Data Preprocessing? - Definition from Techopedia](https://www.techopedia.com/definition/14650/data-preprocessing)
 
+### Data Profiling
+
+[All About Data Profiling in SQL. Elevate your data analytics… | by Chi Nguyen | Mar, 2023 | Medium](https://medium.com/@nphchi223/all-about-data-profiling-in-sql-582a0f250d75)
+
 
 ## Data Cleansing
 
@@ -41,7 +45,15 @@
 
 # Data Governance
 
+[Data governance - Wikipedia](https://en.wikipedia.org/wiki/Data_governance)
+
+
+## Data Catalogs
+
+
 # Data Lineage
+
+[Data lineage - Wikipedia](https://en.wikipedia.org/wiki/Data_lineage)
 
 - Kolibra [Data Lineage | Collibra](https://www.collibra.com/us/en/products/data-lineage)
 - Kastor

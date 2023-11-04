@@ -1,6 +1,7 @@
 
 - TensorFlow
 - Deeplearning4J
+- DMLC
 - PyTorch
 - [[#Scikit-learn]]
 - CAFFE
