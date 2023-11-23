@@ -2,9 +2,9 @@
 
 Standards:
 
-- [[AIXM]] - Aviatory XML
+- [AIXM](AIXM.md) - Aviatory XML
 - [DTD schemas (Document type Definition)](https://www.sitepoint.com/xml-dtds-xml-schema/)
-- [[XSL]]
+- [XSL](XSL.md)
 
 
 Elements
