@@ -1,7 +1,7 @@
 - [[Microsoft SQL Server]]
 - MS Azure
-	- [[Microsoft Azure SQL]] - Cloud relational database
-	- [[Microsoft Azure Synapse]] - Cloud analytics
+	- [[Azure SQL]] - Cloud relational database
+	- [[Azure Synapse]] - Cloud analytics
 - Microsoft Business Intelligence
 - [[MS Excel]]
 - [[MS Access]]
