@@ -1,6 +1,6 @@
 # General repository about data related technologies
 
-## Covered [[Concepts|data storing]] concepts
+## Covered [data storing](Data/Concepts.md) concepts
 
 - Higher architecture and cocepts
 - SQL
@@ -20,12 +20,41 @@
 	- **ERP** as part of data storage engines https://en.wikipedia.org/wiki/Category:ERP_software
 - [Business Intelligence software (wikipedia.org)](https://en.wikipedia.org/wiki/Business_intelligence_software) referred here as a **BI Tool** (retrieve, analyze, transform and report data)
 
-
 ---
-| Data Storing Engines |   Specific Data Tools |
-| --- |  --- | --- |
-| <ul> <li>[[AWS]]</li> <li> [[Apache]]</li> <li> [[ClickHouse]]</li> <li> [[CockroachDB]]</li> <li> [[CrateDB]]</li> <li> [[DataWatch]]</li> <li> [[dbt]]</li> <li> [[Elasticsearch]]</li> <li> [[GoodData]]</li> <li> [[Google]]</li> <li> [[IBM]]</li> <li> [[Incorta]]</li> <li> [[JSON]] (*standalone / JSON native db*)</li> <li> [[MariaDB]]</li> <li> [[MongoDB]]</li> <li> [[Microsoft]] </li> <li> [[MySQL]]</li> <li> [[Oracle]] </li> <li> [[Pentaho]]</li> <li> [[PostgreSQL]]</li> <li> [[Redis]]</li> <li> [[Qlik]]</li> <li> [[SAP]] </li> <li> [[Snowflake]]</li> <li> [[SQLite]]</li> <li> [[Teradata]]</li> <li> [[Vertica]]</li> <li> [[XML]] (*standalone / XML native db*)</li></ul> | <ul><li>Data Discovery</li><ul><li>[SchemaCrawler](https://www.schemacrawler.com/) (DB schema discovery & comprehension tool - [github](http://sualeh.github.io/SchemaCrawler/))</li> <li>[SodaSQL](https://github.com/sodadata/soda-sql) (data testing and monitoring - [documentation](https://docs.soda.io/))</li></ul><li>Data Cleaning</li><ul><li>Talend DataCleaner (Profiling & Cleansing) [https://sourceforge.net/projects/datacleaner/](https://sourceforge.net/projects/datacleaner/)</li> <li>[[OpenRefine]]</li></ul><li>Data Monitoring</li><ul><li>HP OpenView (Rep Agent compatible)</li> <li>IBM Tivoli</li> <li>Ignite</li> <li>BMC</li> <li>Bradmark [http://www.bradmark.com/](http://www.bradmark.com/)</li></ul><li>Reporting & Visualizaion</li><ul><li>Microsoft reporting services</li> <li>IBM Cognos  </li> <li>ADASTRA  </li> <li>ERP  </li> <li>XL Cube</li></ul></ul> |
 
+| Data Storing Engines |   Specific Data Tools |
+| --- |  --- | 
+| [Amazon stores](Amazon/AWS.md) | **Data Discovery** |
+| [Apache](Apache/Apache.md) | - [SchemaCrawler](https://www.schemacrawler.com/) (DB schema discovery & comprehension tool - [github](http://sualeh.github.io/SchemaCrawler/)) |
+| [ClickHouse](ClickHouse/ClickHouse.md) | - [SodaSQL](https://github.com/sodadata/soda-sql) (data testing and monitoring - [documentation](https://docs.soda.io/)) |
+| [CockroachDB](CockroachDB.md) | **Data Cleaning** |
+| [CrateDB](CrateDB/CrateDB.md) | - Talend DataCleaner (Profiling & Cleansing) [https://sourceforge.net/projects/datacleaner/](https://sourceforge.net/projects/datacleaner/) |
+| [DataWatch](DataWatch.md) | - [OpenRefine](Google/OpenRefine.md)|
+|  | **Data Monitoring** |
+| [DuckDB](DuckDB.md) ||
+| [Elasticsearch](Elacsticsearch/Elasticsearch.md)| - HP OpenView (Rep Agent compatible) |
+| [GoodData](GoodData/GoodData.md) | - [IBM Tivoli](IBM/Tivoli.md) |
+| [Google](Google/Google.md) | - Ignite|
+| [IBM](IBM/IBM.md) | - BMC|
+| [Incorta](Incorta/Incorta.md) | - Bradmark [http://www.bradmark.com/](http://www.bradmark.com/) |
+| [InfluxDB](InfluxDB.md) | - [dbt](dbt.md) |
+| [JSON](JSON/JSON.md) (*standalone / JSON native db*)| **Reporting & Visualizaion** |
+| [MongoDB](MongoDB/MongoDB.md) | - Microsoft reporting services|
+| [Microsoft](MS/Microsoft.md) | - [IBM Cognos](IBM/Cognos.md)|
+| [Oracle](Oracle/Oracle.md)| - ADASTRA |
+| [Pentaho](Pentaho/Pentaho.md) | - ERP |
+| [PostgreSQL](PostgreSQL/PostgreSQL)| - XL Cube|
+| [Qlik](Qlik/Qlik.md) ||
+| [Redis](REDIS/Redis.md) ||
+| [Salesforce](Salesforce/SFDC.md)||
+| [SAP](SAP/SAP.md) ||
+| [Snowflake](Snowflake/Snowflake.md) ||
+| [SQLite](SQLite/SQLite.md)||
+| [Teradata](Teradata/Teradata.md)||
+| [Vertica](Vertica/Vertica.md)||
+| [XML](XML/XML.md) (*standalone / XML native db*)||
+
+****
 Universal Data Clients
 
 - Data Grip
