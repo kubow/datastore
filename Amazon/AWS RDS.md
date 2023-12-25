@@ -1,4 +1,11 @@
-https://en.wikipedia.org/wiki/Amazon_Relational_Database_Service
-Amazon Relational Database Service - a distributed web service solution.
-https://aws.amazon.com/rds/
+[Amazon Relational Database Service](https://aws.amazon.com/rds/) - a distributed web service solution ([wikipedia](https://en.wikipedia.org/wiki/Amazon_Relational_Database_Service)).
+
+Choice of engines:
+- [Aurora](AWS Aurora.md)
+- MariaDB
+- Microsoft SQL Server
+- MySQL
+- Oracle
+- PostgreSQL Server
+
 
