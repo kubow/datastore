@@ -14,6 +14,8 @@
 
 [Guides - DuckDB](https://duckdb.org/docs/archive/0.8.1/guides/index)
 
+[Performance Guide - DuckDB](https://duckdb.org/docs/guides/performance/overview)
+
 ```sql
 --- import from csv / parquet / json / xlsx 
 CREATE TABLE new_tbl AS SELECT * FROM read_csv_auto('input.');  -- create new table

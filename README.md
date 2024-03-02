@@ -114,7 +114,7 @@ view "engine_overview" with columns for
 
 
 [UI bakery sample databases](https://uibakery.io/sql-playground)
-
+[Datasets - Data | World Resources Institute](https://datasets.wri.org/dataset)
 [GitHub - jOOQ/sakila: The Sakila Database](https://github.com/jOOQ/sakila/search?l=tsql)
 
 [Datové sady - Národní katalog otevřených dat (NKOD)](https://data.gov.cz/datov%C3%A9-sady)

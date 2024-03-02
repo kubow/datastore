@@ -14,6 +14,7 @@
 [Architecture of SQLite](https://sqlite.org/arch.html)
 [The Schema Table (sqlite.org)](https://www.sqlite.org/schematab.html)
 
+[How does SQLite work? Part 2: btrees | Hacker News](https://news.ycombinator.com/item?id=23668133)
 
 
 ## Practical examples

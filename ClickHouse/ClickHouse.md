@@ -2,6 +2,9 @@ Column oriented DBMS for OLAP created originally by Yandex
 - https://clickhouse.com/
 - [[Clickhouse Cloud]]
 
+Intergation:
+- https://clickhouse.com/docs/en/integrations
+
 Each table must specify a **[table engine](https://clickhouse.com/docs/en/engines/table-engines/)**:
 
 - **MergeTree** (most universal and functional table engine)
@@ -75,7 +78,7 @@ CREATE DATABASE my_database
 SHOW TABLES IN my_database
 CREATE TABLE my_table ( col1 UInt32, col2 String, col3 DateTime ) ENGINE = MergeTree PARTITION BY toYYYYMM(col3) ORDER BY col1
 SELECT * FROM my_table
-
+SELECT formatReadableSize(total_bytes) FROM system.tables WHERE name = 'xxx'
 ```
 
 
