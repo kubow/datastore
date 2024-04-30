@@ -1,1 +1,3 @@
 [CrateDB – Distributed SQL Database Enabling Data Insights at Scale](https://crate.io/)
+
+![[CrateDB-Architecture-Guide.pdf]]
