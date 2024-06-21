@@ -2,6 +2,13 @@
 - [[PSQL Install]]
 - [[PSQL Maintain]]
 
+### Enterprise deployments
+
+- [[EnterpriseDB]]
+- [[GreenPlum]]
+
+
+
 [Why PostgreSQL Is a Top Choice for Enterprise-level Databases](https://www.percona.com/blog/why-postgresql-is-a-top-choice-for-enterprise-level-databases/)
 
 [Foreign data wrappers - PostgreSQL wiki](https://wiki.postgresql.org/wiki/Foreign_data_wrappers)
