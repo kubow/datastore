@@ -31,17 +31,18 @@ ETL best Practices [https://www.timmitchell.net/etl-best-practices/](https://www
 
 - Airbyte
 - FiveTran
-- Meltano
+- [[DataIku]]
+- Meltano (Extraction)
 - Stitch
 - PipeLineWise
 - [Hevo Data | The End-to-End Data Pipeline Platform](https://hevodata.com/)
 
--
+---
 
 Informatica (leader) [https://www.informatica.com](https://www.informatica.com)
 Talend Open Source Data Integrator [https://sourceforge.net/projects/talend-studio/](https://sourceforge.net/projects/talend-studio/)
 Pentaho Data Integrator - Kettle [http://community.pentaho.com/projects/data-integration/](http://community.pentaho.com/projects/data-integration/)
-Dataiku [https://www.dataiku.com/?utm_source=predictiveanalytics](https://www.dataiku.com/?utm_source=predictiveanalytics)
+
 RapidMiner [https://rapidminer.com/?utm_source=PredictiveAnalyticsToday&utm_medium=Review&utm_campaign=PAT](https://rapidminer.com/?utm_source=PredictiveAnalyticsToday&utm_medium=Review&utm_campaign=PAT)  
 Spago [https://www.spagoworld.org/?utm_source=PredictiveAnalyticsToday&utm_medium=Review&utm_campaign=PAT](https://www.spagoworld.org/?utm_source=PredictiveAnalyticsToday&utm_medium=Review&utm_campaign=PAT)  
 Scriptella [https://codebeamer.com/cb/wiki/938267](https://codebeamer.com/cb/wiki/938267)
