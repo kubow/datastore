@@ -21,6 +21,7 @@
 - [[Apache Spark]] - engine for large-scale data analytics
 - [[Apache Submarine]] - machine learning platform
 - [[Apache Superset]] - data exploration and visualization
+- [[Apache TinkerPop]] - graph computing framework
 - [[Apache Zeppelin]] - embedded notebook
 - [[Apache Zookeeper]] - coordination service
 
