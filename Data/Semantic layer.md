@@ -10,7 +10,7 @@
 
 - users are using own tools to see data and build analytics
 	- Mainstream: PowerBI, Tableau, Looker
-	- Data Scientis teams: R Studio, MATLAB
-- each tool has its own mechanism to do the calulations (or metrics)
-- do this in each BI tool separately -> incosistent results
+	- Data Scientist teams: R Studio, MATLAB
+- each tool has its own mechanism to do the calculations (or metrics)
+- do this in each BI tool separately -> inconsistent results
 - the bigger the customer is the bigger the problem is

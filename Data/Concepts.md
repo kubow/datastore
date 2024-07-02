@@ -20,7 +20,7 @@
 
 - **Data**: apply meaning
 - **Information**: apply context
-- **Knwoledge**: apply insight
+- **Knowledge**: apply insight
 - **Wisdom**: apply purpose
 - **Decission**
 
