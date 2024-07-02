@@ -1,9 +1,13 @@
-Column oriented DBMS for OLAP created originally by Yandex
+Column oriented DBMS for OLAP created originally by Yandex (now open sourced)
 - https://clickhouse.com/
 - [[Clickhouse Cloud]]
 
 Intergation:
 - https://clickhouse.com/docs/en/integrations
+
+
+
+## System
 
 Each table must specify a **[table engine](https://clickhouse.com/docs/en/engines/table-engines/)**:
 
@@ -20,12 +24,6 @@ Each table must specify a **[table engine](https://clickhouse.com/docs/en/engine
 	- **primary.idx** has keys per granule
 	- sent to thread for processing
 	- https://clickhouse.com/docs/en/guides/improving-query-performance/sparse-primary-indexes/sparse-primary-indexes-cardinality/
-	- 
-
-## System
-
-
-
 
 ### Data types
 
@@ -36,6 +34,7 @@ Each table must specify a **[table engine](https://clickhouse.com/docs/en/engine
 
 
 [System Tables and a Window into the Internals of ClickHouse](https://clickhouse.com/blog/clickhouse-debugging-issues-with-system-tables)
+
 System tables:
 - [time_zones | ClickHouse Docs](https://clickhouse.com/docs/en/operations/system-tables/time_zones)
 
@@ -81,6 +80,7 @@ SELECT * FROM my_table
 SELECT formatReadableSize(total_bytes) FROM system.tables WHERE name = 'xxx'
 ```
 
+- [[ClickHouse.SQL]]
 
 [Working with Time Series Data in ClickHouse](https://clickhouse.com/blog/working-with-time-series-data-and-functions-ClickHouse)
 
