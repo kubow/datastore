@@ -1,15 +1,22 @@
 [Category:Data visualization software - Wikipedia](https://en.wikipedia.org/wiki/Category:Data_visualization_software)
 
-Leading enterprise data visualization products (alphabetically):
+Leading enterprise data visualisation products (alphabetically):
   
-- [[GoodData]]
+- Amplitude
+- IBM [Cognos](../../IBM/Cognos.md)
+- [GoodData](../../GoodData/GoodData.md)
+- [Incorta](../../Incorta/Incorta.md)
 - [[#Kibana]]
-- [[Looker]]
-- [[Qlik Analytics#QlikView]]
-- [[PowerBI]]
-- [[Tableau]]
+- Google [Looker](../../Google/Looker.md)
+- Microstrategy
+- [Orange](../../Orange.md)
+- [Qlik Analytics](../../Qlik/Qlik%20Analytics.md)
+- Microsoft [PowerBI](../../MS/PowerBI/PowerBI.md)
+- Re:Think
+- Sweeft
+- [Tableau](../../Salesforce/Tableau.md)
+- ToughtSpot
 - [[#TIBCO Spotfire]]
-
 
 [What Makes A Good Data Visualization? — Information is Beautiful](https://www.informationisbeautiful.net/visualizations/what-makes-a-good-data-visualization/)
 
@@ -19,10 +26,6 @@ Leading enterprise data visualization products (alphabetically):
 ## Kibana
 
 [Kibana - Wikipedia](https://en.wikipedia.org/wiki/Kibana)
-
-
-
-
 
 
 ## TIBCO Spotfire
