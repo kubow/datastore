@@ -4,6 +4,8 @@
 [Well-Known Users Of SQLite](https://www.sqlite.org/famous.html)
 [Xml or Sqlite, When to drop Xml for a Database? - Stack Overflow](https://stackoverflow.com/questions/77726/xml-or-sqlite-when-to-drop-xml-for-a-database)
 
+- [RQLite](./RQLite.md) - a distributed SQLite
+
 - [[#System]]
 - [[SQLite Install|Installation]]
 - [[SQLite Maintain|Maintenance]]
