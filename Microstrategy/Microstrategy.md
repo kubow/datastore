@@ -1,4 +1,4 @@
-BI Tool
+Enterprise BI and Analytics Platform (Cloud / On-Premise)
 
 [Introduction to MicroStrategy Workstation](https://www2.microstrategy.com/producthelp/Current/Workstation/en-us/Content/About_MicroStrategy.htm)
 

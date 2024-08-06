@@ -1,5 +1,5 @@
-Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache, streaming engine and message broker.  
-[Redis](https://redis.io/) | 
+Redis is an open source (BSD licensed), in-memory data structure (key-value) store, used as a database, cache, streaming engine and message broker.  
+[Redis](https://redis.io/)
 
 
 [Documentation | Redis](https://redis.io/docs/)

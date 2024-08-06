@@ -1,2 +1,2 @@
-High Performance Object Storage
+High Performance Object Storage (compatible with S3)
 
