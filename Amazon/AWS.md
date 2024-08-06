@@ -2,6 +2,7 @@ Amazon Web Services
 https://en.wikipedia.org/wiki/Category:Amazon_Web_Services
 
 - [AWS Aurora](AWS%20Aurora.md)
+- [AWS DynamoDB](https://aws.amazon.com/dynamodb/) Fast NoSQL Key-Value Database
 - [AWS RDS](AWS%20RDS.md)
 - [AWS RedShift](AWS%20RedShift.md)
 - [AWS S3](AWS%20S3.md)
