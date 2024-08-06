@@ -22,37 +22,41 @@
 
 ---
 
-| Data Storing Engines |   Specific Data Tools |
-| --- |  --- | 
-| [Amazon stores](Amazon/AWS.md) | **Data Discovery** |
-| [Apache](Apache/Apache.md) | - [SchemaCrawler](https://www.schemacrawler.com/) (DB schema discovery & comprehension tool - [github](http://sualeh.github.io/SchemaCrawler/)) |
-| [ClickHouse](ClickHouse/ClickHouse.md) | - [SodaSQL](https://github.com/sodadata/soda-sql) (data testing and monitoring - [documentation](https://docs.soda.io/)) |
-| [CockroachDB](CockroachDB.md) | **Data Cleaning** |
-| [CrateDB](CrateDB/CrateDB.md) | - Talend DataCleaner (Profiling & Cleansing) [https://sourceforge.net/projects/datacleaner/](https://sourceforge.net/projects/datacleaner/) |
-| [DataWatch](DataWatch.md) | - [OpenRefine](Google/OpenRefine.md)|
-|  | **Data Monitoring** |
-| [DuckDB](DuckDB.md) ||
-| [Elasticsearch](Elacsticsearch/Elasticsearch.md)| - HP OpenView (Rep Agent compatible) |
-| [GoodData](GoodData/GoodData.md) | - [IBM Tivoli](IBM/Tivoli.md) |
-| [Google](Google/Google.md) | - Ignite|
-| [IBM](IBM/IBM.md) | - BMC|
-| [Incorta](Incorta/Incorta.md) | - Bradmark [http://www.bradmark.com/](http://www.bradmark.com/) |
-| [InfluxDB](InfluxDB.md) | - [dbt](dbt.md) |
-| [JSON](JSON/JSON.md) (*standalone / JSON native db*)| **Reporting & Visualizaion** |
-| [MongoDB](MongoDB/MongoDB.md) | - Microsoft reporting services|
-| [Microsoft](MS/Microsoft.md) | - [IBM Cognos](IBM/Cognos.md)|
-| [Oracle](Oracle/Oracle.md)| - ADASTRA |
-| [Pentaho](Pentaho/Pentaho.md) | - ERP |
-| [PostgreSQL](PostgreSQL/PostgreSQL)| - XL Cube|
-| [Qlik](Qlik/Qlik.md) ||
-| [Redis](REDIS/Redis.md) ||
-| [Salesforce](Salesforce/SFDC.md)||
-| [SAP](SAP/SAP.md) ||
-| [Snowflake](Snowflake/Snowflake.md) ||
-| [SQLite](SQLite/SQLite.md)||
-| [Teradata](Teradata/Teradata.md)||
-| [Vertica](Vertica/Vertica.md)||
-| [XML](XML/XML.md) (*standalone / XML native db*)||
+| Data Storing Engines                                 | Specific Data Tools                                                                                                                             |
+| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Amazon stores](Amazon/AWS.md)                       | **Data Discovery**                                                                                                                              |
+| [Apache](Apache/Apache.md) (multiple products)       | - [SchemaCrawler](https://www.schemacrawler.com/) (DB schema discovery & comprehension tool - [github](http://sualeh.github.io/SchemaCrawler/)) |
+| [ClickHouse](ClickHouse/ClickHouse.md)               | - [SodaSQL](https://github.com/sodadata/soda-sql) (data testing and monitoring - [documentation](https://docs.soda.io/))                        |
+| [CockroachDB](CockroachDB/CockroachDB.md)            | **Data Processing**                                                                                                                             |
+| [CrateDB](CrateDB/CrateDB.md)                        | - Talend DataCleaner (Profiling & Cleansing) [https://sourceforge.net/projects/datacleaner/](https://sourceforge.net/projects/datacleaner/)     |
+| [Databricks](Databricks/Databricks.md)               | - [OpenRefine](Google/OpenRefine.md)                                                                                                            |
+| [DataWatch](DataWatch.md)                            | - [Meltano](meltano.md) (data extracting)                                                                                                       |
+| [DuckDB](DuckDB.md)                                  | - [dbt](dbt.md) (data transformation)                                                                                                           |
+| [Elasticsearch](Elasticsearch/Elasticsearch.md)      | - [dlt](dlt.md)                                                                                                                                 |
+| [Google](Google/Google.md)                           | - [Kestra](kestra.md)                                                                                                                           |
+| [IBM](IBM/IBM.md)                                    |                                                                                                                                                 |
+| [InfluxDB](InfluxDB.md)                              |                                                                                                                                                 |
+| [JSON](JSON/JSON.md) (*standalone / JSON native db*) | - [y42](y42.md)                                                                                                                                 |
+| [MariaDB](MariaDB/MariaDB.md)                        |                                                                                                                                                 |
+| [MongoDB](MongoDB/MongoDB.md)                        | **Data Analysis & Reporting**                                                                                                                   |
+| [Microstrategy](Microstrategy/Microstrategy.md)      |                                                                                                                                                 |
+| [Microsoft](MS/Microsoft.md)                         |                                                                                                                                                 |
+| [Minio](Minio/Minio.md)                              |                                                                                                                                                 |
+| [Neo4J](Neo4J/Neo4J.md)                              |                                                                                                                                                 |
+| [Oracle](Oracle/Oracle.md)                           |                                                                                                                                                 |
+| [Pentaho](Pentaho/Pentaho.md)                        |                                                                                                                                                 |
+| [PostgreSQL](PostgreSQL/PostgreSQL)                  |                                                                                                                                                 |
+| [Qlik](Qlik/Qlik.md)                                 |                                                                                                                                                 |
+| [Redis](REDIS/Redis.md)                              |                                                                                                                                                 |
+| [Salesforce](Salesforce/SFDC.md)                     |                                                                                                                                                 |
+| [SAP](SAP/SAP.md)                                    | **Data Monitoring**                                                                                                                             |
+| [SingleStore](SingleStore/SingleStore.md)            |                                                                                                                                                 |
+| [Snowflake](Snowflake/Snowflake.md)                  | - HP OpenView (Rep Agent compatible)                                                                                                            |
+| [SQLite](SQLite/SQLite.md)                           | - [IBM Tivoli](IBM/Tivoli.md)                                                                                                                   |
+| [Teradata](Teradata/Teradata.md)                     | - Ignite                                                                                                                                        |
+| [TDEngine](TDEngine/TDEngine.md)                     | - BMC                                                                                                                                           |
+| [Vertica](Vertica/Vertica.md)                        | - Bradmark [http://www.bradmark.com/](http://www.bradmark.com/)                                                                                 |
+| [XML](XML/XML.md) (*standalone / XML native db*)     |                                                                                                                                                 |
 
 ****
 Universal Data Clients
@@ -100,6 +104,10 @@ view "engine_overview" with columns for
 
 
 # Useful resources
+
+[Embedded databases (1): The harmony of DuckDB, KùzuDB and LanceDB | The Data Quarry](https://thedataquarry.com/posts/embedded-db-1/)
+[Embedded databases (2): KùzuDB, an extremely fast OLAP graph database | The Data Quarry](https://thedataquarry.com/posts/embedded-db-2/)
+
 
 ## Books
 
