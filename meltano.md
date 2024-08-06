@@ -4,7 +4,7 @@
 pip install meltano
 meltano init my-meltano-project
 # 1. / add the extractor
-meltano explore extractor
+# meltano explore extractor
 meltano add extractor tap-csv
 meltano invoke tap-csv --discover  # verify data ingesting works fine
 meltano config tap-csv  # verify configuration
