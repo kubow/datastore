@@ -5,6 +5,7 @@ dbt is a transformation workflow that compiles and runs your analytics code agai
 - collaborate on data models
 
 [dbt-labs/metricflow: MetricFlow allows you to define, build, and maintain metrics in code.](https://github.com/dbt-labs/metricflow)
+[GitHub - elementary-data/elementary: The dbt-native data observability solution for data & analytics engineers. Monitor your data pipelines in minutes. Available as self-hosted or cloud service with premium features.](https://github.com/elementary-data/elementary)
 
 ### dbt in pipeline
 
