@@ -1,5 +1,7 @@
 # Data concepts
 
+[Index - Data Engineering Wiki](https://dataengineering.wiki/Index)
+
 - [[Types|Types of data]]
 - [[Storage Comparison]]
 	- [[Data Warehouse]]
