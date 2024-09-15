@@ -32,3 +32,46 @@ selected
 [sys.database_principals (Transact-SQL) - SQL Server | Microsoft Docs](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql?redirectedfrom=MSDN&view=sql-server-ver15)  
 [sys.database_role_members (Transact-SQL) - SQL Server | Microsoft Docs](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql?redirectedfrom=MSDN&view=sql-server-ver15)  
 [sys.database_permissions (Transact-SQL) - SQL Server | Microsoft Docs](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql?redirectedfrom=MSDN&view=sql-server-ver15)
+
+### Constraints
+Constraint can be used to specify the limit on the data type of table. Constraint can be specified while creating or altering the table statement. 
+
+```sql
+NOT NULL
+CHECK
+DEFAULT
+UNIQUE
+PRIMARY KEY
+FOREIGN KEY
+```
+
+### Functions
+
+- Aggregate Functions ([docs](https://learn.microsoft.com/en-us/sql/t-sql/functions/aggregate-functions-transact-sql)), use as expressions only in following situations:
+	1. The select list of a SELECT statement (either a subquery or an outer query).
+	2. A HAVING clause.
+- Analytic Functions
+- Collation Functions
+- Configuration Functions
+- Conversion Functions
+- Cryptographic Functions
+- Cursor Functions
+- Data Type Functions
+- Date and Time Data Types and Functions
+	- [Get week day name from a given month, day and year individually in SQL Server - Stack Overflow](https://stackoverflow.com/questions/20106871/get-week-day-name-from-a-given-month-day-and-year-individually-in-sql-server#20106955)
+	- [SQL Stuff: T-SQL: Get Last Day of Month](https://richbrownesq-sqlserver.blogspot.com/2012/02/t-sql-get-last-day-of-month.html)
+- JSON Functions
+- Logical Functions
+- Mathematical Functions
+- Metadata Functions
+- ODBC Scalar Functions
+- Ranking Functions
+- Replication Functions
+- Rowset Functions
+- Security Functions
+- String Functions ([docs](https://learn.microsoft.com/en-us/sql/t-sql/functions/string-functions-transact-sql?view=sql-server-ver16&redirectedfrom=MSDN))
+	- [T-SQL: RIGHT, LEFT, SUBSTRING and CHARINDEX Functions | Microsoft Learn](https://learn.microsoft.com/en-us/archive/technet-wiki/17948.t-sql-right-left-substring-and-charindex-functions)
+- System Functions
+- System Statistical Functions
+- Text and Image Functions ()
+- Trigger Functions

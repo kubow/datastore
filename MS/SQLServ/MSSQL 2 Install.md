@@ -17,25 +17,27 @@
 
 [SQL Server Versions & Editions | Which Version of SQL Server Running in System (janbasktraining.com)](https://www.janbasktraining.com/blog/sql-server-versions-and-editions/)
 
-|**Version** | **Year** | **Code Name** |
-| --- | --- | --- |
-|1.0 (@OS/2) | 1989 | Filipi |
-|1.1 (@OS/2) | 1990 | Pietro |
-|4.2A (@OS/2) | 1992 | |
-|4.2B (@OS/2) | 1993 | |
-|4.21a (@WinNT) | 1993 | SQLNT |
-|6 | 1995 | SQL95 |
-|6.5 | 1996 | Hydra |
-|7 | 1998 | Sphinx |
-|8.0 (2000) | 2000 | Shiloh |
-|9.0 (2005) | 2005 | Yukon |
-|10.0 (2008) | 2008 | Katmai |
-|10.5 (2008 R2) | 2010 | Kilimanjaro (KJ) |
-|11.0 (2012) | 2012 | Denali |
-|12.0 (2014) | 2014 | Hekaton (initially), SQL14 (current) |
-|13.0 (2016) | 2016 | SQL16 |
-|14.0 (2017) | 2017 | Helsinki |
-|15.0 (2019 RC) | 2019 | Seattle |
+| **Version**       | **Year** | **Code Name**                        |
+| ----------------- | -------- | ------------------------------------ |
+| 1.0 (@OS/2)       | 1989     | Filipi                               |
+| 1.1 (@OS/2)       | 1990     | Pietro                               |
+| 4.2A (@OS/2)      | 1992     |                                      |
+| 4.2B (@OS/2)      | 1993     |                                      |
+| 4.21a (@WinNT)    | 1993     | SQLNT                                |
+| 6                 | 1995     | SQL95                                |
+| 6.5               | 1996     | Hydra                                |
+| 7                 | 1998     | Sphinx                               |
+| 8.0 (2000)        | 2000     | Shiloh                               |
+| 9.0 (2005)        | 2005     | Yukon                                |
+| 10.0 (2008)       | 2008     | Katmai                               |
+| 10.5 (2008 R2)    | 2010     | Kilimanjaro (KJ)                     |
+| 11.0 (2012)       | 2012     | Denali                               |
+| 12.0 (2014)       | 2014     | Hekaton (initially), SQL14 (current) |
+| 13.0 (2016)       | 2016     | SQL16                                |
+| 14.0 (2017)       | 2017     | Helsinki                             |
+| 15.0 (2019 RC)    | 2019     | Seattle                              |
+| Big Data Clusters | 2018     | Aris                                 |
+| 16.0 (2022)       | 2022     | Dallas                               |
 
 
 
