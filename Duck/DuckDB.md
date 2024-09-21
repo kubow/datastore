@@ -9,7 +9,7 @@
 - Fast - optimized for analytics
 - Open Source
 
-- [MotherDuck](./MotherDuck.md) (Online DuckDB storage)
+- [MotherDuck](./MotherDuck.md) (DuckDBaaS)
 
 [DuckDB ADBC - Zero-Copy data transfer via Arrow Database Connectivity - DuckDB](https://duckdb.org/2023/08/04/adbc.html)
 
