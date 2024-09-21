@@ -1,7 +1,8 @@
-## Maintenance
-
-Performance troubleshooting [https://www.sqlshack.com/dba-guide-sql-server-performance-troubleshooting-part-2-monitoring-utilities/](https://www.sqlshack.com/dba-guide-sql-server-performance-troubleshooting-part-2-monitoring-utilities/)
 [Tips and tricks for SQL Server database maintenance optimization (sqlshack.com)](https://www.sqlshack.com/tips-and-tricks-for-sql-server-database-maintenance-optimization/)
+
+[A DBA guide to SQL Server performance troubleshooting – Part 1 – Problems and performance metrics](https://www.sqlshack.com/dba-guide-sql-server-performance-troubleshooting-part-1-problems-performance-metrics/)
+[A DBA guide to SQL Server performance troubleshooting – Part 2 – Monitoring utilities](https://www.sqlshack.com/dba-guide-sql-server-performance-troubleshooting-part-2-monitoring-utilities/)
+
 
 • Index reorganization  
 • Index rebuilding  
@@ -35,7 +36,7 @@ ALTER INDEX IndexTable_CL ON dbo.IndexTable REORGANIZE
 
 ### Index Rebuilding
   
-When fragmentation is high, you should use the index rebuild approach. Index rebuilding can happen online or offline. The online index rebuild process consists of a preparation phase, build phase, and final declaration phase. When rebuilding an index offline, clustered and nonclustered indexes alike can’t be accessed.    
+When fragmentation is high, you should use the index rebuild approach. Index rebuilding can happen online or offline. The online index rebuild process consists of a preparation phase, build phase, and final declaration phase. When rebuilding an index offline, clustered and non-clustered indexes alike can’t be accessed.    
 
 ```SQL
 -- statististics not updated yet  
@@ -57,3 +58,19 @@ It’s important to ensure the integrity and consistency of your SQL Server. Usu
 The maintenance process also includes other repair and cleanup tasks, like backing up database and transaction logs. You could even shrink log files and other data by removing empty pages, which can help you save space. It’s important to set up a plan to ensure all these tasks are performed completely and accurately.  
   
 SQL Server has a built-in tool known as the Maintenance Plan Wizard, which enables you to create and execute scheduled maintenance tasks. However, the Maintenance Plan Wizard is limited—it merely lets you schedule jobs, not enforce their success or optimize them. To continuously improve SQL Server database maintenance and ensure operations are run in the most efficient way, turn to an automated tool.
+
+## Always on availability groups
+
+[Getting Started with availability groups - SQL Server Always On | Microsoft Docs](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server?view=sql-server-ver15)
+
+[Administration of an availability Group (content index) - SQL Server Always On | Microsoft Docs](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server?view=sql-server-ver15)
+
+[AlwaysOn Availability Groups Troubleshooting and Monitoring Guide | Microsoft Docs](https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-guides/dn135328(v=sql.110))
+
+## Always on failover cluster instance
+
+[Always On failover cluster instances - SQL Server Always On | Microsoft Docs](https://docs.microsoft.com/en-us/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server?view=sql-server-ver15)
+
+## Database mirroring
+
+[Database Mirroring (SQL Server) - SQL Server Database Mirroring | Microsoft Docs](https://docs.microsoft.com/en-us/sql/database-engine/database-mirroring/database-mirroring-sql-server?view=sql-server-ver15)

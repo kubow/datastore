@@ -1,9 +1,6 @@
-# MSSQL Install
-
-2 types of instllations:  
+2 types of installations:  
 - Standalone
 - Cluster based
-
 
 ## Installation
 
@@ -11,6 +8,25 @@
 [Installation guidance for SQL Server on Linux - SQL Server | Microsoft Docs](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup?view=sql-server-ver15)
 [SQL Server 2016 & 2017: Hardware & software requirements - SQL Server | Microsoft Docs](https://docs.microsoft.com/en-us/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-ver15)
 [SQL Server 2019: Hardware & software requirements - SQL Server | Microsoft Docs](https://docs.microsoft.com/en-us/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019?view=sql-server-ver15)
+
+[A Minimalist Guide to Microsoft SQL Server 2017 on Ubuntu Linux](https://tech.marksblogg.com/mssql-sql-server-linux-install-tutorial-and-guide.html)
+[SQL Stuff: Admin: Start and Stop Local Instance of SQL Server](https://richbrownesq-sqlserver.blogspot.com/2012/01/start-and-stop-local-instance-of-sql.html)
+
+```batch
+echo StartSQLServices.bat
+  
+NET START mssqlserver  
+NET START sqlserveragent  
+NET START ReportServer  
+NET START msdtsserver100
+  
+echo StopSQLServices.bat
+  
+NET STOP mssqlserver  
+NET STOP sqlserveragent  
+NET STOP ReportServer  
+NET STOP msdtsserver100
+```
 
 
 ## Versions
