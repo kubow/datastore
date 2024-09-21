@@ -1,10 +1,25 @@
-
+	
 Enabling DataOps for Analytics
 - real-time
 - simple-to-use
 - cloud-friendly
 - quick delivery without business friction
 - greater business value
+- Categorize, Index and Prepapre Data - Enterprise-wide Data Catalog
+- QLIK in-memory over persistent store, no additional software required
+- Streaming Data Pipeline Automation, Delivering and Refining.
+
+Qlik leader in CDC (Universal platfrom, Modern architecture, Live Source updates)
+
+Qlik leader in Cloud Integtration Solution (Trusted by Cloud Providers, Complete Cloud Data Delivery)
+
+Qlik leader in Ease of use and Automation (Auto create target tables, auto map sources and targets, create analytics ready structures)
+
+Data Integration Value Proposition
+
+- Integration acros heterogenous systems and new platforms are complex and costly
+- Long time to deliver value due to manually intensive processes
+- Lack of adequate insight for better operational efficiency and cost control
 
 | **Real-time data for faster, better insights** | **Agile data delivery** | **Trusted enterprise-ready data** |
 | --- | --- | --- |
@@ -76,4 +91,51 @@ Offers these processes:
 - Filtering
 - Aggregating
 - Enhancing
+
+## additional content / filter that
+
+Categorize, Index and Prepapre Data - Enterprise-wide Data Catalog
+
+QLIK in-memory over persistent store, no additional software required
+
+Streaming Data Pipeline Automation, Delivering and Refining.
+
+Data Integration Platform (formerly Attunity) consist of:
+
+- Qlik Compose™ solution (formerly Attunity Compose)
+    - Qlik Compose™ for Data Warehouse
+    - Qlik Compose™ for Data Lakes
+- Qlik Replicate™ solution (formerly Attunity Replicate)
+
+Qlik leader in CDC (Universal platfrom, Modern architecture, Live Source updates)
+
+Qlik leader in Cloud Integtration Solution (Trusted by Cloud Providers, Complete Cloud Data Delivery)
+
+Qlik leader in Ease of use and Automation (Auto create target tables, auto map sources and targets, create analytics ready structures)
+
+Data Integration Value Proposition
+
+- Integration acros heterogenous systems and new platforms are complex and costly
+- Long time to deliver value due to manually intensive processes
+- Lack of adequate insight for better operational efficiency and cost control
+
+Qlik statement of direction for Data Integration [https://www.qlik.com/us/announcements/qlik-statement-of-direction-data-integration](https://www.qlik.com/us/announcements/qlik-statement-of-direction-data-integration)
+
+Data Integration Solution (QDI):
+
+- Streaming CDC (Change Data Capture)
+- Data Warehouse Automation
+- Data Lake Creation
+
+5 personas (Data Integration Buyers and Influencers)
+
+Enterprise/Data Architect - Technical Gatekeeper, Strategic technical fit, building blueprints
+
+CIO/VP Data Management - Initiative Sponsor & Primary Approver (ROI) + Decission Maker
+
+Data Engineer - Pipeline Manager, prepare data for analytics, Decission Maker
+
+BI Lead - Data Consumer
+
+Chief Data Officer - Data Value Creator
 
