@@ -33,7 +33,7 @@
 HASH MARK TABLE = temporary table
 
 
-- Allcations
+- Allocations
 - Cache
 - Users
 

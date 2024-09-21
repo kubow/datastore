@@ -12,20 +12,20 @@ SAP IQ - Tap into Big Data:
 
 [![](https://mermaid.ink/img/pako:eNp1kkFvwjAMhf-KlRNMlInuVqFJQC-TQNoo2qXl4DYGojVpSdINBPz3pbTbgG29xHLep_fi-sCyghML2CovPrINagvTeaIATJWuNZYbiOavcTR6hqcXiEi_k17W1wBcaMqsKBQsxk3nGxkP4hAtpmgIViIn0yLX2Hjx0w0HcSdhzmKGQkFkC03DVD927vpi201Ydwl970Ltt-pobyzJ-4kzy4v1FcdT8GAUjf6gH1p6QbIsNOr9jaGV5ZlqEFL89nl-PHVu_7_sayD1N42bqYELuISd5-0u7gZxE0SjMtiwTtYGcZWL8YvxG2ZGxuCaLvRiK82ZuMrdHqHveY_OsK4nuSBlDQy9vusdNW0rMtYc618NiWI9JklLFNytxaEGEmY3JClhgSs56reEJerkdFjZItqrjAVWV9RjVcnRUijQDUqyYIW5cV3iws131uzZed1On4Okv-k)](https://mermaid.live/edit#pako:eNp1kkFvwjAMhf-KlRNMlInuVqFJQC-TQNoo2qXl4DYGojVpSdINBPz3pbTbgG29xHLep_fi-sCyghML2CovPrINagvTeaIATJWuNZYbiOavcTR6hqcXiEi_k17W1wBcaMqsKBQsxk3nGxkP4hAtpmgIViIn0yLX2Hjx0w0HcSdhzmKGQkFkC03DVD927vpi201Ydwl970Ltt-pobyzJ-4kzy4v1FcdT8GAUjf6gH1p6QbIsNOr9jaGV5ZlqEFL89nl-PHVu_7_sayD1N42bqYELuISd5-0u7gZxE0SjMtiwTtYGcZWL8YvxG2ZGxuCaLvRiK82ZuMrdHqHveY_OsK4nuSBlDQy9vusdNW0rMtYc618NiWI9JklLFNytxaEGEmY3JClhgSs56reEJerkdFjZItqrjAVWV9RjVcnRUijQDUqyYIW5cV3iws131uzZed1On4Okv-k)
 **Dbspace**: logical name for a container of files or raw partitions called dbfiles (temporary store has exactly 1 dbspace, other more with IQ_VLDBMGMT option purchased).
-**Dbfile**: operating system file contained within a dbspace (RLV_STORE and SYSTEM containg one dbfile, others multiple).
+**Dbfile**: operating system file contained within a dbspace (RLV_STORE and SYSTEM contain one dbfile, others multiple).
 
 Pro vlastní ukládání dat jsou použity **dbspaces**, jejichž přehled uvádí následující tabulka:
 
-| Store         | Dbspace       | typ uložených dat  | 
-|---------------|---------------|--------------------| 
-| **IQ Main**       | **IQ_SYSTEM_MAIN** | Databázová struktura, <br> metadata pro incremental bacup, <br> data pro database space/identity | 
-|               | USER_DBSPACES | Tabulky a metadata, <br> indexy polí a joinů | 
-| **IQ Catalog**       | SYSTEM catalog | Systémové tabulky a pohledy, <br> uložené procedury, <br> ASA tabulky a definice funkcí | 
-|               | Other catalog | ASA tabulky |
-| **IQ Temporary**  | **IQ_SYSTEM_TEMP** | Soubor dočasných souborů <br> které definují dočasný dbspace  | 
-|               | IQ_SYSTEM_MSG | Externí soubor držící zprávy <br>o aktivitě databáze | 
-|               | IQ_SHARED_TEMP | Sdílený dočasný prostor pro <br> zjednodušení multiplex operací ([wiki](https://wiki.scn.sap.com/wiki/display/SYBIQ/IQ+Shared+System+Temporary+Store+-+IQ_SHARED_TEMP)) | 
-| | RLV_DBSPACE | RLV transakční logy |
+| Store            | Dbspace            | typ uložených dat                                                                                                                                                       |     |
+| ---------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| **IQ Main**      | **IQ_SYSTEM_MAIN** | Databázová struktura, <br> metadata pro incremental bacup, <br> data pro database space/identity                                                                        |     |
+|                  | USER_DBSPACES      | Tabulky a metadata, <br> indexy polí a joinů                                                                                                                            |     |
+| **IQ Catalog**   | SYSTEM catalog     | Systémové tabulky a pohledy, <br> uložené procedury, <br> ASA tabulky a definice funkcí                                                                                 |     |
+|                  | Other catalog      | ASA tabulky                                                                                                                                                             |     |
+| **IQ Temporary** | **IQ_SYSTEM_TEMP** | Soubor dočasných souborů <br> které definují dočasný dbspace                                                                                                            |     |
+|                  | IQ_SYSTEM_MSG      | Externí soubor držící zprávy <br>o aktivitě databáze                                                                                                                    |     |
+|                  | IQ_SHARED_TEMP     | Sdílený dočasný prostor pro <br> zjednodušení multiplex operací ([wiki](https://wiki.scn.sap.com/wiki/display/SYBIQ/IQ+Shared+System+Temporary+Store+-+IQ_SHARED_TEMP)) |     |
+|                  | RLV_DBSPACE        | RLV transakční logy                                                                                                                                                     |     |
 
 These are SAP IQ server/database permanent logs and optional trace files:
 
