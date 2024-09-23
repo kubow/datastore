@@ -3,9 +3,11 @@ SQL Server works in client-server architecture, hence it supports two types of c
 - Workstation components are installed in every device/SQL Server operator’s machine. These are just interfaces to interact with Server components. Example: SSMS, SSCM, Profiler, BIDS, SQLEM etc.
 - Server components are installed in centralized server. These are services. Example: SQL Server, SQL Server Agent, SSIS, SSAS, SSRS, SQL browser, SQL Server full text search etc
 
-- [[MSSQL 1 System]]
-- [[MSSQL 2 Install]]
-- [[MSSQL 3 Maintenance]]
+- [MSSQL 1 System](./MSSQL%201%20System.md)
+- [MSSQL 2 Install](./MSSQL%202%20Install.md)
+- [MSSQL 3 Maintenance](./MSSQL%203%20Maintenance.md)
+
+- [MSSQL SQL syntax](./MSSQL.SQL.md)
 
 Resources
 - [SQL Server Guides - SQL Server | Microsoft Docs](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-guides?view=sql-server-ver15)

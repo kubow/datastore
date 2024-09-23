@@ -4,11 +4,11 @@
 [A DBA guide to SQL Server performance troubleshooting – Part 2 – Monitoring utilities](https://www.sqlshack.com/dba-guide-sql-server-performance-troubleshooting-part-2-monitoring-utilities/)
 
 
-• Index reorganization  
-• Index rebuilding  
-• Updating statistics  
-• Integrity and consistency checks  
-• Repair and cleanup tasks  
+- Index reorganization  
+- Index rebuilding  
+- Updating statistics  
+- Integrity and consistency checks  
+- Repair and cleanup tasks  
 
 [SQL Server and Azure SQL index architecture and design guide - SQL Server | Microsoft Docs](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-index-design-guide?view=sql-server-ver15)
 
@@ -17,9 +17,9 @@
 It’s important to keep your indexes defragmented. You can run an index reorganize operation, which enables you to defragment your indexes with minimal system resources. Index reorganization is best for indexes with fragmentation below 20 to 30% or if you plan on doing an index statistics update in the future—because index reorganization only reorganizes the leaf-level index pages, it’s not efficient when you have a large fragmentation. Index statistics are also not updated during index reorganization.  
 This operation is always online, uses minimal system resources, honors the fill factor that has been used during the creation of the index (common misconception is that reorganize operation does not take into account fill factor at all) and if you kill it due to any reason, the work that has been done would still persist.  
   
-• Index statistics are not being updated  
-• Not efficient when you have a large fragmentation as it is only reorganizing the leaf-level pages  
-• Cannot change the initial fill factor used during index
+- Index statistics are not being updated  
+- Not efficient when you have a large fragmentation as it is only reorganizing the leaf-level pages  
+- Cannot change the initial fill factor used during index
 
 ```SQL
 USE database_name  

@@ -51,6 +51,8 @@ Desktop released as a free tier [https://docs.microsoft.com/en-us/power-bi/funda
 
 ## Modelling
 
+- [PowerBI DAX](./PowerBI.DAX.md)
+
 [Basics of Modeling in Power BI: What is a Dimension Table and Why Say No to a Single Big Table - RADACAD](https://radacad.com/basics-of-modeling-in-power-bi-what-is-a-dimension-table-and-why-say-no-to-a-single-big-table)
 
 ## Performance

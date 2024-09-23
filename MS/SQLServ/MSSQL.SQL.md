@@ -58,4 +58,6 @@ FOREIGN KEY
 
 [Parsing HTML in SQL Server](https://bertwagner.com/posts/parsing-html-sql-server/)
 
+[Convert Xml to Table SQL Server - Stack Overflow](https://stackoverflow.com/questions/3989395/convert-xml-to-table-sql-server)
+
 [Find value inside tables of all databases](https://stackoverflow.com/questions/436351/find-a-value-anywhere-in-a-database)
