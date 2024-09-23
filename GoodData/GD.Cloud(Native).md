@@ -7,13 +7,13 @@ Cloud Native is Cloud with different hosting option
 
 ### Features
 
-| **Main** | **Versioning systems** | **Authentification** |
-| -- | -- | -- |
-| Auto-generated SQL | GitHub | Auth0 |
-| Semantic Abstractions | GitLab | Google |
-| Built-in Multitenancy | | Okta |
-| Drag&Drop Tools | | |
-| Advanced Embedding [>](https://www.gooddata.com/developers/cloud-native/doc/cloud/embed-visualizations/) | | \* anything that is SAML compatible |
+| **Main**                                                                                                 | **Versioning systems** | **Authentification**                |
+| -------------------------------------------------------------------------------------------------------- | ---------------------- | ----------------------------------- |
+| Auto-generated SQL                                                                                       | GitHub                 | Auth0                               |
+| Semantic Abstractions                                                                                    | GitLab                 | Google                              |
+| Built-in Multitenancy                                                                                    |                        | Okta                                |
+| Drag&Drop Tools                                                                                          |                        |                                     |
+| Advanced Embedding [>](https://www.gooddata.com/developers/cloud-native/doc/cloud/embed-visualizations/) |                        | \* anything that is SAML compatible |
 
 [Documentation | GoodData Cloud Native](https://www.gooddata.com/developers/cloud-native/doc/cloud/#connect)
 
