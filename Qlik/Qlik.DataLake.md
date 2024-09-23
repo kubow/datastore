@@ -1,6 +1,6 @@
 **QLIK for Data Lakes** - Streaming Data Pipeline Automation from Ingestion to Analytics
 
-Continuously updated, analytics-ready data no-coding lakes **Qlik Replicate™** and **Qlik Compose™ for Data Lakes**
+Continuously updated, analytics-ready data no-coding lakes **[Qlik Replicate](./Qlik.Replicate.md)™** and **[Qlik Compose](./Qlik.Compose.md)™ for Data Lakes**
 
 Why to keep Data Lake:
 - Economics - Large data at low cost

@@ -1,10 +1,10 @@
 
-- [[Qlik Data Integration]] (formerly Attunity)
-	- Qlik Compose™ solution
-		- Qlik Compose™ for Data Warehouse
-		- Qlik Compose™ for Data Lakes
-	- Qlik Replicate™ solution
-- [[Qlik Analytics]]
+- [Qlik Data Integration](./Qlik%20Data%20Integration.md) (formerly Attunity)
+	- [Qlik Compose](./Qlik.Compose.md)™ solution
+		- Qlik Compose™ for [Data Warehouse](./Qlik.DWHAutomation.md)
+		- Qlik Compose™ for [Data Lakes](./Qlik.DataLake.md)
+	- [Qlik Replicate](./Qlik.Replicate.md)™ solution
+- [Qlik Analytics](./Qlik%20Analytics.md)
 	- 
 
 ![[infographic2x.png]]
