@@ -2,7 +2,7 @@
 
 ## Covered [data storing](Data/Concepts.md) concepts
 
-- Higher architecture and cocepts
+- Higher architecture and concepts
 - SQL
 	- Relational DB (OLTP)
 	- Analytical DB (OLAP)
@@ -28,13 +28,13 @@
 | [Apache](Apache/Apache.md) (multiple products)       | - [SchemaCrawler](https://www.schemacrawler.com/) (DB schema discovery & comprehension tool - [github](http://sualeh.github.io/SchemaCrawler/)) |
 | [ClickHouse](ClickHouse/ClickHouse.md)               | - [SodaSQL](https://github.com/sodadata/soda-sql) (data testing and monitoring - [documentation](https://docs.soda.io/))                        |
 | [CockroachDB](CockroachDB/CockroachDB.md)            | **Data Processing**                                                                                                                             |
-| [CrateDB](CrateDB/CrateDB.md)                        | - Talend DataCleaner (Profiling & Cleansing) [https://sourceforge.net/projects/datacleaner/](https://sourceforge.net/projects/datacleaner/)     |
-| [Databricks](Databricks/Databricks.md)               | - [OpenRefine](Google/OpenRefine.md)                                                                                                            |
-| [DataWatch](DataWatch.md)                            | - [Meltano](meltano.md) (data extracting)                                                                                                       |
-| [DuckDB](DuckDB.md)                                  | - [dbt](dbt.md) (data transformation)                                                                                                           |
-| [Elasticsearch](Elasticsearch/Elasticsearch.md)      | - [dlt](dlt.md)                                                                                                                                 |
-| [Google](Google/Google.md)                           | - [Kestra](kestra.md)                                                                                                                           |
-| [IBM](IBM/IBM.md)                                    |                                                                                                                                                 |
+| [CrateDB](CrateDB/CrateDB.md)                        | - [Apache Airflow](./Apache/Apache%20Airflow.md) (orchestration)                                                                                |
+| [Databricks](Databricks/Databricks.md)               | - Talend DataCleaner (Profiling & Cleansing) [https://sourceforge.net/projects/datacleaner/](https://sourceforge.net/projects/datacleaner/)     |
+| [DataWatch](DataWatch.md)                            | - [OpenRefine](Google/OpenRefine.md)                                                                                                            |
+| [DuckDB](DuckDB.md)                                  | - [Meltano](meltano.md) (data extracting)                                                                                                       |
+| [Elasticsearch](Elasticsearch/Elasticsearch.md)      | - [dbt](dbt.md) (data transformation)                                                                                                           |
+| [Google](Google/Google.md)                           | - [dlt](dlt.md)                                                                                                                                 |
+| [IBM](IBM/IBM.md)                                    | - [Kestra](kestra.md)                                                                                                                           |
 | [InfluxDB](InfluxDB.md)                              |                                                                                                                                                 |
 | [JSON](JSON/JSON.md) (*standalone / JSON native db*) | - [y42](y42.md)                                                                                                                                 |
 | [MariaDB](MariaDB/MariaDB.md)                        |                                                                                                                                                 |
@@ -89,7 +89,7 @@ Universal Database tweakers
 	- Backup / Recovery
 
 
-### Engines overview database description (sqlite3) ###
+### Engines overview database description (sqlite3 database source) ###
 
 view "engine_overview" with columns for
 - engine name
@@ -120,12 +120,15 @@ view "engine_overview" with columns for
 
 ## Free sources
 
+[Index of /~database/documents @ University of Oklahoma](https://www.cs.ou.edu/~database/documents/)
+
 
 [UI bakery sample databases](https://uibakery.io/sql-playground)
 [Datasets - Data | World Resources Institute](https://datasets.wri.org/dataset)
 [GitHub - jOOQ/sakila: The Sakila Database](https://github.com/jOOQ/sakila/search?l=tsql)
 
 [Datové sady - Národní katalog otevřených dat (NKOD)](https://data.gov.cz/datov%C3%A9-sady)
+[The MONDIAL Database](https://www.dbis.informatik.uni-goettingen.de/Mondial/)
 
 
 ## Web sites
