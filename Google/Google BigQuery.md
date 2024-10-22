@@ -2,7 +2,7 @@ PaaS serverless data warehouse that enables scalable analysis over petabytes of 
 [BigQuery - Wikipedia](https://en.wikipedia.org/wiki/BigQuery)
 [BigQuery: Enterprise Data Warehouse  |  BigQuery: Cloud Data Warehouse  |  Google Cloud](https://cloud.google.com/bigquery)
 
-
+[Why BigQuery is The Next Big Thing With Example - DataScienceCentral.com](https://www.datasciencecentral.com/why-bigquery-is-the-next-big-thing-with-example/)
 ## System
 
 Main functions:
