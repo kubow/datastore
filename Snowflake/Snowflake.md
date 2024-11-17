@@ -20,11 +20,12 @@ Cloud-based data storage and analytics service (data-as-a-service)
 
 [Reference | Snowflake Documentation](https://docs.snowflake.com/en/reference)
 
+[Snowflake Snowpark: Overview, Benefits, and How To](https://www.ascend.io/blog/snowflake-snowpark-overview-benefits-and-how-to-harness-its-power/)
 ### Data Unloading
 
 [Overview of data unloading](https://docs.snowflake.com/en/user-guide/data-unload-overview.html)
 [COPY_INTO](https://docs.snowflake.com/en/sql-reference/sql/copy-into-location.html)
 
-Polaris Catalog
+Polaris Catalogue
 - [Polaris Catalog™ overview | Snowflake Documentation](https://other-docs.snowflake.com/en/polaris/overview)
 - [Polaris Catalog: An Open Source Catalog for Apache Iceberg](https://www.snowflake.com/en/blog/introducing-polaris-catalog/)
