@@ -1,3 +1,4 @@
+#streaming
 
 **Streaming CDC (Change Data Capture)** is a simple and real-time solution for continually ingesting and replicating data.
 
