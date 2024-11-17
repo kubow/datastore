@@ -1,4 +1,4 @@
-
+#streaming 
 ## System
 
 Log based replication (transactions from log read native db way) - no shadow tables, no triggers  
