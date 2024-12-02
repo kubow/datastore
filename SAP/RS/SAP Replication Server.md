@@ -7,7 +7,7 @@ Log based replication (transactions from log read native db way) - no shadow tab
   
 RSSD - system database contains (whole metadata, operational data, security information)  
   
-Automatic materialization - create subscription  
+Automatic materialisation - create subscription  
   
 From ASE side use sp_who to identify rep agent  
   
@@ -22,8 +22,8 @@ Drop can be only if there is no subscription.
 
 ## Install
 
-Replication Server 15.7.1 SP100 [http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc36924.1571100/doc/html/jer1331895047201.html](http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc36924.1571100/doc/html/jer1331895047201.html)  
-Replication Server 15.7.1 SP200 [http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc36924.1571200/doc/html/jer1331895047201.html](http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc36924.1571200/doc/html/jer1331895047201.html)  
+- [Replication Server 15.7.1 SP100](https://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc36924.1571100/doc/html/jer1331895047201.html)  
+- [Replication Server 15.7.1 SP200](http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc36924.1571200/doc/html/jer1331895047201.html)  
   
   
 RS - 15.7.1 News  
