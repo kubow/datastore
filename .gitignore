@@ -130,3 +130,9 @@ dmypy.json
 
 # Ignore custom settings and cherrytree backups
 *.ctb~*
+
+# Ignore specific env files
+.env_decoded
+
+# linux settings
+.directory
