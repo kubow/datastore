@@ -1,3 +1,17 @@
+- Process engines
+  - Connection/Thread processor
+  - Parser
+  - Query caching
+  - Optimalization
+- Databases
+- Tables
+- Data types
+- Work with data
+  - [Creating and Using MySQL 8 User Attributes](https://www.percona.com/blog/creating-and-using-mysql-8-user-attributes/)
+- [Comparisons of Proxies for MySQL](https://www.percona.com/blog/comparisons-of-proxies-for-mysql/)
+
+[COUNT(\*) vs COUNT(col) in MySQL - Percona Database Performance Blog](https://www.percona.com/blog/count-vs-countcol-in-mysql/)
+# Storage Engines
 
 - [[#MyISAM]]
 - [[#InnoDB]]
