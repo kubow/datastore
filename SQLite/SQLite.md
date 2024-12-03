@@ -6,9 +6,9 @@
 
 - [RQLite](./RQLite.md) - a distributed SQLite
 
-- [[#System]]
-- [[SQLite Install|Installation]]
-- [[SQLite Maintain|Maintenance]]
+- [System](#system)
+- [Installation](SQLite%20Install.md)
+- [Maintenance](SQLite%20Maintenance.md)
 
 
 ## System
