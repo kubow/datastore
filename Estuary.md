@@ -1,0 +1,2 @@
+Estuary is the only platform built from the ground up for truly real-time ETL and ELT data integration, set up in minutes.
+[Estuary | Real-Time Data Integration, CDC & ETL Platform](https://estuary.dev/)
