@@ -10,6 +10,9 @@
 - [Microsoft PowerBI](./PowerBI/PowerBI.md)
 - 
 
+[decalage2/oletools: oletools - python tools to analyze MS OLE2 files (Structured Storage, Compound File Binary Format) and MS Office documents, for malware analysis, forensics and debugging.](https://github.com/decalage2/oletools)
+
+
 ![[DWaaS-01-image001.jpg]]
 
 ![[MSBI-Cheat-Sheet-1.png]]

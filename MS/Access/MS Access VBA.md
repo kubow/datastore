@@ -1,5 +1,5 @@
-MS Access Database Development [http://www.blueclaw-db.com/](http://www.blueclaw-db.com/)  
-MS Access Tips and Tricks [http://www.msaccesstips.com/](http://www.msaccesstips.com/)  
+[MS Access Database - Blue Claw Database Developer Resource](https://blueclawdb.com/)
+[LEARN MS-ACCESS TIPS AND TRICKS](https://www.msaccesstips.com/)  
 MS Access Web [http://www.theaccessweb.com/](http://www.theaccessweb.com/)  
 MS Access Support [https://btabdevelopment.com/](https://btabdevelopment.com/)  
 Database Development Examples [http://www.databasedevelopment.co.uk/examples.htm](http://www.databasedevelopment.co.uk/examples.htm)  
