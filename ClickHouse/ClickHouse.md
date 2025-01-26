@@ -6,6 +6,9 @@ Column oriented DBMS for OLAP + Real-Time analytics created originally by Yandex
 - Runs on bare metal to cloud / Shared nothing architecture
 - Parallel and vectorized execution
 
+- [ClickBench](./ClickBench.md) - DB benchmark framework
+
+
 Main product parts:
 - [System](./ClickHouse%201%20System.md)
 - [Installation](./ClickHouse%202%20Install.md)
