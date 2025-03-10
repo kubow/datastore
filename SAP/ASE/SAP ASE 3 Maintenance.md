@@ -1,6 +1,5 @@
-- [[#ASE Operational Management]]
-- [[backup]]
-- [[dbcc]]
+- [backup](./SAP%20ASE%20backup.md)
+- [dbcc](./SAP%20ASE%20dbcc.md)
 
 
 # ASE Operational Management

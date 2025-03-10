@@ -22,41 +22,44 @@
 
 ---
 
-| Data Storing Engines                                             | Specific Data Tools                                                                                                                             |
-| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Amazon Web Services](Amazon/AWS.md) #platform                   | **Data Discovery**                                                                                                                              |
-| [Apache](Apache/Apache.md) (multiple products)                   | - [SchemaCrawler](https://www.schemacrawler.com/) (DB schema discovery & comprehension tool - [github](http://sualeh.github.io/SchemaCrawler/)) |
-| [ClickHouse](ClickHouse/ClickHouse.md) #storage                  | - [SodaSQL](https://github.com/sodadata/soda-sql) (data testing and monitoring - [documentation](https://docs.soda.io/))                        |
-| [CockroachDB](CockroachDB/CockroachDB.md) #storage               | **Data Processing**                                                                                                                             |
-| [CrateDB](CrateDB/CrateDB.md) #storage                           | - [Apache Airflow](./Apache/Apache%20Airflow.md) (orchestration)                                                                                |
-| [Databricks](Databricks/Databricks.md) #storage #platform        | - Talend DataCleaner (Profiling & Cleansing) [https://sourceforge.net/projects/datacleaner/](https://sourceforge.net/projects/datacleaner/)     |
-| [DataWatch](DataWatch.md) #storage                               | - [OpenRefine](Google/OpenRefine.md)                                                                                                            |
-| [DuckDB](DuckDB.md) #storage #embed                              | - [Meltano](meltano.md) (data extracting)                                                                                                       |
-| [Elasticsearch](Elasticsearch/Elasticsearch.md) #storage #search | - [dbt](dbt.md) (data transformation)                                                                                                           |
-| [Google](Google/Google.md) #platform                             | - [dlt](dlt.md)                                                                                                                                 |
-| [IBM](IBM/IBM.md) #platform                                      | - [Kestra](kestra.md)                                                                                                                           |
-| [InfluxDB](InfluxDB.md) #storage                                 | - Mage.AI                                                                                                                                       |
-| [JSON](JSON/JSON.md) (*standalone / JSON native db*)             | - [y42](y42.md)                                                                                                                                 |
-| [MariaDB](MariaDB/MariaDB.md) #storage                           |                                                                                                                                                 |
-| [MongoDB](MongoDB/MongoDB.md) #storage #oltp                     | **Data Analysis & Reporting**                                                                                                                   |
-| [Microstrategy](Microstrategy/Microstrategy.md)                  |                                                                                                                                                 |
-| [Microsoft](MS/Microsoft.md)                                     |                                                                                                                                                 |
-| [Minio](Minio/Minio.md)                                          |                                                                                                                                                 |
-| [Neo4J](Neo4J/Neo4J.md) #storage #graph                          |                                                                                                                                                 |
-| [Oracle](Oracle/Oracle.md) #platform                             |                                                                                                                                                 |
-| [Pentaho](Pentaho/Pentaho.md) #etl                               |                                                                                                                                                 |
-| [PostgreSQL](PostgreSQL/PostgreSQL) #storage                     |                                                                                                                                                 |
-| [Qlik](Qlik/Qlik.md) #platform #analytics                        |                                                                                                                                                 |
-| [Redis](REDIS/Redis.md) #storage                                 |                                                                                                                                                 |
-| [Salesforce](Salesforce/SFDC.md)                                 |                                                                                                                                                 |
-| [SAP](SAP/SAP.md) #platform                                      | **Data Monitoring**                                                                                                                             |
-| [SingleStore](SingleStore/SingleStore.md) #storage               |                                                                                                                                                 |
-| [Snowflake](Snowflake/Snowflake.md) #storage                     | - HP OpenView (Rep Agent compatible)                                                                                                            |
-| [SQLite](SQLite/SQLite.md) #storage #embed                       | - [IBM Tivoli](IBM/Tivoli.md)                                                                                                                   |
-| [Teradata](Teradata/Teradata.md) #storage                        | - Ignite                                                                                                                                        |
-| [TDEngine](TDEngine/TDEngine.md)                                 | - BMC                                                                                                                                           |
-| [Vertica](Vertica/Vertica.md)                                    | - Bradmark [http://www.bradmark.com/](http://www.bradmark.com/)                                                                                 |
-| [XML](XML/XML.md) (*standalone / XML native db*)                 |                                                                                                                                                 |
+| Data Storing Engines                                             | Specific Data Tools                                                                                                                           |
+| ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Amazon Web Services](Amazon/AWS.md) #platform                   | **Data Discovery**                                                                                                                            |
+| [Apache](Apache/Apache.md) (multiple products)                   | [SchemaCrawler](https://www.schemacrawler.com/) (DB schema discovery & comprehension tool - [github](http://sualeh.github.io/SchemaCrawler/)) |
+| [AutoMQ](AutoMQ.md) #streaming                                   | [SodaSQL](https://github.com/sodadata/soda-sql) (data testing and monitoring - [documentation](https://docs.soda.io/))                        |
+| [ClickHouse](ClickHouse/ClickHouse.md) #storage                  |                                                                                                                                               |
+| [CockroachDB](CockroachDB/CockroachDB.md) #storage               | **Data Processing**                                                                                                                           |
+| [CrateDB](CrateDB/CrateDB.md) #storage                           | [Apache Airflow](./Apache/Apache%20Airflow.md) (orchestration)                                                                                |
+| [Databricks](Databricks/Databricks.md) #storage #platform        | [Talend DataCleaner](https://sourceforge.net/projects/datacleaner/) (Profiling & Cleansing)                                                   |
+| [DataWatch](DataWatch.md) #storage                               | [OpenRefine](Google/OpenRefine.md)                                                                                                            |
+| [Debezium](./Debezium.md)                                        | [Meltano](meltano.md) (data extracting)                                                                                                       |
+| [DuckDB](./Duck/DuckDB.md) #storage #embed                       | [dbt](dbt.md) (data transformation)                                                                                                           |
+| [Elasticsearch](Elasticsearch/Elasticsearch.md) #storage #search | [dlt](dlt.md)                                                                                                                                 |
+| [Google](Google/Google.md) #platform                             | [Estuary](./Estuary.md)                                                                                                                                       |
+| [IBM](IBM/IBM.md) #platform                                      | [Kestra](kestra.md)                                                                                                                           |
+| [InfluxDB](InfluxDB.md) #storage                                 | [Mage.AI](Mage.AI/Mage.AI.md)                                                                                                                 |
+| [JSON](JSON/JSON.md) (*standalone / JSON native db*)             | [y42](y42.md)                                                                                                                                 |
+| [MariaDB](MariaDB/MariaDB.md) #storage                           |                                                                                                                                               |
+| [MongoDB](MongoDB/MongoDB.md) #storage #oltp                     | **Data Analysis & Reporting** ([full list](Data/Visualize/Visualization.md))                                                                  |
+| [Microstrategy](Microstrategy/Microstrategy.md)                  | [GoodData](GoodData/GoodData.md) #platform #analytics                                                                                         |
+| [Microsoft](MS/Microsoft.md) #platform                           | [Incorta](Incorta/Incorta.md) #platform #analytics                                                                                            |
+| [Minio](Minio/Minio.md)                                          | [PowerBI](MS/PowerBI/PowerBI.md) #platform #analytics                                                                                         |
+| [Neo4J](Neo4J/Neo4J.md) #storage #graph                          | [Qlik](Qlik/Qlik.md) #platform #analytics                                                                                                     |
+| [Oracle](Oracle/Oracle.md) #platform                             |                                                                                                                                               |
+| [Pentaho](Pentaho/Pentaho.md) #etl                               |                                                                                                                                               |
+| [PostgreSQL](PostgreSQL/PostgreSQL) #storage                     |                                                                                                                                               |
+| [Redis](REDIS/Redis.md) #storage                                 |                                                                                                                                               |
+| [RelationalAI](./RelationalAI/RelationalAI.md)                   |                                                                                                                                               |
+| [Salesforce](Salesforce/SFDC.md)                                 |                                                                                                                                               |
+| [SAP](SAP/SAP.md) #platform                                      | **Data Monitoring**                                                                                                                           |
+| [SingleStore](SingleStore/SingleStore.md) #storage               |                                                                                                                                               |
+| [Snowflake](Snowflake/Snowflake.md) #storage                     | HP OpenView (Rep Agent compatible)                                                                                                            |
+| [SQLite](SQLite/SQLite.md) #storage #embed                       | [IBM Tivoli](IBM/Tivoli.md)                                                                                                                   |
+| [Teradata](Teradata/Teradata.md) #storage                        | Ignite                                                                                                                                        |
+| [TigerBeetle](TigerBeetle.md)                                    |                                                                                                                                               |
+| [TDEngine](TDEngine/TDEngine.md)                                 | BMC                                                                                                                                           |
+| [Vertica](Vertica/Vertica.md)                                    | Bradmark [http://www.bradmark.com/](http://www.bradmark.com/)                                                                                 |
+| [XML](XML/XML.md) (*standalone / XML native db*)                 |                                                                                                                                               |
 
 ****
 Universal Data Clients
