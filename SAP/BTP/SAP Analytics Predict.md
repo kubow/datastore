@@ -2,12 +2,12 @@
 
 All of these (except Smart Discovery and Smart Insights) are available both for **Acquired Data** and **Live Data**:
 
-- [[#Predictive Forecast]]
-- [[#Search to Insight]] (request data in natural language by typing a question about your data)
-- [[#Smart Grouping]]
-- [[#Smart Insights]]
-- [[#Smart Predict]]
-- [[#Smart Discovery]] (create a story automatically)
+- [Predictive Forecast](#predictive-forecast)
+- [Search to Insight](#search-to-insight) (request data in natural language by typing a question about your data)
+- [Smart Grouping](#smart-grouping)
+- [Smart Insights](#smart-insights)
+- [Smart Predict](#smart-predict)
+- [Smart Discovery](#smart-discovery) (create a story automatically)
 
 ## Predictive Forecast
 

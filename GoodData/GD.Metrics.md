@@ -4,7 +4,7 @@
 - [Multidimensional Analytical Query Language](https://help.gooddata.com/doc/enterprise/en/dashboards-and-insights/maql-analytical-query-language) - porprietary GoodData language. 
 
 [Getting Started with MAQL in GoodData.CN](https://university.gooddata.com/)
-[MAQL: Powerful Analytical Querying M[[GoodData]]ade Simple | GoodData](https://www.gooddata.com/blog/maql-powerful-analytical-querying-made-simple/)
+[MAQL: Powerful Analytical Querying Made Simple | GoodData](https://www.gooddata.com/blog/maql-powerful-analytical-querying-made-simple/)
 
 
 SQL-like syntax over Logical Data Model
@@ -14,9 +14,9 @@ SQL-like syntax over Logical Data Model
 SELECT aggregation_function({fact/dataset/fact_column})
 ```
 
-- [[#Aggregation functions]]
-- [[#Details]]
-- [[#Using an API to create a metric]]
+- [Aggregation functions](#aggregation-functions)
+- [Details](#details)
+- [Using an API to create a metric](#using-an-api-to-create-a-metric)
 
 
 ## Aggregation functions

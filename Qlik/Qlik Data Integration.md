@@ -23,7 +23,7 @@ Data Integration Value Proposition
 
 | **Real-time data for faster, better insights** | **Agile data delivery** | **Trusted enterprise-ready data** |
 | --- | --- | --- |
-| [[#Change Data Capture]] | [[#Data Lake Pileline Automation & Orchestration]] | [[#Smart Integrated DataOps Catalog]] | 
+| [Change Data Capture](#change-data-capture) | [Data Lake Pileline Automation & Orchestration](#data-lake-pileline-automation--orchestration) | [Smart Integrated DataOps Catalog](#smart-integrated-dataops-catalog) | 
 | Universal Sources, Targets & Platforms <br> - all major cloud vendors (AWS, Azure, GCP) <br> - automatic data cleaning, validationa and profiling <br> - built-in data analysis and conversion | [[#Data Warehouse Automation]] | Security and Governance <br> - data access & obfuscation <br> - consistently applied end-to-end <br> - easy to administer |
 | Always Up-to-date <br> - real-time analytics ready <br> - continously updated and automatically detected <br> - catalog and marketplace | Prepare & provision at scale <br> - quickly build scalable data pipelines <br> - quickly perform data federation, modelling and trasnformation | IT & Business collaboration <br> - colaboration and reuse (business names, definitions & tags) <br> - data lineage |
 

@@ -2,16 +2,16 @@
 SAP claims to have 10k+ customers onASE with over 600+ apps on ASE in production
 
 
-1. [[SAP ASE 1 System|Přehled SAP ASE]]
-2. [[SAP ASE 2 Install|Instalace a licencování SAP ASE]]
-3. [[SAP ASE 3 Maintenance|Údržba SAP ASE]]
+1. [SAP ASE 1 System|Přehled SAP ASE](SAP%20ASE%201%20System.md)
+2. [SAP ASE 2 Install|Instalace a licencování SAP ASE](SAP%20ASE%202%20Install.md)
+3. [SAP ASE 3 Maintenance|Údržba SAP ASE](SAP%20ASE%203%20Maintenance.md)
 	-[backup|Backup/Restore](./SAP%20ASE%20backup.md)
 
 
 
 Separate for now
-[[asemon_setup]]
-[[Nagios check ASE]]
+[asemon_setup](./asemon/asemon_setup.md)
+[Nagios check ASE](./nagios_scripts/Nagios%20check%20ASE.md)
 [sybcron](./SAP%20ASE%20sybcron.md)
 
 

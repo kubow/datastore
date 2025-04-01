@@ -1,15 +1,15 @@
 # SAP Business Technology Platform
 
 
-![[SAP_BTP_Technology.png]]
+![SAP_BTP_Technology](SAP_BTP_Technology.png)
 
 
 - Database & Data Management
-	- SAP Data Warehouse Cloud ([[SAP DWC|DWC]])
+	- SAP Data Warehouse Cloud ([SAP DWC](SAP%20DWC.md))
 	- SAP HANA Cloud
 	- ...
 - Analytics
-	- SAP Analytics Cloud ([[SAP Analytics|SAC]])
+	- SAP Analytics Cloud ([SAP Analytics](SAP%20Analytics.md))
 	- [SAP Crystal Solutions](https://www.sap.com/cz/products/technology-platform/crystal-bi.html)
 	- ...
 - Application Development & Integration

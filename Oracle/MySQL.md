@@ -3,7 +3,7 @@ multiplatform relational DBMS owned by Oracle
 
 [MySQL databáze - český manuál](https://www.junext.net/mysql/)
 
-- [[MySQL Architecture]]
+- [MySQL Architecture](MySQL%20Architecture.md)
 
 ## Installation
 

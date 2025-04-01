@@ -13,10 +13,10 @@
 [COUNT(\*) vs COUNT(col) in MySQL - Percona Database Performance Blog](https://www.percona.com/blog/count-vs-countcol-in-mysql/)
 # Storage Engines
 
-- [[#MyISAM]]
-- [[#InnoDB]]
+- [MyISAM](#myisam)
+- [InnoDB](#innodb)
 - 
-- [[#Memory]]
+- [Memory](#memory)
 - 
 
 [MySQL :: MySQL 8.0 Reference Manual :: 16 Alternative Storage Engines](https://dev.mysql.com/doc/refman/8.0/en/storage-engines.html)
@@ -40,4 +40,5 @@ storage engine format (written in C) for transaction processing (many short term
 
 
 # Memory
+
 

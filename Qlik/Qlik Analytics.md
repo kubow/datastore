@@ -1,7 +1,7 @@
 
-- [[#QlikSense]]
-- [[#QlikView]]
-- [[#QlikAutoML]]
+- [QlikSense](#qliksense)
+- [QlikView](#qlikview)
+- [QlikAutoML](#qlikautoml)
 
 ## QlikSense
 

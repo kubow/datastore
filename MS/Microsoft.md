@@ -1,4 +1,4 @@
-- [[Microsoft SQL Server]]
+- [Microsoft SQL Server](./SQLServ/Microsoft%20SQL%20Server.md)
 - MS Azure ([Types of Databases on Azure](https://azure.microsoft.com/en-us/products/category/databases/))
 	- [Azure Cosmos DB - NoSQL and Relational Database](https://azure.microsoft.com/en-us/products/cosmos-db/)
 	- [MS Azure SQL](MS%20Azure%20SQL.md) - Cloud relational database
@@ -13,6 +13,6 @@
 [decalage2/oletools: oletools - python tools to analyze MS OLE2 files (Structured Storage, Compound File Binary Format) and MS Office documents, for malware analysis, forensics and debugging.](https://github.com/decalage2/oletools)
 
 
-![[DWaaS-01-image001.jpg]]
+![DWaaS](DWaaS-01-image001.jpg)
 
-![[MSBI-Cheat-Sheet-1.png]]
+![MSBI-Cheat-Sheet](MSBI-Cheat-Sheet-1.png)

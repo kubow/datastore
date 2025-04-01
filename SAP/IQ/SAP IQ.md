@@ -1,15 +1,11 @@
-# SAP IQ Customized Workshop
-Created by: Jakub Vajda @ MDSapTech 2022
+# SAP IQ Overview
 
-Kurz je rozdělen na 5 dní v těchto oblastech:
-
-1. [[SAP IQ 1 System|Systémové prvky v SAP IQ]]
-2. [[SAP IQ 2 Install|Instalace SAP IQ a licencování]]
-3. [[SAP IQ 3 Maintenance|Údržba SAP IQ]]
-4. [[SAP IQ 4 Programming|Programovací jazyky v SAP IQ]]
-5. [[SAP IQ 5 SQL Dialects | SQL dialekty v SAP IQ]]
-6. [[SAP IQ 6 Transactions | Správa transakcí v SAP IQ]]
-
+1. [SAP IQ 1 System|Systémové prvky v SAP IQ](SAP%20IQ%201%20System.md)
+2. [SAP IQ 2 Install|Instalace SAP IQ a licencování](SAP%20IQ%202%20Install.md)
+3. [SAP IQ 3 Maintenance|Údržba SAP IQ](SAP%20IQ%203%20Maintenance.md)
+4. [SAP IQ 4 Programming|Programovací jazyky v SAP IQ](SAP%20IQ%204%20Programming.md)
+5. [SAP IQ 5 SQL Dialects | SQL dialekty v SAP IQ](SAP%20IQ%205%20SQL%20Dialects.md)
+6. [SAP IQ 6 Transactions | Správa transakcí v SAP IQ](SAP%20IQ%206%20Transactions.md)
 
 Informace pro tuto prezentaci jsou čerpány z následujích zdrojů:
 

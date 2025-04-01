@@ -1,15 +1,17 @@
 
-- [[Google BigQuery]]
-- [[Google Cloud Spanner]]
-- [[OpenRefine]]
+- [Google BigQuery](Google%20BigQuery.md)
+- [Google Cloud Spanner](Google%20Cloud%20Spanner.md)
+- [OpenRefine](OpenRefine.md)
 
 Google Cloud Database Options [https://cloud.google.com/products/databases/](https://cloud.google.com/products/databases/)
+
 ## Word2Vec
+
 NLP (Nature Language Processing)
 
 Wiki [https://en.wikipedia.org/wiki/Word2vec](https://en.wikipedia.org/wiki/Word2vec)
 
-Google's language techniques help O2 Czech Republic reveal network secrets | ZDNet [https://www.zdnet.com/article/googles-language-techniques-help-o2-czech-republic-reveal-network-secrets/#ftag=RSSbaffb68](https://www.zdnet.com/article/googles-language-techniques-help-o2-czech-republic-reveal-network-secrets/#ftag=RSSbaffb68)
+[Google's language techniques help O2 Czech Republic reveal network secrets | ZDNet](https://www.zdnet.com/article/googles-language-techniques-help-o2-czech-republic-reveal-network-secrets/#ftag=RSSbaffb68)
 
 ## Cloud SQL
 

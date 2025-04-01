@@ -1,11 +1,11 @@
-- [[PSQL System]]
-- [[PSQL Install]]
-- [[PSQL Maintain]]
+- [PSQL System](PSQL%20System.md)
+- [PSQL Install](PSQL%20Install.md)
+- [PSQL Maintain](PSQL%20Maintain.md)
 
 ### Enterprise deployments
 
-- [[EnterpriseDB]]
-- [[GreenPlum]]
+- [EnterpriseDB](EnterpriseDB.md)
+- [GreenPlum](GreenPlum.md)
 
 
 

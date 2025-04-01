@@ -1,7 +1,7 @@
 - [Audit Vault and Database Firewall | Oracle](https://www.oracle.com/security/database-security/audit-vault-database-firewall/)
 - [Oracle Database](Oracle%20Database.md)
 - [Oracle Data Integrator - best practices for data warehouse](https://www.oracle.com/technetwork/middleware/data-integrator/learnmore/odi-best-practice-data-warehouse-168255.pdf)
-- [[Oracle BerkeleyDB]]
+- [Oracle BerkeleyDB](Oracle%20BerkeleyDB.md)
 
 
 [Larry Ellison delivers Oracle's next autonomous database tool, more AWS trash talk | ZDNET](https://www.zdnet.com/article/larry-ellison-delivers-oracles-next-autonomous-database-tool-more-aws-trash-talk/#ftag=RSSbaffb68)

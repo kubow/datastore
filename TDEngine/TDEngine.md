@@ -19,9 +19,9 @@ Open‑Source, High‑Performance Simplified Solution for Time Series Data
 
 ### Cloud
 TD Engine Cluster (supports MS Azure, AWS, GCP)
-- [[Apache Kafka]] for data ingestion
-- [[Redis]] is in-memory storage
-- [[Apache Spark]] for processing
+- [Apache Kafka](../Apache/Apache%20Kafka.md) for data ingestion
+- [Redis](../REDIS/Redis.md) is in-memory storage
+- [Apache Spark](../Apache/Apache%20Spark.md) for processing
 
 
 

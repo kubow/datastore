@@ -1,8 +1,8 @@
 # SAC Data Analysis and Presentation
-- [[#Story Explorer]]
-- [[#Data Analyzer]]
-- [[#Presentation]]
-- [[#Collaboration]]
+- [Story Explorer](#story-explorer)
+- [Data Analyzer](#data-analyzer)
+- [Presentation](#presentation)
+- [Collaboration](#collaboration)
 
 
 ## Story Explorer

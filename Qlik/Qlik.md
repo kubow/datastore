@@ -7,7 +7,7 @@
 - [Qlik Analytics](./Qlik%20Analytics.md)
 	- 
 
-![[infographic2x.png]]
+![infographic](infographic2x.png)
 Key Terms:
 - **Change Data Capture (CDC)** – Software that continuously identifies and captures incremental changes within one source and then delivers thosechanges to a replicated source (agentless & log based, only real-time on the market).
 - **Data Lake** – A massive, centralized repository of large volumes of structuredand unstructured data that has been minimally transformed, if at all. Only when the data is later accessed, is it classified, organized or analyzed.

@@ -1,12 +1,12 @@
 # SAC Data Preparation
 
 - Data Preparation
-	- [[#Data Connections]]
-	- [[#Metadata]]
-	- [[#Data Modeller]]
-		- [[#Dimensions]]
-		- [[#Data Transformation]]
-		- [[#Model Types]]
+	- [Data Connections](#data-connections)
+	- [Metadata](#metadata)
+	- [Data Modeller](#data-modeller)
+		- [Dimensions](#dimensions)
+		- [Data Transformation](#data-transformation)
+		- [Model Types](#model-types)
 
 [Data Preparation and Wrangling (Datasets and Models) | SAP Help Portal](https://help.sap.com/docs/SAP_ANALYTICS_CLOUD/00f68c2e08b941f081002fd3691d86a7/588233d1e7c94ce4a45039b9b63d9cd9.html)
 

@@ -10,12 +10,12 @@ Flexible Deployment
 
 # System 
 
-- [[GD.Platform]] (BEAR)
+- [GoodData Platform](GD.Platform.md) (codename BEAR)
 	- own / hosted data storage
-- [[GD.Cloud(Native)|GD Cloud Native]] (TIGER)
+- [GoodData Cloud(Native)](GD.Cloud(Native).md) (codename TIGER)
 	- no data storage
 	- above data layer
-- GD Cloud (PANTER)
+- GD Cloud (codename PANTER)
 	- hosted in the cloud
 	- tiger-as-a-service
 
@@ -31,9 +31,9 @@ Flexible Deployment
 ## General processing
 
 1. **Data**
-	- Connect to data sources ([[GD.DataSources]])
-	- Create a [[GD.Workspaces|Workspace]]
-	- Build [[GD.LDM|LDM]] (Semantic layer) 1 workspace = 1 LDM (abstract physical data structure)
+	- Connect to data sources ([DataSources](GD.DataSources.md))
+	- Create a [Workspace](GD.Workspaces.md)
+	- Build [LDM](GD.LDM.md) (Semantic layer) 1 workspace = 1 LDM (abstract physical data structure)
 		- [Mapping Data Sources](https://community.gooddata.com/data-sources-kb-articles-47/mapping-your-source-data-to-a-workspace-199)
 		- [Data Modelling](https://help.gooddata.com/doc/enterprise/en/data-integration/data-modeling-in-gooddata) ([Data Models Community Discussion](https://community.gooddata.com/data-models-58))
 			- **Dataset** ~ a database table
@@ -43,7 +43,7 @@ Flexible Deployment
 			- Primary key / Referrence (composite key)
 			- Date dimension ([Dates and Times](https://help.gooddata.com/doc/enterprise/en/dashboards-and-insights/dates-and-times))
 			- **Calculated Measure/Metric** ([Metric Editor](https://help.gooddata.com/doc/enterprise/en/how-to-get-started-with-gooddata/create-metrics/create-and-save-a-metric?pageId=81961865)) = calculation on top of LDM
-		- Using [[GD.Metrics]] for advanced querries
+		- Using [Metrics](GD.Metrics.md) for advanced querries
 			- [Aggregation Functions](https://help.gooddata.com/doc/enterprise/en/dashboards-and-insights/maql-analytical-query-language/maql-expression-reference/aggregation-functions)
 			- [Arithmetic Operations](https://help.gooddata.com/doc/enterprise/en/dashboards-and-insights/maql-analytical-query-language/maql-expression-reference/numeric-functions/arithmetic-operations)
 			- [Filtering with WHERE condition](https://help.gooddata.com/doc/enterprise/en/dashboards-and-insights/maql-analytical-query-language/maql-expression-reference/filter-expressions/filtering-with-the-where-clause)
@@ -68,7 +68,7 @@ Flexible Deployment
 - Analytics as a code, CI/CD
 - Using Python SDk for statistical analysis
 - Integration with MindsDB for ML
-- Integrating GoodData with [[dbt]]
+- Integrating GoodData with [dbt](../dbt.md)
 
 [Access GD workspace from Apache Zeppelin](https://medium.com/gooddata-developers/accessing-gooddata-workspace-from-apache-zeppelin-notebook-a057856030e6)
 

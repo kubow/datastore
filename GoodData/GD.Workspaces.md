@@ -4,8 +4,8 @@ is an environment (endpoint, bucket or previously called project) where you buil
 	- [Workspace | GoodData Cloud Native](https://www.gooddata.com/developers/cloud-native/doc/cloud/manage-deployment/concepts/workspace/)
 - Platform
 	- [Workspace and User Administration - Gooddata Enterprise](https://help.gooddata.com/doc/enterprise/en/workspace-and-user-administration)
-- [[GD.WDF]] (Workspace Data Filter)
-- GD.UDF (User Data Filter)
+- [Workspace Data Filter](GD.WDF.md)
+- [User Data Filter]
 - 
 
 [Create a Workspace | GoodData Cloud Native](https://www.gooddata.com/developers/cloud-native/doc/cloud/getting-started/create-workspace/)

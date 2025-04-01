@@ -1,14 +1,14 @@
 # SAP Analytics Cloud
 
-- [[#Introduction]]
-- [[#Installation]]
+- [Introduction](#Introduction)
+- [Installation](#Installation)
 - System
-	- [[SAP Analytics Prepare|Data Preparation]]
-	- [[SAP Analytics Story|Data Analysis and Presentation]]
-	- [[SAP Analytics Predict|Predictive Features]]
+	- [Data Preparation](SAP%20Analytics%20Prepare.md)
+	- [Data Analysis and Presentation](SAP%20Analytics%20Story.md)
+	- [Predictive Features](SAP%20Analytics%20Predict.md)
 - Maintain
-	- [[SAP Analytics Admin|Administration tasks]]
-	- [[SAP Analytics Security|Security concepts]]
+	- [Administration tasks](SAP%20Analytics%20Admin.md)
+	- [Security concepts](SAP%20Analytics%20Security.md)
 
 
 ## Introduction
@@ -35,7 +35,7 @@ The benefits of this technology include:
 - Detecting drivers of a Key Performance Indicator (KPI) and taking the next best action using automated ML that discovers unknown relationships in data.
 - Predicting potential outcomes and forecasts with the push of a button.
 
-![[SAC_Core_functions.png]]
+![SAC_Core_functions](SAC_Core_functions.png)
 
 
 [SAP Analytics Cloud | SAP Help Portal](https://help.sap.com/docs/SAP_ANALYTICS_CLOUD)
@@ -76,7 +76,7 @@ Two versions of SAC:
 	- provides operational analytics with live connectivity to the underlying data
 	- contains Stories, Models, Calculations, Mobile App, Calendar, Security and Connections (live connection to remote SAP HANA on SAP BTP)
 
-![[SAC_Embedded_solution.png]]
+![SAC_Embedded_solution](SAC_Embedded_solution.png)
 
 - **Enterprise**
 	- either exclusively cloud-based or hybrid of on-premise and cloud solutions
@@ -84,7 +84,7 @@ Two versions of SAC:
 	- Augmented Analytics
 	- Business Intelligence
 
-![[SAC_Enterprise_edition.png]]
+![SAC_Enterprise_edition](SAC_Enterprise_edition.png)
 
 [System Requirements and Technical Prerequisites | SAP Help Portal](https://help.sap.com/docs/SAP_ANALYTICS_CLOUD/00f68c2e08b941f081002fd3691d86a7/11b4e5ff76eb4747bc255d7037be1f01.html)
 The technical client requirements SAP recommends for browsers:

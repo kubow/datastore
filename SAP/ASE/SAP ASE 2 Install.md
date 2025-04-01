@@ -1,12 +1,12 @@
 # ASE Installation and Licensing
 
-1. [[SAP ASE 2 Install#Pre-installation|Pre-Installation]]
-2. [[SAP ASE 2 Install#Installation|Installation]]
-3. [[SAP ASE 2 Install#Post-installation|Post-installation]]
-4. [[SAP ASE 2 Install#Editions|Editions]]
-5. [[SAP ASE 2 Install#Licensing|Licensing]]
-6. [[SAP ASE 2 Install#Versions|Versions]]
-7. [[SAP ASE 2 Install#Upgrading|Upgrading]]
+1. [Pre-Installation](#pre-installation)
+2. [Installation](#installation)
+3. [Post-installation](#post-installation)
+4. [Editions](#editions)
+5. [Licensing](#licensing)
+6. [Versions](#versions)
+7. [Upgrading](#upgrading)
 
 ## Pre-installation
 

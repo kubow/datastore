@@ -10,9 +10,9 @@ All results stored in dbccdb database
 
 [DBCC Commands - SAP ASE - Support Wiki](https://wiki.scn.sap.com/wiki/display/SYBASE/DBCC+Commands)
 
-- [[#Install dbcc]]
-- [[#dbcc checkcatalog]]
-- 
+- [Install dbcc](#install-dbcc)
+- [dbcc checkcatalog](#dbcc-checkcatalog)
+- [dbcc checkstorage](#dbcc-checkstorage--checkverify)
 
 ```sql
 sp_dbcc_help_fault --what to run on error  

@@ -1,5 +1,5 @@
 
-- [[#Time Series]]
+- [Time Series](#time-series)
 
 [Comparison benchmarks](https://en.wikipedia.org/wiki/Category:Benchmarks_(computing)):
 - [TPCC](https://en.wikipedia.org/wiki/TPC-C)

@@ -53,7 +53,7 @@ Under the hood :
 	- Auth Service :: HTTP port = 9050/9051
 	- Result Cache :: HTTP port = 9040/9041
 	- Metadata :: HTTP port = 9007/9008
-	- Calcique :: HTTP port = 9011/9012 ([[Apache Calcite]] clone)
+	- Calcique :: HTTP port = 9011/9012 ([Apache Calcite](../Apache/Apache%20Calcite.md) clone)
 	- SQL executor :: HTTP port = 9100/9101
 	- AFM Exec API :: HTTP port = 9000/9001
 	- Scan Model :: HTTP port = 9060/9061
@@ -61,7 +61,7 @@ Under the hood :
 
 ### Installing pre-built image
 
-Links found in [[#Installation]] under Docker point.
+Links found in [Installation](#installation) under Docker point.
 
 ```bash
 # kubernetes way

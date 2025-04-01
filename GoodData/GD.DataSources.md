@@ -4,7 +4,7 @@
 Bring data to ADS = Downloads
 
 - CSV
-- SQL ([[MySQL]], [[Microsoft SQL Server]], [[PostgreSQL]])
+- SQL ([MySQL](../Oracle/MySQL.md), [Microsoft SQL Server](../MS/SQLServ/Microsoft%20SQL%20Server.md), [PostgreSQL](../PostgreSQL/PostgreSQL.md))
 - Google Analytics
 - Google Sheets
 - Salesforce
@@ -17,16 +17,15 @@ Direct data distribution works from cloud databases, data warehouses or storages
 
 Sources for distribution:
 
-- [[AWS RedShift]]
-- [[AWS S3]]
-- [[Google BigQuery]]
-- [[Microsoft SQL Server]]
-- [[Azure SQL]]
-- [[Azure Synapse]]
-- [[Azure Storage]]
-- [[MongoDB]]
-- [[PostgreSQL]]
-- [[Snowflake]]
+- [AWS RedShift](../Amazon/AWS%20RedShift.md)
+- [AWS S3](../Amazon/AWS%20S3.md)
+- [Google BigQuery](../Google/Google%20BigQuery.md)
+- [Microsoft Azure SQL](../MS/MS%20Azure%20SQL.md)
+- [Microsoft Azure Synapse](../MS/MS%20Azure%20Synapse.md)
+- [Microsoft SQL Server](../MS/SQLServ/Microsoft%20SQL%20Server.md)
+- [MongoDB](../MongoDB/MongoDB.md)
+- [PostgreSQL](../PostgreSQL/PostgreSQL.md)
+- [Snowflake](../Snowflake/Snowflake.md)
 
 # Cloud Native (TIGER) + Cloud (PANTHER)
 
@@ -34,18 +33,27 @@ Sources for distribution:
 
 ## Databases
 
-- [[Snowflake]]
-- [[AWS RedShift]]
-- [[Azure SQL]]
-- [[Google BigQuery]]
-- [[GreenPlum]]
-- [[Microsoft SQL Server]]
-- [[Azure Synapse]]
-- [[PostgreSQL]]
-- [[Vertica]]
+- [AWS RedShift](../Amazon/AWS%20RedShift.md)
+- [AWS Aurora](../Amazon/AWS%20Aurora.md)
+- [ClickHouse](../ClickHouse/ClickHouse.md)
+- [Databricks](../Databricks/Databricks.md)
+- [Google BigQuery](../Google/Google%20BigQuery.md)
+- [GreenPlum](../PostgreSQL/GreenPlum.md)
+- [MariaDB](../MariaDB/MariaDB.md)
+- [Microsoft Azure SQL](../MS/MS%20Azure%20SQL.md)
+- [Microsoft Azure Synapse](../MS/MS%20Azure%20Synapse.md)
+- [Microsoft SQL Server](../MS/SQLServ/Microsoft%20SQL%20Server.md)
+- [MotherDuck](../Duck/MotherDuck.md)
+- [MySQL](../Oracle/MySQL.md)
+- [Oracle Database](../Oracle/Oracle%20Database.md)
+- [PostgreSQL](../PostgreSQL/PostgreSQL.md)
+- [SingleStore](../SingleStore/SingleStore.md)
+- [Snowflake](../Snowflake/Snowflake.md)
+- [TimescaleDB]
+- [Vertica](../Vertica/ADS.md)
 
 ## Data Source Managers
 
-- [[Apache Drill]]
-- [[Dremio]]
+- [Apache Drill]()
+- [Dremio]()
 

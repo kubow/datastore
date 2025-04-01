@@ -1,2 +1,2 @@
 
-![[SAP_DWC.png]]
+![SAP_DWC](SAP%20DWC.md)

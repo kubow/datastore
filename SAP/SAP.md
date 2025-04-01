@@ -1,17 +1,17 @@
-- [[SQL Anyhere]]
-- [[SAP ASE]]
-- [[SAP BTP]]
+- [SQL Anyhere](./Anywhere/SQL%20Anyhere.md)
+- [SAP ASE](./ASE/SAP%20ASE.md)
+- [SAP BTP](./BTP/SAP%20BTP.md)
 - SAP Data Services
 - SAP ERP
 	- R/3
 	- S/4
-- [[SAP IQ]]
-- [[SAP HANA]]
+- [SAP IQ](./IQ/SAP%20IQ.md)
+- [SAP HANA](./HANA/SAP%20HANA.md)
 	- SAP HANA VORA
 	- [SAP Business One HANA - pokročilý ERP systém pro malé a střední firmy na revoluční platformě SAP HANA | TryHana](https://www.tryhana.cz/)
-- [[SAP iRPA]]
-- [[SAP PowerDesigner]]
-- [[SAP Replication Server]]
+- [SAP iRPA](./iRPA/SAP%20iRPA.md)
+- [SAP PowerDesigner](./SAP%20PowerDesigner.md)
+- [SAP Replication Server](./RS/SAP%20Replication%20Server.md)
 - SAP Solution Manager (SolMan)
 
 [Cloud Platform | PaaS and App Development | SAP](https://www.sap.com/products/cloud-platform.html)

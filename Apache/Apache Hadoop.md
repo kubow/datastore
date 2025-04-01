@@ -9,4 +9,4 @@ https://hadoop.apache.org/
 
 [Getting hadoop to run on the Raspberry Pi | raspberrypicloud](https://raspberrypicloud.wordpress.com/2013/04/25/getting-hadoop-to-run-on-the-raspberry-pi/)
 
-![[Data_Lake_Hadoop.png]]
+![data lake](./Data_Lake_Hadoop.png)

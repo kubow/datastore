@@ -4,7 +4,7 @@ System used for reporting and data analysis, considered as core component of bus
 
 Data Mart = layer of Data Warehouse
 
-- [[Data Warehouse Design]]
+- [Data Warehouse Design](Data%20Warehouse%20Design.md)
 - 
 
 

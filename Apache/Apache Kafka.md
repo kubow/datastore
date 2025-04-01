@@ -23,7 +23,7 @@ A topic is a queue of messages written by one or more producers and read by one 
 
 As each producer or consumer connects to the publish-subscribe system, it can read from or write to a specific topic. A topic allows easy matching between publishers and subscribers.
 
-![[Kafka_PublishSubscribe.png]]
+![kafka publish](./Kafka_PublishSubscribe.png)
 
 ## Brokers
 
@@ -33,7 +33,7 @@ Kafka is designed to run on multiple hosts, with one broker per host. If a host 
 
 Topics are replicated across brokers. Replication is an important part of “No Downtime,” “Unlimited Scaling,” and “Message Retention” goals. There is one broker that is responsible for coordinating the cluster. That broker is called the Leader or Controller. As mentioned earlier, an ideal topic behaves as a queue of messages. In reality, having a single queue has scaling issues. Kafka implements partitions for adding robustness to topics.
 
-![[Kafka_Brokers.png]]
+![kafka brokers](./Kafka_Brokers.png)
 
 ## Records
 
@@ -48,7 +48,7 @@ Instead of all records handled by the system being stored in a single log, Kafka
 
 Each topic has one leader partition. If the replication factor is greater than one, there will be additional follower partitions. (For the replication factor = M, there will be M-1 follower partitions.) Any Kafka client (a producer or consumer) communicates only with the leader partition for data.
 
-![[Kafka_Partitions.png]]
+![kafka parittions](./Kafka_Partitions.png)
 
 ## Kafka Brokers and Zookeeper 
 
@@ -58,7 +58,7 @@ The broker, topic, and partition information are maintained in Zookeeper. In par
 -   Kafka Brokers also store other relevant metadata in Zookeeper (also in orange)
 -   Kafka Partitions maintain replica information in Zookeeper (shown in blue)
 
- ![[Kafka_Zookeeper.png]]
+ ![kafka zookeeper](./Kafka_Zookeeper.png)
 
 
 ## Kafka CLI commands
