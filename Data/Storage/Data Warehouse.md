@@ -5,7 +5,13 @@ System used for reporting and data analysis, considered as core component of bus
 Data Mart = layer of Data Warehouse
 
 - [Data Warehouse Design](Data%20Warehouse%20Design.md)
-- 
+- Issues with Warehouse approach
+    - Latency (delays data retrieval speed)
+    - Complex querries (increases processing time)
+    - Lack of Real-Time data (stale information hampers insights)
+    - Inefficient Data Models (complicates data access and analysis)
+    - Limited Scalability (struggles with large data volumes)
+    - Outdated Technlogy (hinders perfromace and responsivness)
 
 
 

@@ -6,6 +6,7 @@
 - [Storage Comparison](./Types/Storage%20Comparison.md)
 	- [Data Warehouse](./Storage/Data%20Warehouse.md)
 	- [LakeHouse|Data Lake(house)](./Storage/LakeHouse.md)
+	- [Real-Time](./Storage/Real_Time.md)
 - [Modelling](./Model/Modelling.md)
 - [Processing](./Processing/Processing.md)
 - [Data Query Language](./Query/StructuralQueryLanguage.md)
