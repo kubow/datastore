@@ -2,19 +2,19 @@
 
 [Index - Data Engineering Wiki](https://dataengineering.wiki/Index)
 
-- [[Types|Types of data]]
-- [[Storage Comparison]]
-	- [[Data Warehouse]]
-	- [[LakeHouse|Data Lake(house)]]
-- [[Modelling]]
-- [[Processing]]
-- [[StructuralQueryLanguage|Data Query Language]]
-- [[Semantic layer]]
-- [[Visualization]]
-- [[Business Intelligence]]
-- [[Data Science]]
-- [[Machine Learning]] / [[Artificial Intelligence]]
-- [[Natural Language]]
+- [Types of data](./Types/Types.md)
+- [Storage Comparison](./Types/Storage%20Comparison.md)
+	- [Data Warehouse](./Storage/Data%20Warehouse.md)
+	- [LakeHouse|Data Lake(house)](./Storage/LakeHouse.md)
+- [Modelling](./Model/Modelling.md)
+- [Processing](./Processing/Processing.md)
+- [Data Query Language](./Query/StructuralQueryLanguage.md)
+- [Semantic layer](./Semantic%20layer.md)
+- [Visualization](./Visualize/Visualization.md)
+- [Business Intelligence](./BI/Business%20Intelligence.md)
+- [Data Science](./Data%20Science.md)
+- [Machine Learning](./AI_ML/Machine%20Learning.md) / [Artificial Intelligence](./AI_ML/Artificial%20Intelligence.md)
+- [Natural Language](./NL/Natural%20Language.md)
 
 
 ![zpracovani dat](https://upload.wikimedia.org/wikipedia/commons/e/ee/Relationship_of_data%2C_information_and_intelligence.png)
@@ -34,8 +34,8 @@
 # Data Analysis
 
 [Data analysis - Wikipedia](https://en.wikipedia.org/wiki/Data_analysis)
-- [[#Embedded analytics]]
-- [[#Distributed analytics]]
+- [Embedded analytics](#embedded-analytics)
+- [Distributed analytics](#distributed-analytics)
 
 ### Embedded analytics
 
