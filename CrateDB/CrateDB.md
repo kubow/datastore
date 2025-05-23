@@ -1,5 +1,7 @@
 [CrateDB – Distributed SQL Database Enabling Data Insights at Scale](https://crate.io/)
 
+[Load and Export guides · cratedb-guide](https://github.com/crate/cratedb-guide/blob/main/docs/integrate/etl/index.md)
+
 [CrateDB Video | CrateDB Workshop Module 1: Introduction to CrateDB and its Architecture](https://cratedb.com/resources/videos/cratedb-workshop-module-1-introduction-to-cratedb-and-its-architecture)
 
 [CrateDB Video | CrateDB Workshop Module 2: Installing and configuring CrateDB](https://cratedb.com/resources/videos/cratedb-workshop-module-2-installing-and-configuring-cratedb)
