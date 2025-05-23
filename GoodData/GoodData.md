@@ -5,7 +5,7 @@ Flexible Deployment
 
 [Headless BI x Data Lakehouse | GoodData](https://www.gooddata.com/blog/headless-bi-data-lakehouse/)
 [Headless BI: Achieve Consistent Analytics Results | GoodData](https://www.gooddata.com/blog/headless-bi-achieve-consistent-analytics-results/)
-
+[Optimized compute for ML workflows](https://www.gooddata.com/platform/analytics-lake/)
 [What Is Multitenancy? | GoodData](https://www.gooddata.com/blog/what-multitenancy/)
 
 # System 
