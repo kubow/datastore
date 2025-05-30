@@ -7,7 +7,7 @@
 	- Nominal data (labelling variables, names of items)
 	- Ordinal data (sequence that can be ordered)
 
-[[Types]]
+[Types](Types.md)
 
 ### Database differences
 
