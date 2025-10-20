@@ -9,6 +9,7 @@
 
 [Types](Types.md)
 
+Partitioning (Physical reorder) vs Clustering (Logical reorder)
 ### Database differences
 
 [mysql - Relationship between catalog, schema, user, and database instance - Stack Overflow](https://stackoverflow.com/questions/7942520/relationship-between-catalog-schema-user-and-database-instance)
