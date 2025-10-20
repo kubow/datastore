@@ -35,7 +35,7 @@
 | [Debezium](./Debezium.md)                                        | [Meltano](meltano.md) (data extracting)                                                                                                       |
 | [DuckDB](./Duck/DuckDB.md) #storage #embed                       | [dbt](dbt.md) (data transformation)                                                                                                           |
 | [Elasticsearch](Elasticsearch/Elasticsearch.md) #storage #search | [dlt](dlt.md)                                                                                                                                 |
-| [Google](Google/Google.md) #platform                             | [Estuary](./Estuary.md)                                                                                                                                       |
+| [Google](Google/Google.md) #platform                             | [Estuary](./Estuary.md)                                                                                                                       |
 | [IBM](IBM/IBM.md) #platform                                      | [Kestra](kestra.md)                                                                                                                           |
 | [InfluxDB](InfluxDB.md) #storage                                 | [Mage.AI](Mage.AI/Mage.AI.md)                                                                                                                 |
 | [JSON](JSON/JSON.md) (*standalone / JSON native db*)             | [y42](y42.md)                                                                                                                                 |
@@ -45,7 +45,7 @@
 | [Microsoft](MS/Microsoft.md) #platform                           | [Incorta](Incorta/Incorta.md) #platform #analytics                                                                                            |
 | [Minio](Minio/Minio.md)                                          | [PowerBI](MS/PowerBI/PowerBI.md) #platform #analytics                                                                                         |
 | [Neo4J](Neo4J/Neo4J.md) #storage #graph                          | [Qlik](Qlik/Qlik.md) #platform #analytics                                                                                                     |
-| [Oracle](Oracle/Oracle.md) #platform                             |                                                                                                                                               |
+| [Oracle](Oracle/Oracle.md) #platform                             | [SAS/STAT](https://www.sas.com/en_us/software/stat.html)                                                                                      |
 | [Pentaho](Pentaho/Pentaho.md) #etl                               |                                                                                                                                               |
 | [PostgreSQL](PostgreSQL/PostgreSQL) #storage                     |                                                                                                                                               |
 | [Redis](REDIS/Redis.md) #storage                                 |                                                                                                                                               |

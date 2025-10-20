@@ -15,6 +15,7 @@ Leading enterprise data visualisation products (alphabetically):
 - [Qlik Analytics](../../Qlik/Qlik%20Analytics.md)
 - Microsoft [PowerBI](../../MS/PowerBI/PowerBI.md)
 - Re:Think
+- [SAS/STAT](https://www.sas.com/en_us/software/stat.html)
 - [Sisense](../../Sisense.md)
 - Sweeft
 - [Tableau](../../Salesforce/Tableau.md)
