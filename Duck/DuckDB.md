@@ -10,6 +10,8 @@
 - Open Source
 
 - [MotherDuck](./MotherDuck.md) (DuckDBaaS)
+- [DuckLake is an integrated data lake and catalog format – DuckLake](https://ducklake.select/)
+- [DuckHouse: functional Data warehouse | by Jason Jimenez Cruz ](https://jasonjimenezcruz.medium.com/duckhouse-your-functional-data-warehouse-in-few-minutes-a84545ab0b53)
 
 [DuckDB ADBC - Zero-Copy data transfer via Arrow Database Connectivity - DuckDB](https://duckdb.org/2023/08/04/adbc.html)
 
