@@ -29,3 +29,17 @@ Cloud-based data storage and analytics service (data-as-a-service)
 Polaris Catalogue
 - [Polaris Catalog™ overview | Snowflake Documentation](https://other-docs.snowflake.com/en/polaris/overview)
 - [Polaris Catalog: An Open Source Catalog for Apache Iceberg](https://www.snowflake.com/en/blog/introducing-polaris-catalog/)
+
+## Stored Procedures
+
+- [Snowflake 101: Working with Stored Procedures](https://select.dev/posts/snowflake-stored-procedures)
+```sql
+CREATE OR REPLACE PROCEDURE hello_world(message VARCHAR)
+RETURNS VARCHAR NOT NULL
+LANGUAGE SQL
+AS
+BEGIN
+   RETURN message; 
+END;
+```
+
