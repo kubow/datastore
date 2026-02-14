@@ -136,3 +136,6 @@ dmypy.json
 
 # linux settings
 .directory
+
+# obsidian custom settings ignore
+.obsidian
