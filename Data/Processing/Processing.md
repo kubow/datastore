@@ -47,6 +47,27 @@
 
 [Data governance - Wikipedia](https://en.wikipedia.org/wiki/Data_governance)
 
+## Modern Data Stack Governance
+
+Applications interact with the modern data stack through a repeating data flow built around:
+
+- Pipeline
+- Data lake / warehouse
+- Predictive analytics
+- Reverse ETL
+
+Governance categories across that stack:
+
+| Category | Focus |
+| --- | --- |
+| Data Catalog | Inventory of data assets |
+| Modeling | Combining data sources and formats into a consistent schema |
+| Modeling | Data modeling and transformation |
+| Modeling | Business modeling |
+| Data Observability / Quality | Data characteristics, lineage, and anomaly detection |
+| Data Observability / Quality | Validation of business rules |
+| Data Use and Privacy | Sensitive data blocking and tokenization, access control, and rights management |
+| Compliance / Risk Management | Legal compliance data application |
 
 ## Data Catalogs
 

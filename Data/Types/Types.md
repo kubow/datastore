@@ -38,3 +38,18 @@ Time-series data mining & applications [http://www.datasciencecentral.com/xn/det
 Dataquest: Data Retrieval and Cleaning: Tracking Migratory Patterns [https://www.dataquest.io/blog/data-retrieval-and-cleaning/](https://www.dataquest.io/blog/data-retrieval-and-cleaning/)
 
 [Long-range correlation in time series](https://www.datasciencecentral.com/long-range-correlation-in-time-series-tutorial-and-case-study/)
+
+## Database features
+
+Databases have existing tools for speed:
+
+- Query planning
+- Skip indexes
+- Efficient merges
+- Materialized views
+- Fast ingest
+- Vectorized query execution
+- Projections
+- Tiered storage
+- Caching
+- Clustering
