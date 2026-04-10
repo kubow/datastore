@@ -138,4 +138,4 @@ dmypy.json
 .directory
 
 # obsidian custom settings ignore
-.obsidian
+.obsidian/workspace.json
