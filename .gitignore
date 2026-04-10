@@ -139,3 +139,5 @@ dmypy.json
 
 # obsidian custom settings ignore
 .obsidian/workspace.json
+
+.codex
