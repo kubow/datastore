@@ -51,8 +51,6 @@ Installation variables
 | ASE specialized libraries | $LD_LIBRARY_PATH | %CLASSPATH% |
 | Server name | $DSLISTEN <br/> $DSQUERY | %DSLISTEN% <br/> %DSQUERY% |
 
-![[ASE_DirStructure.png]]
-
 
 
 ## Post-installation

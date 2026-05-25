@@ -2,8 +2,6 @@
 
 Amazon backups - [http://d0.awsstatic.com/enterprise-marketing/SAP/sap-on-aws-backup-and-recovery-guide-v2-2.pdf](http://d0.awsstatic.com/enterprise-marketing/SAP/sap-on-aws-backup-and-recovery-guide-v2-2.pdf)
 
-![[dump_load.png]]
-
 ## Traceflags on Backup Server
 
 

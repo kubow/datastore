@@ -18,8 +18,6 @@
 - Extent
 - ASE Page (OS Block for Data Files / Raw Partitions partitioned)
 
-![[ASE_databases.png]]
-
 ## **Database objects**
 
 - **Tables** - store data

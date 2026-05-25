@@ -1,6 +1,6 @@
 # SAP IQ SQL dialects
 
-[SAP IQ SQL Reference]([SAP IQ SQL Reference | SAP Help Portal](https://help.sap.com/docs/SAP_IQ/a898e08b84f21015969fa437e89860c8/7b5bd4e8cdcb4593aba6f2895572b0a9.html))
+[SAP IQ SQL Reference](https://help.sap.com/docs/SAP_IQ/a898e08b84f21015969fa437e89860c8/7b5bd4e8cdcb4593aba6f2895572b0a9.html)
 
 Vývoj aplikací pomocí SQL:
 

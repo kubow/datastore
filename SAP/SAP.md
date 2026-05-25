@@ -1,4 +1,4 @@
-- [SQL Anyhere](./Anywhere/SQL%20Anyhere.md)
+- [SQL Anywhere](./Anywhere/SQL%20Anywhere.md)
 - [SAP ASE](./ASE/SAP%20ASE.md)
 - [SAP BTP](./BTP/SAP%20BTP.md)
 - SAP Data Services

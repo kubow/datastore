@@ -2,8 +2,8 @@
 https://help.sap.com/docs/SAP_IQ#discover_task-configuration
 
 
-- [Best Practices Guide]([SAP IQ 16.1 Best Practices Guide | SAP Help Portal](https://help.sap.com/docs/SAP_IQ/6754c6c35da941ba96ae9cfd3485176b/d7b29f9024134a13a4563a9dfc13ca6b.html))
-- [SAP IQ Utility Reference]([SAP IQ Utility Reference | SAP Help Portal](https://help.sap.com/docs/SAP_IQ/a893062984f21015b9e8b03f96ed0cbb/1478006e20e54b359889483512791d9e.html))
+- [Best Practices Guide](https://help.sap.com/docs/SAP_IQ/6754c6c35da941ba96ae9cfd3485176b/d7b29f9024134a13a4563a9dfc13ca6b.html)
+- [SAP IQ Utility Reference](https://help.sap.com/docs/SAP_IQ/a893062984f21015b9e8b03f96ed0cbb/1478006e20e54b359889483512791d9e.html)
 
 - [ ] Database Sizing Considerations
 - [ ] Memory Considerations
@@ -13,14 +13,14 @@ https://help.sap.com/docs/SAP_IQ#discover_task-configuration
 ## Operational Management (Operativní správa)
 
 - SAP IQ Cockpit
-- [SAP IQ Stored Procedures]([Stored Procedures for SAP IQ Management | SAP Help Portal](https://help.sap.com/docs/SAP_IQ/6754c6c35da941ba96ae9cfd3485176b/86eae9a210684789bebc699a8c509836.html))
+- [SAP IQ Stored Procedures](https://help.sap.com/docs/SAP_IQ/6754c6c35da941ba96ae9cfd3485176b/86eae9a210684789bebc699a8c509836.html)
 	- sa_procedure_profile
 	- sp_iqstatus
 	- sp_iqsysmon
 	- sp_iqworkmon
-- [Příkazy a utility na úrovni OS]([OS-Level Tools for SAP IQ Management | SAP Help Portal](https://help.sap.com/docs/SAP_IQ/6754c6c35da941ba96ae9cfd3485176b/117377a2adc4474aaa7223a93d723d52.html))
+- [Příkazy a utility na úrovni OS](https://help.sap.com/docs/SAP_IQ/6754c6c35da941ba96ae9cfd3485176b/117377a2adc4474aaa7223a93d723d52.html)
 	- vmstat (memory, CPU, disk)
-	- [Collecting diagnostic data]([Collecting Diagnostic Data | SAP Help Portal](https://help.sap.com/docs/SAP_IQ/6754c6c35da941ba96ae9cfd3485176b/8bcfb6fac62b49dd8b51ae00b352468c.html))
+	- [Collecting diagnostic data](https://help.sap.com/docs/SAP_IQ/6754c6c35da941ba96ae9cfd3485176b/8bcfb6fac62b49dd8b51ae00b352468c.html)
 
 https://www.slideshare.net/dcbriz/tips-and-tricks-for-sap-sybase-iqi
 
