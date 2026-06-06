@@ -1,0 +1,26 @@
+SQLite/RQLite.md
+  s_f77cfa649bf832::t_29734aaecd9df4 3-17
+SQLite/SQLite.md
+  s_f77cfa649bf832::t_12ad74db47f04f 1-2,8,10,12-14,22-62,64-68,70,72-75,77,79-102,104,106-107,109-110
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "6debce198e6eeb83c02fe46086ac797c5d86b6c1",
+  "prompts": {},
+  "humans": {
+    "h_0907ec034f4a17": {
+      "author": "kubow <kube.kubow@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_f77cfa649bf832": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "57bd3b53-a587-4720-9e67-d781baeef475",
+        "model": "default"
+      },
+      "human_author": "kubow <kube.kubow@gmail.com>"
+    }
+  }
+}
