@@ -1,6 +1,98 @@
-import os
 import sqlite3
 from pathlib import Path
+
+ENGINE_FILES = {
+    "Airbyte/Airbyte.md": "Airbyte",
+    "Amazon/AWS Athena.md": "Athena",
+    "Amazon/AWS Aurora.md": "Amazon Aurora",
+    "Amazon/AWS DynamoDB.md": "DynamoDB",
+    "Amazon/AWS Glue.md": "AWS Glue",
+    "Amazon/AWS RedShift.md": "Redshift",
+    "Amazon/AWS S3.md": "S3",
+    "Apache/Apache Beam.md": "Apache Beam",
+    "Apache/Apache Cassandra.md": "Cassandra",
+    "Apache/Apache CouchDB.md": "CouchDB",
+    "Apache/Apache Derby.md": "Derby",
+    "Apache/Apache Doris.md": "Apache Doris",
+    "Apache/Apache Drill.md": "Drill",
+    "Apache/Apache Druid.md": "Druid",
+    "Apache/Apache Flink.md": "Apache Flink",
+    "Apache/Apache HBase.md": "HBase",
+    "Apache/Apache Hadoop.md": "Apache Hadoop",
+    "Apache/Apache Hive.md": "Hive",
+    "Apache/Apache Hudi.md": "Apache Hudi",
+    "Apache/Apache Iceberg.md": "Apache Iceberg",
+    "Apache/Apache Kafka.md": "Apache Kafka",
+    "Apache/Apache Kudu.md": "Kudu",
+    "Apache/Apache NiFi.md": "Apache NiFi",
+    "Apache/Apache Paimon.md": "Apache Paimon",
+    "Apache/Apache Parquet.md": "Apache Parquet",
+    "Apache/Apache Pinot.md": "Pinot",
+    "Apache/Apache Presto.md": "Presto",
+    "Apache/Apache Pulsar.md": "Apache Pulsar",
+    "Apache/Apache Solr.md": "Apache Solr",
+    "Apache/Apache Spark.md": "Apache Spark",
+    "AutoMQ.md": "AutoMQ",
+    "ClickHouse/ClickHouse.md": "ClickHouse",
+    "CockroachDB/CockroachDB.md": "CockroachDB",
+    "Couchbase/Couchbase.md": "Couchbase",
+    "CrateDB/CrateDB.md": "CrateDB",
+    "Databricks/Databricks.md": "Databricks",
+    "DeltaLake/Delta Lake.md": "Delta Lake",
+    "Dremio/Dremio.md": "Dremio",
+    "Duck/DuckDB.md": "DuckDB",
+    "Elasticsearch/Elasticsearch.md": "Elasticsearch",
+    "Exasol/Exasol.md": "Exasol",
+    "Fivetran/Fivetran.md": "Fivetran",
+    "Google/Google BigQuery.md": "BigQuery",
+    "Google/Google Cloud Spanner.md": "Cloud Spanner",
+    "Google/Google Dataflow.md": "Dataflow",
+    "Google/Google Firestore.md": "Firestore",
+    "IBM/DB2.md": "DB2",
+    "InfluxDB/InfluxDB.md": "InfluxDB",
+    "MS/MS Azure Cosmos DB.md": "Cosmos DB",
+    "MS/MS Azure Data Factory.md": "Azure Data Factory",
+    "MS/MS Azure SQL.md": "Azure SQL Database",
+    "MS/MS Azure Synapse.md": "Azure Synapse Analytics",
+    "MS/Access/MS Access.md": "Access",
+    "MS/SQLServ/Microsoft SQL Server.md": "Microsoft SQL Server",
+    "MariaDB/MariaDB.md": "MariaDB",
+    "MarkLogic/MarkLogic.md": "MarkLogic",
+    "Milvus/Milvus.md": "Milvus",
+    "Minio/Minio.md": "MinIO",
+    "MongoDB/MongoDB.md": "MongoDB",
+    "Neo4J/Neo4J.md": "Neo4j",
+    "OpenSearch/OpenSearch.md": "OpenSearch",
+    "Oracle/MySQL.md": "MySQL",
+    "Oracle/Oracle BerkeleyDB.md": "BerkeleyDB",
+    "Oracle/Oracle Database.md": "Oracle Database",
+    "PostgreSQL/GreenPlum.md": "Greenplum",
+    "PostgreSQL/PostgreSQL.md": "PostgreSQL",
+    "Prefect/Prefect.md": "Prefect",
+    "Prometheus/Prometheus.md": "Prometheus",
+    "Qdrant/Qdrant.md": "Qdrant",
+    "QuestDB/QuestDB.md": "QuestDB",
+    "REDIS/Redis.md": "Redis",
+    "SAP/ASE/SAP ASE.md": "Adaptive Server Enterprise",
+    "SAP/Anywhere/SQL Anywhere.md": "SQL Anywhere",
+    "SAP/HANA/SAP HANA.md": "SAP HANA",
+    "SAP/IQ/SAP IQ.md": "SAP IQ",
+    "SQLite/RQLite.md": "rqlite",
+    "SQLite/SQLite.md": "SQLite",
+    "ScyllaDB/ScyllaDB.md": "ScyllaDB",
+    "SingleStore/SingleStore.md": "SingleStore",
+    "Snowflake/Snowflake.md": "Snowflake",
+    "StarRocks/StarRocks.md": "StarRocks",
+    "TDEngine/TDEngine.md": "TDengine",
+    "Temporal/Temporal.md": "Temporal",
+    "Teradata/Teradata.md": "Teradata Vantage",
+    "TigerBeetle.md": "TigerBeetle",
+    "TimescaleDB/TimescaleDB.md": "TimescaleDB",
+    "Trino/Trino.md": "Trino",
+    "Vertica/Vertica.md": "Vertica",
+    "Weaviate/Weaviate.md": "Weaviate",
+    "dbt.md": "dbt",
+}
 
 # Connect to SQLite database (or create it if it doesn't exist)
 conn = sqlite3.connect('engines.db')
@@ -16,61 +108,29 @@ CREATE TABLE IF NOT EXISTS files (
 ''')
 conn.commit()
 
-def clean_filename(file, keywords):
-    for keyword in keywords:
-        if keyword in file:
-            file = file.replace(keyword, '')
-    # Remove trailing spaces
-    file = file.strip()
-    return file
+def sync_engine_files(directory):
+    """Keep files limited to curated storage and processing engine notes."""
+    missing_files = [
+        filename for filename in ENGINE_FILES
+        if not (Path(directory) / filename).exists()
+    ]
+    if missing_files:
+        raise FileNotFoundError(f"Missing engine note files: {missing_files}")
 
-def is_file_in_db(filename):
-    """Check if the file is already in the database."""
-    cursor.execute('SELECT 1 FROM files WHERE filename = ?', (filename,))
-    return cursor.fetchone() is not None
+    existing_engines = {row[0] for row in cursor.execute('SELECT ename FROM engines')}
+    missing_engines = sorted(set(ENGINE_FILES.values()) - existing_engines)
+    if missing_engines:
+        raise ValueError(f"Missing engines for note files: {missing_engines}")
 
-def add_file_to_db(filename, product_name):
-    """Add a new file to the database."""
-    cursor.execute('INSERT INTO files (filename, product_name) VALUES (?, ?)', (filename, product_name))
+    cursor.execute('DELETE FROM files')
+    cursor.executemany(
+        'INSERT INTO files (filename, product_name) VALUES (?, ?)',
+        ENGINE_FILES.items(),
+    )
     conn.commit()
 
-def parse_markdown_files(directory):
-    """Parse markdown files in the given directory."""
-    categories = {"System", "Maintenance", "Install", "Programming", "Transactions", "Dialect"}
-    
-    for root, _, files in os.walk(directory):
-        # Extract the first-level folder name
-        relative_path = Path(root).relative_to(directory)
-        product_name = relative_path.parts[0] if len(relative_path.parts) > 0 else "Unknown"
 
-        if any(keyword in product_name.lower() for keyword in ["data", "readme", ]):
-            continue
-        
-        for file in files:
-            if file.endswith('.md'):
-                filepath = Path(root) / file
-                
-                # Check if the file part is contained in the folder name (we have main product name)
-                if len(filepath.parts)>2 and " ".join(filepath.parts[:2]) in filepath.stem:
-                    product_name = " ".join(filepath.parts[:2])
-                # Check if the file contains any of the group keywords
-                elif any(keyword in file for keyword in categories):
-                    product_name = clean_filename(filepath.stem, categories)
-                else:
-                    product_name = filepath.stem
-                    
-                if not is_file_in_db(filepath.name):
-                    print(f"New file found: {filepath.name} in product: {product_name}")
-                    add_file_to_db(filepath.name, product_name)
-                else:
-                    print(f"File already in database: {filepath.name}")
-
-
-# Specify the directory to search for markdown files
-directory_to_search = '.'
-
-# Parse markdown files in the specified directory
-parse_markdown_files(directory_to_search)
+sync_engine_files('.')
 
 # Close the database connection
 conn.close()
