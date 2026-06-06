@@ -1,0 +1,40 @@
+"Apache/Apache Doris.md"
+  s_52d7141ec30364::t_04715067c15023 1-17
+"Apache/Apache Beam.md"
+  s_52d7141ec30364::t_04715067c15023 1-18
+"Apache/Apache Kudu.md"
+  s_52d7141ec30364::t_04715067c15023 1-17
+"Apache/Apache NiFi.md"
+  s_52d7141ec30364::t_04715067c15023 1-18
+"Apache/Apache Pinot.md"
+  s_52d7141ec30364::t_04715067c15023 1-17
+"Apache/Apache Hudi.md"
+  s_52d7141ec30364::t_04715067c15023 1-17
+"Apache/Apache Flink.md"
+  s_52d7141ec30364::t_04715067c15023 1-18
+"Apache/Apache Solr.md"
+  s_52d7141ec30364::t_04715067c15023 1-17
+"Apache/Apache HBase.md"
+  s_52d7141ec30364::t_04715067c15023 1-17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "ee4cb3d354a18cf84234737593fb20de96b41a5c",
+  "prompts": {},
+  "humans": {
+    "h_0907ec034f4a17": {
+      "author": "kubow <kube.kubow@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_52d7141ec30364": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e9e41-2a0d-7301-8c2d-5da71d68c365",
+        "model": "gpt-5.5"
+      },
+      "human_author": "kubow <kube.kubow@gmail.com>"
+    }
+  }
+}
