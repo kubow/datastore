@@ -1,0 +1,33 @@
+MariaDB/MariaDB.md
+  s_f77cfa649bf832::t_6b247a40049f3d 12
+  s_f77cfa649bf832::t_3298ec9216c6dd 1,3,5-11,13-15
+"Oracle/MySQL Architecture.md"
+  s_f77cfa649bf832::t_0e0c86cc4967bd 60-69
+  s_f77cfa649bf832::t_b0ab16331bd301 1-27,30,32-35,39-58,70-85,88-100,102,104,106,108,110,112,114-119,121,123-127
+Oracle/MySQL.md
+  s_f77cfa649bf832::t_b3f13f54e82b50 1-4,11-64
+  s_f77cfa649bf832::t_0a6802cf2e1e1c 66-74,76-77
+  s_f77cfa649bf832::t_96b64b13c926b9 75
+  s_f77cfa649bf832::t_d1153419e7c503 123
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "ce9c81104e868766b438a65e566cd97e3d9a05bd",
+  "prompts": {},
+  "humans": {
+    "h_0907ec034f4a17": {
+      "author": "kubow <kube.kubow@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_f77cfa649bf832": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "57bd3b53-a587-4720-9e67-d781baeef475",
+        "model": "default"
+      },
+      "human_author": "kubow <kube.kubow@gmail.com>"
+    }
+  }
+}
