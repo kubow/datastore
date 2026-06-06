@@ -1,0 +1,58 @@
+StarRocks/StarRocks.md
+  s_52d7141ec30364::t_04715067c15023 1-17
+Prometheus/Prometheus.md
+  s_52d7141ec30364::t_04715067c15023 1-17
+MarkLogic/MarkLogic.md
+  s_52d7141ec30364::t_04715067c15023 1-17
+OpenSearch/OpenSearch.md
+  s_52d7141ec30364::t_04715067c15023 1-17
+QuestDB/QuestDB.md
+  s_52d7141ec30364::t_04715067c15023 1-17
+Prefect/Prefect.md
+  s_52d7141ec30364::t_04715067c15023 1-17
+ScyllaDB/ScyllaDB.md
+  s_52d7141ec30364::t_04715067c15023 1-17
+Temporal/Temporal.md
+  s_52d7141ec30364::t_04715067c15023 1-18
+TimescaleDB/TimescaleDB.md
+  s_52d7141ec30364::t_04715067c15023 1-17
+Milvus/Milvus.md
+  s_52d7141ec30364::t_04715067c15023 1-17
+"DeltaLake/Delta Lake.md"
+  s_52d7141ec30364::t_04715067c15023 1-17
+Qdrant/Qdrant.md
+  s_52d7141ec30364::t_04715067c15023 1-17
+Couchbase/Couchbase.md
+  s_52d7141ec30364::t_04715067c15023 1-17
+Weaviate/Weaviate.md
+  s_52d7141ec30364::t_04715067c15023 1-17
+Airbyte/Airbyte.md
+  s_52d7141ec30364::t_04715067c15023 1-17
+Trino/Trino.md
+  s_52d7141ec30364::t_04715067c15023 1-19
+Exasol/Exasol.md
+  s_52d7141ec30364::t_04715067c15023 1-17
+Fivetran/Fivetran.md
+  s_52d7141ec30364::t_04715067c15023 1-17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "d5e91058c6fe4db08be79240b83cf32881786683",
+  "prompts": {},
+  "humans": {
+    "h_0907ec034f4a17": {
+      "author": "kubow <kube.kubow@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_52d7141ec30364": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e9e41-2a0d-7301-8c2d-5da71d68c365",
+        "model": "gpt-5.5"
+      },
+      "human_author": "kubow <kube.kubow@gmail.com>"
+    }
+  }
+}
