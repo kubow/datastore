@@ -1,6 +1,12 @@
+# Google
+
+## Data Services
 
 - [Google BigQuery](Google%20BigQuery.md)
 - [Google Cloud Spanner](Google%20Cloud%20Spanner.md)
+- [Google Dataflow](Google%20Dataflow.md)
+- [Google Firestore](Google%20Firestore.md)
+- [Looker](Looker.md)
 - [OpenRefine](OpenRefine.md)
 
 Google Cloud Database Options [https://cloud.google.com/products/databases/](https://cloud.google.com/products/databases/)
@@ -19,8 +25,7 @@ Cloud SQL [https://cloud.google.com/sql](https://cloud.google.com/sql)
 
 Google Cloud SQL developers [https://developers.google.com/cloud-sql/](https://developers.google.com/cloud-sql/)
 
-## Fire
+## Firebase And Firestore
 
 Firebase realtime database [https://firebase.google.com/products/realtime-database/](https://firebase.google.com/products/realtime-database/)
 Firestore [https://cloud.google.com/firestore](https://cloud.google.com/firestore)
-

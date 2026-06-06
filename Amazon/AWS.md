@@ -1,8 +1,13 @@
-Amazon Web Services
+# Amazon Web Services
+
 https://en.wikipedia.org/wiki/Category:Amazon_Web_Services
 
-- [AWS Aurora](AWS%20Aurora.md)
-- [AWS DynamoDB](https://aws.amazon.com/dynamodb/) Fast NoSQL Key-Value Database
+## Data Services
+
+- [Amazon Athena](AWS%20Athena.md) - serverless interactive SQL over S3 and other sources
+- [Amazon Aurora](AWS%20Aurora.md) - MySQL/PostgreSQL-compatible managed relational database
+- [AWS DynamoDB](AWS%20DynamoDB.md) - managed NoSQL key-value and document database
+- [AWS Glue](AWS%20Glue.md) - data integration and metadata catalog service
 - [AWS RDS](AWS%20RDS.md)
 - [AWS RedShift](AWS%20RedShift.md)
 - [AWS S3](AWS%20S3.md)
