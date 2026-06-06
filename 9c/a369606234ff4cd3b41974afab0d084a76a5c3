@@ -1,0 +1,71 @@
+Oracle/Oracle.md
+  s_52d7141ec30364::t_97cf46855069b9 7-8,63
+  s_52d7141ec30364::t_c73d072390a016 1-2
+"Data/AI_ML/Machine Learning.md"
+  s_52d7141ec30364::t_4928665eb9a5e9 24-25
+MS/Microsoft.md
+  s_52d7141ec30364::t_97cf46855069b9 5-6,23
+  s_52d7141ec30364::t_c73d072390a016 1-2
+Data/AI_ML/python-frameworks.md
+  s_52d7141ec30364::t_4928665eb9a5e9 6
+ClickHouse/ClickHouse.md
+  s_52d7141ec30364::t_4928665eb9a5e9 22,32
+GoodData/GD.Cloud(Native).md
+  s_52d7141ec30364::t_4928665eb9a5e9 90,96,170
+"Data/NL/Natural Language.md"
+  s_52d7141ec30364::t_4928665eb9a5e9 1-2,4
+IBM/IBM.md
+  s_52d7141ec30364::t_c73d072390a016 2-3
+  s_52d7141ec30364::t_97cf46855069b9 4,7
+CrateDB/CrateDB.md
+  s_52d7141ec30364::t_4928665eb9a5e9 13
+Data/Model/Modelling_Relational.md
+  s_52d7141ec30364::t_4928665eb9a5e9 3-5
+"Data/NL/Natural Language Processing.md"
+  s_52d7141ec30364::t_4928665eb9a5e9 7,36
+Qlik/Qlik.Compose.md
+  s_52d7141ec30364::t_4928665eb9a5e9 6,68
+Data/Visualize/Visualization.md
+  s_52d7141ec30364::t_4928665eb9a5e9 10,23
+Data/Query/StructuralQueryLanguage.md
+  s_52d7141ec30364::t_4928665eb9a5e9 2-5,40
+"Qlik/Qlik Data Integration.md"
+  s_52d7141ec30364::t_4928665eb9a5e9 27
+"Data/Types/Storage Comparison.md"
+  s_52d7141ec30364::t_4928665eb9a5e9 20
+"SAP/Anywhere/SQL Anywhere.md"
+  s_52d7141ec30364::t_4928665eb9a5e9 49,139
+"SAP/ASE/SAP ASE 2 Install.md"
+  s_52d7141ec30364::t_4928665eb9a5e9 119
+Apache/Apache.md
+  s_52d7141ec30364::t_97cf46855069b9 3,5-14,16-45
+"Data/Storage/Data Warehouse.md"
+  s_52d7141ec30364::t_4928665eb9a5e9 18,20,26
+Data/Model/Modelling.md
+  s_52d7141ec30364::t_4928665eb9a5e9 11-12,33
+Data/Processing/Processing.md
+  s_52d7141ec30364::t_4928665eb9a5e9 3-11,44,93
+Data/Processing/ETL.md
+  s_52d7141ec30364::t_4928665eb9a5e9 34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "9ca369606234ff4cd3b41974afab0d084a76a5c3",
+  "prompts": {},
+  "humans": {
+    "h_0907ec034f4a17": {
+      "author": "kubow <kube.kubow@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_52d7141ec30364": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e9e41-2a0d-7301-8c2d-5da71d68c365",
+        "model": "gpt-5.5"
+      },
+      "human_author": "kubow <kube.kubow@gmail.com>"
+    }
+  }
+}
