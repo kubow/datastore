@@ -1,0 +1,36 @@
+"MS/MS Azure Cosmos DB.md"
+  s_52d7141ec30364::t_04715067c15023 1-17
+"MS/MS Azure Data Factory.md"
+  s_52d7141ec30364::t_04715067c15023 1-17
+"MS/MS Azure Synapse.md"
+  s_f77cfa649bf832::t_3cb552fa57b3e6 2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "a3e86850a3f72bf09f99b15ee77c9e7743f2b6b9",
+  "prompts": {},
+  "humans": {
+    "h_0907ec034f4a17": {
+      "author": "kubow <kube.kubow@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_52d7141ec30364": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e9e41-2a0d-7301-8c2d-5da71d68c365",
+        "model": "gpt-5.5"
+      },
+      "human_author": "kubow <kube.kubow@gmail.com>"
+    },
+    "s_f77cfa649bf832": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "57bd3b53-a587-4720-9e67-d781baeef475",
+        "model": "default"
+      },
+      "human_author": "kubow <kube.kubow@gmail.com>"
+    }
+  }
+}
