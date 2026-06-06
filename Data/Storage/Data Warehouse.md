@@ -15,15 +15,15 @@ Data Mart = layer of Data Warehouse
 
 
 
-![[Data_warehouse_overview.jpg]]
+![Data warehouse overview](Data_warehouse_overview.jpg)
 
-![[DW_schema.png]]
+![Data warehouse schema](DW_schema.png)
 
 Two main approaches creating warehouses:
 - **Bill Inmon approach** - star schema mapping, not deployed until concept invented
 - **Ralph Kimball approach** - to keep customers happy, deploy warehouses as modules
 
-![[Data_warehouse_Environment.JPG]]
+![Data warehouse environment](Data_warehouse_Environment.JPG)
 
 
 [Everything you need to know about tree data structures | Codementor](https://www.codementor.io/@leandrotk100/everything-you-need-to-know-about-tree-data-structures-pynnlkyud)  
@@ -55,6 +55,5 @@ SET NULL in foreign key constraint [https://dba.stackexchange.com/questions/5176
 Storing vs calculating aggregate values [https://dba.stackexchange.com/questions/239/storing-vs-calculating-aggregate-values](https://dba.stackexchange.com/questions/239/storing-vs-calculating-aggregate-values)  
   
 Codementor: Everything you need to know about tree data structures [https://www.codementor.io/leandrotk100/everything-you-need-to-know-about-tree-data-structures-pynnlkyud](https://www.codementor.io/leandrotk100/everything-you-need-to-know-about-tree-data-structures-pynnlkyud)
-
 
 

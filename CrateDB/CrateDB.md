@@ -10,4 +10,4 @@
 
 [CrateDB Video | CrateDB Workshop Module 4: Modeling Data in CrateDB](https://cratedb.com/resources/videos/cratedb-workshop-module-4-modeling-data-in-cratedb)
 
-![[CrateDB-Architecture-Guide.pdf]]
+[CrateDB Architecture Guide](CrateDB-Architecture-Guide.pdf)

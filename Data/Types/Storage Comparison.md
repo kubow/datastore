@@ -17,7 +17,7 @@ Partitioning (Physical reorder) vs Clustering (Logical reorder)
 
 ![sql_vs_nosql](sql_vs_nosql.jpg)
 
-![[DataStoreTypes.jpg]]
+![Data store types](DataStoreTypes.jpg)
 
 
 [Difference between Row and Column oriented Stores](https://www.geeksforgeeks.org/difference-between-row-oriented-and-column-oriented-data-stores-in-dbms/)
@@ -29,4 +29,3 @@ Partitioning (Physical reorder) vs Clustering (Logical reorder)
 [Apache Arrow vs Apache Parquet vs ORC](http://dbmsmusings.blogspot.com/2017/10/apache-arrow-vs-parquet-and-orc-do-we.html)
 
 [CSV vs Parquet vs Avro: Choosing the Right Tool for the Right Job | by Mikhail Levkovsky | SSENSE-TECH | Medium](https://medium.com/ssense-tech/csv-vs-parquet-vs-avro-choosing-the-right-tool-for-the-right-job-79c9f56914a8)
-

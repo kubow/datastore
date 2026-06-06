@@ -116,7 +116,7 @@ Options
 
 
 ## Versions
-[[SAP ASE Release Builletins]]
+[SAP ASE Release Builletins](versions/SAP%20ASE%20Release%20Builletins.md)
 [A Deeper Look At Sybase: History of ASE | SAP Blogs](https://blogs.sap.com/2011/04/15/a-deeper-look-at-sybase-history-of-ase/)
 
 [Targeted ASE 15.x Release Schedule and CR list Information - SAP ASE - Support Wiki](https://wiki.scn.sap.com/wiki/display/SYBASE/Targeted+ASE+15.x+Release+Schedule+and+CR+list+Information)

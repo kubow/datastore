@@ -21,8 +21,8 @@ Machine learning tasks can be classified into:
 
 Other detailed sections:
 
-- [[Machine Learning Algorithms]]
-- [[python-frameworks]]
+- [Machine Learning Algorithms](Machine%20Learning%20Algorithms.md)
+- [Python frameworks](python-frameworks.md)
 
 
 [machine learning cheatsheet at DuckDuckGo](https://duckduckgo.com/?q=machine+learning+cheatsheet&ia=cheatsheet&iax=cheatsheet)  

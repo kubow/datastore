@@ -3,7 +3,7 @@ Data Pipeline Automator
 - PostrgreSQL database running inside.
 - Easy to setup, real business value that setup will happen in very short time
 - Still need to do some modelling
-- Need to have a source system with a [[Qlik.Replicate]]
+- Need to have a source system with [Qlik Replicate](Qlik.Replicate.md)
 - Work organized in projects (versioned with GIT repository).
 
 1. Create database that will be a warehouse (a lot of importers)

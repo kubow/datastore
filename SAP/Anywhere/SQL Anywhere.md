@@ -46,7 +46,7 @@ Data Server parts:
 
 ### Versions
 
-![[ASA_history.jpg]]
+![ASA history](ASA_history.jpg)
 
 - 1992: Initially published as "Watcom SQL" (version 3) by Watcom
 - 1993: PowerSoft took over Watcom

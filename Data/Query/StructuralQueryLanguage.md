@@ -1,8 +1,8 @@
 
-- [[DCL]] - (Data Control Language)
-- [[DDL]] - (Data Definition Language)
-- [[DML]] -  (Data Manipulation Language)
-- [[OQL]] - (Object Query Language)
+- [DCL](DCL.md) - (Data Control Language)
+- [DDL](DDL.md) - (Data Definition Language)
+- [DML](DML.md) -  (Data Manipulation Language)
+- [OQL](OQL.md) - (Object Query Language)
 
 
 [SQL Practise environment ](http://www.markmcilroy.com/test_env/sql_test.php)  

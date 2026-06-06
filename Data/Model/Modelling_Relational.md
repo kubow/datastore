@@ -1,8 +1,8 @@
 ## Data Model 
 
-- [[Dimensions]]
-- [[Fact Tables]]
-- [[Keys-Indexes]]
+- [Dimensions](Dimensions.md)
+- [Fact Tables](Fact%20Tables.md)
+- [Keys and indexes](Keys-Indexes.md)
 
 [Schema-on-Read vs Schema-on-Write - Blog | luminousmen](https://luminousmen.com/post/schema-on-read-vs-schema-on-write)
 

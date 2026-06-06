@@ -1,6 +1,9 @@
+# Microsoft
+
 - [Microsoft SQL Server](./SQLServ/Microsoft%20SQL%20Server.md)
 - MS Azure ([Types of Databases on Azure](https://azure.microsoft.com/en-us/products/category/databases/))
-	- [Azure Cosmos DB - NoSQL and Relational Database](https://azure.microsoft.com/en-us/products/cosmos-db/)
+	- [Azure Cosmos DB](MS%20Azure%20Cosmos%20DB.md) - NoSQL and relational database service
+	- [Azure Data Factory](MS%20Azure%20Data%20Factory.md) - data integration and orchestration
 	- [MS Azure SQL](MS%20Azure%20SQL.md) - Cloud relational database
 	- [MS Azure Synapse](MS%20Azure%20Synapse.md) - Cloud analytics
 - Microsoft Business Intelligence

@@ -31,7 +31,7 @@ ETL best Practices [https://www.timmitchell.net/etl-best-practices/](https://www
 
 - Airbyte
 - FiveTran
-- [[DataIku]]
+- [DataIku](../../DataIku/DataIku.md)
 - Meltano (Extraction)
 - Stitch
 - PipeLineWise
@@ -52,4 +52,3 @@ CloverETL [http://www.cloveretl.com/products/open-source](http://www.cloveretl.c
 HCPP Systems [https://hpccsystems.com/](https://hpccsystems.com/)
 Jedox [https://www.jedox.com/en/](https://www.jedox.com/en/)
 Apatar [https://sourceforge.net/projects/apatar/](https://sourceforge.net/projects/apatar/)
-

@@ -1,14 +1,14 @@
 [Data processing - Wikipedia](https://en.wikipedia.org/wiki/Data_processing)
 
-- [[#Preparation]]
-	- [[#Data Pre-processing]]
-	- [[#Data Cleansing]]
-- [[#Data Description]]
-	- [[#Data Observability]]
-- [[#Data Transformation]]
-	- [[ETL]]
-- [[#Data Governance]]
-- [[#Data Broking]]
+- [Data Preparation](#data-preparation)
+	- [Data Pre-processing](#data-pre-processing)
+	- [Data Cleansing](#data-cleansing)
+- [Data Description](#data-description)
+	- [Data Observability](#data-observability)
+- [Data Transformation](#data-transformation)
+	- [ETL](ETL.md)
+- [Data Governance](#data-governance)
+- [Data Broking](#data-broking)
 
 
 # Data Preparation
@@ -41,7 +41,7 @@
 
 # Data Transformation
 
-- [[ETL]]
+- [ETL](ETL.md)
 
 # Data Governance
 
@@ -90,4 +90,4 @@ Governance categories across that stack:
 
 - [Messaging that just works — RabbitMQ](https://www.rabbitmq.com/)
 - [ActiveMQ](https://activemq.apache.org/)
-- [[Apache Kafka]]
+- [Apache Kafka](../../Apache/Apache%20Kafka.md)

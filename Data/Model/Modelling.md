@@ -8,8 +8,8 @@ Level of abstraction:
 - [Erwin Data Modeller](../../Erwin/Erwin.md)
 - Denodo
 - [SAP PowerDesigner](../../SAP/SAP%20PowerDesigner.md)
-- [SQLDBM](SQLDBM.md)
-- [[WhereScape]]
+- [SQLDBM](../../SQLDBM/SQLDBM.md)
+- [WhereScape](../../WhereScape/WhereScape.md)
 
 [Comparison of data modeling tools - Wikipedia](https://en.wikipedia.org/wiki/Comparison_of_data_modeling_tools)
 [79 Data Modeling Tools Compared - Database Star](https://www.databasestar.com/data-modeling-tools/)

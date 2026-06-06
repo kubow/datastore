@@ -19,7 +19,7 @@ Extra parts
 - [SQL Dialect](./ClickHouse.SQL.md)
 - [Clients](./ClickHouse.Client.md)
 
-![[ClickHouse overview.png]]
+![ClickHouse overview](ClickHouse%20overview.png)
 
 
 [Working with Time Series Data in ClickHouse](https://clickhouse.com/blog/working-with-time-series-data-and-functions-ClickHouse)

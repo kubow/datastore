@@ -3,7 +3,7 @@
 - Deeplearning4J
 - DMLC
 - PyTorch
-- [[#Scikit-learn]]
+- [Scikit-learn](#scikit-learn)
 - CAFFE
 
 
@@ -16,5 +16,4 @@
 [Scikit-learn Tutorial: Machine Learning in Python – Dataquest](https://www.dataquest.io/blog/sci-kit-learn-tutorial/)  
 
 [Choosing the right estimator — scikit-learn 0.24.2 documentation](https://scikit-learn.org/stable/tutorial/machine_learning_map/)  
-
 

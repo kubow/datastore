@@ -7,7 +7,7 @@ Leading enterprise data visualisation products (alphabetically):
 - IBM [Cognos](../../IBM/Cognos.md)
 - [GoodData](../../GoodData/GoodData.md)
 - [Incorta](../../Incorta/Incorta.md)
-- [[#Kibana]]
+- [Kibana](#kibana)
 - Google [Looker](../../Google/Looker.md)
 - Microstrategy
 - Omni
@@ -20,7 +20,7 @@ Leading enterprise data visualisation products (alphabetically):
 - Sweeft
 - [Tableau](../../Salesforce/Tableau.md)
 - ToughtSpot
-- [[#TIBCO Spotfire]]
+- [TIBCO Spotfire](#tibco-spotfire)
 
 [What Makes A Good Data Visualization? — Information is Beautiful](https://www.informationisbeautiful.net/visualizations/what-makes-a-good-data-visualization/)
 

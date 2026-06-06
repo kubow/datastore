@@ -4,7 +4,7 @@ https://en.wikipedia.org/wiki/Natural_language_processing
 [Natural language processing: A data science tutorial in Python](https://thedatascientist.com/natural-language-processing-data-science-tutorial-python/)
 
 
-- [[#NLP Frameworks]]
+- [NLP Frameworks](#nlp-frameworks)
 
 ## Common tasks
 
@@ -33,7 +33,7 @@ https://en.wikipedia.org/wiki/Natural_language_processing
 	- Document AI
 	- Grammatical error correction
 	- Machine translation
-	- [[Natural Language Generation]] (NLG)
+	- [Natural Language Generation](Natural%20Language%20Generation.md) (NLG)
 	- Natural Language Understanding (NLU)
 	- Question answering
 	- Text-to-image generation
@@ -51,4 +51,3 @@ https://en.wikipedia.org/wiki/Natural_language_processing
 
 - [BERT](https://en.wikipedia.org/wiki/BERT_(language_model)) = open-source ML framework for NLP
 	- [Exploring BERT language framework for NLP tasks](https://www.datasciencecentral.com/exploring-bert-language-framework-for-nlp-tasks/)
-

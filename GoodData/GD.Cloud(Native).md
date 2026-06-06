@@ -87,13 +87,13 @@ yarn refresh-md
 yarn start # npm start
 ```
 
-For common React.js modifications follow [[GD.UI|this link]].
+For common React.js modifications follow [this link](GD.UI.md).
 
 ## Model Building
 
 Scan physical model and build a semantic layer on top of the data.
 
-![[GD_CloudNative_ModelData.png]]
+![GoodData Cloud Native model data](image/GD_CloudNative_ModelData.png)
 [Model Data](https://www.gooddata.com/developers/cloud-native/doc/2.1/model-data/)
 [Build LDM](https://www.gooddata.com/developers/cloud-native/doc/2.1/getting-started/build-ldm/)
 
