@@ -44,4 +44,8 @@ DESCRIBE tbl;
 
 [The Guide to Data Analysis with DuckDB - Analytics Vidhya](https://www.analyticsvidhya.com/blog/2021/12/the-guide-to-data-analysis-with-duckdb/)
 
+## Data Lakes
+
 [Build a poor man’s data lake from scratch with DuckDB | Dagster Blog](https://dagster.io/blog/duckdb-data-lake)
+
+[From DuckDB to DuckHouse](https://juhache.substack.com/p/3465177b-6c6c-417d-912a-be30ef10dab9)
